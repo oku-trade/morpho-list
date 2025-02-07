@@ -3,7 +3,7 @@ import { Command, Option, runExit } from "clipanion";
 import { writeFileSync } from "fs";
 import path, { join } from "path";
 import { loadMarketsAndVaults } from "src/common/load.js";
-import { MasterList, MasterListEntry } from "src/common/types.js";
+import { MasterList } from "src/common/types.js";
 import { z } from "zod";
 
 

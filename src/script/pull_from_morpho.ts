@@ -7,13 +7,15 @@ import { typecheck } from "src/common/utils.js"
 import { existsSync, mkdirSync, statSync, writeFileSync } from "fs"
 import path from "path"
 import { MarketId } from "@morpho-org/blue-sdk"
+import dotenv from "dotenv"
+dotenv.config()
 
 const pcs: Record<string, PublicClient> = {
   1: createPublicClient({
-    transport: http("https://venn.apiary.software/ethereum"),
+    transport: http(`${process.env.VENN_URL}/ethereum`),
   }),
   8453: createPublicClient({
-    transport: http("https://venn.apiary.software/base"),
+    transport: http(`${process.env.VENN_URL}/base`),
   })
 }
 

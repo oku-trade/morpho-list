@@ -491,6 +491,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.4.7":
+  version: 16.4.7
+  resolution: "dotenv@npm:16.4.7"
+  checksum: 10c0/be9f597e36a8daf834452daa1f4cc30e5375a5968f98f46d89b16b983c567398a330580c88395069a77473943c06b877d1ca25b4afafcdd6d4adb549e8293462
+  languageName: node
+  linkType: hard
+
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
@@ -971,6 +978,7 @@ __metadata:
     "@types/minimist": "npm:^1"
     "@types/node": "npm:^22.13.1"
     clipanion: "npm:^4.0.0-rc.4"
+    dotenv: "npm:^16.4.7"
     graphql: "npm:^16.10.0"
     graphql-request: "npm:^7.1.2"
     husky: "npm:^9.1.7"
