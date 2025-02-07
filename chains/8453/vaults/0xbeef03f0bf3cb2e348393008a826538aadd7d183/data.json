@@ -1,0 +1,9 @@
+{
+  "chainId": 8453,
+  "tokenAddress": "0xbeef03f0bf3cb2e348393008a826538aadd7d183",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xbeef03f0bf3cb2e348393008a826538aadd7d183",
+  "guardianAddress": "0x3E9A1Ffd276Cf87Dc41af032528D9A294E018191",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}
