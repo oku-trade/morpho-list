@@ -2,12 +2,18 @@
   "name": "morpho-list",
   "packageManager": "yarn@4.6.0",
   "type": "module",
+  "scripts": {
+    "init": "yarn husky init",
+    "compile": "tsx cli.ts compile --dir chains --outfile public/masterlist.json",
+    "prepare": "husky"
+  },
   "dependencies": {
     "@gfxlabs/oku-chains": "^1.1.162",
     "@types/node": "^22.13.1",
     "clipanion": "^4.0.0-rc.4",
     "graphql": "^16.10.0",
     "graphql-request": "^7.1.2",
+    "husky": "^9.1.7",
     "minimist": "^1.2.8",
     "prettier": "^3.4.2",
     "tsx": "^4.19.2",

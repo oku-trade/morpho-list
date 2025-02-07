@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 import { Command, Option, runExit } from "clipanion";
 import { writeFileSync } from "fs";
-import { join } from "path";
+import path, { join } from "path";
 import { loadMarketsAndVaults } from "src/common/load.js";
 import { MasterList, MasterListEntry } from "src/common/types.js";
 import { z } from "zod";
@@ -40,7 +40,7 @@ class CompileCommand extends Command {
       output.chains[market.chainId].markets.push(market)
     }
     writeFileSync(this.outfile, JSON.stringify(output, null, 2))
-    console.log("wrote masterlist to", this.outfile)
+    console.log("wrote masterlist to", path.normalize(this.outfile))
     return 0
   }
 }
