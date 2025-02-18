@@ -1,4 +1,4 @@
-name: Generate Tokenlist
+name: Generate Masterlist
 permissions:
   contents: write
 
@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  update-tokenlist:
+  update-masterlist:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
 
