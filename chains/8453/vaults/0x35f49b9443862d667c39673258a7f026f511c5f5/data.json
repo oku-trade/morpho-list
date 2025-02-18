@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "TestUSDcVault2",
-  "tokenAddress": "0x35f49b9443862d667c39673258a7f026f511c5f5",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x35f49b9443862d667c39673258a7f026f511c5f5",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

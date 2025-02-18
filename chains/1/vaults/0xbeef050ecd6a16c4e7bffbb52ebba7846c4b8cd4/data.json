@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Steakhouse ETH",
-  "tokenAddress": "0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4",
   "guardianAddress": "0x4ef090B2c36b34974e244f3699DF998e2b9D4FE9",

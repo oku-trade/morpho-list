@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Steakhouse M",
-  "tokenAddress": "0xbeef0075e03a5ce0d84d4accf3481363e0584f5c",
+  "tokenAddress": "0x437cc33344a0B27A429f795ff6B469C72698B291",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeef0075e03a5ce0d84d4accf3481363e0584f5c",
   "guardianAddress": "0xB5fF1b5c809dA5A89d4C031bB016c8ebd5b3D9bB",

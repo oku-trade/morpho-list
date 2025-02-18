@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "MT",
-  "tokenAddress": "0x4b7aed325fa8a7e469157b8449afe5cdd7f87dc6",
+  "tokenAddress": "0xEC7De4956A4569C2a1D171e4dD115a611c8e9eE5",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x4b7aed325fa8a7e469157b8449afe5cdd7f87dc6",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

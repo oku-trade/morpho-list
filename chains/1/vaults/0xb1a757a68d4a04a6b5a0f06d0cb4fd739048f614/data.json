@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Apostro WETH",
-  "tokenAddress": "0xb1a757a68d4a04a6b5a0f06d0cb4fd739048f614",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xb1a757a68d4a04a6b5a0f06d0cb4fd739048f614",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

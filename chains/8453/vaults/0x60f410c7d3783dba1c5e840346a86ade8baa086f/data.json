@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Sberex WETH Core",
-  "tokenAddress": "0x60f410c7d3783dba1c5e840346a86ade8baa086f",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x60f410c7d3783dba1c5e840346a86ade8baa086f",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

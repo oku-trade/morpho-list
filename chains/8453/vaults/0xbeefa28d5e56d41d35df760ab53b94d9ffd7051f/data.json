@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Steakhouse EURA",
-  "tokenAddress": "0xbeefa28d5e56d41d35df760ab53b94d9ffd7051f",
+  "tokenAddress": "0xA61BeB4A3d02decb01039e378237032B351125B4",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbeefa28d5e56d41d35df760ab53b94d9ffd7051f",
   "guardianAddress": "0x7DF37fc774843b678f586D55483819605228a0ae",

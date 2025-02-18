@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Re7 tBTC",
-  "tokenAddress": "0x43fd147d5319b8cf39a6e57143684efca9cf3613",
+  "tokenAddress": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x43fd147d5319b8cf39a6e57143684efca9cf3613",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

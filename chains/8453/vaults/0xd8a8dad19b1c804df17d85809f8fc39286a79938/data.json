@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "testVault 961",
-  "tokenAddress": "0xd8a8dad19b1c804df17d85809f8fc39286a79938",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xd8a8dad19b1c804df17d85809f8fc39286a79938",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

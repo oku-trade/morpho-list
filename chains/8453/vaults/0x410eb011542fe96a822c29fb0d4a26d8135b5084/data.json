@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Yearn USDC",
-  "tokenAddress": "0x410eb011542fe96a822c29fb0d4a26d8135b5084",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x410eb011542fe96a822c29fb0d4a26d8135b5084",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

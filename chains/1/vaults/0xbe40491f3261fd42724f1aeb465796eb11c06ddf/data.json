@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Re7 FRAX",
-  "tokenAddress": "0xbe40491f3261fd42724f1aeb465796eb11c06ddf",
+  "tokenAddress": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
   "performanceFeePercentage": "20000000000000000",
   "vaultAddress": "0xbe40491f3261fd42724f1aeb465796eb11c06ddf",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

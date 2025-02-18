@@ -115,7 +115,7 @@ const main = async () => {
       enabled: true,
       vaultAddress: item.address,
       chainId: Number(item.chain),
-      tokenAddress: vaultConfig.address,
+      tokenAddress: vaultConfig.asset,
       curatorAddress: vaultLive.curator,
       guardianAddress: vaultLive.guardian,
       performanceFeePercentage: vaultLive.fee.toString(),

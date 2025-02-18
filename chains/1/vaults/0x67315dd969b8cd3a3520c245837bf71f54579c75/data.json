@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "LlamaRisk crvUSD Vault",
-  "tokenAddress": "0x67315dd969b8cd3a3520c245837bf71f54579c75",
+  "tokenAddress": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
   "performanceFeePercentage": "200000000000000000",
   "vaultAddress": "0x67315dd969b8cd3a3520c245837bf71f54579c75",
   "guardianAddress": "0xaEe9Dda3198a0474d34CfaB56D7615d90A61c8AA",

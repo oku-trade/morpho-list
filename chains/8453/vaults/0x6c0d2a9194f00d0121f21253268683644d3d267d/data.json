@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "jEURMetaMorpho",
-  "tokenAddress": "0x6c0d2a9194f00d0121f21253268683644d3d267d",
+  "tokenAddress": "0x4154550f4Db74Dc38d1FE98e1F3F28ed6daD627d",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x6c0d2a9194f00d0121f21253268683644d3d267d",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

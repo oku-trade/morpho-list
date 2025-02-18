@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Lumetra Opportunistic WETH",
-  "tokenAddress": "0x968f3548ed4f96cf11a907848506934a8f42a945",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x968f3548ed4f96cf11a907848506934a8f42a945",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

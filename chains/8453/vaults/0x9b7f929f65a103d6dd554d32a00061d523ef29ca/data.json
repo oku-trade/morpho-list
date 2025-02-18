@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Yoginth",
-  "tokenAddress": "0x9b7f929f65a103d6dd554d32a00061d523ef29ca",
+  "tokenAddress": "0x4e65fE4DbA92790696d040ac24Aa414708F5c0AB",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x9b7f929f65a103d6dd554d32a00061d523ef29ca",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

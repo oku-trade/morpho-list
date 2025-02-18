@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Lumetra Opportunistic USDC",
-  "tokenAddress": "0x7fd62b11654f0dd41ad30edda8174366e225e712",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x7fd62b11654f0dd41ad30edda8174366e225e712",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

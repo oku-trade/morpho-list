@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Spark USDS Vault",
-  "tokenAddress": "0x0ffdece791c5a2cb947f8ddbab489e5c02c6d4f7",
+  "tokenAddress": "0x820C137fa70C8691f0e44Dc420a5e53c168921Dc",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x0ffdece791c5a2cb947f8ddbab489e5c02c6d4f7",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

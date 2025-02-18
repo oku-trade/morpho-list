@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "EarnFAI WETH",
-  "tokenAddress": "0xc9332df2fe5461d2e147702cc80068546bbd9214",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xc9332df2fe5461d2e147702cc80068546bbd9214",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

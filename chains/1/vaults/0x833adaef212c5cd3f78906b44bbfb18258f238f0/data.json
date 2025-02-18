@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Smokehouse WSTETH",
-  "tokenAddress": "0x833adaef212c5cd3f78906b44bbfb18258f238f0",
+  "tokenAddress": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x833adaef212c5cd3f78906b44bbfb18258f238f0",
   "guardianAddress": "0xc7645103984F27fb2221E16bFb6b4d650Ea03695",

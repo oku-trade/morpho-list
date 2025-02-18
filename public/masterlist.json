@@ -5,7 +5,7 @@
         {
           "chainId": 1,
           "name": "Elixir USDC",
-          "tokenAddress": "0x0404fd1a77756eb029f06b5cdea88b2b2ddc2fee",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x0404fd1a77756eb029f06b5cdea88b2b2ddc2fee",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -15,7 +15,7 @@
         {
           "chainId": 1,
           "name": "SwissBorg tBTC",
-          "tokenAddress": "0x059fc6723b9bf77dbf4283c8d7c90ea8af44ef10",
+          "tokenAddress": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x059fc6723b9bf77dbf4283c8d7c90ea8af44ef10",
           "guardianAddress": "0x259c444b50e3Ab173c4f850BB40d85A9EA0230F3",
@@ -25,7 +25,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDC Lite",
-          "tokenAddress": "0x08995ec16f3fad0c357b3da68eee09a88932dec0",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x08995ec16f3fad0c357b3da68eee09a88932dec0",
           "guardianAddress": "0xDE50c76b581856c707907F7aBC261E912b00B01B",
@@ -35,7 +35,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDT Lite",
-          "tokenAddress": "0x097ffedb80d4b2ca6105a07a4d90eb739c45a666",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x097ffedb80d4b2ca6105a07a4d90eb739c45a666",
           "guardianAddress": "0x26ab2D7C6d0cB6d8FFf6eFD9429DB68dd502fB68",
@@ -45,7 +45,7 @@
         {
           "chainId": 1,
           "name": "Relend USDC",
-          "tokenAddress": "0x0f359fd18bda75e9c49bc027e7da59a4b01bf32a",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x0f359fd18bda75e9c49bc027e7da59a4b01bf32a",
           "guardianAddress": "0x3A9b02c14d967333cE68E353a64653E258da2BAa",
@@ -55,7 +55,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet USDA Core",
-          "tokenAddress": "0x125d41a6e5dbf455cd9df8f80bcc6fd172d52cc6",
+          "tokenAddress": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x125d41a6e5dbf455cd9df8f80bcc6fd172d52cc6",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -65,7 +65,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital Elixir USDC",
-          "tokenAddress": "0x1265a81d42d513df40d0031f8f2e1346954d665a",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x1265a81d42d513df40d0031f8f2e1346954d665a",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -75,7 +75,7 @@
         {
           "chainId": 1,
           "name": "Resolv USDC",
-          "tokenAddress": "0x132e6c9c33a62d7727cd359b1f51e5b566e485eb",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x132e6c9c33a62d7727cd359b1f51e5b566e485eb",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -85,7 +85,7 @@
         {
           "chainId": 1,
           "name": "Flagship USDC",
-          "tokenAddress": "0x186514400e52270cef3d80e1c6f8d10a75d47344",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x186514400e52270cef3d80e1c6f8d10a75d47344",
           "guardianAddress": "0x8B9cB6eb51bE08507Dffc280F880bF8FB36c0f08",
@@ -95,7 +95,7 @@
         {
           "chainId": 1,
           "name": "testMorphoVault",
-          "tokenAddress": "0x19f91632ba0367cd7b1fc8816071cb31519e5d8a",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "10000000000000000",
           "vaultAddress": "0x19f91632ba0367cd7b1fc8816071cb31519e5d8a",
           "guardianAddress": "0x6CD72B1E6E300340A48943d6aF34EF5AE07D3577",
@@ -105,7 +105,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet AUSD Core",
-          "tokenAddress": "0x1b4cd53a1a8e5f50ab6320ef34e5fb4d3df7b6f6",
+          "tokenAddress": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x1b4cd53a1a8e5f50ab6320ef34e5fb4d3df7b6f6",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -115,7 +115,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital WBTC",
-          "tokenAddress": "0x1c530d6de70c05a81bf1670157b9d928e9699089",
+          "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x1c530d6de70c05a81bf1670157b9d928e9699089",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -125,7 +125,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet WETH Ecosystem",
-          "tokenAddress": "0x1e6ffa4e9f63d10b8820a3ab52566af881dab53c",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x1e6ffa4e9f63d10b8820a3ab52566af881dab53c",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -135,7 +135,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital USD0",
-          "tokenAddress": "0x20b8020cc34f7105be5605300fcca00728f0a5d1",
+          "tokenAddress": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x20b8020cc34f7105be5605300fcca00728f0a5d1",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -145,7 +145,7 @@
         {
           "chainId": 1,
           "name": "Apostro Resolv USDC",
-          "tokenAddress": "0x214b47c50057efaa7adc1b1c2608c3751cd77d78",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x214b47c50057efaa7adc1b1c2608c3751cd77d78",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -155,7 +155,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital Usual Boosted USDT",
-          "tokenAddress": "0x225c119ffaf1caddcfcdb493283edf4b816bf773",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x225c119ffaf1caddcfcdb493283edf4b816bf773",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -165,7 +165,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet WETH Prime",
-          "tokenAddress": "0x2371e134e3455e0593363cbf89d3b6cf53740618",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x2371e134e3455e0593363cbf89d3b6cf53740618",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -175,7 +175,7 @@
         {
           "chainId": 1,
           "name": "Morpho USD0",
-          "tokenAddress": "0x2a79e2c69ff4d3a50bf335153e4c09fa360f3386",
+          "tokenAddress": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x2a79e2c69ff4d3a50bf335153e4c09fa360f3386",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -185,7 +185,7 @@
         {
           "chainId": 1,
           "name": "Flagship USDT",
-          "tokenAddress": "0x2c25f6c25770ffec5959d34b94bf898865e5d6b1",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x2c25f6c25770ffec5959d34b94bf898865e5d6b1",
           "guardianAddress": "0xB5f28e67C616a183e4e8843358A185a57462556E",
@@ -195,7 +195,7 @@
         {
           "chainId": 1,
           "name": "APPX",
-          "tokenAddress": "0x2d8283b177d2e6ad92e09bdf13e10d1c2ce327d0",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x2d8283b177d2e6ad92e09bdf13e10d1c2ce327d0",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -205,7 +205,7 @@
         {
           "chainId": 1,
           "name": "Flagship USDC",
-          "tokenAddress": "0x2e52efab5be3c4aacdb832386f5a670fe1c60555",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x2e52efab5be3c4aacdb832386f5a670fe1c60555",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -215,7 +215,7 @@
         {
           "chainId": 1,
           "name": "Pendle WBTC",
-          "tokenAddress": "0x2f1abb81ed86be95bcf8178ba62c8e72d6834775",
+          "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x2f1abb81ed86be95bcf8178ba62c8e72d6834775",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -225,7 +225,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDR",
-          "tokenAddress": "0x30881baa943777f92dc934d53d3bfdf33382cab3",
+          "tokenAddress": "0x7B43E3875440B44613DC3bC08E7763e6Da63C8f8",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x30881baa943777f92dc934d53d3bfdf33382cab3",
           "guardianAddress": "0xAa5BD13E90428dCc33a5b367Cfebc7FFaB7E2d9e",
@@ -235,7 +235,7 @@
         {
           "chainId": 1,
           "name": "Flagship ETH",
-          "tokenAddress": "0x38989bba00bdf8181f4082995b3deae96163ac5d",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x38989bba00bdf8181f4082995b3deae96163ac5d",
           "guardianAddress": "0xB6F83824F267320a66850C59FE05d21cAb9C4D41",
@@ -245,7 +245,7 @@
         {
           "chainId": 1,
           "name": "",
-          "tokenAddress": "0x3d46c7bf79feddeec7d0c2939c0be35e4ffa2970",
+          "tokenAddress": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x3d46c7bf79feddeec7d0c2939c0be35e4ffa2970",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -255,7 +255,7 @@
         {
           "chainId": 1,
           "name": "Hakutora DAI",
-          "tokenAddress": "0x42d425fb918acbbd73b10b851979e8fc469b3e9a",
+          "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x42d425fb918acbbd73b10b851979e8fc469b3e9a",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -265,7 +265,7 @@
         {
           "chainId": 1,
           "name": "Re7 tBTC",
-          "tokenAddress": "0x43fd147d5319b8cf39a6e57143684efca9cf3613",
+          "tokenAddress": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x43fd147d5319b8cf39a6e57143684efca9cf3613",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -275,7 +275,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet WBTC Core",
-          "tokenAddress": "0x443df5eee3196e9b2dd77cabd3ea76c3dee8f9b2",
+          "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x443df5eee3196e9b2dd77cabd3ea76c3dee8f9b2",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -285,7 +285,7 @@
         {
           "chainId": 1,
           "name": "Relend Gold",
-          "tokenAddress": "0x45c1875f1c48622b3d9740af2d7dc62bc9a72422",
+          "tokenAddress": "0x2103E845C5E135493Bb6c2A4f0B8651956eA8682",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x45c1875f1c48622b3d9740af2d7dc62bc9a72422",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -295,7 +295,7 @@
         {
           "chainId": 1,
           "name": "Nova WETH Vault",
-          "tokenAddress": "0x47fe8ab9ee47dd65c24df52324181790b9f47efc",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x47fe8ab9ee47dd65c24df52324181790b9f47efc",
           "guardianAddress": "0xEB4Af6fA3AFA08B10d593EC8fF87efB03BC04645",
@@ -305,7 +305,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet LRT Core",
-          "tokenAddress": "0x4881ef0bf6d2365d3dd6499ccd7532bcdbce0658",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x4881ef0bf6d2365d3dd6499ccd7532bcdbce0658",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -315,7 +315,7 @@
         {
           "chainId": 1,
           "name": "LeadBlock USDC RWA",
-          "tokenAddress": "0x4ca0e178c94f039d7f202e09d8d1a655ed3fb6b6",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x4ca0e178c94f039d7f202e09d8d1a655ed3fb6b6",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -325,7 +325,7 @@
         {
           "chainId": 1,
           "name": "f(x) Protocol Morpho USDC",
-          "tokenAddress": "0x4f460bb11cf958606c69a963b4a17f9daeeea8b6",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x4f460bb11cf958606c69a963b4a17f9daeeea8b6",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -335,7 +335,7 @@
         {
           "chainId": 1,
           "name": "Anzen Boosted USDC",
-          "tokenAddress": "0x4fbb60166199d36dd2fb09005154f0938b6d717b",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x4fbb60166199d36dd2fb09005154f0938b6d717b",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -345,7 +345,7 @@
         {
           "chainId": 1,
           "name": "SwissBorg Morpho USDC",
-          "tokenAddress": "0x4ff4186188f8406917293a9e01a1ca16d3cf9e59",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x4ff4186188f8406917293a9e01a1ca16d3cf9e59",
           "guardianAddress": "0xAC15982Ca8A8e8BAc738FE492b84D8761B4384a3",
@@ -355,7 +355,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet DAI Core",
-          "tokenAddress": "0x500331c9ff24d9d11aee6b07734aa72343ea74a5",
+          "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x500331c9ff24d9d11aee6b07734aa72343ea74a5",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -365,7 +365,7 @@
         {
           "chainId": 1,
           "name": "Apostro Resolv USR",
-          "tokenAddress": "0x5085dd6fad07c12e38fae01bc2a4938d2c08b1bc",
+          "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x5085dd6fad07c12e38fae01bc2a4938d2c08b1bc",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -375,7 +375,7 @@
         {
           "chainId": 1,
           "name": "MaxEarn USDC",
-          "tokenAddress": "0x51056b3f809f4cfe17e1a8715b82f5dbbca5a5a1",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x51056b3f809f4cfe17e1a8715b82f5dbbca5a5a1",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -385,7 +385,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet MKR Blended",
-          "tokenAddress": "0x53675a75a0d6e5c13dbfb0d691ea679357ca5dda",
+          "tokenAddress": "0x9f8F72aA9304c8B593d555F12eF6589cC3A579A2",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x53675a75a0d6e5c13dbfb0d691ea679357ca5dda",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -395,7 +395,7 @@
         {
           "chainId": 1,
           "name": "Re7 USDC",
-          "tokenAddress": "0x60d715515d4411f7f43e4206dc5d4a3677f0ec78",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "200000000000000000",
           "vaultAddress": "0x60d715515d4411f7f43e4206dc5d4a3677f0ec78",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -405,7 +405,7 @@
         {
           "chainId": 1,
           "name": "Vertex USDC Investment Grade",
-          "tokenAddress": "0x6188c18cb1c9ef246adf4454cc184a84a4fc5465",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x6188c18cb1c9ef246adf4454cc184a84a4fc5465",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -415,7 +415,7 @@
         {
           "chainId": 1,
           "name": "LlamaRisk crvUSD Vault",
-          "tokenAddress": "0x67315dd969b8cd3a3520c245837bf71f54579c75",
+          "tokenAddress": "0xf939E0A03FB07F59A73314E73794Be0E57ac1b4E",
           "performanceFeePercentage": "200000000000000000",
           "vaultAddress": "0x67315dd969b8cd3a3520c245837bf71f54579c75",
           "guardianAddress": "0xaEe9Dda3198a0474d34CfaB56D7615d90A61c8AA",
@@ -425,7 +425,7 @@
         {
           "chainId": 1,
           "name": "Lumetra Opportunistic USDC",
-          "tokenAddress": "0x67e23a4bc1195d66326d07609c3f20ed9a0b87e4",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x67e23a4bc1195d66326d07609c3f20ed9a0b87e4",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -435,7 +435,7 @@
         {
           "chainId": 1,
           "name": "Metronome msUSD Vault",
-          "tokenAddress": "0x6859b34a9379122d25a9fa46f0882d434fee36c3",
+          "tokenAddress": "0xab5eB14c09D416F0aC63661E57EDB7AEcDb9BEfA",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x6859b34a9379122d25a9fa46f0882d434fee36c3",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -445,7 +445,7 @@
         {
           "chainId": 1,
           "name": "Hakutora WETH",
-          "tokenAddress": "0x6aca9d74215e9512d9608aff3e87dac0d9ce6218",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x6aca9d74215e9512d9608aff3e87dac0d9ce6218",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -455,7 +455,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDC RWA",
-          "tokenAddress": "0x6d4e530b8431a52ffda4516ba4aadc0951897f8c",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x6d4e530b8431a52ffda4516ba4aadc0951897f8c",
           "guardianAddress": "0xf419cd5eDDd3Ea5066FEAA00068353DC72B42d3B",
@@ -465,7 +465,7 @@
         {
           "chainId": 1,
           "name": "Index Coop hyETH",
-          "tokenAddress": "0x701907283a57ff77e255c3f1aad790466b8ce4ef",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x701907283a57ff77e255c3f1aad790466b8ce4ef",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -475,7 +475,7 @@
         {
           "chainId": 1,
           "name": "Coinshift USDC",
-          "tokenAddress": "0x7204b7dbf9412567835633b6f00c3edc3a8d6330",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x7204b7dbf9412567835633b6f00c3edc3a8d6330",
           "guardianAddress": "0x8949f991EAB43d69B78c1d2fF2C9C047373d5730",
@@ -485,7 +485,7 @@
         {
           "chainId": 1,
           "name": "Spark DAI Vault",
-          "tokenAddress": "0x73e65dbd630f90604062f6e02fab9138e713edd9",
+          "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x73e65dbd630f90604062f6e02fab9138e713edd9",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -495,7 +495,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital USD0",
-          "tokenAddress": "0x749794e985af5a9a384b9cee6d88dab4ce1576a1",
+          "tokenAddress": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x749794e985af5a9a384b9cee6d88dab4ce1576a1",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -505,7 +505,7 @@
         {
           "chainId": 1,
           "name": "Caramila Capital USDC",
-          "tokenAddress": "0x7526e974d8a8469d29ee606630215245287a07bf",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x7526e974d8a8469d29ee606630215245287a07bf",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -515,7 +515,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse EURCV",
-          "tokenAddress": "0x75741a12b36d181f44f389e0c6b1e0210311e3ff",
+          "tokenAddress": "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x75741a12b36d181f44f389e0c6b1e0210311e3ff",
           "guardianAddress": "0x82c79B5bF298DE4AEc73CbFb248502Ba248fC36A",
@@ -525,7 +525,7 @@
         {
           "chainId": 1,
           "name": "Metronome msETH Vault",
-          "tokenAddress": "0x78b18e07dc43017fceaabad0751d6464c0f56b25",
+          "tokenAddress": "0x64351fC9810aDAd17A690E4e1717Df5e7e085160",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x78b18e07dc43017fceaabad0751d6464c0f56b25",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -535,7 +535,7 @@
         {
           "chainId": 1,
           "name": "Re7 WETH",
-          "tokenAddress": "0x78fc2c2ed1a4cdb5402365934ae5648adad094d0",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "200000000000000000",
           "vaultAddress": "0x78fc2c2ed1a4cdb5402365934ae5648adad094d0",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -545,7 +545,7 @@
         {
           "chainId": 1,
           "name": "",
-          "tokenAddress": "0x79fd640000f8563a866322483524a4b48f1ed702",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x79fd640000f8563a866322483524a4b48f1ed702",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -555,7 +555,7 @@
         {
           "chainId": 1,
           "name": "MAHA.xyz ZAI Vault",
-          "tokenAddress": "0x7f172587b13f85992e8d36c1d8723dfd1bdd931e",
+          "tokenAddress": "0x6900057428C99Fb373397D657Beb40D92D8aC97f",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x7f172587b13f85992e8d36c1d8723dfd1bdd931e",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -565,7 +565,7 @@
         {
           "chainId": 1,
           "name": "Smokehouse WSTETH",
-          "tokenAddress": "0x833adaef212c5cd3f78906b44bbfb18258f238f0",
+          "tokenAddress": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x833adaef212c5cd3f78906b44bbfb18258f238f0",
           "guardianAddress": "0xc7645103984F27fb2221E16bFb6b4d650Ea03695",
@@ -575,7 +575,7 @@
         {
           "chainId": 1,
           "name": "Nova WETH Vault",
-          "tokenAddress": "0x89610f2125a54547a7fb2a1b7926be734a632255",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x89610f2125a54547a7fb2a1b7926be734a632255",
           "guardianAddress": "0xEB4Af6fA3AFA08B10d593EC8fF87efB03BC04645",
@@ -585,7 +585,7 @@
         {
           "chainId": 1,
           "name": "Re7 USDA",
-          "tokenAddress": "0x89d80f5e9bc88d8021b352064ae73f0eaf79ebd8",
+          "tokenAddress": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x89d80f5e9bc88d8021b352064ae73f0eaf79ebd8",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -595,7 +595,7 @@
         {
           "chainId": 1,
           "name": "ZAI Stablecoin Vault",
-          "tokenAddress": "0x8a0d114b72a5ba5abf37283ef98708945db4423e",
+          "tokenAddress": "0x69000405f9DcE69BD4Cbf4f2865b79144A69BFE0",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x8a0d114b72a5ba5abf37283ef98708945db4423e",
           "guardianAddress": "0x6357EDbfE5aDA570005ceB8FAd3139eF5A8863CC",
@@ -605,7 +605,7 @@
         {
           "chainId": 1,
           "name": "Scented DAI",
-          "tokenAddress": "0x8be3f517a3382ec57a730c41b739717b214b375d",
+          "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x8be3f517a3382ec57a730c41b739717b214b375d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -615,7 +615,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet USDT Prime",
-          "tokenAddress": "0x8cb3649114051ca5119141a34c200d65dc0faa73",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x8cb3649114051ca5119141a34c200d65dc0faa73",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -625,7 +625,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital WBTC",
-          "tokenAddress": "0x8e3c0a68f8065dc666065f16cf902596a60d540e",
+          "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x8e3c0a68f8065dc666065f16cf902596a60d540e",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -635,7 +635,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet USDC Core",
-          "tokenAddress": "0x8eb67a509616cd6a7c1b3c8c21d48ff57df3d458",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x8eb67a509616cd6a7c1b3c8c21d48ff57df3d458",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -645,7 +645,7 @@
         {
           "chainId": 1,
           "name": "Re7 USDT",
-          "tokenAddress": "0x95eef579155cd2c5510f312c8fa39208c3be01a8",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x95eef579155cd2c5510f312c8fa39208c3be01a8",
           "guardianAddress": "0x2F80ba89362f86a9acC71BFfE5EcF4997F52BDd4",
@@ -655,7 +655,7 @@
         {
           "chainId": 1,
           "name": "Hakutora USDC",
-          "tokenAddress": "0x974c8fbf4fd795f66b85b73ebc988a51f1a040a9",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x974c8fbf4fd795f66b85b73ebc988a51f1a040a9",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -665,7 +665,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital cbBTC",
-          "tokenAddress": "0x98cf0b67da0f16e1f8f1a1d23ad8dc64c0c70e0b",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x98cf0b67da0f16e1f8f1a1d23ad8dc64c0c70e0b",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -675,7 +675,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital wETH",
-          "tokenAddress": "0x9a8bc3b04b7f3d87cfc09ba407dced575f2d61d8",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x9a8bc3b04b7f3d87cfc09ba407dced575f2d61d8",
           "guardianAddress": "0x777498D046d593F747Fd5884A73B3b9964479711",
@@ -685,7 +685,7 @@
         {
           "chainId": 1,
           "name": "Re7 cbBTC",
-          "tokenAddress": "0xa02f5e93f783baf150aa1f8b341ae90fe0a772f7",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xa02f5e93f783baf150aa1f8b341ae90fe0a772f7",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -695,7 +695,7 @@
         {
           "chainId": 1,
           "name": "Smokehouse USDT",
-          "tokenAddress": "0xa0804346780b4c2e3be118ac957d1db82f9d7484",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xa0804346780b4c2e3be118ac957d1db82f9d7484",
           "guardianAddress": "0x4fCD92bF530abdEb5Eb7413A63a8EB8F5a62C1dD",
@@ -705,7 +705,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDQ",
-          "tokenAddress": "0xa1b60d96e5c50da627095b9381dc5a46af1a9a42",
+          "tokenAddress": "0xc83e27f270cce0A3A3A29521173a83F402c1768b",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xa1b60d96e5c50da627095b9381dc5a46af1a9a42",
           "guardianAddress": "0x245840748267c05E007Fb19eD0cA95F71511EfEd",
@@ -715,7 +715,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse M",
-          "tokenAddress": "0xa5aa40f27daede9748822ef836170f202e196b5a",
+          "tokenAddress": "0x437cc33344a0B27A429f795ff6B469C72698B291",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xa5aa40f27daede9748822ef836170f202e196b5a",
           "guardianAddress": "0x1CFbF651B41Eb770EbCB20213c0Cad9dBf8886f0",
@@ -725,7 +725,7 @@
         {
           "chainId": 1,
           "name": "Hakutora USDT",
-          "tokenAddress": "0xa71d08a159258553a5ac190d60fa919425ff02ea",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xa71d08a159258553a5ac190d60fa919425ff02ea",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -735,7 +735,7 @@
         {
           "chainId": 1,
           "name": "Nova fxUSD Vault",
-          "tokenAddress": "0xa79a5fb6f619da3ed71087fb5cd33b16a5b666b5",
+          "tokenAddress": "0x085780639CC2cACd35E474e71f4d000e2405d8f6",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xa79a5fb6f619da3ed71087fb5cd33b16a5b666b5",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -745,7 +745,7 @@
         {
           "chainId": 1,
           "name": "Midas USDC",
-          "tokenAddress": "0xa8875aaebc4f830524e35d57f9772ffacbdd6c45",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xa8875aaebc4f830524e35d57f9772ffacbdd6c45",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -755,7 +755,7 @@
         {
           "chainId": 1,
           "name": "Apostro WETH",
-          "tokenAddress": "0xb1a757a68d4a04a6b5a0f06d0cb4fd739048f614",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xb1a757a68d4a04a6b5a0f06d0cb4fd739048f614",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -765,7 +765,7 @@
         {
           "chainId": 1,
           "name": "Spark DAI Vault",
-          "tokenAddress": "0xb8c7f2a4b3bf76cc04bd55ebc259b33a67b3b36d",
+          "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xb8c7f2a4b3bf76cc04bd55ebc259b33a67b3b36d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -775,7 +775,7 @@
         {
           "chainId": 1,
           "name": "Relend cbBTC",
-          "tokenAddress": "0xb9c9158ab81f90996cad891ffbadfbaad733c8c6",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xb9c9158ab81f90996cad891ffbadfbaad733c8c6",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -785,7 +785,7 @@
         {
           "chainId": 1,
           "name": "Hakutora cbBTC",
-          "tokenAddress": "0xba04de02ed8cecc3befb8575a95d56d901c9c602",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xba04de02ed8cecc3befb8575a95d56d901c9c602",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -795,7 +795,7 @@
         {
           "chainId": 1,
           "name": "ZAI Vault (MAHA.xyz)",
-          "tokenAddress": "0xbd4073e6e929f197a9d18e22a68c276e8b400375",
+          "tokenAddress": "0x69000dFD5025E82f48Eb28325A2B88a241182CEd",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbd4073e6e929f197a9d18e22a68c276e8b400375",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -805,7 +805,7 @@
         {
           "chainId": 1,
           "name": "Re7 FRAX",
-          "tokenAddress": "0xbe40491f3261fd42724f1aeb465796eb11c06ddf",
+          "tokenAddress": "0x853d955aCEf822Db058eb8505911ED77F175b99e",
           "performanceFeePercentage": "20000000000000000",
           "vaultAddress": "0xbe40491f3261fd42724f1aeb465796eb11c06ddf",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -815,7 +815,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse M",
-          "tokenAddress": "0xbeef0075e03a5ce0d84d4accf3481363e0584f5c",
+          "tokenAddress": "0x437cc33344a0B27A429f795ff6B469C72698B291",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef0075e03a5ce0d84d4accf3481363e0584f5c",
           "guardianAddress": "0xB5fF1b5c809dA5A89d4C031bB016c8ebd5b3D9bB",
@@ -825,7 +825,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDC",
-          "tokenAddress": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
           "guardianAddress": "0xaa0500198B4425DfC4E272FbE42C8E64E21fc03d",
@@ -835,7 +835,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse PYUSD",
-          "tokenAddress": "0xbeef02e5e13584ab96848af90261f0c8ee04722a",
+          "tokenAddress": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef02e5e13584ab96848af90261f0c8ee04722a",
           "guardianAddress": "0xCcFd0E9CEC732fb839fadDeCc72B6154530bC90f",
@@ -845,7 +845,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDM",
-          "tokenAddress": "0xbeef033b4520267c5acfcb45414117b633fcb3dd",
+          "tokenAddress": "0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xbeef033b4520267c5acfcb45414117b633fcb3dd",
           "guardianAddress": "0x1b2d4dc305eC01f8afFF2b82a5F993f82F09EE32",
@@ -855,7 +855,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDT",
-          "tokenAddress": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
           "guardianAddress": "0xaeC761545Fd135db6d04D27C92BCB3951668c67F",
@@ -865,7 +865,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse ETH",
-          "tokenAddress": "0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4",
           "guardianAddress": "0x4ef090B2c36b34974e244f3699DF998e2b9D4FE9",
@@ -875,7 +875,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse EURe",
-          "tokenAddress": "0xbeef06e7027eb8a1f0ab6cef743542ea31b8492b",
+          "tokenAddress": "0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeef06e7027eb8a1f0ab6cef743542ea31b8492b",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -885,7 +885,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse EURCV",
-          "tokenAddress": "0xbeef07e929f84466a591de130e4154667214f491",
+          "tokenAddress": "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef07e929f84466a591de130e4154667214f491",
           "guardianAddress": "0xCB461d249d6f751233BCCD09a9f0c2aC0685F1f5",
@@ -895,7 +895,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse EURC",
-          "tokenAddress": "0xbeef087c8430c0f9dcba39ba866eb7c22200599b",
+          "tokenAddress": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeef087c8430c0f9dcba39ba866eb7c22200599b",
           "guardianAddress": "0x17a1af46FcDB02EB389e33Ec7088702e79939f40",
@@ -905,7 +905,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse WBTC",
-          "tokenAddress": "0xbeef094333aedd535c130958c204e84f681fd9fa",
+          "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef094333aedd535c130958c204e84f681fd9fa",
           "guardianAddress": "0x435fB04bBcD0086134236596C8e9435763c97491",
@@ -915,7 +915,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse RUSD",
-          "tokenAddress": "0xbeef11ecb698f4b5378685c05a210bdf71093521",
+          "tokenAddress": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeef11ecb698f4b5378685c05a210bdf71093521",
           "guardianAddress": "0x4E8a4894275780f571AaD53122e641D9f50Ff04f",
@@ -925,7 +925,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDC RWA",
-          "tokenAddress": "0xbeef6806363b51a90ffd1a632a8de32873b63a9e",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeef6806363b51a90ffd1a632a8de32873b63a9e",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -935,7 +935,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse PAXG",
-          "tokenAddress": "0xbeef7959ae71d4e45e1863dae0b94c35244af816",
+          "tokenAddress": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef7959ae71d4e45e1863dae0b94c35244af816",
           "guardianAddress": "0x5148Db8942C69A431167C1B7FA7590c15DF934f1",
@@ -945,7 +945,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse PAXG",
-          "tokenAddress": "0xbeef796ae50ba5423857cac27dd36369cfc8241b",
+          "tokenAddress": "0x45804880De22913dAFE09f4980848ECE6EcbAf78",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeef796ae50ba5423857cac27dd36369cfc8241b",
           "guardianAddress": "0xe6359B966f35975575699188f8d893f30fC46Beb",
@@ -955,7 +955,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDA",
-          "tokenAddress": "0xbeefa1abfebe621df50ceaef9f54fdb73648c92c",
+          "tokenAddress": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeefa1abfebe621df50ceaef9f54fdb73648c92c",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -965,7 +965,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse EURA",
-          "tokenAddress": "0xbeefa260c2ce39122367ceab0b4f94e6068cacb6",
+          "tokenAddress": "0x1a7e4e63778B4f12a199C062f3eFdD288afCBce8",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeefa260c2ce39122367ceab0b4f94e6068cacb6",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -975,7 +975,7 @@
         {
           "chainId": 1,
           "name": "Coinshift USDL",
-          "tokenAddress": "0xbeefc011e94f43b8b7b455ebab290c7ab4e216f1",
+          "tokenAddress": "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeefc011e94f43b8b7b455ebab290c7ab4e216f1",
           "guardianAddress": "0x28066D14e9176cDE5C01Bf5Fd087e4E6B6525f72",
@@ -985,7 +985,7 @@
         {
           "chainId": 1,
           "name": "Coinshift USDL",
-          "tokenAddress": "0xbeefc01767ed5086f35decb6c00e6c12bc7476c1",
+          "tokenAddress": "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeefc01767ed5086f35decb6c00e6c12bc7476c1",
           "guardianAddress": "0x99C7f05e40B0fD928a264B6D55AaB2Ed05186FF3",
@@ -995,7 +995,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDL",
-          "tokenAddress": "0xbeefd1c0c6c1f7c94dc6b989dba2e983a47a26a8",
+          "tokenAddress": "0x7751E2F4b8ae93EF6B79d86419d42FE3295A4559",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xbeefd1c0c6c1f7c94dc6b989dba2e983a47a26a8",
           "guardianAddress": "0x081f3646B924610EB9a9CF46c68C44Ea8d96Db46",
@@ -1005,7 +1005,7 @@
         {
           "chainId": 1,
           "name": "Steakhouse USDS",
-          "tokenAddress": "0xbeefda19bc6114633fc17e6d074a6a2b472c756f",
+          "tokenAddress": "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeefda19bc6114633fc17e6d074a6a2b472c756f",
           "guardianAddress": "0x8992599E83DFEda520144caEC1e24fB88FE3e781",
@@ -1015,7 +1015,7 @@
         {
           "chainId": 1,
           "name": "Smokehouse USDC",
-          "tokenAddress": "0xbeefff209270748ddd194831b3fa287a5386f5bc",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeefff209270748ddd194831b3fa287a5386f5bc",
           "guardianAddress": "0x94aa34975987119197e53e760AF1ee5aC80A27D3",
@@ -1025,7 +1025,7 @@
         {
           "chainId": 1,
           "name": "Smokehouse DAI",
-          "tokenAddress": "0xbeefff68cc520d68f82641eff84330c631e2490e",
+          "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeefff68cc520d68f82641eff84330c631e2490e",
           "guardianAddress": "0xbdb791B5D2c61Ab8C2CcAC3cB802Ce8679b7a36b",
@@ -1035,7 +1035,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet eUSD Core",
-          "tokenAddress": "0xc080f56504e0278828a403269db945f6c6d6e014",
+          "tokenAddress": "0xA0d69E286B938e21CBf7E51D71F6A4c8918f482F",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xc080f56504e0278828a403269db945f6c6d6e014",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -1045,7 +1045,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital USD0",
-          "tokenAddress": "0xc0a14627d6a23f70c809777ced873238581c1032",
+          "tokenAddress": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xc0a14627d6a23f70c809777ced873238581c1032",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1055,7 +1055,7 @@
         {
           "chainId": 1,
           "name": "testUSDCVault2",
-          "tokenAddress": "0xc1d3e596984982bfbaefc85387107c26c319e465",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xc1d3e596984982bfbaefc85387107c26c319e465",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1065,7 +1065,7 @@
         {
           "chainId": 1,
           "name": "EUR Real Yield",
-          "tokenAddress": "0xc21db71648b18c5b9e038d88393c9b254cf8eac8",
+          "tokenAddress": "0x3231Cb76718CDeF2155FC47b5286d82e6eDA273f",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xc21db71648b18c5b9e038d88393c9b254cf8eac8",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1075,7 +1075,7 @@
         {
           "chainId": 1,
           "name": "IndexCoop hyETH",
-          "tokenAddress": "0xc554929a61d862f2741077f8aafa147479c0b308",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xc554929a61d862f2741077f8aafa147479c0b308",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1085,7 +1085,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet USDC Frontier",
-          "tokenAddress": "0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -1095,7 +1095,7 @@
         {
           "chainId": 1,
           "name": "Hakutora WBTC",
-          "tokenAddress": "0xc82b74bc114d7e2d4047ccf14f7a6109b654ab91",
+          "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xc82b74bc114d7e2d4047ccf14f7a6109b654ab91",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1105,7 +1105,7 @@
         {
           "chainId": 1,
           "name": "",
-          "tokenAddress": "0xd05ca07a28573437a148f9d589aa5a4c7fd63e6e",
+          "tokenAddress": "0xa3931d71877C0E7a3148CB7Eb4463524FEc27fbD",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xd05ca07a28573437a148f9d589aa5a4c7fd63e6e",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1115,7 +1115,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital Resolv USR",
-          "tokenAddress": "0xd50da5f859811a91fd1876c9461fd39c23c747ad",
+          "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xd50da5f859811a91fd1876c9461fd39c23c747ad",
           "guardianAddress": "0x6e9d65eC80D69b1f508560Bc7aeA5003db1f7FB7",
@@ -1125,7 +1125,7 @@
         {
           "chainId": 1,
           "name": "9Summits USDC Core",
-          "tokenAddress": "0xd5ac156319f2491d4ad1ec4aa5ed0ed48c0fa173",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xd5ac156319f2491d4ad1ec4aa5ed0ed48c0fa173",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1135,7 +1135,7 @@
         {
           "chainId": 1,
           "name": " Usual Boosted USDC",
-          "tokenAddress": "0xd63070114470f685b75b74d60eec7c1113d33a3d",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xd63070114470f685b75b74d60eec7c1113d33a3d",
           "guardianAddress": "0x6e9d65eC80D69b1f508560Bc7aeA5003db1f7FB7",
@@ -1145,7 +1145,7 @@
         {
           "chainId": 1,
           "name": "RiskDAO DAI Core",
-          "tokenAddress": "0xda1f00d47054a1807f6bf2403ce48a14d894a18b",
+          "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xda1f00d47054a1807f6bf2403ce48a14d894a18b",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1155,7 +1155,7 @@
         {
           "chainId": 1,
           "name": "SolvBTC Babylon Vault",
-          "tokenAddress": "0xdbb316375b4dc992b2c8827d120c09dfb1d3455d",
+          "tokenAddress": "0xd9D920AA40f578ab794426F5C90F6C731D159DEf",
           "performanceFeePercentage": "200000000000000000",
           "vaultAddress": "0xdbb316375b4dc992b2c8827d120c09dfb1d3455d",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -1165,7 +1165,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet LBTC Core",
-          "tokenAddress": "0xdc94785959b73f7a168452b3654e44fec6a750e4",
+          "tokenAddress": "0x8236a87084f8B84306f72007F36F2618A5634494",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xdc94785959b73f7a168452b3654e44fec6a750e4",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -1175,7 +1175,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet USDC Prime",
-          "tokenAddress": "0xdd0f28e19c1780eb6396170735d45153d261490d",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xdd0f28e19c1780eb6396170735d45153d261490d",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -1185,7 +1185,7 @@
         {
           "chainId": 1,
           "name": "",
-          "tokenAddress": "0xdd5b53a4c95e81f5c26c31640901ae935711025b",
+          "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xdd5b53a4c95e81f5c26c31640901ae935711025b",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1195,7 +1195,7 @@
         {
           "chainId": 1,
           "name": "Re7 WBTC",
-          "tokenAddress": "0xe0c98605f279e4d7946d25b75869c69802823763",
+          "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xe0c98605f279e4d7946d25b75869c69802823763",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1205,7 +1205,7 @@
         {
           "chainId": 1,
           "name": "",
-          "tokenAddress": "0xe11dbbce9d0bfbe919a8427c3ae5e04e9572cf68",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xe11dbbce9d0bfbe919a8427c3ae5e04e9572cf68",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1215,7 +1215,7 @@
         {
           "chainId": 1,
           "name": "Re7 wstETH",
-          "tokenAddress": "0xe87ed29896b91421ff43f69257abf78300e40c7a",
+          "tokenAddress": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
           "performanceFeePercentage": "200000000000000000",
           "vaultAddress": "0xe87ed29896b91421ff43f69257abf78300e40c7a",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1225,7 +1225,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet MKR Blended",
-          "tokenAddress": "0xebfa750279defa89b8d99bdd145a016f6292757b",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xebfa750279defa89b8d99bdd145a016f6292757b",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1235,7 +1235,7 @@
         {
           "chainId": 1,
           "name": "PufEthWeth Market 86 lltv",
-          "tokenAddress": "0xec3b2cc4c6a8fc9a13620a91622483b56e2e6fd9",
+          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xec3b2cc4c6a8fc9a13620a91622483b56e2e6fd9",
           "guardianAddress": "0x92Ae2d908a647241eEb77A4b4DA065803bbA46b9",
@@ -1245,7 +1245,7 @@
         {
           "chainId": 1,
           "name": "Apostro USDC",
-          "tokenAddress": "0xf2efebe45180c8c04edfdbff3d88e58c9d61a03e",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xf2efebe45180c8c04edfdbff3d88e58c9d61a03e",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -1255,7 +1255,7 @@
         {
           "chainId": 1,
           "name": "Gauntlet cbBTC Core",
-          "tokenAddress": "0xf587f2e8aff7d76618d3b6b4626621860fbd54e3",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xf587f2e8aff7d76618d3b6b4626621860fbd54e3",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -1265,7 +1265,7 @@
         {
           "chainId": 1,
           "name": "MEV Capital M^0 Vault",
-          "tokenAddress": "0xfbdee8670b273e12b019210426e70091464b02ab",
+          "tokenAddress": "0x437cc33344a0B27A429f795ff6B469C72698B291",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xfbdee8670b273e12b019210426e70091464b02ab",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5846,7 +5846,7 @@
         {
           "chainId": 8453,
           "name": "Re7 cdxUSD",
-          "tokenAddress": "0x004ff85f887aa612cfdaf4b7a19b10eacfab32f2",
+          "tokenAddress": "0xC0D3700000987C99b3C9009069E4f8413fD22330",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x004ff85f887aa612cfdaf4b7a19b10eacfab32f2",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5856,7 +5856,7 @@
         {
           "chainId": 8453,
           "name": "Kvass ETH",
-          "tokenAddress": "0x07eac93b30187093e3c3f654047924cc760c9669",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x07eac93b30187093e3c3f654047924cc760c9669",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5866,7 +5866,7 @@
         {
           "chainId": 8453,
           "name": "Gauntlet LBTC Core",
-          "tokenAddress": "0x0d05e6ec0a10f9ffe9229eaa785c11606a1d13fb",
+          "tokenAddress": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x0d05e6ec0a10f9ffe9229eaa785c11606a1d13fb",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -5876,7 +5876,7 @@
         {
           "chainId": 8453,
           "name": "TestUSDCsnARS",
-          "tokenAddress": "0x0e95a6571c39a0f707ed89fb2791f64e57f900c7",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x0e95a6571c39a0f707ed89fb2791f64e57f900c7",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5886,7 +5886,7 @@
         {
           "chainId": 8453,
           "name": "Glocusent USDC weETH",
-          "tokenAddress": "0x0eee72d8229c7973b6924a42954287d0d2a1e0e8",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x0eee72d8229c7973b6924a42954287d0d2a1e0e8",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5896,7 +5896,7 @@
         {
           "chainId": 8453,
           "name": "Pyth USDC",
-          "tokenAddress": "0x0fabfeacedf47e890c50c8120177fff69c6a1d9b",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x0fabfeacedf47e890c50c8120177fff69c6a1d9b",
           "guardianAddress": "0x8f9A074EA60042A684DC263c42C43eA185C59E7a",
@@ -5906,7 +5906,7 @@
         {
           "chainId": 8453,
           "name": "Spark USDS Vault",
-          "tokenAddress": "0x0ffdece791c5a2cb947f8ddbab489e5c02c6d4f7",
+          "tokenAddress": "0x820C137fa70C8691f0e44Dc420a5e53c168921Dc",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x0ffdece791c5a2cb947f8ddbab489e5c02c6d4f7",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5916,7 +5916,7 @@
         {
           "chainId": 8453,
           "name": "MEV Capital USDC",
-          "tokenAddress": "0x1108ba213483911f063e5a649199c87fa7ba8429",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x1108ba213483911f063e5a649199c87fa7ba8429",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5926,7 +5926,7 @@
         {
           "chainId": 8453,
           "name": "Re7 USDC",
-          "tokenAddress": "0x12afdefb2237a5963e7bab3e2d46ad0eee70406e",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x12afdefb2237a5963e7bab3e2d46ad0eee70406e",
           "guardianAddress": "0x8f66CA7d50c964d4Ab23816877C6Ea3653744205",
@@ -5936,7 +5936,7 @@
         {
           "chainId": 8453,
           "name": "Testmbr",
-          "tokenAddress": "0x13b6441f276255b0125d06aa934079ca8a3c2557",
+          "tokenAddress": "0xFD5D4dca18d565CaD0Fb1064d61c3dd4D9f286aa",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x13b6441f276255b0125d06aa934079ca8a3c2557",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5946,7 +5946,7 @@
         {
           "chainId": 8453,
           "name": "Jarvis jEUR",
-          "tokenAddress": "0x13f9e48e5240ba49f1f1838c81c6eb79c27fd467",
+          "tokenAddress": "0x4154550f4Db74Dc38d1FE98e1F3F28ed6daD627d",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x13f9e48e5240ba49f1f1838c81c6eb79c27fd467",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5956,7 +5956,7 @@
         {
           "chainId": 8453,
           "name": "Nekodex USDC Morpho Vault",
-          "tokenAddress": "0x1491cba488bcf3dc3762558323806a005d009a36",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x1491cba488bcf3dc3762558323806a005d009a36",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5966,7 +5966,7 @@
         {
           "chainId": 8453,
           "name": "Glocusent WETHWEETH",
-          "tokenAddress": "0x1a2970dac83a3ce5a8c6ecaa4fe0616724717c82",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x1a2970dac83a3ce5a8c6ecaa4fe0616724717c82",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5976,7 +5976,7 @@
         {
           "chainId": 8453,
           "name": "Gauntlet EURC Core",
-          "tokenAddress": "0x1c155be6bc51f2c37d472d4c2eba7a637806e122",
+          "tokenAddress": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x1c155be6bc51f2c37d472d4c2eba7a637806e122",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -5986,7 +5986,7 @@
         {
           "chainId": 8453,
           "name": "mmTestUSDC",
-          "tokenAddress": "0x1dd5e4a1bbd6105bf9f75a963df2b928c2aa5391",
+          "tokenAddress": "0xBC77067f829979812d795d516E523C4033b66409",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x1dd5e4a1bbd6105bf9f75a963df2b928c2aa5391",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -5996,7 +5996,7 @@
         {
           "chainId": 8453,
           "name": "Ionic Ecosystem USDC",
-          "tokenAddress": "0x23479229e52ab6aad312d0b03df9f33b46753b5e",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x23479229e52ab6aad312d0b03df9f33b46753b5e",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6006,7 +6006,7 @@
         {
           "chainId": 8453,
           "name": "Seamless WETH Vault",
-          "tokenAddress": "0x27d8c7273fd3fcc6956a0b370ce5fd4a7fc65c18",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x27d8c7273fd3fcc6956a0b370ce5fd4a7fc65c18",
           "guardianAddress": "0xdA57deF26DB6b0AaafAa85D53c15c76F77220F87",
@@ -6016,7 +6016,7 @@
         {
           "chainId": 8453,
           "name": "Basils Vault",
-          "tokenAddress": "0x291d8050ab47e81204bf380ec9c40780c0cace11",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x291d8050ab47e81204bf380ec9c40780c0cace11",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6026,7 +6026,7 @@
         {
           "chainId": 8453,
           "name": "testMetaMorphoUSDC",
-          "tokenAddress": "0x305a22602d0f6bcd14adcc59555a36b0c9c3d76d",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x305a22602d0f6bcd14adcc59555a36b0c9c3d76d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6036,7 +6036,7 @@
         {
           "chainId": 8453,
           "name": "Spark USDC Vault",
-          "tokenAddress": "0x305e03ed9adaab22f4a58c24515d79f2b1e2fd5d",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x305e03ed9adaab22f4a58c24515d79f2b1e2fd5d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6046,7 +6046,7 @@
         {
           "chainId": 8453,
           "name": "Morpho MAI",
-          "tokenAddress": "0x30b8a2c8e7fa41e77b54b8faf45c610e7ad909e3",
+          "tokenAddress": "0xbf1aeA8670D2528E08334083616dD9C5F3B087aE",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x30b8a2c8e7fa41e77b54b8faf45c610e7ad909e3",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6056,7 +6056,7 @@
         {
           "chainId": 8453,
           "name": "Spark USDC Vault",
-          "tokenAddress": "0x32ed54e24f0b00f2de08b9c34e50db8aef4a6706",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x32ed54e24f0b00f2de08b9c34e50db8aef4a6706",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6066,7 +6066,7 @@
         {
           "chainId": 8453,
           "name": "Monarch M1",
-          "tokenAddress": "0x346aac1e83239db6a6cb760e95e13258ad3d1a6d",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x346aac1e83239db6a6cb760e95e13258ad3d1a6d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6076,7 +6076,7 @@
         {
           "chainId": 8453,
           "name": "LayerZero vault by fran6.eth",
-          "tokenAddress": "0x34959fe3f07abcfd6a159c09e2443e151526078a",
+          "tokenAddress": "0x6985884C4392D348587B19cb9eAAf157F13271cd",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x34959fe3f07abcfd6a159c09e2443e151526078a",
           "guardianAddress": "0xB0Aa56926bE166Bcc5FB6Cf1169f56d9Fd7A25d7",
@@ -6086,7 +6086,7 @@
         {
           "chainId": 8453,
           "name": "TestUSDcVault2",
-          "tokenAddress": "0x35f49b9443862d667c39673258a7f026f511c5f5",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x35f49b9443862d667c39673258a7f026f511c5f5",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6096,7 +6096,7 @@
         {
           "chainId": 8453,
           "name": "testdnu",
-          "tokenAddress": "0x3849ee776bde7b20b6b09e519136a256e6d25474",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x3849ee776bde7b20b6b09e519136a256e6d25474",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6106,7 +6106,7 @@
         {
           "chainId": 8453,
           "name": "do not use",
-          "tokenAddress": "0x3ea3bf1a1e543d1d5d17e145e870c9efd3f9f283",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x3ea3bf1a1e543d1d5d17e145e870c9efd3f9f283",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6116,7 +6116,7 @@
         {
           "chainId": 8453,
           "name": "Yearn USDC",
-          "tokenAddress": "0x410eb011542fe96a822c29fb0d4a26d8135b5084",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x410eb011542fe96a822c29fb0d4a26d8135b5084",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6126,7 +6126,7 @@
         {
           "chainId": 8453,
           "name": "Re7 wstETH",
-          "tokenAddress": "0x43338cc9c514952ebc9c36a842acec986ec7cedb",
+          "tokenAddress": "0xc1CBa3fCea344f92D9239c08C0568f6F2F0ee452",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x43338cc9c514952ebc9c36a842acec986ec7cedb",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6136,7 +6136,7 @@
         {
           "chainId": 8453,
           "name": "Metronome msETH Vault",
-          "tokenAddress": "0x43cd00de63485618a5ceebe0de364cd6cbeb26e7",
+          "tokenAddress": "0x7Ba6F01772924a82D9626c126347A28299E98c98",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x43cd00de63485618a5ceebe0de364cd6cbeb26e7",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6146,7 +6146,7 @@
         {
           "chainId": 8453,
           "name": "wUSDR Market",
-          "tokenAddress": "0x477966a2afe996dfc40bfedd7f5f8a3dedea5af2",
+          "tokenAddress": "0xd9aAEc86B65D86f6A7B5B1b0c42FFA531710b6CA",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x477966a2afe996dfc40bfedd7f5f8a3dedea5af2",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6156,7 +6156,7 @@
         {
           "chainId": 8453,
           "name": "TEST DTF Vault",
-          "tokenAddress": "0x4acf04037dbc98ea0823a8a79467408034740ecb",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x4acf04037dbc98ea0823a8a79467408034740ecb",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6166,7 +6166,7 @@
         {
           "chainId": 8453,
           "name": "MT",
-          "tokenAddress": "0x4b7aed325fa8a7e469157b8449afe5cdd7f87dc6",
+          "tokenAddress": "0xEC7De4956A4569C2a1D171e4dD115a611c8e9eE5",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x4b7aed325fa8a7e469157b8449afe5cdd7f87dc6",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6176,7 +6176,7 @@
         {
           "chainId": 8453,
           "name": "EuroMetaMorpho",
-          "tokenAddress": "0x4dbd80f8029d5264fac0b57a16ac54de512be45a",
+          "tokenAddress": "0x4154550f4Db74Dc38d1FE98e1F3F28ed6daD627d",
           "performanceFeePercentage": "200000000000000000",
           "vaultAddress": "0x4dbd80f8029d5264fac0b57a16ac54de512be45a",
           "guardianAddress": "0xc71E2B0F787D6Be1B4d85c53aBD2CCCE85683500",
@@ -6186,7 +6186,7 @@
         {
           "chainId": 8453,
           "name": "aUSDC Test Vault 1",
-          "tokenAddress": "0x4df778b23a6e4d1e3d15b68ee6ac0e0cc5a2db93",
+          "tokenAddress": "0xAB8debaEC1eF6Ae0D8B6c20076D1cc47AE3d62F3",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x4df778b23a6e4d1e3d15b68ee6ac0e0cc5a2db93",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6196,7 +6196,7 @@
         {
           "chainId": 8453,
           "name": "LayerZero vault by fran6.eth",
-          "tokenAddress": "0x532a3fb6e00a5dbc2c40b10dec5793538d2e4bf8",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x532a3fb6e00a5dbc2c40b10dec5793538d2e4bf8",
           "guardianAddress": "0xB0Aa56926bE166Bcc5FB6Cf1169f56d9Fd7A25d7",
@@ -6206,7 +6206,7 @@
         {
           "chainId": 8453,
           "name": "Moonwell Frontier cbBTC",
-          "tokenAddress": "0x543257ef2161176d7c8cd90ba65c2d4caef5a796",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x543257ef2161176d7c8cd90ba65c2d4caef5a796",
           "guardianAddress": "0xB9d4acf113a423Bc4A64110B8738a52E51C2AB38",
@@ -6216,7 +6216,7 @@
         {
           "chainId": 8453,
           "name": "9Summits WETH Core 1.1",
-          "tokenAddress": "0x5496b42ad0decebfab0db944d83260e60d54f667",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x5496b42ad0decebfab0db944d83260e60d54f667",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6226,7 +6226,7 @@
         {
           "chainId": 8453,
           "name": "Yoginth's Vault",
-          "tokenAddress": "0x553b4860242c0bf78a42668bd296a18dffba527a",
+          "tokenAddress": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x553b4860242c0bf78a42668bd296a18dffba527a",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6236,7 +6236,7 @@
         {
           "chainId": 8453,
           "name": "Ionic Ecosystem WETH",
-          "tokenAddress": "0x562a128a696b32e942a4b3915055e3cefe615489",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x562a128a696b32e942a4b3915055e3cefe615489",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6246,7 +6246,7 @@
         {
           "chainId": 8453,
           "name": "Test verUSDC",
-          "tokenAddress": "0x578bf478a3cf39ecd32bd6f78c784c13b12c865c",
+          "tokenAddress": "0x59aaF835D34b1E3dF2170e4872B785f11E2a964b",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x578bf478a3cf39ecd32bd6f78c784c13b12c865c",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6256,7 +6256,7 @@
         {
           "chainId": 8453,
           "name": "Anzen Boosted USDC",
-          "tokenAddress": "0x586d8a1a7254607e79be7be81e0e17b83bb1af69",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x586d8a1a7254607e79be7be81e0e17b83bb1af69",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6266,7 +6266,7 @@
         {
           "chainId": 8453,
           "name": "0xequity RWA USDC",
-          "tokenAddress": "0x5990b44027b248a5902082a5f3280f6a627eb8b4",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x5990b44027b248a5902082a5f3280f6a627eb8b4",
           "guardianAddress": "0x56E49e06cf2080966397DBC6eA10Ab3f7fBB4903",
@@ -6276,7 +6276,7 @@
         {
           "chainId": 8453,
           "name": "Test XEQ  Vault",
-          "tokenAddress": "0x59c09bc0a4f77cfcef9fb5ece1da1cc5516fa7f5",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x59c09bc0a4f77cfcef9fb5ece1da1cc5516fa7f5",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6286,7 +6286,7 @@
         {
           "chainId": 8453,
           "name": "Ionic Ecosystem WETH",
-          "tokenAddress": "0x5a32099837d89e3a794a44fb131cbbad41f87a8c",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x5a32099837d89e3a794a44fb131cbbad41f87a8c",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6296,7 +6296,7 @@
         {
           "chainId": 8453,
           "name": "Seamless cbBTC Vault",
-          "tokenAddress": "0x5a47c803488fe2bb0a0eaaf346b420e4df22f3c7",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x5a47c803488fe2bb0a0eaaf346b420e4df22f3c7",
           "guardianAddress": "0xdA57deF26DB6b0AaafAa85D53c15c76F77220F87",
@@ -6306,7 +6306,7 @@
         {
           "chainId": 8453,
           "name": "Sberex WETH Core",
-          "tokenAddress": "0x60f410c7d3783dba1c5e840346a86ade8baa086f",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x60f410c7d3783dba1c5e840346a86ade8baa086f",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6316,7 +6316,7 @@
         {
           "chainId": 8453,
           "name": "Seamless USDC Vault",
-          "tokenAddress": "0x616a4e1db48e22028f6bbf20444cd3b8e3273738",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x616a4e1db48e22028f6bbf20444cd3b8e3273738",
           "guardianAddress": "0xdA57deF26DB6b0AaafAa85D53c15c76F77220F87",
@@ -6326,7 +6326,7 @@
         {
           "chainId": 8453,
           "name": "THOMASCMF VAULT ",
-          "tokenAddress": "0x621af7955e6dac25d789b115f790666a30d748b8",
+          "tokenAddress": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x621af7955e6dac25d789b115f790666a30d748b8",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6336,7 +6336,7 @@
         {
           "chainId": 8453,
           "name": "v0",
-          "tokenAddress": "0x634aeb2e230e6d22cce80f4572436b0bc381103d",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x634aeb2e230e6d22cce80f4572436b0bc381103d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6346,7 +6346,7 @@
         {
           "chainId": 8453,
           "name": "Gauntlet cbBTC Core",
-          "tokenAddress": "0x6770216ac60f634483ec073cbabc4011c94307cb",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x6770216ac60f634483ec073cbabc4011c94307cb",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6356,7 +6356,7 @@
         {
           "chainId": 8453,
           "name": "testingW",
-          "tokenAddress": "0x69e02db044be72386f6ea013e0c599582d954d62",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x69e02db044be72386f6ea013e0c599582d954d62",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6366,7 +6366,7 @@
         {
           "chainId": 8453,
           "name": "Gauntlet WETH Core",
-          "tokenAddress": "0x6b13c060f13af1fdb319f52315bbbf3fb1d88844",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x6b13c060f13af1fdb319f52315bbbf3fb1d88844",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6376,7 +6376,7 @@
         {
           "chainId": 8453,
           "name": "jEURMetaMorpho",
-          "tokenAddress": "0x6c0d2a9194f00d0121f21253268683644d3d267d",
+          "tokenAddress": "0x4154550f4Db74Dc38d1FE98e1F3F28ed6daD627d",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x6c0d2a9194f00d0121f21253268683644d3d267d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6386,7 +6386,7 @@
         {
           "chainId": 8453,
           "name": "Re7 RWA",
-          "tokenAddress": "0x6e37c95b43566e538d8c278eb69b00fc717a001b",
+          "tokenAddress": "0x59aaF835D34b1E3dF2170e4872B785f11E2a964b",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x6e37c95b43566e538d8c278eb69b00fc717a001b",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6396,7 +6396,7 @@
         {
           "chainId": 8453,
           "name": "testusdc",
-          "tokenAddress": "0x6ffee92e508d39a4b3edeb054e8a8b5e0f4bcdd9",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x6ffee92e508d39a4b3edeb054e8a8b5e0f4bcdd9",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6406,7 +6406,7 @@
         {
           "chainId": 8453,
           "name": "Relend ETH",
-          "tokenAddress": "0x70f796946ed919e4bc6cd506f8dacc45e4539771",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x70f796946ed919e4bc6cd506f8dacc45e4539771",
           "guardianAddress": "0x3A9b02c14d967333cE68E353a64653E258da2BAa",
@@ -6416,7 +6416,7 @@
         {
           "chainId": 8453,
           "name": "Re7 cdxUSD",
-          "tokenAddress": "0x74b6ea9bfee07c3756969b0139cfacbba5845969",
+          "tokenAddress": "0xC0D3700000987C99b3C9009069E4f8413fD22330",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x74b6ea9bfee07c3756969b0139cfacbba5845969",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6426,7 +6426,7 @@
         {
           "chainId": 8453,
           "name": "Elixir Capital USDC",
-          "tokenAddress": "0x76238b005dcd48460c2dcce51c92049065702605",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x76238b005dcd48460c2dcce51c92049065702605",
           "guardianAddress": "0x224228a4e62F43b5eF02D0ed0cCF66aDa01F25fE",
@@ -6436,7 +6436,7 @@
         {
           "chainId": 8453,
           "name": "Spark USDC Vault",
-          "tokenAddress": "0x7bfa7c4f149e7415b73bdedfe609237e29cbf34a",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x7bfa7c4f149e7415b73bdedfe609237e29cbf34a",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6446,7 +6446,7 @@
         {
           "chainId": 8453,
           "name": "Test USDC",
-          "tokenAddress": "0x7ce5f356a10bbf528618259404543bb1e6412b69",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x7ce5f356a10bbf528618259404543bb1e6412b69",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6456,7 +6456,7 @@
         {
           "chainId": 8453,
           "name": "Lumetra Opportunistic USDC",
-          "tokenAddress": "0x7fd62b11654f0dd41ad30edda8174366e225e712",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x7fd62b11654f0dd41ad30edda8174366e225e712",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6466,7 +6466,7 @@
         {
           "chainId": 8453,
           "name": "Pyth ETH",
-          "tokenAddress": "0x80d9964feb4a507dd697b4437fc5b25b618ce446",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x80d9964feb4a507dd697b4437fc5b25b618ce446",
           "guardianAddress": "0xCBBbE41af39357e8E8CDd3B866c2a20f3c2DeA27",
@@ -6476,7 +6476,7 @@
         {
           "chainId": 8453,
           "name": "YoYo WETH Vault",
-          "tokenAddress": "0x834821d5f0363932faef5af4cde8d4678398cf24",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "130000000000000000",
           "vaultAddress": "0x834821d5f0363932faef5af4cde8d4678398cf24",
           "guardianAddress": "0x16661628904Ea6bb4Bc929dA981204b8Fd824E27",
@@ -6486,7 +6486,7 @@
         {
           "chainId": 8453,
           "name": "Morpho Degen",
-          "tokenAddress": "0x8c3a6b12332a6354805eb4b72ef619aedd22bcdd",
+          "tokenAddress": "0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x8c3a6b12332a6354805eb4b72ef619aedd22bcdd",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6496,7 +6496,7 @@
         {
           "chainId": 8453,
           "name": "Glocusent USDC ezETH",
-          "tokenAddress": "0x8d1c8b59947e144cad164831a9b12d1030afca5a",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x8d1c8b59947e144cad164831a9b12d1030afca5a",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6506,7 +6506,7 @@
         {
           "chainId": 8453,
           "name": "MEV Capital wETH",
-          "tokenAddress": "0x8dc4d84f58ccd12c2cade1823ef320ed48187790",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x8dc4d84f58ccd12c2cade1823ef320ed48187790",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6516,7 +6516,7 @@
         {
           "chainId": 8453,
           "name": "Lumetra Opportunistic WETH",
-          "tokenAddress": "0x968f3548ed4f96cf11a907848506934a8f42a945",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x968f3548ed4f96cf11a907848506934a8f42a945",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6526,7 +6526,7 @@
         {
           "chainId": 8453,
           "name": "testOhnoVault",
-          "tokenAddress": "0x98b178f2495f58aa4a285ad363a97782b8ecfcef",
+          "tokenAddress": "0x1fE265dB428Ec5dbCd69e4AECFc47791a4e5F0Bd",
           "performanceFeePercentage": "10000000000000000",
           "vaultAddress": "0x98b178f2495f58aa4a285ad363a97782b8ecfcef",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6536,7 +6536,7 @@
         {
           "chainId": 8453,
           "name": "Ionic Ecosystem WETH",
-          "tokenAddress": "0x9ab2d181e4b87ba57d5ed564d3ef652c4e710707",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x9ab2d181e4b87ba57d5ed564d3ef652c4e710707",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6546,7 +6546,7 @@
         {
           "chainId": 8453,
           "name": "TestVaultEvix",
-          "tokenAddress": "0x9ac43dc33f7f60ffd874152dff7c852c83f662a6",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x9ac43dc33f7f60ffd874152dff7c852c83f662a6",
           "guardianAddress": "0xD80F0caA45425374d469e99F0Ce01B7FfB02594c",
@@ -6556,7 +6556,7 @@
         {
           "chainId": 8453,
           "name": "Yoginth",
-          "tokenAddress": "0x9b7f929f65a103d6dd554d32a00061d523ef29ca",
+          "tokenAddress": "0x4e65fE4DbA92790696d040ac24Aa414708F5c0AB",
           "performanceFeePercentage": "0",
           "vaultAddress": "0x9b7f929f65a103d6dd554d32a00061d523ef29ca",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6566,7 +6566,7 @@
         {
           "chainId": 8453,
           "name": "Storm USDC",
-          "tokenAddress": "0x9e9a74ef35b74dfb61b778250304f4fcb446f268",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "10000000000000000",
           "vaultAddress": "0x9e9a74ef35b74dfb61b778250304f4fcb446f268",
           "guardianAddress": "0xaA5CBCBd7f85F03BdD7D64C7186c16C0A19217c9",
@@ -6576,7 +6576,7 @@
         {
           "chainId": 8453,
           "name": "MaxEarn USDC",
-          "tokenAddress": "0x9f90a9d1d1a1dee6adf16bb958ed4dd6107321fa",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x9f90a9d1d1a1dee6adf16bb958ed4dd6107321fa",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6586,7 +6586,7 @@
         {
           "chainId": 8453,
           "name": "Moonwell Flagship ETH",
-          "tokenAddress": "0xa0e430870c4604ccfc7b38ca7845b1ff653d0ff1",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xa0e430870c4604ccfc7b38ca7845b1ff653d0ff1",
           "guardianAddress": "0xB9d4acf113a423Bc4A64110B8738a52E51C2AB38",
@@ -6596,7 +6596,7 @@
         {
           "chainId": 8453,
           "name": "Re7 WETH",
-          "tokenAddress": "0xa2cac0023a4797b4729db94783405189a4203afc",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xa2cac0023a4797b4729db94783405189a4203afc",
           "guardianAddress": "0x0EA60F6DE2A56E9147BB8494193A7e2D8324b3b1",
@@ -6606,7 +6606,7 @@
         {
           "chainId": 8453,
           "name": "OP USDC 2",
-          "tokenAddress": "0xa4e4ec662ca8aa3d759123670ceb6918209e1ede",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xa4e4ec662ca8aa3d759123670ceb6918209e1ede",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6616,7 +6616,7 @@
         {
           "chainId": 8453,
           "name": "Moonwell Flagship EURC",
-          "tokenAddress": "0xadcb88c776b97bc9f11f38729409fee407a44bd9",
+          "tokenAddress": "0xa0E430870c4604CcfC7B38Ca7845B1FF653D0ff1",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xadcb88c776b97bc9f11f38729409fee407a44bd9",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6626,7 +6626,7 @@
         {
           "chainId": 8453,
           "name": "YoYo WBTC Vault",
-          "tokenAddress": "0xaebcee4b481a724b0c9792e280071386b31a233d",
+          "tokenAddress": "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xaebcee4b481a724b0c9792e280071386b31a233d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6636,7 +6636,7 @@
         {
           "chainId": 8453,
           "name": "Universal USDC",
-          "tokenAddress": "0xb7890cee6cf4792cdcc13489d36d9d42726ab863",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xb7890cee6cf4792cdcc13489d36d9d42726ab863",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6646,7 +6646,7 @@
         {
           "chainId": 8453,
           "name": "Morpho eUSD",
-          "tokenAddress": "0xbb819d845b573b5d7c538f5b85057160cfb5f313",
+          "tokenAddress": "0xCfA3Ef56d303AE4fAabA0592388F19d7C3399FB4",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xbb819d845b573b5d7c538f5b85057160cfb5f313",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6656,7 +6656,7 @@
         {
           "chainId": 8453,
           "name": "Elixir Capital USDC",
-          "tokenAddress": "0xbbeab58ff0fb74371efc6126c6935271d3744145",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbbeab58ff0fb74371efc6126c6935271d3744145",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6666,7 +6666,7 @@
         {
           "chainId": 8453,
           "name": "Re7 eUSD",
-          "tokenAddress": "0xbd596239f71ce6ba9993100fbd5aff366c9366a1",
+          "tokenAddress": "0xCfA3Ef56d303AE4fAabA0592388F19d7C3399FB4",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xbd596239f71ce6ba9993100fbd5aff366c9366a1",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6676,7 +6676,7 @@
         {
           "chainId": 8453,
           "name": "MAHA.xyz ZAI Vault",
-          "tokenAddress": "0xbdd1a02e0042ee4b6a89856a8521f78a43ef6a8c",
+          "tokenAddress": "0x0A27E060C0406f8Ab7B64e3BEE036a37e5a62853",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbdd1a02e0042ee4b6a89856a8521f78a43ef6a8c",
           "guardianAddress": "0x1F09Ec21d7fd0A21879b919bf0f9C46e6b85CA8b",
@@ -6686,7 +6686,7 @@
         {
           "chainId": 8453,
           "name": "Steakhouse USDC",
-          "tokenAddress": "0xbeef010f9cb27031ad51e3333f9af9c6b1228183",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef010f9cb27031ad51e3333f9af9c6b1228183",
           "guardianAddress": "0xFC7A2C1A631A10574637178610Bb2040A15e4C26",
@@ -6696,7 +6696,7 @@
         {
           "chainId": 8453,
           "name": "Steakhouse USDM",
-          "tokenAddress": "0xbeef03f0bf3cb2e348393008a826538aadd7d183",
+          "tokenAddress": "0x57F5E098CaD7A3D1Eed53991D4d66C45C9AF7812",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef03f0bf3cb2e348393008a826538aadd7d183",
           "guardianAddress": "0x3E9A1Ffd276Cf87Dc41af032528D9A294E018191",
@@ -6706,7 +6706,7 @@
         {
           "chainId": 8453,
           "name": "Steakhouse ETH",
-          "tokenAddress": "0xbeef050a7485865a7a8d8ca0cc5f7536b7a3443e",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef050a7485865a7a8d8ca0cc5f7536b7a3443e",
           "guardianAddress": "0x447Da5d18b42C37122e5dE91C7a7CAB2cBCD9086",
@@ -6716,7 +6716,7 @@
         {
           "chainId": 8453,
           "name": "Steakhouse EURC",
-          "tokenAddress": "0xbeef086b8807dc5e5a1740c5e3a7c4c366ea6ab5",
+          "tokenAddress": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xbeef086b8807dc5e5a1740c5e3a7c4c366ea6ab5",
           "guardianAddress": "0x869a7cb9B5bab46d26007A17401BF56e22B9e6bC",
@@ -6726,7 +6726,7 @@
         {
           "chainId": 8453,
           "name": "Steakhouse USDA",
-          "tokenAddress": "0xbeefa1abfebe621df50ceaef9f54fdb73648c92c",
+          "tokenAddress": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeefa1abfebe621df50ceaef9f54fdb73648c92c",
           "guardianAddress": "0x7DF37fc774843b678f586D55483819605228a0ae",
@@ -6736,7 +6736,7 @@
         {
           "chainId": 8453,
           "name": "Steakhouse EURA",
-          "tokenAddress": "0xbeefa28d5e56d41d35df760ab53b94d9ffd7051f",
+          "tokenAddress": "0xA61BeB4A3d02decb01039e378237032B351125B4",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xbeefa28d5e56d41d35df760ab53b94d9ffd7051f",
           "guardianAddress": "0x7DF37fc774843b678f586D55483819605228a0ae",
@@ -6746,7 +6746,7 @@
         {
           "chainId": 8453,
           "name": "Steakhouse USDC RWA",
-          "tokenAddress": "0xbeefc4adbe58173fca2c042097fe33095e68c3d6",
+          "tokenAddress": "0x59aaF835D34b1E3dF2170e4872B785f11E2a964b",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xbeefc4adbe58173fca2c042097fe33095e68c3d6",
           "guardianAddress": "0xF398807d2D7EBC116Fc66a7BD5657344402c2f08",
@@ -6756,7 +6756,7 @@
         {
           "chainId": 8453,
           "name": "Gauntlet USDC Core",
-          "tokenAddress": "0xc0c5689e6f4d256e861f65465b691aeecc0deb12",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xc0c5689e6f4d256e861f65465b691aeecc0deb12",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6766,7 +6766,7 @@
         {
           "chainId": 8453,
           "name": "Moonwell Flagship USDC",
-          "tokenAddress": "0xc1256ae5ff1cf2719d4937adb3bbccab2e00a2ca",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xc1256ae5ff1cf2719d4937adb3bbccab2e00a2ca",
           "guardianAddress": "0xB9d4acf113a423Bc4A64110B8738a52E51C2AB38",
@@ -6776,7 +6776,7 @@
         {
           "chainId": 8453,
           "name": "Glocusent WETH ezETH",
-          "tokenAddress": "0xc28ca6bfa6c1dfef94989dc0d0a862eff8d71065",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xc28ca6bfa6c1dfef94989dc0d0a862eff8d71065",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6786,7 +6786,7 @@
         {
           "chainId": 8453,
           "name": "Anzen Boosted USDC",
-          "tokenAddress": "0xc43f5f199a055f38de4629dd14d18e69dae9f29d",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xc43f5f199a055f38de4629dd14d18e69dae9f29d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6796,7 +6796,7 @@
         {
           "chainId": 8453,
           "name": "Test cbBTC Vault",
-          "tokenAddress": "0xc5059df8bea8531f56546bfe5b32e0cea56ae800",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xc5059df8bea8531f56546bfe5b32e0cea56ae800",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6806,7 +6806,7 @@
         {
           "chainId": 8453,
           "name": "EarnFAI WETH",
-          "tokenAddress": "0xc9332df2fe5461d2e147702cc80068546bbd9214",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xc9332df2fe5461d2e147702cc80068546bbd9214",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6816,7 +6816,7 @@
         {
           "chainId": 8453,
           "name": "Ionic Ecosystem USDC",
-          "tokenAddress": "0xcd347c1e7d600a9a3e403497562edd0a7bc3ef21",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xcd347c1e7d600a9a3e403497562edd0a7bc3ef21",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6826,7 +6826,7 @@
         {
           "chainId": 8453,
           "name": "prodtest",
-          "tokenAddress": "0xcf0d2c68cde60c8827ad901ba5bfa3c6b42525ee",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xcf0d2c68cde60c8827ad901ba5bfa3c6b42525ee",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6836,7 +6836,7 @@
         {
           "chainId": 8453,
           "name": "BONSAI",
-          "tokenAddress": "0xd0cfaab6f33cc4b13fc5e25b6c14d86e658e24d4",
+          "tokenAddress": "0x474f4cb764df9da079D94052fED39625c147C12C",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xd0cfaab6f33cc4b13fc5e25b6c14d86e658e24d4",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6846,7 +6846,7 @@
         {
           "chainId": 8453,
           "name": "testVault 961",
-          "tokenAddress": "0xd8a8dad19b1c804df17d85809f8fc39286a79938",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xd8a8dad19b1c804df17d85809f8fc39286a79938",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6856,7 +6856,7 @@
         {
           "chainId": 8453,
           "name": "Degen USDC",
-          "tokenAddress": "0xdb90a4e973b7663ce0ccc32b6fbd37ffb19bfa83",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xdb90a4e973b7663ce0ccc32b6fbd37ffb19bfa83",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6866,7 +6866,7 @@
         {
           "chainId": 8453,
           "name": "Basil Test 2",
-          "tokenAddress": "0xdc993d6a15123d094a63194c3f4dac6e29f0dd50",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xdc993d6a15123d094a63194c3f4dac6e29f0dd50",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6876,7 +6876,7 @@
         {
           "chainId": 8453,
           "name": "Re7 USDA",
-          "tokenAddress": "0xdd195bc052f172a996d721b25d587a1ea5b8385d",
+          "tokenAddress": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xdd195bc052f172a996d721b25d587a1ea5b8385d",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6886,7 +6886,7 @@
         {
           "chainId": 8453,
           "name": "Kvass USDC",
-          "tokenAddress": "0xdff60f336a115aade8d9051e068fd4aeeecca901",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xdff60f336a115aade8d9051e068fd4aeeecca901",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6896,7 +6896,7 @@
         {
           "chainId": 8453,
           "name": "Re7 cbBTC",
-          "tokenAddress": "0xe51f91e68d01530fbbcd3d2c9724e841c06ec827",
+          "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xe51f91e68d01530fbbcd3d2c9724e841c06ec827",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6906,7 +6906,7 @@
         {
           "chainId": 8453,
           "name": "MAHA.xyz Vault",
-          "tokenAddress": "0xe576eb9da26c608217729c656c5b2eb3e4278af0",
+          "tokenAddress": "0x0A27E060C0406f8Ab7B64e3BEE036a37e5a62853",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xe576eb9da26c608217729c656c5b2eb3e4278af0",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6916,7 +6916,7 @@
         {
           "chainId": 8453,
           "name": "Krypital USDC Vault",
-          "tokenAddress": "0xece20f4083e043d16afa78451067ef3dad201f9f",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xece20f4083e043d16afa78451067ef3dad201f9f",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6926,7 +6926,7 @@
         {
           "chainId": 8453,
           "name": "MetaMorpho Test",
-          "tokenAddress": "0xed0a7a49f2228e01a3169c4a5a72a2ebfe8756dc",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xed0a7a49f2228e01a3169c4a5a72a2ebfe8756dc",
           "guardianAddress": "0x937Ce2d6c488b361825D2DB5e8A70e26d48afEd5",
@@ -6936,7 +6936,7 @@
         {
           "chainId": 8453,
           "name": "Gauntlet USDC Prime",
-          "tokenAddress": "0xee8f4ec5672f09119b96ab6fb59c27e1b7e44b61",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xee8f4ec5672f09119b96ab6fb59c27e1b7e44b61",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
@@ -6946,7 +6946,7 @@
         {
           "chainId": 8453,
           "name": "Yearn Morpho Vault 1",
-          "tokenAddress": "0xef417a2512c5a41f69ae4e021648b69a7cde5d03",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xef417a2512c5a41f69ae4e021648b69a7cde5d03",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6956,7 +6956,7 @@
         {
           "chainId": 8453,
           "name": "Spark USDS Vault",
-          "tokenAddress": "0xf0d346e56c037f9933eabca0621a875dfee97339",
+          "tokenAddress": "0x820C137fa70C8691f0e44Dc420a5e53c168921Dc",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xf0d346e56c037f9933eabca0621a875dfee97339",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6966,7 +6966,7 @@
         {
           "chainId": 8453,
           "name": "Moonwell Flagship EURC",
-          "tokenAddress": "0xf24608e0ccb972b0b0f4a6446a0bbf58c701a026",
+          "tokenAddress": "0x60a3E35Cc302bFA44Cb288Bc5a4F316Fdb1adb42",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0xf24608e0ccb972b0b0f4a6446a0bbf58c701a026",
           "guardianAddress": "0xB9d4acf113a423Bc4A64110B8738a52E51C2AB38",
@@ -6976,7 +6976,7 @@
         {
           "chainId": 8453,
           "name": "9Summits WETH Core",
-          "tokenAddress": "0xf540d790413fcfaedac93518ae99eddace82cb78",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0xf540d790413fcfaedac93518ae99eddace82cb78",
           "guardianAddress": "0x23E6aecB76675462Ad8f2B31eC7C492060c2fAEF",
@@ -6986,7 +6986,7 @@
         {
           "chainId": 8453,
           "name": "testMetaMorpho",
-          "tokenAddress": "0xf634f82d21db8f54f4fc76395da54a948cf5f16a",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xf634f82d21db8f54f4fc76395da54a948cf5f16a",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -6996,7 +6996,7 @@
         {
           "chainId": 8453,
           "name": "Laxmi Chit Fund - WETH",
-          "tokenAddress": "0xf8dc175d96469552182efaae8f7c1cdb46726212",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xf8dc175d96469552182efaae8f7c1cdb46726212",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -7006,7 +7006,7 @@
         {
           "chainId": 8453,
           "name": "mmTestUSDC",
-          "tokenAddress": "0xfe333f2c3c55138fad556b6c1f1d9103c7268071",
+          "tokenAddress": "0x5449eCE0580A8287FC42d2634e848eBe8Dc97c07",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xfe333f2c3c55138fad556b6c1f1d9103c7268071",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
@@ -8520,6 +8520,17 @@
           "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
           "lltvPercent": "860000000000000000",
           "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 8453,
+          "marketId": "0xa7813c754ddd6a24e1a1a29ff3ea877803ac63d09efc2f121b1cf3f0bf3af2f6",
+          "collateralTokenAddress": "0x4200000000000000000000000000000000000006",
+          "loanTokenAddress": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+          "oracleAddress": "0x05d2618404668d725b66c0f32b39e4ec15b393dc",
+          "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
           "enabled": true
         },
         {

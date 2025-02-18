@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "THOMASCMF VAULT ",
-  "tokenAddress": "0x621af7955e6dac25d789b115f790666a30d748b8",
+  "tokenAddress": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x621af7955e6dac25d789b115f790666a30d748b8",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

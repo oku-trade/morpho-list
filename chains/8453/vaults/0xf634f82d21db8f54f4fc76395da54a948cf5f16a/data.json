@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "testMetaMorpho",
-  "tokenAddress": "0xf634f82d21db8f54f4fc76395da54a948cf5f16a",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xf634f82d21db8f54f4fc76395da54a948cf5f16a",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

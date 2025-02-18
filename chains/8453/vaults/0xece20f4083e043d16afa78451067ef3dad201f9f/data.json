@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Krypital USDC Vault",
-  "tokenAddress": "0xece20f4083e043d16afa78451067ef3dad201f9f",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xece20f4083e043d16afa78451067ef3dad201f9f",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

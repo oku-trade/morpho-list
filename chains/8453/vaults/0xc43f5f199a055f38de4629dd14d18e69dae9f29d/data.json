@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Anzen Boosted USDC",
-  "tokenAddress": "0xc43f5f199a055f38de4629dd14d18e69dae9f29d",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xc43f5f199a055f38de4629dd14d18e69dae9f29d",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

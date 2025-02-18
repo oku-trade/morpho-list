@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Nova WETH Vault",
-  "tokenAddress": "0x47fe8ab9ee47dd65c24df52324181790b9f47efc",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x47fe8ab9ee47dd65c24df52324181790b9f47efc",
   "guardianAddress": "0xEB4Af6fA3AFA08B10d593EC8fF87efB03BC04645",

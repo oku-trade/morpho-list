@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "Gauntlet eUSD Core",
-  "tokenAddress": "0xc080f56504e0278828a403269db945f6c6d6e014",
+  "tokenAddress": "0xA0d69E286B938e21CBf7E51D71F6A4c8918f482F",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xc080f56504e0278828a403269db945f6c6d6e014",
   "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",

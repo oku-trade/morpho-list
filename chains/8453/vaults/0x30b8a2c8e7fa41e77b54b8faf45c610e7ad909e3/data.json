@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Morpho MAI",
-  "tokenAddress": "0x30b8a2c8e7fa41e77b54b8faf45c610e7ad909e3",
+  "tokenAddress": "0xbf1aeA8670D2528E08334083616dD9C5F3B087aE",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x30b8a2c8e7fa41e77b54b8faf45c610e7ad909e3",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

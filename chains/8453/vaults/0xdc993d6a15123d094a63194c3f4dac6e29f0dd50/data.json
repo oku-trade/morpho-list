@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Basil Test 2",
-  "tokenAddress": "0xdc993d6a15123d094a63194c3f4dac6e29f0dd50",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xdc993d6a15123d094a63194c3f4dac6e29f0dd50",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

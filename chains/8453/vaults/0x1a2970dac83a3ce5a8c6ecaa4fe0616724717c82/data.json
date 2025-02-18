@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Glocusent WETHWEETH",
-  "tokenAddress": "0x1a2970dac83a3ce5a8c6ecaa4fe0616724717c82",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x1a2970dac83a3ce5a8c6ecaa4fe0616724717c82",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

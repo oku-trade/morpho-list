@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "testMorphoVault",
-  "tokenAddress": "0x19f91632ba0367cd7b1fc8816071cb31519e5d8a",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
   "performanceFeePercentage": "10000000000000000",
   "vaultAddress": "0x19f91632ba0367cd7b1fc8816071cb31519e5d8a",
   "guardianAddress": "0x6CD72B1E6E300340A48943d6aF34EF5AE07D3577",

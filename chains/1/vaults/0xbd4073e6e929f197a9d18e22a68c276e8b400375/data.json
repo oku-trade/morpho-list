@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "ZAI Vault (MAHA.xyz)",
-  "tokenAddress": "0xbd4073e6e929f197a9d18e22a68c276e8b400375",
+  "tokenAddress": "0x69000dFD5025E82f48Eb28325A2B88a241182CEd",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbd4073e6e929f197a9d18e22a68c276e8b400375",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

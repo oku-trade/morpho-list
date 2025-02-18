@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "ZAI Stablecoin Vault",
-  "tokenAddress": "0x8a0d114b72a5ba5abf37283ef98708945db4423e",
+  "tokenAddress": "0x69000405f9DcE69BD4Cbf4f2865b79144A69BFE0",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x8a0d114b72a5ba5abf37283ef98708945db4423e",
   "guardianAddress": "0x6357EDbfE5aDA570005ceB8FAd3139eF5A8863CC",

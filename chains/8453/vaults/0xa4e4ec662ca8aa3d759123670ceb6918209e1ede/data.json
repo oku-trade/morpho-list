@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "OP USDC 2",
-  "tokenAddress": "0xa4e4ec662ca8aa3d759123670ceb6918209e1ede",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xa4e4ec662ca8aa3d759123670ceb6918209e1ede",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

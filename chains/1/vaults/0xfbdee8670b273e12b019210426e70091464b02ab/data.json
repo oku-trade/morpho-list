@@ -1,7 +1,7 @@
 {
   "chainId": 1,
   "name": "MEV Capital M^0 Vault",
-  "tokenAddress": "0xfbdee8670b273e12b019210426e70091464b02ab",
+  "tokenAddress": "0x437cc33344a0B27A429f795ff6B469C72698B291",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xfbdee8670b273e12b019210426e70091464b02ab",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

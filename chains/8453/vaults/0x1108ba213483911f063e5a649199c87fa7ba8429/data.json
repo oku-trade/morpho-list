@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "MEV Capital USDC",
-  "tokenAddress": "0x1108ba213483911f063e5a649199c87fa7ba8429",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x1108ba213483911f063e5a649199c87fa7ba8429",
   "guardianAddress": "0x0000000000000000000000000000000000000000",

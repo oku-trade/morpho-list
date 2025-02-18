@@ -1,7 +1,7 @@
 {
   "chainId": 8453,
   "name": "Laxmi Chit Fund - WETH",
-  "tokenAddress": "0xf8dc175d96469552182efaae8f7c1cdb46726212",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xf8dc175d96469552182efaae8f7c1cdb46726212",
   "guardianAddress": "0x0000000000000000000000000000000000000000",
