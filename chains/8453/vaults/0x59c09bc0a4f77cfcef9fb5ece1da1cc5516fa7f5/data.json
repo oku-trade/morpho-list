@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Test XEQ  Vault",
   "tokenAddress": "0x59c09bc0a4f77cfcef9fb5ece1da1cc5516fa7f5",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x59c09bc0a4f77cfcef9fb5ece1da1cc5516fa7f5",

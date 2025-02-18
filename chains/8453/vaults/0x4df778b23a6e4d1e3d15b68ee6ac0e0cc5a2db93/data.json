@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "aUSDC Test Vault 1",
   "tokenAddress": "0x4df778b23a6e4d1e3d15b68ee6ac0e0cc5a2db93",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x4df778b23a6e4d1e3d15b68ee6ac0e0cc5a2db93",

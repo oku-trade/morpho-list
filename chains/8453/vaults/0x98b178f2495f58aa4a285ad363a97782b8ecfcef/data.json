@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "testOhnoVault",
   "tokenAddress": "0x98b178f2495f58aa4a285ad363a97782b8ecfcef",
   "performanceFeePercentage": "10000000000000000",
   "vaultAddress": "0x98b178f2495f58aa4a285ad363a97782b8ecfcef",

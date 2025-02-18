@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Ionic Ecosystem USDC",
   "tokenAddress": "0xcd347c1e7d600a9a3e403497562edd0a7bc3ef21",
   "performanceFeePercentage": "150000000000000000",
   "vaultAddress": "0xcd347c1e7d600a9a3e403497562edd0a7bc3ef21",

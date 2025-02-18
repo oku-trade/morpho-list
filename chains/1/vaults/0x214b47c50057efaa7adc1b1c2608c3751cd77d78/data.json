@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Apostro Resolv USDC",
   "tokenAddress": "0x214b47c50057efaa7adc1b1c2608c3751cd77d78",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x214b47c50057efaa7adc1b1c2608c3751cd77d78",

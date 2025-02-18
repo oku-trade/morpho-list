@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Nekodex USDC Morpho Vault",
   "tokenAddress": "0x1491cba488bcf3dc3762558323806a005d009a36",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x1491cba488bcf3dc3762558323806a005d009a36",

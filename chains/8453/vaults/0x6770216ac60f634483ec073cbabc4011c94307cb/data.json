@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Gauntlet cbBTC Core",
   "tokenAddress": "0x6770216ac60f634483ec073cbabc4011c94307cb",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x6770216ac60f634483ec073cbabc4011c94307cb",

@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "mmTestUSDC",
   "tokenAddress": "0x1dd5e4a1bbd6105bf9f75a963df2b928c2aa5391",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x1dd5e4a1bbd6105bf9f75a963df2b928c2aa5391",

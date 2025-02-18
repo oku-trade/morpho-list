@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Gauntlet MKR Blended",
   "tokenAddress": "0x53675a75a0d6e5c13dbfb0d691ea679357ca5dda",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x53675a75a0d6e5c13dbfb0d691ea679357ca5dda",

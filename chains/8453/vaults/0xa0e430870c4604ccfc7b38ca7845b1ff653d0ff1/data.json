@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Moonwell Flagship ETH",
   "tokenAddress": "0xa0e430870c4604ccfc7b38ca7845b1ff653d0ff1",
   "performanceFeePercentage": "150000000000000000",
   "vaultAddress": "0xa0e430870c4604ccfc7b38ca7845b1ff653d0ff1",

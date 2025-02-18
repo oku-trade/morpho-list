@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Gauntlet USDC Core",
   "tokenAddress": "0x8eb67a509616cd6a7c1b3c8c21d48ff57df3d458",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x8eb67a509616cd6a7c1b3c8c21d48ff57df3d458",

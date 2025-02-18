@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Relend ETH",
   "tokenAddress": "0x70f796946ed919e4bc6cd506f8dacc45e4539771",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x70f796946ed919e4bc6cd506f8dacc45e4539771",

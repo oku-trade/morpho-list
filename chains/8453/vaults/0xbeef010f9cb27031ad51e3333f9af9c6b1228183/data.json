@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Steakhouse USDC",
   "tokenAddress": "0xbeef010f9cb27031ad51e3333f9af9c6b1228183",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeef010f9cb27031ad51e3333f9af9c6b1228183",

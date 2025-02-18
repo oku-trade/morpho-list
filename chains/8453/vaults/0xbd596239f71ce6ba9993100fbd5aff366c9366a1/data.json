@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Re7 eUSD",
   "tokenAddress": "0xbd596239f71ce6ba9993100fbd5aff366c9366a1",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xbd596239f71ce6ba9993100fbd5aff366c9366a1",

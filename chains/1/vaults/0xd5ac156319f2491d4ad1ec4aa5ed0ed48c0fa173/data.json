@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "9Summits USDC Core",
   "tokenAddress": "0xd5ac156319f2491d4ad1ec4aa5ed0ed48c0fa173",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xd5ac156319f2491d4ad1ec4aa5ed0ed48c0fa173",

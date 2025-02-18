@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Re7 WETH",
   "tokenAddress": "0x78fc2c2ed1a4cdb5402365934ae5648adad094d0",
   "performanceFeePercentage": "200000000000000000",
   "vaultAddress": "0x78fc2c2ed1a4cdb5402365934ae5648adad094d0",

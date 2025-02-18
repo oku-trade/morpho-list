@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Storm USDC",
   "tokenAddress": "0x9e9a74ef35b74dfb61b778250304f4fcb446f268",
   "performanceFeePercentage": "10000000000000000",
   "vaultAddress": "0x9e9a74ef35b74dfb61b778250304f4fcb446f268",

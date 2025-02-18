@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "f(x) Protocol Morpho USDC",
   "tokenAddress": "0x4f460bb11cf958606c69a963b4a17f9daeeea8b6",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x4f460bb11cf958606c69a963b4a17f9daeeea8b6",

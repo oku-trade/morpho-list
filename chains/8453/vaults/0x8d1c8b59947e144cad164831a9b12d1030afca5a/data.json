@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Glocusent USDC ezETH",
   "tokenAddress": "0x8d1c8b59947e144cad164831a9b12d1030afca5a",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x8d1c8b59947e144cad164831a9b12d1030afca5a",

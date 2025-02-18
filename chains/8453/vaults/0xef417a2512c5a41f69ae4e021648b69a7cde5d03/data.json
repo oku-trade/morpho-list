@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Yearn Morpho Vault 1",
+  "tokenAddress": "0xef417a2512c5a41f69ae4e021648b69a7cde5d03",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xef417a2512c5a41f69ae4e021648b69a7cde5d03",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

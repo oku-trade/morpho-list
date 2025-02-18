@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Caramila Capital USDC",
   "tokenAddress": "0x7526e974d8a8469d29ee606630215245287a07bf",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x7526e974d8a8469d29ee606630215245287a07bf",

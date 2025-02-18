@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "LayerZero vault by fran6.eth",
   "tokenAddress": "0x34959fe3f07abcfd6a159c09e2443e151526078a",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x34959fe3f07abcfd6a159c09e2443e151526078a",

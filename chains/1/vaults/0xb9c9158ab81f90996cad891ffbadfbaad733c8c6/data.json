@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Relend cbBTC",
   "tokenAddress": "0xb9c9158ab81f90996cad891ffbadfbaad733c8c6",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xb9c9158ab81f90996cad891ffbadfbaad733c8c6",

@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Pyth ETH",
   "tokenAddress": "0x80d9964feb4a507dd697b4437fc5b25b618ce446",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x80d9964feb4a507dd697b4437fc5b25b618ce446",

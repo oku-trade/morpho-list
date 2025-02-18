@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Re7 cdxUSD",
   "tokenAddress": "0x004ff85f887aa612cfdaf4b7a19b10eacfab32f2",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x004ff85f887aa612cfdaf4b7a19b10eacfab32f2",

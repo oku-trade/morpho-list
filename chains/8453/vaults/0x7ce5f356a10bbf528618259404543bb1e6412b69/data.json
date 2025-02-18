@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Test USDC",
+  "tokenAddress": "0x7ce5f356a10bbf528618259404543bb1e6412b69",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x7ce5f356a10bbf528618259404543bb1e6412b69",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

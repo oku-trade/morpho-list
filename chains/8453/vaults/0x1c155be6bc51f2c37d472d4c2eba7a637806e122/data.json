@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Gauntlet EURC Core",
   "tokenAddress": "0x1c155be6bc51f2c37d472d4c2eba7a637806e122",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x1c155be6bc51f2c37d472d4c2eba7a637806e122",

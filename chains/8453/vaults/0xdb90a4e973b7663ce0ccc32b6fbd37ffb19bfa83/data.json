@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Degen USDC",
   "tokenAddress": "0xdb90a4e973b7663ce0ccc32b6fbd37ffb19bfa83",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xdb90a4e973b7663ce0ccc32b6fbd37ffb19bfa83",

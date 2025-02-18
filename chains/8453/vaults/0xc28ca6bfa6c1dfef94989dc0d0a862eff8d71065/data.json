@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Glocusent WETH ezETH",
   "tokenAddress": "0xc28ca6bfa6c1dfef94989dc0d0a862eff8d71065",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xc28ca6bfa6c1dfef94989dc0d0a862eff8d71065",

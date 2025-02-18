@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "MAHA.xyz ZAI Vault",
   "tokenAddress": "0xbdd1a02e0042ee4b6a89856a8521f78a43ef6a8c",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbdd1a02e0042ee4b6a89856a8521f78a43ef6a8c",

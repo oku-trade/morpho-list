@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Hakutora WBTC",
   "tokenAddress": "0xc82b74bc114d7e2d4047ccf14f7a6109b654ab91",
   "performanceFeePercentage": "150000000000000000",
   "vaultAddress": "0xc82b74bc114d7e2d4047ccf14f7a6109b654ab91",

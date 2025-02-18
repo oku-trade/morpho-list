@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Morpho USD0",
   "tokenAddress": "0x2a79e2c69ff4d3a50bf335153e4c09fa360f3386",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x2a79e2c69ff4d3a50bf335153e4c09fa360f3386",

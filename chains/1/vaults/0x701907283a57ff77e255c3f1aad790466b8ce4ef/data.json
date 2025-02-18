@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Index Coop hyETH",
   "tokenAddress": "0x701907283a57ff77e255c3f1aad790466b8ce4ef",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x701907283a57ff77e255c3f1aad790466b8ce4ef",

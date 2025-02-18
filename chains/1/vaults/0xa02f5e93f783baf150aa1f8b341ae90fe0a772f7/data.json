@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Re7 cbBTC",
   "tokenAddress": "0xa02f5e93f783baf150aa1f8b341ae90fe0a772f7",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xa02f5e93f783baf150aa1f8b341ae90fe0a772f7",

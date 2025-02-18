@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "MEV Capital wETH",
   "tokenAddress": "0x8dc4d84f58ccd12c2cade1823ef320ed48187790",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x8dc4d84f58ccd12c2cade1823ef320ed48187790",

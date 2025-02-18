@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Steakhouse PYUSD",
   "tokenAddress": "0xbeef02e5e13584ab96848af90261f0c8ee04722a",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeef02e5e13584ab96848af90261f0c8ee04722a",

@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Elixir Capital USDC",
   "tokenAddress": "0x76238b005dcd48460c2dcce51c92049065702605",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x76238b005dcd48460c2dcce51c92049065702605",

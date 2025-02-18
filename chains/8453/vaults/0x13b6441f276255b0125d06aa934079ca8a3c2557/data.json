@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Testmbr",
   "tokenAddress": "0x13b6441f276255b0125d06aa934079ca8a3c2557",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x13b6441f276255b0125d06aa934079ca8a3c2557",

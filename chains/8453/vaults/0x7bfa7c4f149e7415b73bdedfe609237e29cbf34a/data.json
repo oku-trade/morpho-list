@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Spark USDC Vault",
   "tokenAddress": "0x7bfa7c4f149e7415b73bdedfe609237e29cbf34a",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x7bfa7c4f149e7415b73bdedfe609237e29cbf34a",

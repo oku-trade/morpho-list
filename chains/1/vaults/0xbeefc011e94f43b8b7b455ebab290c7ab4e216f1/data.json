@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Coinshift USDL",
   "tokenAddress": "0xbeefc011e94f43b8b7b455ebab290c7ab4e216f1",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbeefc011e94f43b8b7b455ebab290c7ab4e216f1",

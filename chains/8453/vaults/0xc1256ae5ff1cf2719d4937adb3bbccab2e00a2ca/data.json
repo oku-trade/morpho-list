@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Moonwell Flagship USDC",
   "tokenAddress": "0xc1256ae5ff1cf2719d4937adb3bbccab2e00a2ca",
   "performanceFeePercentage": "150000000000000000",
   "vaultAddress": "0xc1256ae5ff1cf2719d4937adb3bbccab2e00a2ca",

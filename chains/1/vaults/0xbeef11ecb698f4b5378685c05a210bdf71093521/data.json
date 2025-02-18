@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Steakhouse RUSD",
   "tokenAddress": "0xbeef11ecb698f4b5378685c05a210bdf71093521",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbeef11ecb698f4b5378685c05a210bdf71093521",

@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Elixir USDC",
   "tokenAddress": "0x0404fd1a77756eb029f06b5cdea88b2b2ddc2fee",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x0404fd1a77756eb029f06b5cdea88b2b2ddc2fee",

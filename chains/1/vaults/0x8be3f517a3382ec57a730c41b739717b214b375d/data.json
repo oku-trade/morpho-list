@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Scented DAI",
   "tokenAddress": "0x8be3f517a3382ec57a730c41b739717b214b375d",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x8be3f517a3382ec57a730c41b739717b214b375d",

@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Smokehouse DAI",
   "tokenAddress": "0xbeefff68cc520d68f82641eff84330c631e2490e",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeefff68cc520d68f82641eff84330c631e2490e",

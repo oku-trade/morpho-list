@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "wUSDR Market",
   "tokenAddress": "0x477966a2afe996dfc40bfedd7f5f8a3dedea5af2",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x477966a2afe996dfc40bfedd7f5f8a3dedea5af2",

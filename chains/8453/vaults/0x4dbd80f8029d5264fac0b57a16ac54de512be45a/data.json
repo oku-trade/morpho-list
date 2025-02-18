@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "EuroMetaMorpho",
   "tokenAddress": "0x4dbd80f8029d5264fac0b57a16ac54de512be45a",
   "performanceFeePercentage": "200000000000000000",
   "vaultAddress": "0x4dbd80f8029d5264fac0b57a16ac54de512be45a",

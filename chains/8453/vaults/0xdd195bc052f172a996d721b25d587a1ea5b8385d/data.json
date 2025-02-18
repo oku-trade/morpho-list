@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Re7 USDA",
   "tokenAddress": "0xdd195bc052f172a996d721b25d587a1ea5b8385d",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xdd195bc052f172a996d721b25d587a1ea5b8385d",

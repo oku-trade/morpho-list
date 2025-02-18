@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Steakhouse USDC RWA",
   "tokenAddress": "0xbeef6806363b51a90ffd1a632a8de32873b63a9e",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbeef6806363b51a90ffd1a632a8de32873b63a9e",

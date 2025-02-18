@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "0xequity RWA USDC",
   "tokenAddress": "0x5990b44027b248a5902082a5f3280f6a627eb8b4",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x5990b44027b248a5902082a5f3280f6a627eb8b4",

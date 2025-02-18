@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Gauntlet USDA Core",
   "tokenAddress": "0x125d41a6e5dbf455cd9df8f80bcc6fd172d52cc6",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x125d41a6e5dbf455cd9df8f80bcc6fd172d52cc6",

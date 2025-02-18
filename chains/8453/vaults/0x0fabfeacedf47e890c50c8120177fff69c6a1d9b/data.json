@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Pyth USDC",
   "tokenAddress": "0x0fabfeacedf47e890c50c8120177fff69c6a1d9b",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x0fabfeacedf47e890c50c8120177fff69c6a1d9b",

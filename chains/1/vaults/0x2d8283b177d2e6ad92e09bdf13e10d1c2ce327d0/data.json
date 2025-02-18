@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "APPX",
   "tokenAddress": "0x2d8283b177d2e6ad92e09bdf13e10d1c2ce327d0",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x2d8283b177d2e6ad92e09bdf13e10d1c2ce327d0",

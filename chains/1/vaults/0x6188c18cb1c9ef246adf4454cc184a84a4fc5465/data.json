@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Vertex USDC Investment Grade",
   "tokenAddress": "0x6188c18cb1c9ef246adf4454cc184a84a4fc5465",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x6188c18cb1c9ef246adf4454cc184a84a4fc5465",

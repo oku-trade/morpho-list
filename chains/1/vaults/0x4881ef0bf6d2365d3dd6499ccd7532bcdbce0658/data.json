@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Gauntlet LRT Core",
   "tokenAddress": "0x4881ef0bf6d2365d3dd6499ccd7532bcdbce0658",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x4881ef0bf6d2365d3dd6499ccd7532bcdbce0658",

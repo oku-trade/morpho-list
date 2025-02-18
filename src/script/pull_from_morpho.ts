@@ -119,6 +119,7 @@ const main = async () => {
       curatorAddress: vaultLive.curator,
       guardianAddress: vaultLive.guardian,
       performanceFeePercentage: vaultLive.fee.toString(),
+      name: vaultConfig.name,
     })
     // now try to write this
     console.log("writing new vault", item.chain, item.address)

@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Moonwell Flagship EURC",
   "tokenAddress": "0xf24608e0ccb972b0b0f4a6446a0bbf58c701a026",
   "performanceFeePercentage": "150000000000000000",
   "vaultAddress": "0xf24608e0ccb972b0b0f4a6446a0bbf58c701a026",

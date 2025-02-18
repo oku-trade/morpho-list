@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Spark DAI Vault",
   "tokenAddress": "0x73e65dbd630f90604062f6e02fab9138e713edd9",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x73e65dbd630f90604062f6e02fab9138e713edd9",

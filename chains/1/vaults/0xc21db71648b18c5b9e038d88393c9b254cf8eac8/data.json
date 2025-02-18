@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "EUR Real Yield",
   "tokenAddress": "0xc21db71648b18c5b9e038d88393c9b254cf8eac8",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xc21db71648b18c5b9e038d88393c9b254cf8eac8",

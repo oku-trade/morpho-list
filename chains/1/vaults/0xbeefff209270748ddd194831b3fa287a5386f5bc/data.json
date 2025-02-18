@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Smokehouse USDC",
   "tokenAddress": "0xbeefff209270748ddd194831b3fa287a5386f5bc",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeefff209270748ddd194831b3fa287a5386f5bc",

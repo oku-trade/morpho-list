@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "",
   "tokenAddress": "0xdd5b53a4c95e81f5c26c31640901ae935711025b",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xdd5b53a4c95e81f5c26c31640901ae935711025b",

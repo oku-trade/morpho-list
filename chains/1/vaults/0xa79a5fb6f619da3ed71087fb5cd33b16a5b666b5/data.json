@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Nova fxUSD Vault",
+  "tokenAddress": "0xa79a5fb6f619da3ed71087fb5cd33b16a5b666b5",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xa79a5fb6f619da3ed71087fb5cd33b16a5b666b5",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

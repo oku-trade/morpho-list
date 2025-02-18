@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Basils Vault",
   "tokenAddress": "0x291d8050ab47e81204bf380ec9c40780c0cace11",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x291d8050ab47e81204bf380ec9c40780c0cace11",

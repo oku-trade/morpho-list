@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Steakhouse USDT",
   "tokenAddress": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",

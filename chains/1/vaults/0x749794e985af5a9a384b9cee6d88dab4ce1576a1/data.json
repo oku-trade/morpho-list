@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "MEV Capital USD0",
+  "tokenAddress": "0x749794e985af5a9a384b9cee6d88dab4ce1576a1",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x749794e985af5a9a384b9cee6d88dab4ce1576a1",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

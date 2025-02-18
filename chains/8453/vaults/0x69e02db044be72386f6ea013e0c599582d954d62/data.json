@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "testingW",
   "tokenAddress": "0x69e02db044be72386f6ea013e0c599582d954d62",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x69e02db044be72386f6ea013e0c599582d954d62",

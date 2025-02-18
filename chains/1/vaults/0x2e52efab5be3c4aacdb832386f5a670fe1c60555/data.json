@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Flagship USDC",
   "tokenAddress": "0x2e52efab5be3c4aacdb832386f5a670fe1c60555",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x2e52efab5be3c4aacdb832386f5a670fe1c60555",

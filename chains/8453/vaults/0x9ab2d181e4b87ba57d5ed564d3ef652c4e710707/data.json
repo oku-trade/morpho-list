@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Ionic Ecosystem WETH",
   "tokenAddress": "0x9ab2d181e4b87ba57d5ed564d3ef652c4e710707",
   "performanceFeePercentage": "150000000000000000",
   "vaultAddress": "0x9ab2d181e4b87ba57d5ed564d3ef652c4e710707",

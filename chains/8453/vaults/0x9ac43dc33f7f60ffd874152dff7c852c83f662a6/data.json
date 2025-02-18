@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "TestVaultEvix",
   "tokenAddress": "0x9ac43dc33f7f60ffd874152dff7c852c83f662a6",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0x9ac43dc33f7f60ffd874152dff7c852c83f662a6",

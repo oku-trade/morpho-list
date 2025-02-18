@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Midas USDC",
   "tokenAddress": "0xa8875aaebc4f830524e35d57f9772ffacbdd6c45",
   "performanceFeePercentage": "150000000000000000",
   "vaultAddress": "0xa8875aaebc4f830524e35d57f9772ffacbdd6c45",

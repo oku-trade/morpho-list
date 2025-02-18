@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Steakhouse EURCV",
   "tokenAddress": "0xbeef07e929f84466a591de130e4154667214f491",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeef07e929f84466a591de130e4154667214f491",

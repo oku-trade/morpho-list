@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "RiskDAO DAI Core",
   "tokenAddress": "0xda1f00d47054a1807f6bf2403ce48a14d894a18b",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xda1f00d47054a1807f6bf2403ce48a14d894a18b",

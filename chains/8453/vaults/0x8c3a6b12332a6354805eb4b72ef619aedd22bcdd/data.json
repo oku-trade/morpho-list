@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Morpho Degen",
   "tokenAddress": "0x8c3a6b12332a6354805eb4b72ef619aedd22bcdd",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x8c3a6b12332a6354805eb4b72ef619aedd22bcdd",

@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Gauntlet WETH Ecosystem",
   "tokenAddress": "0x1e6ffa4e9f63d10b8820a3ab52566af881dab53c",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x1e6ffa4e9f63d10b8820a3ab52566af881dab53c",

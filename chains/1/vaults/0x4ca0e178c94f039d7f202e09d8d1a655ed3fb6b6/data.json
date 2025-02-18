@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "LeadBlock USDC RWA",
   "tokenAddress": "0x4ca0e178c94f039d7f202e09d8d1a655ed3fb6b6",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0x4ca0e178c94f039d7f202e09d8d1a655ed3fb6b6",

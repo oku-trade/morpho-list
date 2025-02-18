@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "9Summits WETH Core 1.1",
   "tokenAddress": "0x5496b42ad0decebfab0db944d83260e60d54f667",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0x5496b42ad0decebfab0db944d83260e60d54f667",

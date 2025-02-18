@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Resolv USDC",
   "tokenAddress": "0x132e6c9c33a62d7727cd359b1f51e5b566e485eb",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x132e6c9c33a62d7727cd359b1f51e5b566e485eb",

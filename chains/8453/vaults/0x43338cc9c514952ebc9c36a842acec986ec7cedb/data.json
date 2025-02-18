@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Re7 wstETH",
   "tokenAddress": "0x43338cc9c514952ebc9c36a842acec986ec7cedb",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x43338cc9c514952ebc9c36a842acec986ec7cedb",

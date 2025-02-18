@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Flagship ETH",
   "tokenAddress": "0x38989bba00bdf8181f4082995b3deae96163ac5d",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0x38989bba00bdf8181f4082995b3deae96163ac5d",

@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "testdnu",
   "tokenAddress": "0x3849ee776bde7b20b6b09e519136a256e6d25474",
   "performanceFeePercentage": "0",
   "vaultAddress": "0x3849ee776bde7b20b6b09e519136a256e6d25474",

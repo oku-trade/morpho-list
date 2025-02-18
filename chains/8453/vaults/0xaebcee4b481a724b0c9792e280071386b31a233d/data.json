@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "YoYo WBTC Vault",
+  "tokenAddress": "0xaebcee4b481a724b0c9792e280071386b31a233d",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xaebcee4b481a724b0c9792e280071386b31a233d",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

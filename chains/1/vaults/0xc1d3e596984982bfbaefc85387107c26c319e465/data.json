@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "testUSDCVault2",
   "tokenAddress": "0xc1d3e596984982bfbaefc85387107c26c319e465",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xc1d3e596984982bfbaefc85387107c26c319e465",

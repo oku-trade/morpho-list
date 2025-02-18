@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Steakhouse EURC",
   "tokenAddress": "0xbeef086b8807dc5e5a1740c5e3a7c4c366ea6ab5",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0xbeef086b8807dc5e5a1740c5e3a7c4c366ea6ab5",

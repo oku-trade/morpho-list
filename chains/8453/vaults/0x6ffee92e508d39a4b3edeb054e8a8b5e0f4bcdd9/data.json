@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "testusdc",
   "tokenAddress": "0x6ffee92e508d39a4b3edeb054e8a8b5e0f4bcdd9",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0x6ffee92e508d39a4b3edeb054e8a8b5e0f4bcdd9",

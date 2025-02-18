@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Steakhouse PAXG",
   "tokenAddress": "0xbeef796ae50ba5423857cac27dd36369cfc8241b",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xbeef796ae50ba5423857cac27dd36369cfc8241b",

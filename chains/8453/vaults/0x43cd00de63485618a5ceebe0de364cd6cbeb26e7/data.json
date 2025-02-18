@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Metronome msETH Vault",
   "tokenAddress": "0x43cd00de63485618a5ceebe0de364cd6cbeb26e7",
   "performanceFeePercentage": "50000000000000000",
   "vaultAddress": "0x43cd00de63485618a5ceebe0de364cd6cbeb26e7",

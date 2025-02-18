@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "TEST DTF Vault",
+  "tokenAddress": "0x4acf04037dbc98ea0823a8a79467408034740ecb",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x4acf04037dbc98ea0823a8a79467408034740ecb",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xC1CD3866d9d24f4F10884689d42392f8560a8cC9",
+  "enabled": true
+}

@@ -1,5 +1,6 @@
 {
   "chainId": 8453,
+  "name": "Test cbBTC Vault",
   "tokenAddress": "0xc5059df8bea8531f56546bfe5b32e0cea56ae800",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xc5059df8bea8531f56546bfe5b32e0cea56ae800",

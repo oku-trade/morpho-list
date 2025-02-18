@@ -1,5 +1,6 @@
 {
   "chainId": 1,
+  "name": "Steakhouse USDM",
   "tokenAddress": "0xbeef033b4520267c5acfcb45414117b633fcb3dd",
   "performanceFeePercentage": "100000000000000000",
   "vaultAddress": "0xbeef033b4520267c5acfcb45414117b633fcb3dd",
