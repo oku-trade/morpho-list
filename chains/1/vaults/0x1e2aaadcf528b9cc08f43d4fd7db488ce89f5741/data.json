@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "9S Mount Denali USDC Core",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x1e2aaadcf528b9cc08f43d4fd7db488ce89f5741",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x59e608E4842162480591032f3c8b0aE55C98d104",
+  "enabled": true
+}
