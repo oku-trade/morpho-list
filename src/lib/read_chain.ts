@@ -41,8 +41,8 @@ export const getMarketById = async (chain: number, id: MarketId) => {
   const pc = getRpc(chain);
   const marketConfig = await fetchMarketParams(id , pc)
   console.log("got market config", marketConfig)
-  if(marketConfig.collateralToken === zeroAddress) {
-    throw new Error(`the zero address is not a valid collateral token for a market`)
+  if(marketConfig.loanToken === zeroAddress) {
+    throw new Error(`the zero address is not a valid loan token for a market`)
   }
   // try to create an entry now
   let entry = await typecheck(MorphoMarket, {
