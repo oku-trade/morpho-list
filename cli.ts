@@ -4,9 +4,10 @@ import { Command, Option, runExit } from "clipanion";
 import { writeFileSync } from "fs";
 import path, { join } from "path";
 import { MasterList } from "src/lib/types.js";
-import { loadMarketsAndVaults } from "src/lib/load.js";
+import { loadAllData, loadMarketsAndVaults } from "src/lib/load.js";
 import { z } from "zod";
 import { AddMarketCommand, AddVaultCommand } from "src/cmd/add.js";
+import { CreateRewardsCommand } from "src/cmd/rewards.js";
 
 class CompileCommand extends Command {
   static paths=[[`compile`]]
@@ -17,30 +18,47 @@ class CompileCommand extends Command {
   async execute() {
     console.log(`running compile in ${this.dir}`)
     const list = await loadMarketsAndVaults(this.dir)
+
+    const markets = await loadAllData(this.dir, "markets")
+    const vaults = await loadAllData(this.dir, "vaults")
+    const rewards = await loadAllData(this.dir, "rewards")
+
     console.log("markets", list.markets.size, "vaults", list.vaults.size)
     let output: z.infer<typeof MasterList> = {
       chains: {},
     }
 
-    for (const vault of list.vaults.values()) {
-      if(output.chains[vault.chainId] === undefined) {
-        output.chains[vault.chainId] = {
+    const ensureChain = (chainId: number) => {
+      if(output.chains[chainId] === undefined) {
+        output.chains[chainId] = {
           vaults: [],
           markets: [],
-          rewardPrograms: [],
+          rewards: [],
         }
       }
+    }
+
+    let seen = new Set<string>()
+    const checkSeen = (key: string) => {
+      if(seen.has(key)) {
+        throw new Error(`Duplicate key ${key}`)
+      }
+      seen.add(key)
+    }
+    for (const vault of vaults) {
+      ensureChain(vault.chainId)
+      checkSeen(`${vault.chainId}_${vault.vaultAddress}`)
       output.chains[vault.chainId].vaults.push(vault)
     }
-    for (const market of list.markets.values()) {
-      if(output.chains[market.chainId] === undefined) {
-        output.chains[market.chainId] = {
-          vaults: [],
-          markets: [],
-          rewardPrograms: [],
-        }
-      }
+    for (const market of markets) {
+      ensureChain(market.chainId)
+      checkSeen(`${market.chainId}_${market.marketId}`)
       output.chains[market.chainId].markets.push(market)
+    }
+    for(const rewardProgram of rewards) {
+      ensureChain(rewardProgram.chainId)
+      checkSeen(`${rewardProgram.chainId}_${rewardProgram.urdAddress}`)
+      output.chains[rewardProgram.chainId].rewards.push(rewardProgram)
     }
     writeFileSync(this.outfile, JSON.stringify(output, null, 2))
     console.log("wrote masterlist to", path.normalize(this.outfile))
@@ -52,5 +70,6 @@ runExit([
   CompileCommand,
   AddVaultCommand,
   AddMarketCommand,
+  CreateRewardsCommand,
 ])
 

@@ -57,13 +57,16 @@ export const MorphoRewardProgram  = z.object({
   urdAddress: zAddress,
   salt: z.string(),
   timelock: zStringInt,
+
+  name: z.string().optional(),
+  chainId: z.number().int(),
 })
 
 
 export const MasterListEntry = z.object({
   vaults: z.array(MorphoVault),
   markets: z.array(MorphoMarket),
-  rewardPrograms: z.array(MorphoRewardProgram),
+  rewards: z.array(MorphoRewardProgram),
 })
 
 export const MasterList = z.object({

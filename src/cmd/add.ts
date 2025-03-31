@@ -4,6 +4,7 @@ import { MAINNET_CHAINS } from "@gfxlabs/oku-chains";
 import { MarketId } from "@morpho-org/blue-sdk";
 import { getMarketById, getVaultByAddress } from "src/lib/read_chain.js";
 import { getAddress } from "viem";
+import { getChainId } from "src/lib/rpc.js";
 
 
 
@@ -18,16 +19,7 @@ export class AddVaultCommand extends Command {
   withMarkets = Option.Boolean("--with-markets", true);
 
   async execute() {
-    var chainId: number
-    if(!isNaN(parseInt(this.chain))) {
-      chainId = parseInt(this.chain)
-    }else {
-      const foundChain = MAINNET_CHAINS.find(c => c.internalName === this.chain)
-      if(!foundChain) {
-        throw new Error(`chain ${this.chain} not found`)
-      }
-      chainId = foundChain.id
-    }
+    const chainId = getChainId(this.chain);
     // see if the vault is an address
     const addr = getAddress(this.vault)
     if(!this.force) {

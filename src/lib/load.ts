@@ -44,40 +44,50 @@ export const storeData = <T extends DataType>(root: string, chainFolder: string,
   writeFileSync(targetDataFile, JSON.stringify(data, null, 2))
 }
 
-export const loadMarket = async (root:string, chainFolder: string, marketFolder: string ) => {
-  const datafile = path.join(root, chainFolder, "markets",marketFolder,"data.json")
+export const loadData = async <T extends DataType>(root: string, chainFolder: string,datatype: T, keyFolder: string):Promise<DataTypeTypeMap[T]>  => {
+  const validator = DataTypeZodMap[datatype]
+  if(!validator) {
+    throw new Error(`Datatype "${datatype}" is not supported`)
+  }
+  const datafile = path.join(root, chainFolder, datatype,keyFolder,"data.json")
   const content = await readFile(datafile, "utf8")
   if(!existsSync(datafile)){
-    throw new Error(`Market "${marketFolder}" does not exist`)
+    throw new Error(`${datatype} "${keyFolder}" does not exist`)
   }
   const jsonData = JSON.parse(content)
-  const validationResult = await MorphoMarket.parseAsync(jsonData)
+  const validationResult = await validator.parseAsync(jsonData)
+  return validationResult as DataTypeTypeMap[T]
+}
 
-  if (validationResult.marketId !== marketFolder) {
-    throw new Error(`Market folder "${marketFolder}" does not match marketId in data.json`)
-  }
-  if (validationResult.chainId !== Number(chainFolder)) {
-    throw new Error(`Market folder "${marketFolder}" does not match chainId in data.json`)
-  }
-  return validationResult
+export const loadMarket = async (root:string, chainFolder: string, marketFolder: string ) => {
+  return loadData(root, chainFolder, "markets", marketFolder)
 }
 
 export const loadVault = async (root:string, chainFolder: string, vaultFolder: string ) => {
-  const datafile = path.join(root, chainFolder, "vaults",vaultFolder,"data.json")
-  const content = await readFile(datafile, "utf8")
-  if(!existsSync(datafile)){
-    throw new Error(`Vault "${vaultFolder}" does not exist. no such file`)
-  }
-  const jsonData = JSON.parse(content)
-  const validationResult = await MorphoVault.parseAsync(jsonData)
+  return loadData(root, chainFolder, "vaults", vaultFolder)
+}
 
-  if (validationResult.vaultAddress !== vaultFolder) {
-    throw new Error(`Vault folder "${vaultFolder}" does not match vaultId in data.json`)
+export const loadAllData = async <T extends DataType>(root: string, datatype: T): Promise<Array<DataTypeTypeMap[T]>> => {
+  let out = new Array<DataTypeTypeMap[T]>()
+  const folders = await readdir(root)
+  for (const chainFolder of folders) {
+    if (!/^\d+$/.test(chainFolder)) {
+      throw new Error(`Chain folder "${chainFolder}" is not a valid integer.`);
+    }
+    if (!isChainSupported(Number(chainFolder))) {
+      throw new Error(`Chain "${chainFolder}" is not supported.`);
+    }
+    const marketsFolderPath = path.join(root,chainFolder,datatype)
+    if (!existsSync(marketsFolderPath)) {
+      continue
+    }
+    const keyFolders = await readdir(marketsFolderPath)
+    for (const keyFolder of keyFolders) {
+      const validationResult = await loadData(root, chainFolder,datatype, keyFolder)
+      out.push(validationResult)
+    }
   }
-  if (validationResult.chainId !== Number(chainFolder)) {
-    throw new Error(`Vault folder "${vaultFolder}" does not match chainId in data.json`)
-  }
-  return validationResult
+  return out
 }
 
 export const loadMarketsAndVaults = async (root: string) => {

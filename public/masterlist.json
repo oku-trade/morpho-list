@@ -2883,7 +2883,7 @@
           "enabled": true
         }
       ],
-      "rewardPrograms": []
+      "rewards": []
     },
     "8453": {
       "vaults": [
@@ -4296,7 +4296,7 @@
           "enabled": true
         }
       ],
-      "rewardPrograms": []
+      "rewards": []
     },
     "21000000": {
       "vaults": [
@@ -4312,7 +4312,7 @@
         }
       ],
       "markets": [],
-      "rewardPrograms": []
+      "rewards": []
     }
   }
 }

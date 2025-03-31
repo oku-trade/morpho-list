@@ -187,12 +187,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gfxlabs/oku-chains@npm:^1.1.204":
-  version: 1.1.204
-  resolution: "@gfxlabs/oku-chains@npm:1.1.204"
+"@gfxlabs/oku-chains@npm:^1.1.205":
+  version: 1.1.205
+  resolution: "@gfxlabs/oku-chains@npm:1.1.205"
   peerDependencies:
     viem: 2.x
-  checksum: 10c0/7d5ee5b09e10fa582a51b0450b3c613ae9ea69bddd31c5f1e787e89e84d0fde290d1761ec28ac963d698998c09a04e12e1685af3851a942290be180a13828ac4
+  checksum: 10c0/619e8bf9707cef58442ff54a7f00c45cb76f6845fec6e313f4b61fa6a9a05eae56406ff3ec4f992b6dca2ae6779031d5d24f6995914d90ffd9347887417b7770
   languageName: node
   linkType: hard
 
@@ -981,7 +981,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "morpho-list@workspace:."
   dependencies:
-    "@gfxlabs/oku-chains": "npm:^1.1.204"
+    "@gfxlabs/oku-chains": "npm:^1.1.205"
     "@morpho-org/blue-sdk": "npm:^2.3.2"
     "@morpho-org/blue-sdk-viem": "npm:^2.2.2"
     "@morpho-org/morpho-ts": "npm:^2.2.0"
@@ -995,7 +995,7 @@ __metadata:
     minimist: "npm:^1.2.8"
     prettier: "npm:^3.5.3"
     tsx: "npm:^4.19.3"
-    viem: "npm:^2.24.2"
+    viem: "npm:^2.24.3"
     zod: "npm:^3.24.2"
   languageName: unknown
   linkType: soft
@@ -1332,9 +1332,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"viem@npm:^2.24.2":
-  version: 2.24.2
-  resolution: "viem@npm:2.24.2"
+"viem@npm:^2.24.3":
+  version: 2.24.3
+  resolution: "viem@npm:2.24.3"
   dependencies:
     "@noble/curves": "npm:1.8.1"
     "@noble/hashes": "npm:1.7.1"
@@ -1349,7 +1349,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/f6f91ce3c447e79828ed03771d68f7cb00a4d6780b2f29f907777083d3b384a736b62743873a380b9279796eaf6dca49d4c92a64ed9cc59ea2802b9bdd393d18
+  checksum: 10c0/d054082f9b5f2e0a9e7f3a5c5e911b6cc7a9879f83e51377c20594ea11a0609abe14b1debebf9a09d77918273342e2a4c830f243f0d03f86b7ed3ef7fdb4d97d
   languageName: node
   linkType: hard
 
