@@ -2882,7 +2882,8 @@
           "liquidationPenalty": "1074113856068743286",
           "enabled": true
         }
-      ]
+      ],
+      "rewardPrograms": []
     },
     "8453": {
       "vaults": [
@@ -4294,7 +4295,24 @@
           "liquidationPenalty": "1026167265264238070",
           "enabled": true
         }
-      ]
+      ],
+      "rewardPrograms": []
+    },
+    "21000000": {
+      "vaults": [
+        {
+          "chainId": 21000000,
+          "name": "Test BTCN Vault",
+          "tokenAddress": "0xda5dDd7270381A7C2717aD10D1c0ecB19e3CDFb2",
+          "performanceFeePercentage": "0",
+          "vaultAddress": "0x3660DC59fAF8CbFBe308a547c4312882Fcf503c5",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        }
+      ],
+      "markets": [],
+      "rewardPrograms": []
     }
   }
 }
