@@ -1,11 +1,12 @@
 #!/usr/bin/env tsx
+// vi: ft=typescript
 import { Command, Option, runExit } from "clipanion";
 import { writeFileSync } from "fs";
 import path, { join } from "path";
-import { loadMarketsAndVaults } from "src/common/load.js";
-import { MasterList } from "src/common/types.js";
+import { MasterList } from "src/lib/types.js";
+import { loadMarketsAndVaults } from "src/lib/load.js";
 import { z } from "zod";
-
+import { AddMarketCommand, AddVaultCommand } from "src/cmd/add.js";
 
 class CompileCommand extends Command {
   static paths=[[`compile`]]
@@ -26,6 +27,7 @@ class CompileCommand extends Command {
         output.chains[vault.chainId] = {
           vaults: [],
           markets: [],
+          rewardPrograms: [],
         }
       }
       output.chains[vault.chainId].vaults.push(vault)
@@ -35,6 +37,7 @@ class CompileCommand extends Command {
         output.chains[market.chainId] = {
           vaults: [],
           markets: [],
+          rewardPrograms: [],
         }
       }
       output.chains[market.chainId].markets.push(market)
@@ -47,5 +50,7 @@ class CompileCommand extends Command {
 
 runExit([
   CompileCommand,
+  AddVaultCommand,
+  AddMarketCommand,
 ])
 

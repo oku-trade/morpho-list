@@ -44,9 +44,26 @@ export const MorphoMarket = z.object({
   blacklisted: z.boolean().optional(),
 })
 
+export const MorphoRewardProgram  = z.object({
+  id: z.string(),
+  type: z.string(),
+  vault: z.string(),
+  start_timestamp: z.number(),
+  end_timestamp: z.number(),
+  start_block: z.number(),
+  end_block: z.number(),
+  reward_token: z.string(),
+  reward_amount: z.number(),
+  urdAddress: zAddress,
+  salt: z.string(),
+  timelock: zStringInt,
+})
+
+
 export const MasterListEntry = z.object({
   vaults: z.array(MorphoVault),
   markets: z.array(MorphoMarket),
+  rewardPrograms: z.array(MorphoRewardProgram),
 })
 
 export const MasterList = z.object({
