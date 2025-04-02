@@ -187,12 +187,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gfxlabs/oku-chains@npm:^1.1.205":
-  version: 1.1.205
-  resolution: "@gfxlabs/oku-chains@npm:1.1.205"
+"@gfxlabs/oku-chains@npm:^1.1.208":
+  version: 1.1.208
+  resolution: "@gfxlabs/oku-chains@npm:1.1.208"
   peerDependencies:
     viem: 2.x
-  checksum: 10c0/619e8bf9707cef58442ff54a7f00c45cb76f6845fec6e313f4b61fa6a9a05eae56406ff3ec4f992b6dca2ae6779031d5d24f6995914d90ffd9347887417b7770
+  checksum: 10c0/e2600accac36b7f18f3bf1a5520b3104a14e1d3c6754573222e1aabff852db879c935eb9bd5d2b6ad5d99572c8366f367d4eb580e4634f809c558617b9022632
   languageName: node
   linkType: hard
 
@@ -228,25 +228,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@morpho-org/blue-sdk-viem@npm:^2.2.2":
-  version: 2.2.2
-  resolution: "@morpho-org/blue-sdk-viem@npm:2.2.2"
+"@morpho-org/blue-sdk-viem@npm:^3.0.0-next.5":
+  version: 3.0.0-next.5
+  resolution: "@morpho-org/blue-sdk-viem@npm:3.0.0-next.5"
   peerDependencies:
-    "@morpho-org/blue-sdk": ^2.3.1
-    "@morpho-org/morpho-ts": ^2.0.2
+    "@morpho-org/blue-sdk": ^3.0.0-next.11
+    "@morpho-org/morpho-ts": ^2.2.0
     viem: ^2.0.0
-  checksum: 10c0/4d5067921036d552f8ea75348af4f4922e383cc4e6a6130550df395df2b2c0c3b7ebad269bfadb922e2f46599f0a6223e010300af1e3241da296aeb467dc7c09
+  checksum: 10c0/be0883efa3d00aa03492a5bb2ef4083ad5c8d51a2e8b4bb37d07c80b2c8cdcbc69ed242352e27be51d1f7a9d39d1f68bc81212409d08eec74ce3caa5d99ba6fd
   languageName: node
   linkType: hard
 
-"@morpho-org/blue-sdk@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "@morpho-org/blue-sdk@npm:2.3.2"
+"@morpho-org/blue-sdk@npm:^3.0.0-next.2":
+  version: 3.0.0-next.12
+  resolution: "@morpho-org/blue-sdk@npm:3.0.0-next.12"
   dependencies:
     "@noble/hashes": "npm:^1.6.1"
   peerDependencies:
-    "@morpho-org/morpho-ts": ^2.1.0
-  checksum: 10c0/c74268f9fa94bb1ca1f2c7ade0ec59f29a5c1f0bcf8258d3a62dd80d786667ac5b9fbd1c5537b23604cda345821a69b5a656afe241203f94453c612811c928d6
+    "@morpho-org/morpho-ts": ^2.2.0
+  checksum: 10c0/e0d06ca51fc7b6170b7cc8a80da788268531b8c2baf2d52ed4827415e665115c053255f55e8f67a8452338a25c422ee63c9cf7684876522913e85d8540b26176
   languageName: node
   linkType: hard
 
@@ -337,12 +337,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.13.14":
-  version: 22.13.14
-  resolution: "@types/node@npm:22.13.14"
+"@types/node@npm:^22.13.17":
+  version: 22.13.17
+  resolution: "@types/node@npm:22.13.17"
   dependencies:
     undici-types: "npm:~6.20.0"
-  checksum: 10c0/fa2ab5b8277bfbcc86c42e46a3ea9871b0d559894cc9d955685d17178c9499f0b1bf03d1d1ea8d92ef2dda818988f4035acb8abf9dc15423a998fa56173ab804
+  checksum: 10c0/77a052fec0fe02f60557e1c5f3f28eb09cd9bee426be88328a94689150a3c0df5b4b6b69fad28157fb34521693dad0b311ecd7f613845d681ff973991310c20e
   languageName: node
   linkType: hard
 
@@ -981,12 +981,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "morpho-list@workspace:."
   dependencies:
-    "@gfxlabs/oku-chains": "npm:^1.1.205"
-    "@morpho-org/blue-sdk": "npm:^2.3.2"
-    "@morpho-org/blue-sdk-viem": "npm:^2.2.2"
+    "@gfxlabs/oku-chains": "npm:^1.1.208"
+    "@morpho-org/blue-sdk": "npm:^3.0.0-next.2"
+    "@morpho-org/blue-sdk-viem": "npm:^3.0.0-next.5"
     "@morpho-org/morpho-ts": "npm:^2.2.0"
     "@types/minimist": "npm:^1"
-    "@types/node": "npm:^22.13.14"
+    "@types/node": "npm:^22.13.17"
     clipanion: "npm:^4.0.0-rc.4"
     dotenv: "npm:^16.4.7"
     graphql: "npm:^16.10.0"

@@ -8,8 +8,8 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@gfxlabs/oku-chains": "^1.1.205",
-    "@types/node": "^22.13.14",
+    "@gfxlabs/oku-chains": "^1.1.208",
+    "@types/node": "^22.13.17",
     "clipanion": "^4.0.0-rc.4",
     "dotenv": "^16.4.7",
     "graphql": "^16.10.0",
@@ -21,8 +21,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@morpho-org/blue-sdk": "^2.3.2",
-    "@morpho-org/blue-sdk-viem": "^2.2.2",
+    "@morpho-org/blue-sdk": "^3.0.0-next.2",
+    "@morpho-org/blue-sdk-viem": "^3.0.0-next.5",
     "@morpho-org/morpho-ts": "^2.2.0",
     "@types/minimist": "^1",
     "viem": "^2.24.3"
