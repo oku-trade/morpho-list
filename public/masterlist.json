@@ -2885,6 +2885,65 @@
       ],
       "rewards": []
     },
+    "480": {
+      "vaults": [
+        {
+          "chainId": 480,
+          "name": "Re7 WETH",
+          "tokenAddress": "0x4200000000000000000000000000000000000006",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0x0Db7E405278c2674F462aC9D9eb8b8346D1c1571",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
+          "name": "Re7 WBTC",
+          "tokenAddress": "0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0xBC8C37467c5Df9D50B42294B8628c25888BECF61",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
+          "name": "Re7 USDC",
+          "tokenAddress": "0x79A02482A880bCE3F13e09Da970dC34db4CD24d1",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0xb1E80387EbE53Ff75a89736097D34dC8D9E9045B",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        }
+      ],
+      "markets": [
+        {
+          "chainId": 480,
+          "marketId": "0x64e6d549f61bef88b55e80dbff9258c23386675af8fa7734393d0848b5ffe610",
+          "collateralTokenAddress": "0x0000000000000000000000000000000000000000",
+          "loanTokenAddress": "0x79a02482a880bce3f13e09da970dc34db4cd24d1",
+          "oracleAddress": "0x0000000000000000000000000000000000000000",
+          "irmAddress": "0x0000000000000000000000000000000000000000",
+          "lltvPercent": "0",
+          "liquidationPenalty": "1150000000000000000",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
+          "marketId": "0xe920c120b2e1c79e9f97c5219ab092f96e06ed0b58882737fe863b029395f36f",
+          "collateralTokenAddress": "0x0000000000000000000000000000000000000000",
+          "loanTokenAddress": "0x4200000000000000000000000000000000000006",
+          "oracleAddress": "0x0000000000000000000000000000000000000000",
+          "irmAddress": "0x0000000000000000000000000000000000000000",
+          "lltvPercent": "0",
+          "liquidationPenalty": "1150000000000000000",
+          "enabled": true
+        }
+      ],
+      "rewards": []
+    },
     "8453": {
       "vaults": [
         {

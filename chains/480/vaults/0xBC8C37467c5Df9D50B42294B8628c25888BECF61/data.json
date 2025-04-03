@@ -1,0 +1,10 @@
+{
+  "chainId": 480,
+  "name": "Re7 WBTC",
+  "tokenAddress": "0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xBC8C37467c5Df9D50B42294B8628c25888BECF61",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}
