@@ -52,7 +52,7 @@ export const MorphoRewardProgram  = z.object({
   start_timestamp: z.number(),
   end_timestamp: z.number(),
   reward_token: z.string(),
-  reward_amount: z.number(),
+  reward_amount: z.string(),
   urdAddress: zAddress,
   salt: z.string(),
   name: z.string().optional(),
