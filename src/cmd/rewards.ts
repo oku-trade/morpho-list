@@ -8,10 +8,8 @@ export class CreateRewardsCommand  extends Command {
   static paths = [["deploy urd"]];
 
   chain = Option.String();
-  id = Option.String();
   dir = Option.String("--dir","chains");
   salt = Option.String("--salt","oku");
-
 
   async execute() {
     const chain = getChain(this.chain);

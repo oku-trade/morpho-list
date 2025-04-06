@@ -22,5 +22,15 @@ export const createRewards = async (
       salt,
     ],
   })
-  return await payer.writeContract(request)
+  const deployed = await payer.writeContract(request)
+  // add owner to root updaters
+  const {request: request2} = await client.simulateContract({
+    account: payer.account,
+    address: deployed,
+    abi: parseAbi([`function setRootUpdater(address rootUpdater, bool active) external`]),
+    functionName: "setRootUpdater",
+    args: [payer.account.address, true],
+  })
+  await payer.writeContract(request2)
+  return deployed
 }

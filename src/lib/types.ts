@@ -47,17 +47,14 @@ export const MorphoMarket = z.object({
 export const MorphoRewardProgram  = z.object({
   id: z.string(),
   type: z.string(),
-  vault: z.string(),
+  vault: z.string().optional(),
+  market: z.string().optional(),
   start_timestamp: z.number(),
   end_timestamp: z.number(),
-  start_block: z.number(),
-  end_block: z.number(),
   reward_token: z.string(),
   reward_amount: z.number(),
   urdAddress: zAddress,
   salt: z.string(),
-  timelock: zStringInt,
-
   name: z.string().optional(),
   chainId: z.number().int(),
 })
