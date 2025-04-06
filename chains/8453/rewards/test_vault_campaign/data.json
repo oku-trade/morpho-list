@@ -6,7 +6,7 @@
   "start_timestamp": 1740563695,
   "end_timestamp": 1745026852,
   "reward_token": "0xB0fFa8000886e57F86dd5264b9582b2Ad87b2b91",
-  "reward_amount": "10000000",
+  "reward_amount": "10000000000000000000000000",
   "urdAddress": "0x0000000000000000000000000000000000000000",
   "salt": "",
   "chainId": 8453
