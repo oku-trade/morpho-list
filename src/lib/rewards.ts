@@ -1,4 +1,28 @@
-import { Address, decodeAbiParameters, Hex, parseAbi, PublicClient, WalletClient } from "viem";
+import { Address, decodeAbiParameters, Hex, parseAbi, PublicClient, WalletClient, zeroHash } from "viem";
+
+export const updateRewardRoot = async (
+  client: PublicClient,
+  payer: WalletClient,
+  urdAddress: Address,
+  newRoot: Hex,
+  newIpfs: Hex = zeroHash,
+) => {
+  if(!payer.account) throw new Error("payer account not found")
+
+  const {request} = await client.simulateContract({
+    account: payer.account,
+    address: urdAddress,
+    abi: parseAbi([`function setRoot(bytes32 root, bytes32 ipfs) external`]),
+    functionName: "setRoot",
+    args: [
+      newRoot,
+      newIpfs,
+    ],
+  })
+  const txn = await payer.writeContract(request)
+  await client.waitForTransactionReceipt({hash: txn})
+  return txn
+}
 
 export const createRewards = async (
   client: PublicClient,

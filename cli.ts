@@ -4,10 +4,10 @@ import { Command, Option, runExit } from "clipanion";
 import { writeFileSync } from "fs";
 import path, { join } from "path";
 import { MasterList } from "src/lib/types.js";
-import { loadAllData, loadMarketsAndVaults } from "src/lib/load.js";
+import { loadAllData } from "src/lib/load.js";
 import { z } from "zod";
 import { AddMarketCommand, AddVaultCommand } from "src/cmd/add.js";
-import { CreateRewardsCommand } from "src/cmd/rewards.js";
+import { CreateRewardsCommand, ListRewardPrograms, UpdateRewardRoot } from "src/cmd/rewards.js";
 
 class CompileCommand extends Command {
   static paths=[[`compile`]]
@@ -17,13 +17,12 @@ class CompileCommand extends Command {
 
   async execute() {
     console.log(`running compile in ${this.dir}`)
-    const list = await loadMarketsAndVaults(this.dir)
 
     const markets = await loadAllData(this.dir, "markets")
     const vaults = await loadAllData(this.dir, "vaults")
     const rewards = await loadAllData(this.dir, "rewards")
 
-    console.log("markets", list.markets.size, "vaults", list.vaults.size)
+    console.log("markets", markets.length, "vaults",vaults.length, "rewards", rewards.length)
     let output: z.infer<typeof MasterList> = {
       chains: {},
     }
@@ -41,7 +40,7 @@ class CompileCommand extends Command {
     let seen = new Set<string>()
     const checkSeen = (key: string) => {
       if(seen.has(key)) {
-        throw new Error(`Duplicate key ${key}`)
+        throw new Error(`Duplicate key ${key} (reward programs must be unique across chains)`)
       }
       seen.add(key)
     }
@@ -57,7 +56,7 @@ class CompileCommand extends Command {
     }
     for(const rewardProgram of rewards) {
       ensureChain(rewardProgram.chainId)
-      checkSeen(`${rewardProgram.chainId}_${rewardProgram.urdAddress}`)
+      checkSeen(`${rewardProgram.id}`)
       output.chains[rewardProgram.chainId].rewards.push(rewardProgram)
     }
     writeFileSync(this.outfile, JSON.stringify(output, null, 2))
@@ -71,5 +70,7 @@ runExit([
   AddVaultCommand,
   AddMarketCommand,
   CreateRewardsCommand,
+  UpdateRewardRoot,
+  ListRewardPrograms,
 ])
 
