@@ -5,7 +5,7 @@ import { createWalletClient, Hex, keccak256, toHex } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 
 export class CreateRewardsCommand  extends Command {
-  static paths = [["deploy urd"]];
+  static paths = [["deploy", "urd"]];
 
   chain = Option.String();
   dir = Option.String("--dir","chains");
@@ -28,8 +28,7 @@ export class CreateRewardsCommand  extends Command {
       transport,
     })
     const saltHash = keccak256(toHex(this.salt));
-    // 5 day timelock, in seconds
-    const timelock = 60 * 60 * 24 * 5;
+    const timelock = 0;
     const urdAddress = await createRewards(
       publicClient,
       walletClient,

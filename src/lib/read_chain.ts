@@ -15,7 +15,7 @@ export const getVaultByAddress =  async (chain: number, address: Address) => {
   const vaultConfig = await fetchVaultConfig(address, pc)
   const vaultLive = await fetchVault(address, pc)
 
-  console.log("got vault config", vaultConfig, vaultMarkets)
+  console.log("got vault config", vaultConfig, vaultMarkets, vaultLive)
 
 
   // try to create an entry now
