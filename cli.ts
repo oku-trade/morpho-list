@@ -7,7 +7,7 @@ import { MasterList } from "src/lib/types.js";
 import { loadAllData } from "src/lib/load.js";
 import { z } from "zod";
 import { AddMarketCommand, AddVaultCommand } from "src/cmd/add.js";
-import { CreateRewardsCommand, ListRewardPrograms, UpdateRewardRoot } from "src/cmd/rewards.js";
+import { AcceptRewardRoot, CreateRewardsCommand, ListRewardPrograms, UpdateRewardRoot } from "src/cmd/rewards.js";
 
 class CompileCommand extends Command {
   static paths=[[`compile`]]
@@ -70,6 +70,7 @@ runExit([
   AddVaultCommand,
   AddMarketCommand,
   CreateRewardsCommand,
+  AcceptRewardRoot,
   UpdateRewardRoot,
   ListRewardPrograms,
 ])

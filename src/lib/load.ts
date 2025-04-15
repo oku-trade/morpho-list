@@ -42,6 +42,8 @@ export const storeData = <T extends DataType>(root: string, chainFolder: string,
   }
   const targetDataFile = path.join(targetDataDir, "data.json")
   writeFileSync(targetDataFile, JSON.stringify(data, null, 2))
+
+  return targetDataFile
 }
 
 export const loadData = async <T extends DataType>(root: string, chainFolder: string,datatype: T, keyFolder: string):Promise<DataTypeTypeMap[T]>  => {

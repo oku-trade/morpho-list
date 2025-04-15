@@ -23,6 +23,24 @@ export const updateRewardRoot = async (
   await client.waitForTransactionReceipt({hash: txn})
   return txn
 }
+export const acceptRewardRoot = async (
+  client: PublicClient,
+  payer: WalletClient,
+  urdAddress: Address,
+) => {
+  if(!payer.account) throw new Error("payer account not found")
+
+  const {request} = await client.simulateContract({
+    account: payer.account,
+    address: urdAddress,
+    abi: parseAbi([`function acceptRoot() external`]),
+    functionName: "acceptRoot",
+    args: [],
+  })
+  const txn = await payer.writeContract(request)
+  await client.waitForTransactionReceipt({hash: txn})
+  return txn
+}
 
 export const createRewards = async (
   client: PublicClient,

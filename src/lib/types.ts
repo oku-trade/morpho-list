@@ -57,6 +57,7 @@ export const MorphoRewardProgram  = z.object({
   salt: z.string(),
   name: z.string().optional(),
   chainId: z.number().int(),
+  production: z.boolean().optional(),
 })
 
 

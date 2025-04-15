@@ -1,18 +1,31 @@
 import { Command, Option} from "clipanion";
-import { loadAllData } from "src/lib/load.js";
-import { createRewards, updateRewardRoot } from "src/lib/rewards.js";
+import { loadAllData, storeData } from "src/lib/load.js";
+import { acceptRewardRoot, createRewards, updateRewardRoot } from "src/lib/rewards.js";
 import { getChain, getRpc, getTransport } from "src/lib/rpc.js";
-import { Address, createWalletClient, getAddress, Hex, isHash, keccak256, toHex } from "viem";
+import { MorphoRewardProgram } from "src/lib/types.js";
+import { Address, createWalletClient, getAddress, Hex, isHash, keccak256, toHex, zeroAddress } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
+import { z } from "zod";
 
 export class CreateRewardsCommand  extends Command {
   static paths = [["reward", "deploy"]];
 
   chain = Option.String();
+  id = Option.String();
+  hashPrefix = Option.String("--hash-prefix", "oku:v0.0.0");
   dir = Option.String("--dir","chains");
-  salt = Option.String("--salt","oku");
 
   async execute() {
+
+    // load all the rewards to make sure the id is not a duplicate
+    const rewards = await loadAllData(this.dir, "rewards")
+    const rewardIds = new Set(rewards.map(r => r.id))
+
+
+    if(rewardIds.has(this.id)) {
+      throw new Error(`Reward id ${this.id} already exists. try 'reward list'`)
+    }
+
     const chain = getChain(this.chain);
     if(!("urdFactory" in chain.morpho)) {
       throw new Error(`No urdFactory for chain ${chain.id}`)
@@ -28,7 +41,7 @@ export class CreateRewardsCommand  extends Command {
       account,
       transport,
     })
-    const saltHash = keccak256(toHex(this.salt));
+    const saltHash = keccak256(toHex(`${this.hashPrefix}:${this.id}`));
     const timelock = 0;
     const urdAddress = await createRewards(
       publicClient,
@@ -37,7 +50,24 @@ export class CreateRewardsCommand  extends Command {
       saltHash,
       chain.morpho.urdFactory,
     )
+    //// ended here
     console.log(`deployed a new urd to ${urdAddress}`)
+    let rewardProgram: z.infer<typeof MorphoRewardProgram> =  {
+      id: this.id,
+      salt: saltHash,
+      urdAddress: urdAddress.toLowerCase(),
+      chainId: chain.id,
+      start_timestamp: 0,
+      end_timestamp: 0,
+      production: false,
+      reward_amount: "0",
+      reward_token: zeroAddress,
+      name: this.id,
+      type: "vault",
+      vault: zeroAddress,
+    }
+    const writtenFile = storeData(this.dir, chain.id.toString(), "rewards", rewardProgram.id, rewardProgram)
+    console.log(`wrote placeholder campaign to ${writtenFile}. please edit it/update it`)
   }
 }
 
@@ -52,6 +82,38 @@ export class ListRewardPrograms extends Command {
     for(const reward of rewards) {
       console.log(reward.chainId, reward.id)
     }
+  }
+}
+
+export class AcceptRewardRoot extends Command {
+  static paths = [["reward", "accept"]];
+  id = Option.String();
+  dir = Option.String("--dir","chains");
+  async execute() {
+    const rewards = await loadAllData(this.dir, "rewards")
+    const reward = rewards.find(r => r.id === this.id)
+    if(!reward) {
+      throw new Error(`reward ${this.id} not found. try 'reward list'`)
+    }
+    const chain = getChain(`${reward.chainId}`);
+    const publicClient = getRpc(chain.id);
+    const transport = getTransport(chain.id);
+    const private_key = process.env.ETHEREUM_PRIVATE_KEY;
+    if(!private_key) {
+      throw new Error("No private key found. set ETHEREUM_PRIVATE_KEY env var")
+    }
+    const account = privateKeyToAccount(private_key as Hex);
+    const walletClient = createWalletClient({
+      account,
+      transport,
+    })
+    const txnhash = await acceptRewardRoot(
+      publicClient,
+      walletClient,
+      getAddress(reward.urdAddress),
+    )
+    console.log(`updated root for urd ${reward.urdAddress}. txn hash: ${txnhash}`)
+
   }
 }
 export class UpdateRewardRoot extends Command {
