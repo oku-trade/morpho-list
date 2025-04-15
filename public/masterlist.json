@@ -2883,7 +2883,8 @@
           "enabled": true
         }
       ],
-      "rewards": []
+      "rewards": [],
+      "blacklist": []
     },
     "480": {
       "vaults": [
@@ -2942,7 +2943,8 @@
           "enabled": true
         }
       ],
-      "rewards": []
+      "rewards": [],
+      "blacklist": []
     },
     "8453": {
       "vaults": [
@@ -4382,7 +4384,8 @@
           "name": "Test Vault Campaign",
           "chainId": 8453
         }
-      ]
+      ],
+      "blacklist": []
     },
     "21000000": {
       "vaults": [
@@ -4490,6 +4493,9 @@
           "name": "CORN Test Market Campaign",
           "chainId": 21000000
         }
+      ],
+      "blacklist": [
+        "0x0000000000000000000000000000000000000000"
       ]
     }
   }
