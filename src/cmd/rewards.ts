@@ -1,9 +1,9 @@
 import { Command, Option} from "clipanion";
 import { loadAllData, storeData } from "src/lib/load.js";
-import { acceptRewardRoot, createRewards, updateRewardRoot } from "src/lib/rewards.js";
+import { acceptRewardRoot, createRewards, setRootUpdater, updateRewardRoot } from "src/lib/rewards.js";
 import { getChain, getRpc, getTransport } from "src/lib/rpc.js";
 import { MorphoRewardProgram } from "src/lib/types.js";
-import { Address, createWalletClient, getAddress, Hex, isHash, keccak256, toHex, zeroAddress } from "viem";
+import { Address, createWalletClient, getAddress, Hex, isAddress, isHash, keccak256, toHex, zeroAddress } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
 
@@ -150,5 +150,43 @@ export class UpdateRewardRoot extends Command {
       this.root,
     )
     console.log(`updated root for urd ${reward.urdAddress} to ${this.root}. txn hash: ${txnhash}`)
+  }
+}
+
+export class AddRewardPublisher extends Command {
+  static paths = [["reward", "add-publisher"]];
+
+  id = Option.String();
+  publisher = Option.String();
+  dir = Option.String("--dir","chains");
+  async execute() {
+    const rewards = await loadAllData(this.dir, "rewards")
+    const reward = rewards.find(r => r.id === this.id)
+    if(!reward) {
+      throw new Error(`reward ${this.id} not found. try 'reward list'`)
+    }
+    const chain = getChain(`${reward.chainId}`);
+    const publicClient = getRpc(chain.id);
+    const transport = getTransport(chain.id);
+    const private_key = process.env.ETHEREUM_PRIVATE_KEY;
+    if(!private_key) {
+      throw new Error("No private key found. set ETHEREUM_PRIVATE_KEY env var")
+    }
+    const account = privateKeyToAccount(private_key as Hex);
+    const walletClient = createWalletClient({
+      account,
+      transport,
+    })
+    if(!this.publisher || !isAddress(this.publisher)) {
+      throw new Error("publisher must be an address")
+    }
+    const txnhash = await setRootUpdater(
+      publicClient,
+      walletClient,
+      getAddress(reward.urdAddress),
+      getAddress(this.publisher),
+      true,
+    )
+    console.log(`added publisher ${this.publisher} to urd ${reward.urdAddress}. txn hash: ${txnhash}`)
   }
 }

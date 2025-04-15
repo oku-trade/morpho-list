@@ -1,5 +1,28 @@
 import { Address, decodeAbiParameters, Hex, parseAbi, PublicClient, WalletClient, zeroHash } from "viem";
 
+export const setRootUpdater = async (
+  client: PublicClient,
+  payer: WalletClient,
+  urdAddress: Address,
+  publisher: Address,
+  status: boolean,
+) => {
+  if(!payer.account) throw new Error("payer account not found")
+
+  const {request} = await client.simulateContract({
+    account: payer.account,
+    address: urdAddress,
+    abi: parseAbi([`function setRootUpdater(address publisher, bool active) external`]),
+    functionName: "setRootUpdater",
+    args: [
+      publisher, status
+    ],
+  })
+  const txn = await payer.writeContract(request)
+  await client.waitForTransactionReceipt({hash: txn})
+  return txn
+}
+
 export const updateRewardRoot = async (
   client: PublicClient,
   payer: WalletClient,
