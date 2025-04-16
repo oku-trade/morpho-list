@@ -9,6 +9,10 @@ import { z } from "zod";
 import { AddMarketCommand, AddVaultCommand } from "src/cmd/add.js";
 import { AcceptRewardRoot, AddRewardPublisher, CreateRewardsCommand, ListRewardPrograms, UpdateRewardRoot } from "src/cmd/rewards.js";
 
+import * as rawRewardCommands from "src/cmd/rewards.js";
+
+const rewardCommmands = Object.values(rawRewardCommands)
+
 class CompileCommand extends Command {
   static paths = [[`compile`]];
 
@@ -86,9 +90,5 @@ runExit([
   CompileCommand,
   AddVaultCommand,
   AddMarketCommand,
-  CreateRewardsCommand,
-  AcceptRewardRoot,
-  UpdateRewardRoot,
-  ListRewardPrograms,
-  AddRewardPublisher,
+  ...rewardCommmands
 ])
