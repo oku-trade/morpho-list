@@ -4481,6 +4481,20 @@
           "chainId": 21000000
         },
         {
+          "id": "corn_corn_usdt0_btcn_v0.1.0",
+          "type": "market",
+          "market": "0x1c6b87ae1b97071ef444eedcba9f5a92cfe974edbbcaa1946644fc7ab0e283af",
+          "start_timestamp": 1744844400,
+          "end_timestamp": 1746226800,
+          "reward_token": "0x44f49ff0da2498bCb1D3Dc7C0f999578F67FD8C6",
+          "reward_amount": "143334925900000000000000",
+          "urdAddress": "0x20e478f7179653ab8348822f41eb0cae6ba14e33",
+          "salt": "0x80b2017744a31e0c4d3c8a5d9927b568d30a79208e8bd04626987f945f03b951",
+          "name": "USDT0 BTCN Market Borrow",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
           "id": "corn_corn_wbtcn_lbtc_v0.1.0",
           "type": "market",
           "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de",
