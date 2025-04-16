@@ -8,7 +8,7 @@
   "production": true,
   "reward_amount": "215002388900000000000000",
   "reward_token": "0x44f49ff0da2498bCb1D3Dc7C0f999578F67FD8C6",
-  "name": "corn_corn_wbtcn_lbtc_v0.1.0",
+  "name": "WBTCN LBTC Market Borrow",
   "type": "market",
   "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de"
 }
