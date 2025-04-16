@@ -4498,7 +4498,7 @@
           "type": "market",
           "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de",
           "start_timestamp": 1744754400,
-          "end_timestamp": 1744696800,
+          "end_timestamp": 1744835203,
           "reward_token": "0x44f49ff0da2498bcb1d3dc7c0f999578f67fd8c6",
           "reward_amount": "100000000000000000000",
           "urdAddress": "0x5b6a907c6aaabe0e29b9c430adcb82d3c05ddcba",
