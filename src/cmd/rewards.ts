@@ -14,28 +14,8 @@ const devPublishers = [
   "0xe4306ad21A29f9EdcfA9fA584e379A8D0D1463BB",
 ]
 
-export class CreateRewardsCommand  extends Command {
-  static paths = [["reward", "deploy"]];
-
-  chain = Option.String();
-  id = Option.String();
-  hashPrefix = Option.String("--hash-prefix", "oku:v0.0.0");
-  dir = Option.String("--dir","chains");
-
-  prod = Option.Boolean("--prod", false);
-
-  async execute() {
-
-    // load all the rewards to make sure the id is not a duplicate
-    const rewards = await loadAllData(this.dir, "rewards")
-    const rewardIds = new Set(rewards.map(r => r.id))
-
-
-    if(rewardIds.has(this.id)) {
-      throw new Error(`Reward id ${this.id} already exists. try 'reward list'`)
-    }
-
-    const chain = getChain(this.chain);
+const getWalletInfo = (chainString: string | number) => {
+const chain = getChain(chainString);
     if(!("urdFactory" in chain.morpho)) {
       throw new Error(`No urdFactory for chain ${chain.id}`)
     }
@@ -49,7 +29,38 @@ export class CreateRewardsCommand  extends Command {
     const walletClient = createWalletClient({
       account,
       transport,
-    })
+  })
+  return {publicClient, walletClient, account, chain}
+}
+
+export class CreateRewardsCommand  extends Command {
+  static paths = [["reward", "deploy"]];
+
+  chain = Option.String();
+  id = Option.String();
+  hashPrefix = Option.String("--hash-prefix", "oku:v0.0.0");
+  dir = Option.String("--dir","chains");
+
+  prod = Option.Boolean("--prod", false);
+
+  async execute() {
+
+    const {chain, publicClient, walletClient } = getWalletInfo(this.chain);
+
+    if(!("urdFactory" in chain.morpho)) {
+      throw new Error(`No urdFactory for chain ${chain.id}.'`)
+    }
+
+    // load all the rewards to make sure the id is not a duplicate
+    const rewards = await loadAllData(this.dir, "rewards")
+    const rewardIds = new Set(rewards.map(r => r.id))
+
+
+    if(rewardIds.has(this.id)) {
+      throw new Error(`Reward id ${this.id} already exists. try 'reward list'`)
+    }
+
+
     const saltHash = keccak256(toHex(`${this.hashPrefix}:${this.id}`));
     let timelock = 0;
     if(this.prod) {
@@ -141,18 +152,11 @@ export class AcceptRewardRoot extends Command {
     if(!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`)
     }
-    const chain = getChain(`${reward.chainId}`);
-    const publicClient = getRpc(chain.id);
-    const transport = getTransport(chain.id);
-    const private_key = process.env.ETHEREUM_PRIVATE_KEY;
-    if(!private_key) {
-      throw new Error("No private key found. set ETHEREUM_PRIVATE_KEY env var")
+    const {chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
+
+    if(!("urdFactory" in chain.morpho)) {
+      throw new Error(`No urdFactory for chain ${chain.id}.'`)
     }
-    const account = privateKeyToAccount(private_key as Hex);
-    const walletClient = createWalletClient({
-      account,
-      transport,
-    })
     const txnhash = await acceptRewardRoot(
       publicClient,
       walletClient,
@@ -174,18 +178,12 @@ export class UpdateRewardRoot extends Command {
     if(!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`)
     }
-    const chain = getChain(`${reward.chainId}`);
-    const publicClient = getRpc(chain.id);
-    const transport = getTransport(chain.id);
-    const private_key = process.env.ETHEREUM_PRIVATE_KEY;
-    if(!private_key) {
-      throw new Error("No private key found. set ETHEREUM_PRIVATE_KEY env var")
+
+    const {chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
+
+    if(!("urdFactory" in chain.morpho)) {
+      throw new Error(`No urdFactory for chain ${chain.id}.'`)
     }
-    const account = privateKeyToAccount(private_key as Hex);
-    const walletClient = createWalletClient({
-      account,
-      transport,
-    })
     if(!this.root || !isHash(this.root)) {
       throw new Error("root must be a hash")
     }
@@ -211,18 +209,7 @@ export class AddRewardPublisher extends Command {
     if(!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`)
     }
-    const chain = getChain(`${reward.chainId}`);
-    const publicClient = getRpc(chain.id);
-    const transport = getTransport(chain.id);
-    const private_key = process.env.ETHEREUM_PRIVATE_KEY;
-    if(!private_key) {
-      throw new Error("No private key found. set ETHEREUM_PRIVATE_KEY env var")
-    }
-    const account = privateKeyToAccount(private_key as Hex);
-    const walletClient = createWalletClient({
-      account,
-      transport,
-    })
+    const {publicClient, walletClient } = getWalletInfo(reward.chainId);
     if(!this.publisher || !isAddress(this.publisher)) {
       throw new Error("publisher must be an address")
     }

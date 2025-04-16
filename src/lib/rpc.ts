@@ -5,7 +5,7 @@ dotenv.config()
 
 const chains = MAINNET_CHAINS
 
-export const getChain = (chain: string) => {
+export const getChain = (chain: string | number) => {
   const chainId = getChainId(chain)
   const foundChain = chains.find(c => c.id === chainId)
   if(!foundChain) {
@@ -14,7 +14,14 @@ export const getChain = (chain: string) => {
   return foundChain
 }
 
-export const getChainId = (chain: string): number => {
+export const getChainId = (chain: string | number): number => {
+  if(typeof chain === "number") {
+    const foundChain = MAINNET_CHAINS.find(c => c.id === chain)
+    if(!foundChain) {
+      throw new Error(`chain ${chain} not found`)
+    }
+    return foundChain.id
+  }
   var chainId: number
   if(!isNaN(parseInt(chain))) {
     chainId = parseInt(chain)
