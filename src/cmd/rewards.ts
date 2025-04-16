@@ -3,7 +3,7 @@ import { loadAllData, storeData } from "src/lib/load.js";
 import { acceptRewardRoot, createRewards, setRootUpdater, updateRewardRoot } from "src/lib/rewards.js";
 import { getChain, getRpc, getTransport } from "src/lib/rpc.js";
 import { MorphoRewardProgram } from "src/lib/types.js";
-import { Address, createWalletClient, getAddress, Hex, isAddress, isHash, keccak256, toHex, zeroAddress } from "viem";
+import { createWalletClient, getAddress, Hex, isAddress, isHash, keccak256, toHex, zeroAddress } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
 
