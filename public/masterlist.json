@@ -4490,7 +4490,7 @@
           "reward_amount": "215002388900000000000000",
           "urdAddress": "0x561f9b924b2ce39a32cbb548c6211f49c4365d3d",
           "salt": "0xe0b4615d1a184cf1232536b1adc25a4d3173b4f7e3f7ca1559a92211fe3ba43e",
-          "name": "corn_corn_wbtcn_lbtc_v0.1.0",
+          "name": "WBTCN LBTC Market Borrow",
           "chainId": 21000000,
           "production": true
         },
