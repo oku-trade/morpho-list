@@ -7,6 +7,9 @@ import { Address, createWalletClient, getAddress, Hex, isAddress, isHash, keccak
 import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
 
+const prodPublisher = "0xCa3D836E100Aca076991bF9abaA4F7516e5155Cb"
+const devPublisher = "0xA8F5d96E2DDfb5ec3F24B960A5a44EbC620064A3"
+
 export class CreateRewardsCommand  extends Command {
   static paths = [["reward", "deploy"]];
 
@@ -14,6 +17,8 @@ export class CreateRewardsCommand  extends Command {
   id = Option.String();
   hashPrefix = Option.String("--hash-prefix", "oku:v0.0.0");
   dir = Option.String("--dir","chains");
+
+  prod = Option.Boolean("--prod", false);
 
   async execute() {
 
@@ -50,7 +55,36 @@ export class CreateRewardsCommand  extends Command {
       saltHash,
       chain.morpho.urdFactory,
     )
-    //// ended here
+    if(this.prod) {
+      //// ended here
+      const txnhash = await setRootUpdater(
+        publicClient,
+        walletClient,
+        getAddress(urdAddress),
+        getAddress(prodPublisher),
+        true,
+      )
+      console.log(`set prod publisher ${prodPublisher} for urd ${urdAddress}. txn hash: ${txnhash}`)
+      // TODO: ownership transfer to the multisig
+    } else {
+      const txnSetDevPublisher= await setRootUpdater(
+        publicClient,
+        walletClient,
+        getAddress(urdAddress),
+        getAddress(devPublisher),
+        true,
+      )
+      console.log(`set dev publisher ${devPublisher} for urd ${urdAddress}. txn hash: ${txnSetDevPublisher}`)
+      const txnSetOwnerPublisher= await setRootUpdater(
+        publicClient,
+        walletClient,
+        getAddress(urdAddress),
+        getAddress(walletClient.account.address),
+        true,
+      )
+      console.log(`set owner publisher ${walletClient.account.address} for urd ${urdAddress}. txn hash: ${txnSetOwnerPublisher}`)
+    }
+    //
     console.log(`deployed a new urd to ${urdAddress}`)
     let rewardProgram: z.infer<typeof MorphoRewardProgram> =  {
       id: this.id,
@@ -59,7 +93,7 @@ export class CreateRewardsCommand  extends Command {
       chainId: chain.id,
       start_timestamp: 0,
       end_timestamp: 0,
-      production: false,
+      production: this.prod,
       reward_amount: "0",
       reward_token: zeroAddress,
       name: this.id,

@@ -1,7 +1,5 @@
 import { Address, decodeAbiParameters, Hex, parseAbi, PublicClient, WalletClient, zeroHash } from "viem";
 
-const prodSigner = "0xCa3D836E100Aca076991bF9abaA4F7516e5155Cb"
-
 export const setRootUpdater = async (
   client: PublicClient,
   payer: WalletClient,
@@ -105,28 +103,6 @@ export const createRewards = async (
   }
   const [deployedAddress] = decodeAbiParameters([{type:'address'}], relevantTopic)
   console.log("deployed urd to address", deployedAddress)
-  // add owner to root updaters
-{
-    const {request: request2} = await client.simulateContract({
-      account: payer.account,
-      address: deployedAddress,
-      abi: parseAbi([`function setRootUpdater(address rootUpdater, bool active) external`]),
-      functionName: "setRootUpdater",
-      args: [payer.account.address, true],
-    })
-    await payer.writeContract(request2)
-    console.log("added owner to root updaters")
-  }
-{
-    const {request: request2} = await client.simulateContract({
-      account: payer.account,
-      address: deployedAddress,
-      abi: parseAbi([`function setRootUpdater(address rootUpdater, bool active) external`]),
-      functionName: "setRootUpdater",
-      args: [prodSigner, true],
-    })
-    await payer.writeContract(request2)
-    console.log("added prodSigner to root updaters")
-  }
+
   return deployedAddress
 }
