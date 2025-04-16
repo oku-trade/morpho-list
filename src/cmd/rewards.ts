@@ -8,7 +8,11 @@ import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
 
 const prodPublisher = "0xCa3D836E100Aca076991bF9abaA4F7516e5155Cb"
-const devPublisher = "0xA8F5d96E2DDfb5ec3F24B960A5a44EbC620064A3"
+const devPublishers = [
+  "0xA8F5d96E2DDfb5ec3F24B960A5a44EbC620064A3",
+  "0xbF56E691851FdbEa83C670Cb365c2c1AFA1E58ca",
+  "0xe4306ad21A29f9EdcfA9fA584e379A8D0D1463BB",
+]
 
 export class CreateRewardsCommand  extends Command {
   static paths = [["reward", "deploy"]];
@@ -47,7 +51,11 @@ export class CreateRewardsCommand  extends Command {
       transport,
     })
     const saltHash = keccak256(toHex(`${this.hashPrefix}:${this.id}`));
-    const timelock = 0;
+    let timelock = 0;
+    if(this.prod) {
+      timelock = 5 * 24 * 60 * 60
+    }
+
     const urdAddress = await createRewards(
       publicClient,
       walletClient,
@@ -67,14 +75,16 @@ export class CreateRewardsCommand  extends Command {
       console.log(`set prod publisher ${prodPublisher} for urd ${urdAddress}. txn hash: ${txnhash}`)
       // TODO: ownership transfer to the multisig
     } else {
-      const txnSetDevPublisher= await setRootUpdater(
-        publicClient,
-        walletClient,
-        getAddress(urdAddress),
-        getAddress(devPublisher),
-        true,
-      )
-      console.log(`set dev publisher ${devPublisher} for urd ${urdAddress}. txn hash: ${txnSetDevPublisher}`)
+      for(const devPublisher of devPublishers) {
+        const txnSetDevPublisher= await setRootUpdater(
+          publicClient,
+          walletClient,
+          getAddress(urdAddress),
+          getAddress(devPublisher),
+          true,
+        )
+        console.log(`set dev publisher ${devPublisher} for urd ${urdAddress}. txn hash: ${txnSetDevPublisher}`)
+      }
       const txnSetOwnerPublisher= await setRootUpdater(
         publicClient,
         walletClient,
