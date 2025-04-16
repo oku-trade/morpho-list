@@ -85,14 +85,16 @@ export class CreateRewardsCommand  extends Command {
         )
         console.log(`set dev publisher ${devPublisher} for urd ${urdAddress}. txn hash: ${txnSetDevPublisher}`)
       }
-      const txnSetOwnerPublisher= await setRootUpdater(
-        publicClient,
-        walletClient,
-        getAddress(urdAddress),
-        getAddress(walletClient.account.address),
-        true,
-      )
-      console.log(`set owner publisher ${walletClient.account.address} for urd ${urdAddress}. txn hash: ${txnSetOwnerPublisher}`)
+      if(!devPublishers.includes(walletClient.account.address)) {
+        const txnSetOwnerPublisher= await setRootUpdater(
+          publicClient,
+          walletClient,
+          getAddress(urdAddress),
+          getAddress(walletClient.account.address),
+          true,
+        )
+        console.log(`set owner publisher ${walletClient.account.address} for urd ${urdAddress}. txn hash: ${txnSetOwnerPublisher}`)
+      }
     }
     //
     console.log(`deployed a new urd to ${urdAddress}`)
