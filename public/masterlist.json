@@ -4481,6 +4481,20 @@
           "chainId": 21000000
         },
         {
+          "id": "corn_corn_btcn_vault_v0.1.0",
+          "type": "vault",
+          "vault": "0xa7ba08cfc37e7cc67404d4996ffbb3e977490115",
+          "start_timestamp": 1744844400,
+          "end_timestamp": 1746226800,
+          "reward_token": "0x44f49ff0da2498bCb1D3Dc7C0f999578F67FD8C6",
+          "reward_amount": "238891543200000000000000",
+          "urdAddress": "0x640f4d03ee12e3dd56af9d5d2ff67062a85bead2",
+          "salt": "0xe4841b78d2fd84b1ca111fd22275bc2f0a4c98ac0e22f63d21abfc70cd7e0f95",
+          "name": "BTCN Vault Supply",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
           "id": "corn_corn_usdt0_btcn_v0.1.0",
           "type": "market",
           "market": "0x1c6b87ae1b97071ef444eedcba9f5a92cfe974edbbcaa1946644fc7ab0e283af",
