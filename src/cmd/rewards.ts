@@ -117,11 +117,11 @@ export class CreateRewardsCommand extends Command {
       start_timestamp: 1744844400,
       end_timestamp: 1746226800,
       production: this.prod,
-      reward_amount: "215002388900000000000000",
+      reward_amount: "143334925900000000000000",
       reward_token: "0x44f49ff0da2498bCb1D3Dc7C0f999578F67FD8C6",
       name: this.id,
       type: "market",
-      market: "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de",
+      market: "0x1c6b87ae1b97071ef444eedcba9f5a92cfe974edbbcaa1946644fc7ab0e283af",
     }
     const writtenFile = storeData(this.dir, chain.id.toString(), "rewards", rewardProgram.id, rewardProgram)
     console.log(`wrote placeholder campaign to ${writtenFile}. please edit it/update it`)
