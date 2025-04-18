@@ -4500,7 +4500,9 @@
           "production": false
         }
       ],
-      "blacklist": []
+      "blacklist": [
+        "0xcc771952fde840e30c6802734e5ad20479c2959f"
+      ]
     }
   }
 }
