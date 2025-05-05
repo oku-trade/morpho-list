@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Hakutora USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x974c8fbf4fd795f66b85b73ebc988a51f1a040a9",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x2413A57FBD695f6B13C1D8d7D30EE10fa61b1b02",
+  "enabled": true
+}

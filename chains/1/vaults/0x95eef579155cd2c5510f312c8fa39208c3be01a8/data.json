@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Re7 USDT",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x95eef579155cd2c5510f312c8fa39208c3be01a8",
+  "guardianAddress": "0x2F80ba89362f86a9acC71BFfE5EcF4997F52BDd4",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

@@ -1,0 +1,14 @@
+{
+  "id": "test_lbtc_wbtcn_market",
+  "salt": "0xc8a08829b53d5b7f7e8e0adda4d83a9bff21f46c26d20074a1760fc881dd87ee",
+  "urdAddress": "0x5b6a907c6aaabe0e29b9c430adcb82d3c05ddcba",
+  "chainId": 21000000,
+  "start_timestamp": 1744696800,
+  "end_timestamp": 1744835203,
+  "production": false,
+  "reward_amount": "100000000000000000000",
+  "reward_token": "0x44f49ff0da2498bcb1d3dc7c0f999578f67fd8c6",
+  "name": "test_lbtc_wbtcn_market",
+  "type": "market",
+  "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de"
+}

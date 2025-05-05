@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Steakhouse ETH",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xbeef050a7485865a7a8d8ca0cc5f7536b7a3443e",
+  "guardianAddress": "0x447Da5d18b42C37122e5dE91C7a7CAB2cBCD9086",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true
+}

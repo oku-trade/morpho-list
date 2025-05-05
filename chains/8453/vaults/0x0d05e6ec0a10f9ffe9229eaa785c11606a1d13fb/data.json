@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Gauntlet LBTC Core",
+  "tokenAddress": "0xecAc9C5F704e954931349Da37F60E39f515c11c1",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x0d05e6ec0a10f9ffe9229eaa785c11606a1d13fb",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

@@ -1,0 +1,14 @@
+{
+  "id": "corn_corn_usdt0_btcn_v0.1.0",
+  "salt": "0x80b2017744a31e0c4d3c8a5d9927b568d30a79208e8bd04626987f945f03b951",
+  "urdAddress": "0x20e478f7179653ab8348822f41eb0cae6ba14e33",
+  "chainId": 21000000,
+  "start_timestamp": 1744905600,
+  "end_timestamp": 1746201600,
+  "production": true,
+  "reward_amount": "143334925900000000000000",
+  "reward_token": "0x44f49ff0da2498bCb1D3Dc7C0f999578F67FD8C6",
+  "name": "USDT0 BTCN Market Borrow",
+  "type": "market",
+  "market": "0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec"
+}

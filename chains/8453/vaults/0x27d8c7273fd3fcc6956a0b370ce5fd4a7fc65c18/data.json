@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Seamless WETH Vault",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x27d8c7273fd3fcc6956a0b370ce5fd4a7fc65c18",
+  "guardianAddress": "0xdA57deF26DB6b0AaafAa85D53c15c76F77220F87",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

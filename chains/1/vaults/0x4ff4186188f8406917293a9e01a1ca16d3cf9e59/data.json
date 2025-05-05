@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "SwissBorg Morpho USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x4ff4186188f8406917293a9e01a1ca16d3cf9e59",
+  "guardianAddress": "0xAC15982Ca8A8e8BAc738FE492b84D8761B4384a3",
+  "curatorAddress": "0xC684c6587712e5E7BDf9fD64415F23Bd2b05fAec",
+  "enabled": true
+}

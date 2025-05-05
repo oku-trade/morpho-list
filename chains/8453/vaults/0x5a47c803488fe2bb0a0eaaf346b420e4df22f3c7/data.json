@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Seamless cbBTC Vault",
+  "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x5a47c803488fe2bb0a0eaaf346b420e4df22f3c7",
+  "guardianAddress": "0xdA57deF26DB6b0AaafAa85D53c15c76F77220F87",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

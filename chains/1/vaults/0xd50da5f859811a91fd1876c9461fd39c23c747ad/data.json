@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "MEV Capital Resolv USR",
+  "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xd50da5f859811a91fd1876c9461fd39c23c747ad",
+  "guardianAddress": "0x6e9d65eC80D69b1f508560Bc7aeA5003db1f7FB7",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Moonwell Frontier cbBTC",
+  "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x543257ef2161176d7c8cd90ba65c2d4caef5a796",
+  "guardianAddress": "0xB9d4acf113a423Bc4A64110B8738a52E51C2AB38",
+  "curatorAddress": "0x4b8f6CADb8A2B222e8840E8aDDc32E031794A4D6",
+  "enabled": true
+}

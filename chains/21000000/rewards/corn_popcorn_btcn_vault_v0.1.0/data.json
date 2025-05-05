@@ -1,0 +1,14 @@
+{
+  "id": "corn_popcorn_btcn_vault_v0.1.0",
+  "salt": "0x7c3f874e3b47e72ba64da9ee7789a3b4be3179a9bf19829ba7c8adb7d0b7d047",
+  "urdAddress": "0xce59a71fd8f225a724b16513ca7cbd6e70a0e14c",
+  "chainId": 21000000,
+  "start_timestamp": 1746547200,
+  "end_timestamp": 1747756800,
+  "production": true,
+  "reward_amount": "269801600000000000000000",
+  "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+  "name": "BTCN Vault Supply",
+  "type": "vault",
+  "vault": "0xa7ba08cfc37e7cc67404d4996ffbb3e977490115"
+}

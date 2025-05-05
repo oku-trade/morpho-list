@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Seamless USDC Vault",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x616a4e1db48e22028f6bbf20444cd3b8e3273738",
+  "guardianAddress": "0xdA57deF26DB6b0AaafAa85D53c15c76F77220F87",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

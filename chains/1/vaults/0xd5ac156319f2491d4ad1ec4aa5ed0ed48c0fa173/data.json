@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "9Summits USDC Core",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xd5ac156319f2491d4ad1ec4aa5ed0ed48c0fa173",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x59e608E4842162480591032f3c8b0aE55C98d104",
+  "enabled": true
+}

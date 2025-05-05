@@ -1,0 +1,10 @@
+{
+  "chainId": 480,
+  "name": "Re7 WLD",
+  "tokenAddress": "0x2cFc85d8E48F8EAB294be644d9E25C3030863003",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x348831b46876d3dF2Db98BdEc5E3B4083329Ab9f",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

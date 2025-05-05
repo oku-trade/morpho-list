@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "MEV Capital Elixir USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x1265a81d42d513df40d0031f8f2e1346954d665a",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

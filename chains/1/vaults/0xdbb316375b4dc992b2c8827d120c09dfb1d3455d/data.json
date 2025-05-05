@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "SolvBTC Babylon Vault",
+  "tokenAddress": "0xd9D920AA40f578ab794426F5C90F6C731D159DEf",
+  "performanceFeePercentage": "200000000000000000",
+  "vaultAddress": "0xdbb316375b4dc992b2c8827d120c09dfb1d3455d",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

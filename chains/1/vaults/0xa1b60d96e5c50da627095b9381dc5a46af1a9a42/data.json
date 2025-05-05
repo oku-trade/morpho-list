@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Steakhouse USDQ",
+  "tokenAddress": "0xc83e27f270cce0A3A3A29521173a83F402c1768b",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xa1b60d96e5c50da627095b9381dc5a46af1a9a42",
+  "guardianAddress": "0x245840748267c05E007Fb19eD0cA95F71511EfEd",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true
+}

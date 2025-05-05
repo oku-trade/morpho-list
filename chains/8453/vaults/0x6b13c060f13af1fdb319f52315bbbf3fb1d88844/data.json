@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Gauntlet WETH Core",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x6b13c060f13af1fdb319f52315bbbf3fb1d88844",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

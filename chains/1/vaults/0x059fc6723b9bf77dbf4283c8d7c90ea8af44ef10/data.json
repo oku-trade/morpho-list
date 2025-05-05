@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "SwissBorg tBTC",
+  "tokenAddress": "0x18084fbA666a33d37592fA2633fD49a74DD93a88",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x059fc6723b9bf77dbf4283c8d7c90ea8af44ef10",
+  "guardianAddress": "0xAC15982Ca8A8e8BAc738FE492b84D8761B4384a3",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

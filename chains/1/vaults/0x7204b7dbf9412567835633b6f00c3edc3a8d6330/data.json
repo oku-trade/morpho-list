@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Coinshift USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x7204b7dbf9412567835633b6f00c3edc3a8d6330",
+  "guardianAddress": "0x8949f991EAB43d69B78c1d2fF2C9C047373d5730",
+  "curatorAddress": "0x0A0e559bc3b0950a7e448F0d4894db195b9cf8DD",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Apostro Resolv USR",
+  "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x5085dd6fad07c12e38fae01bc2a4938d2c08b1bc",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xC91578e51BCE35844E345CC7F733b4bBf6721734",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Relend Gold",
+  "tokenAddress": "0x2103E845C5E135493Bb6c2A4f0B8651956eA8682",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x45c1875f1c48622b3d9740af2d7dc62bc9a72422",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

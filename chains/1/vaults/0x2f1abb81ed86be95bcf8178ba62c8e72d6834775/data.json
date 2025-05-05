@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Pendle WBTC",
+  "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x2f1abb81ed86be95bcf8178ba62c8e72d6834775",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

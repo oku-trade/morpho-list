@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Re7 RWA",
+  "tokenAddress": "0x59aaF835D34b1E3dF2170e4872B785f11E2a964b",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x6e37c95b43566e538d8c278eb69b00fc717a001b",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

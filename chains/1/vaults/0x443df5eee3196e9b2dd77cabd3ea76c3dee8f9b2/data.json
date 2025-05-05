@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Gauntlet WBTC Core",
+  "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x443df5eee3196e9b2dd77cabd3ea76c3dee8f9b2",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

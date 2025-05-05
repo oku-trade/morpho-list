@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Metronome msUSD Vault",
+  "tokenAddress": "0xab5eB14c09D416F0aC63661E57EDB7AEcDb9BEfA",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x6859b34a9379122d25a9fa46f0882d434fee36c3",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

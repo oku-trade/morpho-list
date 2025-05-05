@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": " Usual Boosted USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xd63070114470f685b75b74d60eec7c1113d33a3d",
+  "guardianAddress": "0x6e9d65eC80D69b1f508560Bc7aeA5003db1f7FB7",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

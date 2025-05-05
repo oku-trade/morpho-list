@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Relend USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x0f359fd18bda75e9c49bc027e7da59a4b01bf32a",
+  "guardianAddress": "0x3A9b02c14d967333cE68E353a64653E258da2BAa",
+  "curatorAddress": "0xD6D14E60c0DAFcB3B77B296fe718623Ec84e5eb3",
+  "enabled": true
+}

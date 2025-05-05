@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Gauntlet DAI Core",
+  "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x500331c9ff24d9d11aee6b07734aa72343ea74a5",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

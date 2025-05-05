@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Gauntlet AUSD Core",
+  "tokenAddress": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x1b4cd53a1a8e5f50ab6320ef34e5fb4d3df7b6f6",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

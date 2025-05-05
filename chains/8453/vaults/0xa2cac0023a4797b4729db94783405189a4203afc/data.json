@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Re7 WETH",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xa2cac0023a4797b4729db94783405189a4203afc",
+  "guardianAddress": "0x0EA60F6DE2A56E9147BB8494193A7e2D8324b3b1",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

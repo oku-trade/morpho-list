@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Flagship USDT",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x2c25f6c25770ffec5959d34b94bf898865e5d6b1",
+  "guardianAddress": "0xB5f28e67C616a183e4e8843358A185a57462556E",
+  "curatorAddress": "0x2a933dbd0D9e32593e62702028Edcab437CE3cBA",
+  "enabled": true
+}

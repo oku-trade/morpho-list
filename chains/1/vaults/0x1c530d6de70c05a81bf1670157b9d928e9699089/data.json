@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "MEV Capital WBTC",
+  "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x1c530d6de70c05a81bf1670157b9d928e9699089",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

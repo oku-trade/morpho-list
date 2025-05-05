@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Re7 USDC",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x12afdefb2237a5963e7bab3e2d46ad0eee70406e",
+  "guardianAddress": "0x8f66CA7d50c964d4Ab23816877C6Ea3653744205",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

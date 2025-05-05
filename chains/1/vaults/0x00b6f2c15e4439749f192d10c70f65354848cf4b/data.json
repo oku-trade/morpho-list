@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "9S Mount Kosciuszko USR",
+  "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x00b6f2c15e4439749f192d10c70f65354848cf4b",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x59e608E4842162480591032f3c8b0aE55C98d104",
+  "enabled": true
+}

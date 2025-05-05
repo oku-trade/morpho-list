@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "MEV Capital cbBTC",
+  "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x98cf0b67da0f16e1f8f1a1d23ad8dc64c0c70e0b",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

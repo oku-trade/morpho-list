@@ -1,0 +1,35 @@
+name: Generate Masterlist
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-masterlist:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup environment
+        run: make setup
+
+      - name: Update public/masterlist.json
+        run: make list
+
+      - name: Commit updated public/masterlist.json
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          if [ -n "$(git status --porcelain public/masterlist.json)" ]; then  
+            git add public/masterlist.json
+            git commit -m "chore: update masterlist [skip ci]"
+            git push origin main
+          else
+            echo "No changes in masterlist.json"
+          fi
