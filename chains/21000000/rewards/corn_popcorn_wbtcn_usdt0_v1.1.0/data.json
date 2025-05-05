@@ -1,7 +1,7 @@
 {
-  "id": "corn_popcorn_wbtcn_usdt0_v0.1.0",
-  "salt": "0x0f97c0a72a628cb881d8f63f4e5b637888a55620d99ad0978b97ee4393631b78",
-  "urdAddress": "0x1a8ea7fc045689180071d78443570e25f7514421",
+  "id": "corn_popcorn_wbtcn_usdt0_v1.1.0",
+  "salt": "0x511043415452558713ef8e68077cc0260ca37129ad945a4ea7b8d19bd6090df1",
+  "urdAddress": "0x4e81cb09318a88b1bdd14369107c03e3eb016d91",
   "chainId": 21000000,
   "start_timestamp": 1746547200,
   "end_timestamp": 1747756800,

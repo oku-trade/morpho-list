@@ -1,7 +1,7 @@
 {
-  "id": "corn_popcorn_lbtc_wbtcn_v0.1.0",
-  "salt": "0xc943c68d4cb42bb6034ad1672e97177e1d9b93f87f2b36b33c31d7aeef178324",
-  "urdAddress": "0x577ad9e5be45e074393e38295ce1b4bb63167348",
+  "id": "corn_popcorn_lbtc_wbtcn_v1.1.0",
+  "salt": "0xeb109d0d7691fdbb01cacb09747e344b0c4bb72b74f610eae0aae555b61a1939",
+  "urdAddress": "0x812674d920f01955c2501aa4ba6b68e6a516f7eb",
   "chainId": 21000000,
   "start_timestamp": 1746547200,
   "end_timestamp": 1747756800,

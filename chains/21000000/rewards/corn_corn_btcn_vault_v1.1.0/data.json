@@ -1,7 +1,7 @@
 {
-  "id": "corn_corn_btcn_vault_v0.1.0",
-  "salt": "0xe4841b78d2fd84b1ca111fd22275bc2f0a4c98ac0e22f63d21abfc70cd7e0f95",
-  "urdAddress": "0x640f4d03ee12e3dd56af9d5d2ff67062a85bead2",
+  "id": "corn_corn_btcn_vault_v1.1.0",
+  "salt": "0x52bff598bd78d1647e98df074bdbdcadcc9bb554638544ba02a36d2428b949e4",
+  "urdAddress": "0x6fe0a9846e5423dc82769a3d8b0d2c59daaa5205",
   "chainId": 21000000,
   "start_timestamp": 1744905600,
   "end_timestamp": 1746201600,
