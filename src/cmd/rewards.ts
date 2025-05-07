@@ -184,7 +184,7 @@ export class ListRewardPrograms extends Command {
     const rewards = await loadAllData(this.dir, "rewards");
     for (const reward of rewards) {
       console.log(
-        `${reward.id}: (${reward.chainId}) ${reward.reward_amount} https://cornscan.io/address/${reward.urdAddress}`,
+        `${reward.id}: (${reward.chainId}) ${reward.reward_amount} https://maizenet-explorer.usecorn.com/address/${reward.urdAddress}`,
       );
     }
   }
