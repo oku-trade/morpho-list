@@ -96,7 +96,7 @@ export class CreateRewardsCommand extends Command {
     const saltHash = keccak256(toHex(`${this.hashPrefix}:${this.id}`));
     let timelock = 0;
     if (this.prod) {
-      timelock = 5 * 24 * 60 * 60;
+      timelock = 3 * 24 * 60 * 60;
     }
 
     const urdAddress = await createRewards(
