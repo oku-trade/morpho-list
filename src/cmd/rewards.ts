@@ -11,7 +11,6 @@ import {
 } from "src/lib/rewards.js";
 import { getChain, getRpc, getTransport } from "src/lib/rpc.js";
 import { MorphoRewardProgram } from "src/lib/types.js";
-import { isNumber } from "util";
 import {
   createWalletClient,
   getAddress,
@@ -20,7 +19,7 @@ import {
   isHash,
   keccak256,
   toHex,
-  zeroAddress,
+  zeroHash,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
@@ -31,12 +30,12 @@ const devPublishers = [
   "0xbF56E691851FdbEa83C670Cb365c2c1AFA1E58ca",
   "0xe4306ad21A29f9EdcfA9fA584e379A8D0D1463BB",
 ];
-const selectReward = async (dir: string, id: string | undefined) => {
+const selectReward = async (dir: string, id: string | undefined, action: string | undefined) => {
   const rewards = await loadAllData(dir, "rewards");
   const reward =
     id === undefined
       ? await search({
-        message: "Select a reward program to set timelock for",
+        message: `Select a campaign${action ? ` to ${action} for` : ""}:`,
         source: async (input) => {
           return rewards
             .filter((r) => r.id.includes(input || ""))
@@ -195,7 +194,7 @@ export class AcceptRewardRoot extends Command {
   id = Option.String({ required: false });
   dir = Option.String("--dir", "chains");
   async execute() {
-    const { reward } = await selectReward(this.dir, this.id);
+    const { reward } = await selectReward(this.dir, this.id, "accept root");
     if (!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`);
     }
@@ -221,7 +220,7 @@ export class UpdateRewardRoot extends Command {
   root = Option.String();
   dir = Option.String("--dir", "chains");
   async execute() {
-    const { reward } = await selectReward(this.dir, this.id);
+    const { reward } = await selectReward(this.dir, this.id, "update root");
     if (!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`);
     }
@@ -255,7 +254,7 @@ export class AddRewardPublisher extends Command {
   publisher = Option.String();
   dir = Option.String("--dir", "chains");
   async execute() {
-    const { reward } = await selectReward(this.dir, this.id);
+    const { reward } = await selectReward(this.dir, this.id, "add publisher");
     if (!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`);
     }
@@ -286,7 +285,7 @@ export class SetTimelock extends Command {
   timelock = Option.String("--timelock", "57600");
   dir = Option.String("--dir", "chains");
   async execute() {
-    const { reward } = await selectReward(this.dir, this.id);
+    const { reward } = await selectReward(this.dir, this.id, "set timelock");
     if (!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`);
     }
@@ -310,6 +309,78 @@ export class SetTimelock extends Command {
   }
 }
 
+export class CheckPendingRoot extends Command {
+  static paths = [["reward", "check"]];
+  id = Option.String({ required: false });
+  dir = Option.String("--dir", "chains");
+  async execute() {
+    const { reward } = await selectReward(this.dir, this.id, "check pending root");
+    if (!reward) {
+      throw new Error(`reward ${this.id} not found. try 'reward list'`);
+    }
+    const { chain, publicClient } = getWalletInfo(reward.chainId);
+
+    if (!("urdFactory" in chain.morpho)) {
+      throw new Error(`No urdFactory for chain ${chain.id}.'`);
+    }
+
+    const pendingRoot = await getPendingRoot(
+      publicClient,
+      getAddress(reward.urdAddress),
+    );
+
+    console.log(`Reward Program: ${reward.id} (${reward.name || "no name"})`);
+    console.log(`Chain: ${reward.chainId}`);
+    console.log(`URD Address: ${reward.urdAddress}`);
+    console.log(`On-chain Pending Root: ${pendingRoot}`);
+
+    try {
+      const endpointUrl = `https://sap.staging.gfx.town/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
+      const response = await fetch(endpointUrl);
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const endpointData = await response.json();
+      console.log(`Endpoint Response:`, JSON.stringify(endpointData, null, 2));
+
+      if (endpointData && endpointData.result) {
+        const campaignTree = endpointData.result;
+
+        if (campaignTree.root) {
+          const endpointRoot = campaignTree.root;
+          console.log(`Endpoint Root: ${endpointRoot}`);
+          console.log(`Campaign ID: ${campaignTree.id || 'N/A'}`);
+          console.log(`Campaign Name: ${campaignTree.metadata?.name || 'N/A'}`);
+          console.log(`Tree Entries: ${campaignTree.tree?.length || 0}`);
+
+          if (pendingRoot.toLowerCase() === endpointRoot.toLowerCase()) {
+            console.log("✅ Status: On-chain pending root matches endpoint root");
+          } else {
+            console.log("❌ Status: On-chain pending root does NOT match endpoint root");
+            console.log(`  On-chain: ${pendingRoot}`);
+            console.log(`  Endpoint: ${endpointRoot}`);
+          }
+        } else {
+          console.log("⚠️  Endpoint did not return a root value in the campaign tree");
+        }
+      } else {
+        console.log("⚠️  Endpoint did not return a valid campaign tree");
+      }
+    } catch (error) {
+      console.log(`❌ Error calling endpoint: ${error instanceof Error ? error.message : error}`);
+    }
+
+    if (pendingRoot === zeroHash) {
+      console.log("Status: No pending root");
+    } else {
+      console.log("Status: Pending root available");
+      console.log("Use 'reward accept' to accept this pending root");
+    }
+  }
+}
+
 export class RepublishRoot extends Command {
   static paths = [["reward", "republish-root"]];
   id = Option.String({
@@ -317,7 +388,7 @@ export class RepublishRoot extends Command {
   });
   dir = Option.String("--dir", "chains");
   async execute() {
-    const { reward } = await selectReward(this.dir, this.id);
+    const { reward } = await selectReward(this.dir, this.id, "republish root");
     if (!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`);
     }
@@ -342,7 +413,7 @@ export class RepublishRoot extends Command {
       walletClient,
       getAddress(reward.urdAddress),
       pendingRoot,
-      "0x0000000000000000000000000000000000000000000000000000000000000000",
+      zeroHash,
     );
     console.log(
       `republished root for urd ${reward.urdAddress}. txn hash: ${txnhash}`,
