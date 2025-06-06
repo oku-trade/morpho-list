@@ -58,6 +58,36 @@ export const getPendingRoot = async (
   return result[0]
 }
 
+export const getPendingRootWithTimestamp = async (
+  client: PublicClient,
+  urdAddress: Address,
+) => {
+  const result = await client.readContract({
+    address: urdAddress,
+    abi: parseAbi([`function pendingRoot() external view returns ((bytes32,bytes32,uint256))`]),
+    functionName: "pendingRoot",
+    args: [],
+  })
+  return {
+    root: result[0],
+    ipfs: result[1], 
+    timestamp: result[2]
+  }
+}
+
+export const getTimelock = async (
+  client: PublicClient,
+  urdAddress: Address,
+) => {
+  const result = await client.readContract({
+    address: urdAddress,
+    abi: parseAbi([`function timelock() external view returns (uint256)`]),
+    functionName: "timelock",
+    args: [],
+  })
+  return result
+}
+
 export const updateRewardRoot = async (
   client: PublicClient,
   payer: WalletClient,

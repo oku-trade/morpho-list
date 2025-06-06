@@ -8,6 +8,8 @@ import {
   updateRewardRoot,
   setTimelock,
   getPendingRoot,
+  getPendingRootWithTimestamp,
+  getTimelock,
 } from "src/lib/rewards.js";
 import { getChain, getRpc, getTransport } from "src/lib/rpc.js";
 import { MorphoRewardProgram } from "src/lib/types.js";
@@ -329,6 +331,17 @@ export class CheckPendingRoot extends Command {
       getAddress(reward.urdAddress),
     );
 
+    // Get detailed pending root info and timelock
+    const pendingRootData = await getPendingRootWithTimestamp(
+      publicClient,
+      getAddress(reward.urdAddress),
+    );
+
+    const timelockPeriod = await getTimelock(
+      publicClient,
+      getAddress(reward.urdAddress),
+    );
+
     console.log(`Reward Program: ${reward.id} (${reward.name || "no name"})`);
     console.log(`Chain: ${reward.chainId}`);
     console.log(`URD Address: ${reward.urdAddress}`);
@@ -362,6 +375,9 @@ export class CheckPendingRoot extends Command {
             console.log(`  On-chain: ${pendingRoot}`);
             console.log(`  Endpoint: ${endpointRoot}`);
           }
+
+          // Enhanced validation logic
+          this.validateCampaignProgress(reward, campaignTree);
         } else {
           console.log("⚠️  Endpoint did not return a root value in the campaign tree");
         }
@@ -372,11 +388,194 @@ export class CheckPendingRoot extends Command {
       console.log(`❌ Error calling endpoint: ${error instanceof Error ? error.message : error}`);
     }
 
+    // Display timelock information at the bottom
+    this.displayTimelockInfo(pendingRootData, timelockPeriod);
+
+    // Update status messages based on timelock
     if (pendingRoot === zeroHash) {
-      console.log("Status: No pending root");
+      console.log("\nStatus: No pending root");
     } else {
-      console.log("Status: Pending root available");
-      console.log("Use 'reward accept' to accept this pending root");
+      const pendingTimestamp = Number(pendingRootData.timestamp);
+      const expirationTimestamp = pendingTimestamp + Number(timelockPeriod);
+      const now = Math.floor(Date.now() / 1000);
+
+      if (now >= expirationTimestamp) {
+        console.log("\n✅ Status: Pending root available and ready to accept");
+        console.log("Use 'reward accept' to accept this pending root");
+      } else {
+        console.log("\n⏳ Status: Pending root available but still in timelock");
+        const timeRemaining = expirationTimestamp - now;
+        const hoursRemaining = Math.floor(timeRemaining / 3600);
+        const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+        console.log(`Cannot accept for ${hoursRemaining}h ${minutesRemaining}m more`);
+      }
+    }
+  }
+
+  private validateCampaignProgress(reward: any, campaignTree: any) {
+    console.log("\n🔍 Campaign Progress Validation:");
+
+    // Calculate the most recent Friday at 9am PDT
+    const referenceTime = this.getMostRecentFriday9amPDT();
+    const startTime = campaignTree.metadata?.start_timestamp || reward.start_timestamp;
+    const endTime = campaignTree.metadata?.end_timestamp || reward.end_timestamp;
+    const totalRewardAmount = BigInt(reward.reward_amount);
+
+    console.log(`📅 Using reference time: ${new Date(referenceTime * 1000).toISOString()} (Most recent Friday 9pm PDT - 12hrs after 9am)`);
+
+    // Calculate campaign completion percentage
+    let completionPercentage = 0;
+    if (referenceTime < startTime) {
+      completionPercentage = 0;
+      console.log("⏳ Campaign has not started yet (as of reference time)");
+    } else if (referenceTime >= endTime) {
+      completionPercentage = 100;
+      console.log("✅ Campaign has ended (as of reference time)");
+    } else {
+      const elapsed = referenceTime - startTime;
+      const total = endTime - startTime;
+      completionPercentage = (elapsed / total) * 100;
+      console.log(`⏱️ Campaign is ${completionPercentage.toFixed(2)}% complete (as of reference time)`);
+    }
+
+    // Validate total claimable amount
+    if (campaignTree.tree && Array.isArray(campaignTree.tree)) {
+      const totalClaimable = campaignTree.tree.reduce((sum: bigint, entry: any) => {
+        return sum + BigInt(entry.claimable || entry.amount || 0);
+      }, BigInt(0));
+
+      const expectedMax = (totalRewardAmount * BigInt(Math.ceil(completionPercentage))) / BigInt(100);
+      const claimablePercentage = Number((totalClaimable * BigInt(10000)) / totalRewardAmount) / 100;
+
+      console.log(`💰 Total claimable: ${totalClaimable.toString()} (${claimablePercentage.toFixed(2)}% of total reward)`);
+      console.log(`📊 Expected max claimable: ${expectedMax.toString()} (${completionPercentage.toFixed(2)}% of total reward)`);
+
+      // Validation with some tolerance (allowing up to 5% over expected)
+      const tolerance = BigInt(5); // 5%
+      const maxAllowed = (totalRewardAmount * (BigInt(Math.ceil(completionPercentage)) + tolerance)) / BigInt(100);
+
+      if (totalClaimable <= maxAllowed) {
+        console.log("✅ Total claimable amount is within expected range");
+      } else {
+        console.log("⚠️  Total claimable amount exceeds expected range");
+        const excessPercentage = Number(((totalClaimable - expectedMax) * BigInt(10000)) / totalRewardAmount) / 100;
+        console.log(`   Excess: ${excessPercentage.toFixed(2)}% over expected`);
+      }
+
+      // Calculate and display top 5 users' claimable percentages
+      this.displayTopUsersAnalysis(campaignTree.tree, totalRewardAmount);
+    } else {
+      console.log("⚠️  No tree data available for validation");
+    }
+
+    // Display campaign timing info
+    console.log(`\n📅 Campaign Timeline:`);
+    console.log(`   Start: ${new Date(startTime * 1000).toISOString()}`);
+    console.log(`   End: ${new Date(endTime * 1000).toISOString()}`);
+    console.log(`   Reference: ${new Date(referenceTime * 1000).toISOString()}`);
+  }
+
+  private getMostRecentFriday9amPDT(): number {
+    // Get current date in PDT (UTC-7)
+    const now = new Date();
+    const pdtOffset = 7 * 60; // PDT is UTC-7
+    const nowPDT = new Date(now.getTime() - pdtOffset * 60 * 1000);
+
+    // Get current day of week (0 = Sunday, 1 = Monday, ..., 5 = Friday, 6 = Saturday)
+    const currentDay = nowPDT.getDay();
+
+    // Calculate days to subtract to get to most recent Friday
+    let daysToSubtract = 0;
+    if (currentDay === 5) { // Friday
+      daysToSubtract = 0; // Use today
+    } else if (currentDay === 6) { // Saturday
+      daysToSubtract = 1; // Use yesterday (Friday)
+    } else if (currentDay === 0) { // Sunday
+      daysToSubtract = 2; // Use 2 days ago (Friday)
+    } else { // Monday (1), Tuesday (2), Wednesday (3), Thursday (4)
+      daysToSubtract = currentDay + 2; // Mon=3, Tue=4, Wed=5, Thu=6 days ago
+    }
+
+    // Create the target Friday date
+    const targetFriday = new Date(nowPDT);
+    targetFriday.setDate(targetFriday.getDate() - daysToSubtract);
+
+    // Set to 9am PDT
+    targetFriday.setHours(9, 0, 0, 0);
+
+    // Subtract 12 hours (9am PDT becomes 9pm PDT the previous day)
+    targetFriday.setHours(targetFriday.getHours() - 12);
+
+    // Convert back to UTC and return as Unix timestamp
+    const fridayUTC = new Date(targetFriday.getTime() + pdtOffset * 60 * 1000);
+    return Math.floor(fridayUTC.getTime() / 1000);
+  }
+
+  private displayTimelockInfo(pendingRootData: any, timelockPeriod: bigint) {
+    console.log(`\n🔒 Timelock Information:`);
+    console.log(`   Timelock Period: ${timelockPeriod.toString()} seconds (${Number(timelockPeriod) / 3600} hours)`);
+
+    if (pendingRootData.root === zeroHash) {
+      console.log(`   Status: No pending root to timelock`);
+      return;
+    }
+
+    const pendingTimestamp = Number(pendingRootData.timestamp);
+    const expirationTimestamp = pendingTimestamp + Number(timelockPeriod);
+    const now = Math.floor(Date.now() / 1000);
+
+    console.log(`   Pending Root Set At: ${new Date(pendingTimestamp * 1000).toISOString()}`);
+    console.log(`   Timelock Expires At: ${new Date(expirationTimestamp * 1000).toISOString()}`);
+
+    if (now >= expirationTimestamp) {
+      console.log(`   ✅ Status: Ready to accept! (Timelock expired)`);
+      const expiredSince = now - expirationTimestamp;
+      const hoursExpired = Math.floor(expiredSince / 3600);
+      const minutesExpired = Math.floor((expiredSince % 3600) / 60);
+      console.log(`   📅 Expired: ${hoursExpired}h ${minutesExpired}m ago`);
+    } else {
+      console.log(`   ⏳ Status: Still locked`);
+      const timeRemaining = expirationTimestamp - now;
+      const hoursRemaining = Math.floor(timeRemaining / 3600);
+      const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+      console.log(`   ⏱️ Time Remaining: ${hoursRemaining}h ${minutesRemaining}m`);
+      console.log(`   🕐 Ready At: ${new Date(expirationTimestamp * 1000).toLocaleString()}`);
+    }
+  }
+
+  private displayTopUsersAnalysis(tree: any[], totalRewardAmount: bigint) {
+    console.log("\n👥 Top 5 Users Analysis:");
+
+    // Sort users by claimable amount (descending)
+    const sortedUsers = tree
+      .map(entry => ({
+        user: entry.account || entry.user || entry.address || 'Unknown',
+        claimable: BigInt(entry.claimable || entry.amount || 0)
+      }))
+      .sort((a, b) => {
+        if (a.claimable > b.claimable) return -1;
+        if (a.claimable < b.claimable) return 1;
+        return 0;
+      })
+      .slice(0, 5);
+
+    const topFiveTotal = sortedUsers.reduce((sum, user) => sum + user.claimable, BigInt(0));
+    const topFivePercentage = Number((topFiveTotal * BigInt(10000)) / totalRewardAmount) / 100;
+
+    console.log(`🏆 Top 5 users control ${topFivePercentage.toFixed(2)}% of total rewards`);
+
+    sortedUsers.forEach((user, index) => {
+      const userPercentage = Number((user.claimable * BigInt(10000)) / totalRewardAmount) / 100;
+      console.log(`   ${index + 1}. ${user.user}: ${user.claimable.toString()} (${userPercentage.toFixed(2)}%)`);
+    });
+
+    // Analysis of concentration
+    if (topFivePercentage > 50) {
+      console.log("⚠️  High concentration: Top 5 users control >50% of rewards");
+    } else if (topFivePercentage > 25) {
+      console.log("ℹ️  Moderate concentration: Top 5 users control >25% of rewards");
+    } else {
+      console.log("✅ Good distribution: Top 5 users control <25% of rewards");
     }
   }
 }
