@@ -395,16 +395,15 @@ export class CheckPendingRoot extends Command {
     if (pendingRoot === zeroHash) {
       console.log("\nStatus: No pending root");
     } else {
-      const pendingTimestamp = Number(pendingRootData.timestamp);
-      const expirationTimestamp = pendingTimestamp + Number(timelockPeriod);
+      const validAtTimestamp = Number(pendingRootData.timestamp);
       const now = Math.floor(Date.now() / 1000);
 
-      if (now >= expirationTimestamp) {
+      if (now >= validAtTimestamp) {
         console.log("\n✅ Status: Pending root available and ready to accept");
         console.log("Use 'reward accept' to accept this pending root");
       } else {
         console.log("\n⏳ Status: Pending root available but still in timelock");
-        const timeRemaining = expirationTimestamp - now;
+        const timeRemaining = validAtTimestamp - now;
         const hoursRemaining = Math.floor(timeRemaining / 3600);
         const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
         console.log(`Cannot accept for ${hoursRemaining}h ${minutesRemaining}m more`);
@@ -520,26 +519,26 @@ export class CheckPendingRoot extends Command {
       return;
     }
 
-    const pendingTimestamp = Number(pendingRootData.timestamp);
-    const expirationTimestamp = pendingTimestamp + Number(timelockPeriod);
+    const validAtTimestamp = Number(pendingRootData.timestamp);
+    const submittedAtTimestamp = validAtTimestamp - Number(timelockPeriod);
     const now = Math.floor(Date.now() / 1000);
 
-    console.log(`   Pending Root Set At: ${new Date(pendingTimestamp * 1000).toISOString()}`);
-    console.log(`   Timelock Expires At: ${new Date(expirationTimestamp * 1000).toISOString()}`);
+    console.log(`   Pending Root Set At: ${new Date(submittedAtTimestamp * 1000).toISOString()}`);
+    console.log(`   Timelock Expires At: ${new Date(validAtTimestamp * 1000).toISOString()}`);
 
-    if (now >= expirationTimestamp) {
+    if (now >= validAtTimestamp) {
       console.log(`   ✅ Status: Ready to accept! (Timelock expired)`);
-      const expiredSince = now - expirationTimestamp;
+      const expiredSince = now - validAtTimestamp;
       const hoursExpired = Math.floor(expiredSince / 3600);
       const minutesExpired = Math.floor((expiredSince % 3600) / 60);
       console.log(`   📅 Expired: ${hoursExpired}h ${minutesExpired}m ago`);
     } else {
       console.log(`   ⏳ Status: Still locked`);
-      const timeRemaining = expirationTimestamp - now;
+      const timeRemaining = validAtTimestamp - now;
       const hoursRemaining = Math.floor(timeRemaining / 3600);
       const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
       console.log(`   ⏱️ Time Remaining: ${hoursRemaining}h ${minutesRemaining}m`);
-      console.log(`   🕐 Ready At: ${new Date(expirationTimestamp * 1000).toLocaleString()}`);
+      console.log(`   🕐 Ready At: ${new Date(validAtTimestamp * 1000).toLocaleString()}`);
     }
   }
 
