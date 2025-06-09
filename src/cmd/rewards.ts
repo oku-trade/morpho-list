@@ -579,6 +579,71 @@ export class CheckPendingRoot extends Command {
   }
 }
 
+export class ListPendingRoots extends Command {
+  static paths = [["reward", "pending"]];
+  dir = Option.String("--dir", "chains");
+  async execute() {
+    const rewards = await loadAllData(this.dir, "rewards");
+    console.log("Checking all rewards for pending roots...\n");
+    
+    let foundPending = false;
+    
+    for (const reward of rewards) {
+      try {
+        const { chain, publicClient } = getWalletInfo(reward.chainId);
+        
+        if (!("urdFactory" in chain.morpho)) {
+          console.log(`⚠️  Skipping ${reward.id}: No urdFactory for chain ${chain.id}`);
+          continue;
+        }
+
+        const pendingRoot = await getPendingRoot(
+          publicClient,
+          getAddress(reward.urdAddress),
+        );
+
+        if (pendingRoot !== zeroHash) {
+          foundPending = true;
+          
+          const pendingRootData = await getPendingRootWithTimestamp(
+            publicClient,
+            getAddress(reward.urdAddress),
+          );
+          
+          const timelockPeriod = await getTimelock(
+            publicClient,
+            getAddress(reward.urdAddress),
+          );
+
+          const validAtTimestamp = Number(pendingRootData.timestamp);
+          const now = Math.floor(Date.now() / 1000);
+          const timeRemaining = validAtTimestamp - now;
+          
+          console.log(`🔄 ${reward.id} (${reward.name || "no name"})`);
+          console.log(`   Chain: ${reward.chainId}`);
+          console.log(`   URD: ${reward.urdAddress}`);
+          console.log(`   Pending Root: ${pendingRoot}`);
+          
+          if (now >= validAtTimestamp) {
+            console.log(`   ✅ Status: Ready to accept! (expired ${Math.floor((now - validAtTimestamp) / 3600)}h ago)`);
+          } else {
+            const hoursRemaining = Math.floor(timeRemaining / 3600);
+            const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+            console.log(`   ⏳ Status: Locked for ${hoursRemaining}h ${minutesRemaining}m more`);
+          }
+          console.log("");
+        }
+      } catch (error) {
+        console.log(`❌ Error checking ${reward.id}: ${error instanceof Error ? error.message : error}`);
+      }
+    }
+    
+    if (!foundPending) {
+      console.log("✨ No rewards have pending roots.");
+    }
+  }
+}
+
 export class RepublishRoot extends Command {
   static paths = [["reward", "republish-root"]];
   id = Option.String({
