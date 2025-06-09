@@ -25,6 +25,8 @@ import {
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 const prodPublisher = "0xCa3D836E100Aca076991bF9abaA4F7516e5155Cb";
 const devPublishers = [
@@ -49,6 +51,16 @@ const selectReward = async (dir: string, id: string | undefined, action: string 
       })
       : rewards.find((r) => r.id === id);
   return { reward, rewards };
+};
+
+const loadBlacklist = (dir: string, chainId: number): string[] => {
+  try {
+    const blacklistPath = join(dir, chainId.toString(), "blacklist", "users", "data.json");
+    const blacklistData = JSON.parse(readFileSync(blacklistPath, "utf8"));
+    return blacklistData.blacklist?.map((addr: string) => addr.toLowerCase()) || [];
+  } catch (error) {
+    return [];
+  }
 };
 
 const getWalletInfo = (chainString: string | number) => {
@@ -348,7 +360,7 @@ export class CheckPendingRoot extends Command {
     console.log(`On-chain Pending Root: ${pendingRoot}`);
 
     try {
-      const endpointUrl = `https://sap.staging.gfx.town/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
+      const endpointUrl = `https://sap.icarus.tools/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
       const response = await fetch(endpointUrl);
 
       if (!response.ok) {
@@ -378,6 +390,9 @@ export class CheckPendingRoot extends Command {
 
           // Enhanced validation logic
           this.validateCampaignProgress(reward, campaignTree);
+          
+          // Blacklist validation
+          this.validateBlacklist(campaignTree, reward.chainId);
         } else {
           console.log("⚠️  Endpoint did not return a root value in the campaign tree");
         }
@@ -577,6 +592,39 @@ export class CheckPendingRoot extends Command {
       console.log("✅ Good distribution: Top 5 users control <25% of rewards");
     }
   }
+
+  private validateBlacklist(campaignTree: any, chainId: number) {
+    console.log("\n🚫 Blacklist Validation:");
+    
+    // Load blacklist for the specific chain
+    const blacklist = loadBlacklist(this.dir, chainId);
+    
+    if (blacklist.length === 0) {
+      console.log("ℹ️  No blacklist found for this chain");
+      return;
+    }
+    
+    console.log(`📋 Loaded blacklist with ${blacklist.length} addresses for chain ${chainId}`);
+    
+    if (!campaignTree.tree || !Array.isArray(campaignTree.tree)) {
+      console.log("⚠️  No tree data available for blacklist validation");
+      return;
+    }
+    
+    // Check for blacklisted addresses in the tree
+    for (const entry of campaignTree.tree) {
+      const userAddress = (entry.account || entry.user || entry.address || '').toLowerCase();
+      if (blacklist.includes(userAddress)) {
+        console.log("\n🔥🔥🔥 CRITICAL ERROR: BLACKLISTED ADDRESS DETECTED 🔥🔥🔥");
+        console.log("❌❌❌ DO NOT ACCEPT THIS ROOT - CONTAINS SANCTIONED USER ❌❌❌");
+        console.log(`🚨 Blacklisted address found: ${userAddress}`);
+        console.log("🛑 ABORTING VALIDATION - MANUAL REVIEW REQUIRED 🛑");
+        return;
+      }
+    }
+    
+    console.log("✅ No blacklisted addresses found in pending root");
+  }
 }
 
 export class ListPendingRoots extends Command {
@@ -585,13 +633,13 @@ export class ListPendingRoots extends Command {
   async execute() {
     const rewards = await loadAllData(this.dir, "rewards");
     console.log("Checking all rewards for pending roots...\n");
-    
+
     let foundPending = false;
-    
+
     for (const reward of rewards) {
       try {
         const { chain, publicClient } = getWalletInfo(reward.chainId);
-        
+
         if (!("urdFactory" in chain.morpho)) {
           console.log(`⚠️  Skipping ${reward.id}: No urdFactory for chain ${chain.id}`);
           continue;
@@ -604,12 +652,12 @@ export class ListPendingRoots extends Command {
 
         if (pendingRoot !== zeroHash) {
           foundPending = true;
-          
+
           const pendingRootData = await getPendingRootWithTimestamp(
             publicClient,
             getAddress(reward.urdAddress),
           );
-          
+
           const timelockPeriod = await getTimelock(
             publicClient,
             getAddress(reward.urdAddress),
@@ -618,12 +666,12 @@ export class ListPendingRoots extends Command {
           const validAtTimestamp = Number(pendingRootData.timestamp);
           const now = Math.floor(Date.now() / 1000);
           const timeRemaining = validAtTimestamp - now;
-          
+
           console.log(`🔄 ${reward.id} (${reward.name || "no name"})`);
           console.log(`   Chain: ${reward.chainId}`);
           console.log(`   URD: ${reward.urdAddress}`);
           console.log(`   Pending Root: ${pendingRoot}`);
-          
+
           if (now >= validAtTimestamp) {
             console.log(`   ✅ Status: Ready to accept! (expired ${Math.floor((now - validAtTimestamp) / 3600)}h ago)`);
           } else {
@@ -637,7 +685,7 @@ export class ListPendingRoots extends Command {
         console.log(`❌ Error checking ${reward.id}: ${error instanceof Error ? error.message : error}`);
       }
     }
-    
+
     if (!foundPending) {
       console.log("✨ No rewards have pending roots.");
     }
