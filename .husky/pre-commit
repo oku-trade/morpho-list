@@ -1,1 +1,7 @@
 corepack yarn compile
+
+# Check if there are any changes after compilation
+if ! git diff --quiet; then
+    git add .
+    git commit -m "masterlist changes" --no-verify
+fi
