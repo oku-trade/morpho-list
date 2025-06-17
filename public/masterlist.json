@@ -4644,6 +4644,20 @@
           "production": true
         },
         {
+          "id": "corn_popcorn_btcn_vault_v1.1.3",
+          "type": "vault",
+          "vault": "0xa7ba08cfc37e7cc67404d4996ffbb3e977490115",
+          "start_timestamp": 1750176000,
+          "end_timestamp": 1751385601,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "62304190000000000000000",
+          "urdAddress": "0xd426cfa37c8afaab5414c23023563a28bcb70bc6",
+          "salt": "0x22774f4fd5f46bcef21adb3240f8f924cf91a3bd3c79ae512e4b4fdf476b7b6b",
+          "name": "BTCN Vault Supply 6/17",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
           "id": "corn_popcorn_lbtc_wbtcn_v1.1.0",
           "type": "market",
           "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de",
@@ -4686,6 +4700,20 @@
           "production": true
         },
         {
+          "id": "corn_popcorn_lbtc_wbtcn_v1.1.3",
+          "type": "market",
+          "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de",
+          "start_timestamp": 1750176000,
+          "end_timestamp": 1751385601,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "80914530000000000000000",
+          "urdAddress": "0x92420f9ec97042bac8b5eaf7f1026d6826892b7a",
+          "salt": "0xa8b4a6d89d301f211ef5a8cf0ac49125070ea974e8d4c258b21c087c7eaa32c1",
+          "name": "LBTC WBTCN Market Borrow 6/17",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
           "id": "corn_popcorn_usdt0_vault_v1.1.1",
           "type": "vault",
           "vault": "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21",
@@ -4710,6 +4738,20 @@
           "urdAddress": "0x2892c015128133161be6b0cbe445e7c99f2141bf",
           "salt": "0xc27ce7f18598f76b5efd172bfcfdca6882a489987b8ce5a9a5804c95cb5a8ec4",
           "name": "USDT0 Vault Supply 6/3",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
+          "id": "corn_popcorn_usdt0_vault_v1.1.3",
+          "type": "vault",
+          "vault": "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21",
+          "start_timestamp": 1750176000,
+          "end_timestamp": 1751385601,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "202286330000000000000000",
+          "urdAddress": "0x30c8cc0d39fa20ea35a5889e194d1da8b8a720ce",
+          "salt": "0xa7ccfcadada1d48905e3f109712f095c789247a47d7e3bc35eb4f76b4446549e",
+          "name": "USDT0 Vault Supply 6/17",
           "chainId": 21000000,
           "production": true
         },
@@ -4752,6 +4794,20 @@
           "urdAddress": "0xbb421a154133707557fc969fd8914c8e8dcac92c",
           "salt": "0x7739f9e59b42e15ad7ef154b0d62e841f41773332f4130cf552154e598478590",
           "name": "WBTCN USDT0 Market Borrow 6/3",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
+          "id": "corn_popcorn_wbtcn_usdt0_v1.1.3",
+          "type": "market",
+          "market": "0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec",
+          "start_timestamp": 1750176000,
+          "end_timestamp": 1751385601,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "18367600000000000000000",
+          "urdAddress": "0x6041a40abf7b06073f31fba53be02bea1ae7c3a5",
+          "salt": "0x2b25c83642c4fa0affae1b258d350bfc4b6922d1f327aeb9be0feb2c8db849d9",
+          "name": "WBTCN USDT0 Market Borrow 6/17",
           "chainId": 21000000,
           "production": true
         },
@@ -4804,7 +4860,9 @@
         "0x5401b8620e5fb570064ca9114fd1e135fd77d57c",
         "0x3b22d991977611716220d3731c0f2752cc9c3c67",
         "0x9c32f66facf4e1c1b91f7585c47e919e20f1095e",
-        "0x3eb6464a77d7b619aaafa7e9ffc0fbe3ed7084b3"
+        "0x3eb6464a77d7b619aaafa7e9ffc0fbe3ed7084b3",
+        "0x27e919eac2fdf1bca7a3ea3e7eaa939e1a6a667d",
+        "0x33cf08276cf3bf408f64e3d3aabc95ef00fa1582"
       ]
     }
   }

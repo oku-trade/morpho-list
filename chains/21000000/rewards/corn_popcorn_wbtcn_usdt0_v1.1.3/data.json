@@ -1,0 +1,14 @@
+{
+  "id": "corn_popcorn_wbtcn_usdt0_v1.1.3",
+  "salt": "0x2b25c83642c4fa0affae1b258d350bfc4b6922d1f327aeb9be0feb2c8db849d9",
+  "urdAddress": "0x6041a40abf7b06073f31fba53be02bea1ae7c3a5",
+  "chainId": 21000000,
+  "start_timestamp": 1750176000,
+  "end_timestamp": 1751385601,
+  "production": true,
+  "reward_amount": "18367600000000000000000",
+  "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+  "name": "WBTCN USDT0 Market Borrow 6/17",
+  "type": "market",
+  "market": "0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec"
+}

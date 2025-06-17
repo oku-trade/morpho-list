@@ -165,10 +165,10 @@ export class CreateRewardsCommand extends Command {
       salt: saltHash,
       urdAddress: urdAddress.toLowerCase(),
       chainId: chain.id,
-      start_timestamp: 1748966400,
-      end_timestamp: 1750176000,
+      start_timestamp: 1750176000,
+      end_timestamp: 1751385601,
       production: this.prod,
-      reward_amount: "33576950000000000000000",
+      reward_amount: "80914530000000000000000",
       reward_token: "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
       name: this.id,
       type: "market",
@@ -390,7 +390,7 @@ export class CheckPendingRoot extends Command {
 
           // Enhanced validation logic
           this.validateCampaignProgress(reward, campaignTree);
-          
+
           // Blacklist validation
           this.validateBlacklist(campaignTree, reward.chainId);
         } else {
@@ -595,22 +595,22 @@ export class CheckPendingRoot extends Command {
 
   private validateBlacklist(campaignTree: any, chainId: number) {
     console.log("\n🚫 Blacklist Validation:");
-    
+
     // Load blacklist for the specific chain
     const blacklist = loadBlacklist(this.dir, chainId);
-    
+
     if (blacklist.length === 0) {
       console.log("ℹ️  No blacklist found for this chain");
       return;
     }
-    
+
     console.log(`📋 Loaded blacklist with ${blacklist.length} addresses for chain ${chainId}`);
-    
+
     if (!campaignTree.tree || !Array.isArray(campaignTree.tree)) {
       console.log("⚠️  No tree data available for blacklist validation");
       return;
     }
-    
+
     // Check for blacklisted addresses in the tree
     for (const entry of campaignTree.tree) {
       const userAddress = (entry.account || entry.user || entry.address || '').toLowerCase();
@@ -622,7 +622,7 @@ export class CheckPendingRoot extends Command {
         return;
       }
     }
-    
+
     console.log("✅ No blacklisted addresses found in pending root");
   }
 }
