@@ -70,7 +70,7 @@ export const getPendingRootWithTimestamp = async (
   })
   return {
     root: result[0],
-    ipfs: result[1], 
+    ipfs: result[1],
     timestamp: result[2]
   }
 }
@@ -83,6 +83,19 @@ export const getTimelock = async (
     address: urdAddress,
     abi: parseAbi([`function timelock() external view returns (uint256)`]),
     functionName: "timelock",
+    args: [],
+  })
+  return result
+}
+
+export const getOwner = async (
+  client: PublicClient,
+  urdAddress: Address,
+) => {
+  const result = await client.readContract({
+    address: urdAddress,
+    abi: parseAbi([`function owner() external view returns (address)`]),
+    functionName: "owner",
     args: [],
   })
   return result
@@ -124,6 +137,26 @@ export const acceptRewardRoot = async (
     abi: parseAbi([`function acceptRoot() external`]),
     functionName: "acceptRoot",
     args: [],
+  })
+  const txn = await payer.writeContract(request)
+  await client.waitForTransactionReceipt({hash: txn})
+  return txn
+}
+
+export const transferOwnership = async (
+  client: PublicClient,
+  payer: WalletClient,
+  urdAddress: Address,
+  newOwner: Address,
+) => {
+  if(!payer.account) throw new Error("payer account not found")
+
+  const {request} = await client.simulateContract({
+    account: payer.account,
+    address: urdAddress,
+    abi: parseAbi([`function setOwner(address newOwner) external`]),
+    functionName: "setOwner",
+    args: [newOwner],
   })
   const txn = await payer.writeContract(request)
   await client.waitForTransactionReceipt({hash: txn})
