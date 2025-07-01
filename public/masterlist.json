@@ -294,6 +294,16 @@
         },
         {
           "chainId": 1,
+          "name": "Hyperithm USDC",
+          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0x777791C4d6DC2CE140D00D2828a7C93503c67777",
+          "guardianAddress": "0x3C487BA7Ba5D436a9196C64b036fF4b53E5f8B1f",
+          "curatorAddress": "0x75178137D3B4B9A0F771E0e149b00fB8167BA325",
+          "enabled": true
+        },
+        {
+          "chainId": 1,
           "name": "Metronome msETH Vault",
           "tokenAddress": "0x64351fC9810aDAd17A690E4e1717Df5e7e085160",
           "performanceFeePercentage": "50000000000000000",
@@ -320,6 +330,16 @@
           "vaultAddress": "0x833adaef212c5cd3f78906b44bbfb18258f238f0",
           "guardianAddress": "0xc7645103984F27fb2221E16bFb6b4d650Ea03695",
           "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+          "enabled": true
+        },
+        {
+          "chainId": 1,
+          "name": "Hyperithm USDT",
+          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0x888883f0eDDF69Ca4BfD00Af93714Ff97F188888",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x75178137D3B4B9A0F771E0e149b00fB8167BA325",
           "enabled": true
         },
         {

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Hyperithm USDT",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x888883f0eDDF69Ca4BfD00Af93714Ff97F188888",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x75178137D3B4B9A0F771E0e149b00fB8167BA325",
+  "enabled": true
+}
