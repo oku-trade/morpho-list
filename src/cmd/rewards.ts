@@ -167,10 +167,10 @@ export class CreateRewardsCommand extends Command {
       salt: saltHash,
       urdAddress: urdAddress.toLowerCase(),
       chainId: chain.id,
-      start_timestamp: 1750176000,
-      end_timestamp: 1751385601,
+      start_timestamp: 1751385600,
+      end_timestamp: 1752595200,
       production: this.prod,
-      reward_amount: "80914530000000000000000",
+      reward_amount: "81269810000000000000000",
       reward_token: "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
       name: this.id,
       type: "market",
@@ -736,24 +736,24 @@ export class RepublishRoot extends Command {
 
 export class ShowRewardInfo extends Command {
   static paths = [["reward", "info"]];
-  
+
   id = Option.String({ required: false });
   dir = Option.String("--dir", "chains");
-  
+
   async execute() {
     const { reward } = await selectReward(this.dir, this.id, "show info");
     if (!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`);
     }
-    
+
     const { chain, publicClient } = getWalletInfo(reward.chainId);
-    
+
     if (!("urdFactory" in chain.morpho)) {
       throw new Error(`No urdFactory for chain ${chain.id}.'`);
     }
-    
+
     console.log("=== Reward Campaign Information ===\n");
-    
+
     console.log(`📋 Campaign Details:`);
     console.log(`   ID: ${reward.id}`);
     console.log(`   Name: ${reward.name || "No name specified"}`);
@@ -761,7 +761,7 @@ export class ShowRewardInfo extends Command {
     console.log(`   Chain ID: ${reward.chainId}`);
     console.log(`   Production: ${reward.production ? "Yes" : "No"}`);
     console.log(`   Finished: ${reward.finished ? "Yes" : "No"}`);
-    
+
     console.log(`\n📍 Addresses:`);
     console.log(`   URD Contract: ${reward.urdAddress}`);
     console.log(`   Reward Token: ${reward.reward_token}`);
@@ -771,19 +771,19 @@ export class ShowRewardInfo extends Command {
     if (reward.market) {
       console.log(`   Market: ${reward.market}`);
     }
-    
+
     console.log(`\n💰 Reward Details:`);
     console.log(`   Total Amount: ${reward.reward_amount}`);
     const rewardBigInt = BigInt(reward.reward_amount);
     const rewardFormatted = (Number(rewardBigInt) / 1e18).toFixed(2);
     console.log(`   Total Amount (formatted): ${rewardFormatted}`);
-    
+
     console.log(`\n⏱️ Timeline:`);
     const startDate = new Date(reward.start_timestamp * 1000);
     const endDate = new Date(reward.end_timestamp * 1000);
     console.log(`   Start: ${startDate.toISOString()} (${reward.start_timestamp})`);
     console.log(`   End: ${endDate.toISOString()} (${reward.end_timestamp})`);
-    
+
     const now = Date.now() / 1000;
     if (now < reward.start_timestamp) {
       const daysUntilStart = Math.ceil((reward.start_timestamp - now) / 86400);
@@ -798,40 +798,40 @@ export class ShowRewardInfo extends Command {
       const daysRemaining = Math.ceil((reward.end_timestamp - now) / 86400);
       console.log(`   Status: Active (${percentage.toFixed(2)}% complete, ${daysRemaining} days remaining)`);
     }
-    
+
     console.log(`\n🔧 Technical Details:`);
     console.log(`   Salt: ${reward.salt}`);
-    
+
     try {
       const pendingRoot = await getPendingRoot(
         publicClient,
         getAddress(reward.urdAddress),
       );
-      
+
       const pendingRootData = await getPendingRootWithTimestamp(
         publicClient,
         getAddress(reward.urdAddress),
       );
-      
+
       const timelockPeriod = await getTimelock(
         publicClient,
         getAddress(reward.urdAddress),
       );
-      
+
       const owner = await getOwner(
         publicClient,
         getAddress(reward.urdAddress),
       );
-      
+
       console.log(`\n📊 On-chain State:`);
       console.log(`   Owner: ${owner}`);
       console.log(`   Pending Root: ${pendingRoot}`);
       console.log(`   Timelock Period: ${timelockPeriod.toString()} seconds (${Number(timelockPeriod) / 3600} hours)`);
-      
+
       if (pendingRoot !== zeroHash) {
         const validAtTimestamp = Number(pendingRootData.timestamp);
         const currentTime = Math.floor(Date.now() / 1000);
-        
+
         if (currentTime >= validAtTimestamp) {
           console.log(`   Root Status: ✅ Ready to accept`);
         } else {
@@ -840,18 +840,18 @@ export class ShowRewardInfo extends Command {
           const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
           console.log(`   Root Status: ⏳ In timelock (${hoursRemaining}h ${minutesRemaining}m remaining)`);
         }
-        
+
         if (pendingRootData.ipfs && pendingRootData.ipfs !== zeroHash) {
           console.log(`   IPFS Hash: ${pendingRootData.ipfs}`);
         }
       } else {
         console.log(`   Root Status: No pending root`);
       }
-      
+
     } catch (error) {
       console.log(`\n⚠️ Could not fetch on-chain data: ${error instanceof Error ? error.message : error}`);
     }
-    
+
     console.log(`\n🔗 Links:`);
     console.log(`   Explorer: https://maizenet-explorer.usecorn.com/address/${reward.urdAddress}`);
   }
@@ -859,61 +859,61 @@ export class ShowRewardInfo extends Command {
 
 export class TransferOwner extends Command {
   static paths = [["reward", "transfer-owner"]];
-  
+
   id = Option.String({ required: false });
   newOwner = Option.String();
   dir = Option.String("--dir", "chains");
-  
+
   async execute() {
     const { reward } = await selectReward(this.dir, this.id, "transfer ownership");
     if (!reward) {
       throw new Error(`reward ${this.id} not found. try 'reward list'`);
     }
-    
+
     if (!this.newOwner || !isAddress(this.newOwner)) {
       throw new Error("new-owner must be a valid address");
     }
-    
+
     const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
-    
+
     if (!("urdFactory" in chain.morpho)) {
       throw new Error(`No urdFactory for chain ${chain.id}.'`);
     }
-    
+
     // Get current owner
     const currentOwner = await getOwner(
       publicClient,
       getAddress(reward.urdAddress),
     );
-    
+
     console.log(`\n⚠️  WARNING: Ownership Transfer`);
     console.log(`Campaign: ${reward.id} (${reward.name || "no name"})`);
     console.log(`URD Contract: ${reward.urdAddress}`);
     console.log(`Current Owner: ${currentOwner}`);
     console.log(`New Owner: ${this.newOwner}`);
     console.log(`\n🚨 This action is IRREVERSIBLE!`);
-    
+
     const answer = await confirm({
       message: `Are you absolutely sure you want to transfer ownership to ${this.newOwner}?`,
       default: false,
     });
-    
+
     if (!answer) {
       console.log("Transfer cancelled");
       return;
     }
-    
+
     // Double confirmation for safety
     const secondAnswer = await confirm({
       message: `FINAL CONFIRMATION: Transfer ownership of ${reward.id} to ${this.newOwner}?`,
       default: false,
     });
-    
+
     if (!secondAnswer) {
       console.log("Transfer cancelled");
       return;
     }
-    
+
     try {
       const txnhash = await transferOwnership(
         publicClient,
@@ -921,17 +921,17 @@ export class TransferOwner extends Command {
         getAddress(reward.urdAddress),
         getAddress(this.newOwner),
       );
-      
+
       console.log(`\n✅ Ownership transferred successfully!`);
       console.log(`Transaction hash: ${txnhash}`);
       console.log(`New owner: ${this.newOwner}`);
-      
+
       // Verify the transfer
       const newOwnerVerified = await getOwner(
         publicClient,
         getAddress(reward.urdAddress),
       );
-      
+
       if (newOwnerVerified.toLowerCase() === this.newOwner.toLowerCase()) {
         console.log(`✅ Ownership transfer verified on-chain`);
       } else {

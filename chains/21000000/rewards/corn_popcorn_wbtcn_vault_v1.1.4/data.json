@@ -1,0 +1,14 @@
+{
+  "id": "corn_popcorn_wbtcn_vault_v1.1.4",
+  "salt": "0x672de17d3be9e35bdf781e399b3a37b1ea8da17d4ad54c04c9e5058ae1306e99",
+  "urdAddress": "0xdf851e75cd7336f25f99cc6aa5d8133b6c369345",
+  "chainId": 21000000,
+  "start_timestamp": 1751385600,
+  "end_timestamp": 1752595200,
+  "production": true,
+  "reward_amount": "73620890000000000000000",
+  "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+  "name": "WBTCN Vault Supply 7/1",
+  "type": "vault",
+  "vault": "0xa7ba08cfc37e7cc67404d4996ffbb3e977490115"
+}
