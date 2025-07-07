@@ -857,6 +857,290 @@ export class ShowRewardInfo extends Command {
   }
 }
 
+export class CheckAllPendingRoots extends Command {
+  static paths = [["reward", "check-all-pending"]];
+  dir = Option.String("--dir", "chains");
+
+  async execute() {
+    const rewards = await loadAllData(this.dir, "rewards");
+    console.log("🔍 Checking validity of all pending roots...\n");
+
+    let foundPending = false;
+    let validCount = 0;
+    let invalidCount = 0;
+    let errorCount = 0;
+    let readyToAccept: string[] = [];
+
+    for (const reward of rewards) {
+      try {
+        const { chain, publicClient } = getWalletInfo(reward.chainId);
+
+        if (!("urdFactory" in chain.morpho)) {
+          console.log(`⚠️  Skipping ${reward.id}: No urdFactory for chain ${chain.id}`);
+          continue;
+        }
+
+        const pendingRoot = await getPendingRoot(
+          publicClient,
+          getAddress(reward.urdAddress),
+        );
+
+        if (pendingRoot !== zeroHash) {
+          foundPending = true;
+          console.log(`\n${'='.repeat(60)}`);
+          console.log(`🔄 CHECKING: ${reward.id} (${reward.name || "no name"})`);
+          console.log(`${'='.repeat(60)}`);
+
+          let isValid = true;
+          let hasErrors = false;
+
+          // Get detailed pending root info and timelock
+          const pendingRootData = await getPendingRootWithTimestamp(
+            publicClient,
+            getAddress(reward.urdAddress),
+          );
+
+          const timelockPeriod = await getTimelock(
+            publicClient,
+            getAddress(reward.urdAddress),
+          );
+
+          console.log(`📋 Chain: ${reward.chainId}`);
+          console.log(`📋 URD Address: ${reward.urdAddress}`);
+          console.log(`📋 On-chain Pending Root: ${pendingRoot}`);
+
+          // Check endpoint validation
+          try {
+            const endpointUrl = `https://sap.icarus.tools/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
+            const response = await fetch(endpointUrl);
+
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const endpointData = await response.json();
+
+            if (endpointData && endpointData.result && endpointData.result.root) {
+              const campaignTree = endpointData.result;
+              const endpointRoot = campaignTree.root;
+              
+              console.log(`📋 Endpoint Root: ${endpointRoot}`);
+
+              if (pendingRoot.toLowerCase() === endpointRoot.toLowerCase()) {
+                console.log("✅ Root Match: On-chain pending root matches endpoint root");
+              } else {
+                console.log("❌ Root Match: On-chain pending root does NOT match endpoint root");
+                isValid = false;
+              }
+
+              // Validate campaign progress
+              const progressValid = this.validateCampaignProgressQuick(reward, campaignTree);
+              if (!progressValid) {
+                isValid = false;
+              }
+
+              // Validate blacklist
+              const blacklistValid = this.validateBlacklistQuick(campaignTree, reward.chainId);
+              if (!blacklistValid) {
+                isValid = false;
+              }
+
+            } else {
+              console.log("❌ Endpoint: Did not return a valid campaign tree");
+              isValid = false;
+            }
+          } catch (error) {
+            console.log(`❌ Endpoint Error: ${error instanceof Error ? error.message : error}`);
+            hasErrors = true;
+          }
+
+          // Display timelock information
+          this.displayTimelockInfoQuick(pendingRootData, timelockPeriod);
+
+          // Final status
+          const validAtTimestamp = Number(pendingRootData.timestamp);
+          const now = Math.floor(Date.now() / 1000);
+          const isReady = now >= validAtTimestamp;
+
+          if (hasErrors) {
+            console.log(`\n🔴 FINAL STATUS: ERROR - Could not fully validate ${reward.id}`);
+            errorCount++;
+          } else if (!isValid) {
+            console.log(`\n🔴 FINAL STATUS: INVALID - ${reward.id} has validation issues`);
+            invalidCount++;
+          } else if (!isReady) {
+            console.log(`\n🟡 FINAL STATUS: VALID BUT LOCKED - ${reward.id} is valid but still in timelock`);
+            validCount++;
+          } else {
+            console.log(`\n🟢 FINAL STATUS: VALID AND READY - ${reward.id} is ready to accept`);
+            validCount++;
+            readyToAccept.push(reward.id);
+          }
+        }
+      } catch (error) {
+        console.log(`❌ Error checking ${reward.id}: ${error instanceof Error ? error.message : error}`);
+        errorCount++;
+      }
+    }
+
+    // Summary
+    console.log(`\n${'='.repeat(60)}`);
+    console.log(`📊 VALIDATION SUMMARY`);
+    console.log(`${'='.repeat(60)}`);
+    
+    if (!foundPending) {
+      console.log("✨ No rewards have pending roots.");
+    } else {
+      console.log(`🟢 Valid: ${validCount}`);
+      console.log(`🔴 Invalid: ${invalidCount}`);
+      console.log(`⚠️  Errors: ${errorCount}`);
+      console.log(`📊 Total Checked: ${validCount + invalidCount + errorCount}`);
+      
+      if (validCount > 0) {
+        console.log(`\n✅ ${validCount} campaign(s) ready for acceptance`);
+      }
+      if (invalidCount > 0) {
+        console.log(`\n❌ ${invalidCount} campaign(s) have validation issues - DO NOT ACCEPT`);
+      }
+      if (errorCount > 0) {
+        console.log(`\n⚠️  ${errorCount} campaign(s) had validation errors - manual review required`);
+      }
+
+      // Print acceptance commands for ready campaigns
+      if (readyToAccept.length > 0) {
+        console.log(`\n${'='.repeat(60)}`);
+        console.log(`🚀 READY TO ACCEPT - RUN THESE COMMANDS:`);
+        console.log(`${'='.repeat(60)}`);
+        
+        for (const campaignId of readyToAccept) {
+          console.log(`./cli reward accept ${campaignId}`);
+        }
+        
+        console.log(`\n💡 Or accept all at once:`);
+        const acceptAllCommand = readyToAccept.map(id => `./cli reward accept ${id}`).join(' && ');
+        console.log(acceptAllCommand);
+      }
+    }
+  }
+
+  private validateCampaignProgressQuick(reward: any, campaignTree: any): boolean {
+    try {
+      const referenceTime = this.getMostRecentFriday9amPDT();
+      const startTime = campaignTree.metadata?.start_timestamp || reward.start_timestamp;
+      const endTime = campaignTree.metadata?.end_timestamp || reward.end_timestamp;
+      const totalRewardAmount = BigInt(reward.reward_amount);
+
+      let completionPercentage = 0;
+      if (referenceTime < startTime) {
+        completionPercentage = 0;
+      } else if (referenceTime >= endTime) {
+        completionPercentage = 100;
+      } else {
+        const elapsed = referenceTime - startTime;
+        const total = endTime - startTime;
+        completionPercentage = (elapsed / total) * 100;
+      }
+
+      if (campaignTree.tree && Array.isArray(campaignTree.tree)) {
+        const totalClaimable = campaignTree.tree.reduce((sum: bigint, entry: any) => {
+          return sum + BigInt(entry.claimable || entry.amount || 0);
+        }, BigInt(0));
+
+        const expectedMax = (totalRewardAmount * BigInt(Math.ceil(completionPercentage))) / BigInt(100);
+        const tolerance = BigInt(5);
+        const maxAllowed = (totalRewardAmount * (BigInt(Math.ceil(completionPercentage)) + tolerance)) / BigInt(100);
+
+        if (totalClaimable <= maxAllowed) {
+          console.log("✅ Progress: Total claimable amount is within expected range");
+          return true;
+        } else {
+          console.log("❌ Progress: Total claimable amount exceeds expected range");
+          return false;
+        }
+      }
+      return true;
+    } catch (error) {
+      console.log(`⚠️  Progress: Could not validate campaign progress: ${error}`);
+      return false;
+    }
+  }
+
+  private validateBlacklistQuick(campaignTree: any, chainId: number): boolean {
+    try {
+      const blacklist = loadBlacklist(this.dir, chainId);
+      
+      if (blacklist.length === 0) {
+        console.log("ℹ️  Blacklist: No blacklist found for this chain");
+        return true;
+      }
+
+      if (!campaignTree.tree || !Array.isArray(campaignTree.tree)) {
+        console.log("⚠️  Blacklist: No tree data available for validation");
+        return false;
+      }
+
+      for (const entry of campaignTree.tree) {
+        const userAddress = (entry.account || entry.user || entry.address || '').toLowerCase();
+        if (blacklist.includes(userAddress)) {
+          console.log("🔥 CRITICAL: BLACKLISTED ADDRESS DETECTED - DO NOT ACCEPT");
+          return false;
+        }
+      }
+
+      console.log("✅ Blacklist: No blacklisted addresses found");
+      return true;
+    } catch (error) {
+      console.log(`⚠️  Blacklist: Could not validate blacklist: ${error}`);
+      return false;
+    }
+  }
+
+  private getMostRecentFriday9amPDT(): number {
+    const now = new Date();
+    const pdtOffset = 7 * 60;
+    const nowPDT = new Date(now.getTime() - pdtOffset * 60 * 1000);
+    const currentDay = nowPDT.getDay();
+
+    let daysToSubtract = 0;
+    if (currentDay === 5) {
+      daysToSubtract = 0;
+    } else if (currentDay === 6) {
+      daysToSubtract = 1;
+    } else if (currentDay === 0) {
+      daysToSubtract = 2;
+    } else {
+      daysToSubtract = currentDay + 2;
+    }
+
+    const targetFriday = new Date(nowPDT);
+    targetFriday.setDate(targetFriday.getDate() - daysToSubtract);
+    targetFriday.setHours(9, 0, 0, 0);
+    targetFriday.setHours(targetFriday.getHours() - 12);
+
+    const fridayUTC = new Date(targetFriday.getTime() + pdtOffset * 60 * 1000);
+    return Math.floor(fridayUTC.getTime() / 1000);
+  }
+
+  private displayTimelockInfoQuick(pendingRootData: any, timelockPeriod: bigint) {
+    if (pendingRootData.root === zeroHash) {
+      console.log(`ℹ️  Timelock: No pending root to timelock`);
+      return;
+    }
+
+    const validAtTimestamp = Number(pendingRootData.timestamp);
+    const now = Math.floor(Date.now() / 1000);
+
+    if (now >= validAtTimestamp) {
+      console.log(`✅ Timelock: Ready to accept (timelock expired)`);
+    } else {
+      const timeRemaining = validAtTimestamp - now;
+      const hoursRemaining = Math.floor(timeRemaining / 3600);
+      const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+      console.log(`⏳ Timelock: Still locked (${hoursRemaining}h ${minutesRemaining}m remaining)`);
+    }
+  }
+}
+
 export class TransferOwner extends Command {
   static paths = [["reward", "transfer-owner"]];
 
