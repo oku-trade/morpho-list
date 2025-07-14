@@ -167,10 +167,10 @@ export class CreateRewardsCommand extends Command {
       salt: saltHash,
       urdAddress: urdAddress.toLowerCase(),
       chainId: chain.id,
-      start_timestamp: 1751385600,
-      end_timestamp: 1752595200,
+      start_timestamp: 1752595200,
+      end_timestamp: 1753804800,
       production: this.prod,
-      reward_amount: "81269810000000000000000",
+      reward_amount: "79676290000000000000000",
       reward_token: "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
       name: this.id,
       type: "market",
@@ -923,7 +923,7 @@ export class CheckAllPendingRoots extends Command {
             if (endpointData && endpointData.result && endpointData.result.root) {
               const campaignTree = endpointData.result;
               const endpointRoot = campaignTree.root;
-              
+
               console.log(`📋 Endpoint Root: ${endpointRoot}`);
 
               if (pendingRoot.toLowerCase() === endpointRoot.toLowerCase()) {
@@ -987,7 +987,7 @@ export class CheckAllPendingRoots extends Command {
     console.log(`\n${'='.repeat(60)}`);
     console.log(`📊 VALIDATION SUMMARY`);
     console.log(`${'='.repeat(60)}`);
-    
+
     if (!foundPending) {
       console.log("✨ No rewards have pending roots.");
     } else {
@@ -995,7 +995,7 @@ export class CheckAllPendingRoots extends Command {
       console.log(`🔴 Invalid: ${invalidCount}`);
       console.log(`⚠️  Errors: ${errorCount}`);
       console.log(`📊 Total Checked: ${validCount + invalidCount + errorCount}`);
-      
+
       if (validCount > 0) {
         console.log(`\n✅ ${validCount} campaign(s) ready for acceptance`);
       }
@@ -1011,11 +1011,11 @@ export class CheckAllPendingRoots extends Command {
         console.log(`\n${'='.repeat(60)}`);
         console.log(`🚀 READY TO ACCEPT - RUN THESE COMMANDS:`);
         console.log(`${'='.repeat(60)}`);
-        
+
         for (const campaignId of readyToAccept) {
           console.log(`./cli reward accept ${campaignId}`);
         }
-        
+
         console.log(`\n💡 Or accept all at once:`);
         const acceptAllCommand = readyToAccept.map(id => `./cli reward accept ${id}`).join(' && ');
         console.log(acceptAllCommand);
@@ -1068,7 +1068,7 @@ export class CheckAllPendingRoots extends Command {
   private validateBlacklistQuick(campaignTree: any, chainId: number): boolean {
     try {
       const blacklist = loadBlacklist(this.dir, chainId);
-      
+
       if (blacklist.length === 0) {
         console.log("ℹ️  Blacklist: No blacklist found for this chain");
         return true;
