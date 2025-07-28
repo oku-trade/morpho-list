@@ -1,0 +1,14 @@
+{
+  "id": "corn_popcorn_usdt0_vault_v1.1.6",
+  "salt": "0x87cce4404dad908a30b5977f7aef85c09e569376fbca4ae998a6e50b282594fc",
+  "urdAddress": "0x984aa4e95268f952419944a6d57521824b44fd24",
+  "chainId": 21000000,
+  "start_timestamp": 1753804800,
+  "end_timestamp": 1755014400,
+  "production": true,
+  "reward_amount": "127861860000000000000000",
+  "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+  "name": "USDT0 Vault Supply 7/29",
+  "type": "vault",
+  "vault": "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21"
+}
