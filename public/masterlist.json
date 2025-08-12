@@ -5007,6 +5007,20 @@
           "production": true
         },
         {
+          "id": "corn_popcorn_lbtc_wbtcn_v1.1.7",
+          "type": "market",
+          "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de",
+          "start_timestamp": 1755014400,
+          "end_timestamp": 1756224000,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "33098270000000000000000",
+          "urdAddress": "0x213deac6434c4cf479892cb4b524b2594d1f9536",
+          "salt": "0x5c2fb71478d6904a9a64fe9c2355f1f91ce6dd6c01d21a993a98d2ab0d052c55",
+          "name": "LBTC WBTCN Market Borrow 8/12",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
           "id": "corn_popcorn_usdt0_vault_v1.1.1",
           "type": "vault",
           "vault": "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21",
@@ -5087,6 +5101,20 @@
           "urdAddress": "0x984aa4e95268f952419944a6d57521824b44fd24",
           "salt": "0x87cce4404dad908a30b5977f7aef85c09e569376fbca4ae998a6e50b282594fc",
           "name": "USDT0 Vault Supply 7/29",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
+          "id": "corn_popcorn_usdt0_vault_v1.1.7",
+          "type": "vault",
+          "vault": "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21",
+          "start_timestamp": 1755014400,
+          "end_timestamp": 1756224000,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "102131800000000000000000",
+          "urdAddress": "0x3b898771df8f1b456cdbd1d5777c7d9c4b1f0cf8",
+          "salt": "0x95c348b5571a0e36dbdfce5b511bfa733bad32a834a78ca8d800989a18b2f13c",
+          "name": "USDT0 Vault Supply 8/12",
           "chainId": 21000000,
           "production": true
         },
@@ -5189,6 +5217,20 @@
           "production": true
         },
         {
+          "id": "corn_popcorn_wbtcn_usdt0_v1.1.7",
+          "type": "market",
+          "market": "0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec",
+          "start_timestamp": 1755014400,
+          "end_timestamp": 1756224000,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "9850040000000000000000",
+          "urdAddress": "0xcc70f5e081eb540b9c14af705d8454d553757bd0",
+          "salt": "0xbbdda5e1d091a4de4020f6143ae20f45b0bb8d78da9d22f97cd2edbbcd72e2d0",
+          "name": "WBTCN USDT0 Market Borrow 8/12",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
           "id": "corn_popcorn_wbtcn_vault_v1.1.4",
           "type": "vault",
           "vault": "0xa7ba08cfc37e7cc67404d4996ffbb3e977490115",
@@ -5227,6 +5269,20 @@
           "urdAddress": "0xd3049da75ebdbd69d52baeac4c0725e9e3e2277f",
           "salt": "0x2d8700608318c05cfc2efc962850d3d2c0e0e2a474ffe561aaebc1da9374f083",
           "name": "WBTCN Vault Supply 7/29",
+          "chainId": 21000000,
+          "production": true
+        },
+        {
+          "id": "corn_popcorn_wbtcn_vault_v1.1.7",
+          "type": "vault",
+          "vault": "0xa7ba08cfc37e7cc67404d4996ffbb3e977490115",
+          "start_timestamp": 1755014400,
+          "end_timestamp": 1756224000,
+          "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+          "reward_amount": "58729170000000000000000",
+          "urdAddress": "0xa581e397791d0514bb1986502b383e052c4709d5",
+          "salt": "0x4dd935aab6c558913692970e9fbd44e9570070bb93bfbd71974e15146254dc8c",
+          "name": "WBTCN Vault Supply 8/12",
           "chainId": 21000000,
           "production": true
         }
