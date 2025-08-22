@@ -167,15 +167,15 @@ export class CreateRewardsCommand extends Command {
       salt: saltHash,
       urdAddress: urdAddress.toLowerCase(),
       chainId: chain.id,
-      start_timestamp: 1755014400,
-      end_timestamp: 1756224000,
+      start_timestamp: 1756224000,
+      end_timestamp: 1757433600,
       production: this.prod,
-      reward_amount: "9850040000000000000000",
+      reward_amount: "121257470000000000000000",
       reward_token: "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
       name: this.id,
-      type: "market",
-      market:
-        "0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec",
+      type: "vault",
+      vault:
+        "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21",
     };
     const writtenFile = storeData(
       this.dir,
