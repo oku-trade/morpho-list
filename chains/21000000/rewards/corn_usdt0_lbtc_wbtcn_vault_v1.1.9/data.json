@@ -1,0 +1,14 @@
+{
+  "id": "corn_usdt0_lbtc_wbtcn_vault_v1.1.9",
+  "salt": "0xd20b3c66cc8cbe5f766356268bcfe38ab69fa4efbc1ed300936bc2fe3c952b29",
+  "urdAddress": "0x48793bc777a6de5d4a8483a4fe5fd541ba4b876a",
+  "chainId": 21000000,
+  "start_timestamp": 1757433600,
+  "end_timestamp": 1758643200,
+  "production": true,
+  "reward_amount": "317590000",
+  "reward_token": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+  "name": "LBTC WBTCN Vault Supply 9/9",
+  "type": "market",
+  "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "corn_popcorn_lbtc_wbtcn_v1.1.9",
+  "salt": "0x732ed08164c7c7e3e0b1a039df288b569310f9c31f3d4172c068a32d3bde0b76",
+  "urdAddress": "0x172ba96db7d02175330905ad7e2c20095674e811",
+  "chainId": 21000000,
+  "start_timestamp": 1757433600,
+  "end_timestamp": 1758643200,
+  "production": true,
+  "reward_amount": "5156760000000000000000",
+  "reward_token": "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
+  "name": "LBTC WBTCN Market Borrow 9/9",
+  "type": "market",
+  "market": "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de"
+}

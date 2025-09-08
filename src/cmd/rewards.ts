@@ -2,28 +2,28 @@ import { confirm, search } from "@inquirer/prompts";
 import { Command, Option } from "clipanion";
 import { loadAllData, storeData } from "src/lib/load.js";
 import {
-  acceptRewardRoot,
-  createRewards,
-  setRootUpdater,
-  updateRewardRoot,
-  setTimelock,
-  getPendingRoot,
-  getPendingRootWithTimestamp,
-  getTimelock,
-  getOwner,
-  transferOwnership,
+	acceptRewardRoot,
+	createRewards,
+	setRootUpdater,
+	updateRewardRoot,
+	setTimelock,
+	getPendingRoot,
+	getPendingRootWithTimestamp,
+	getTimelock,
+	getOwner,
+	transferOwnership,
 } from "src/lib/rewards.js";
 import { getChain, getRpc, getTransport } from "src/lib/rpc.js";
 import { MorphoRewardProgram } from "src/lib/types.js";
 import {
-  createWalletClient,
-  getAddress,
-  Hex,
-  isAddress,
-  isHash,
-  keccak256,
-  toHex,
-  zeroHash,
+	createWalletClient,
+	getAddress,
+	Hex,
+	isAddress,
+	isHash,
+	keccak256,
+	toHex,
+	zeroHash,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
@@ -32,1198 +32,1379 @@ import { join } from "path";
 
 const prodPublisher = "0xCa3D836E100Aca076991bF9abaA4F7516e5155Cb";
 const devPublishers = [
-  "0xA8F5d96E2DDfb5ec3F24B960A5a44EbC620064A3",
-  "0xbF56E691851FdbEa83C670Cb365c2c1AFA1E58ca",
-  "0xe4306ad21A29f9EdcfA9fA584e379A8D0D1463BB",
+	"0xA8F5d96E2DDfb5ec3F24B960A5a44EbC620064A3",
+	"0xbF56E691851FdbEa83C670Cb365c2c1AFA1E58ca",
+	"0xe4306ad21A29f9EdcfA9fA584e379A8D0D1463BB",
 ];
-const selectReward = async (dir: string, id: string | undefined, action: string | undefined) => {
-  const rewards = await loadAllData(dir, "rewards");
-  const reward =
-    id === undefined
-      ? await search({
-        message: `Select a campaign${action ? ` to ${action} for` : ""}:`,
-        source: async (input) => {
-          return rewards
-            .filter((r) => r.id.includes(input || ""))
-            .map((r) => ({
-              name: `${r.id} - (${r.name})`,
-              value: r,
-            }));
-        },
-      })
-      : rewards.find((r) => r.id === id);
-  return { reward, rewards };
+const selectReward = async (
+	dir: string,
+	id: string | undefined,
+	action: string | undefined,
+) => {
+	const rewards = await loadAllData(dir, "rewards");
+	const reward =
+		id === undefined
+			? await search({
+					message: `Select a campaign${action ? ` to ${action} for` : ""}:`,
+					source: async (input) => {
+						return rewards
+							.filter((r) => r.id.includes(input || ""))
+							.map((r) => ({
+								name: `${r.id} - (${r.name})`,
+								value: r,
+							}));
+					},
+				})
+			: rewards.find((r) => r.id === id);
+	return { reward, rewards };
 };
 
 const loadBlacklist = (dir: string, chainId: number): string[] => {
-  try {
-    const blacklistPath = join(dir, chainId.toString(), "blacklist", "users", "data.json");
-    const blacklistData = JSON.parse(readFileSync(blacklistPath, "utf8"));
-    return blacklistData.blacklist?.map((addr: string) => addr.toLowerCase()) || [];
-  } catch (error) {
-    return [];
-  }
+	try {
+		const blacklistPath = join(
+			dir,
+			chainId.toString(),
+			"blacklist",
+			"users",
+			"data.json",
+		);
+		const blacklistData = JSON.parse(readFileSync(blacklistPath, "utf8"));
+		return (
+			blacklistData.blacklist?.map((addr: string) => addr.toLowerCase()) || []
+		);
+	} catch (error) {
+		return [];
+	}
 };
 
 const getWalletInfo = (chainString: string | number) => {
-  const chain = getChain(chainString);
-  if (!("urdFactory" in chain.morpho)) {
-    throw new Error(`No urdFactory for chain ${chain.id}`);
-  }
-  const publicClient = getRpc(chain.id);
-  const transport = getTransport(chain.id);
-  const private_key = process.env.ETHEREUM_PRIVATE_KEY;
-  if (!private_key) {
-    throw new Error("No private key found. set ETHEREUM_PRIVATE_KEY env var");
-  }
-  const account = privateKeyToAccount(private_key as Hex);
-  const walletClient = createWalletClient({
-    account,
-    transport,
-  });
-  return { publicClient, walletClient, account, chain };
+	const chain = getChain(chainString);
+	if (!("urdFactory" in chain.morpho)) {
+		throw new Error(`No urdFactory for chain ${chain.id}`);
+	}
+	const publicClient = getRpc(chain.id);
+	const transport = getTransport(chain.id);
+	const private_key = process.env.ETHEREUM_PRIVATE_KEY;
+	if (!private_key) {
+		throw new Error("No private key found. set ETHEREUM_PRIVATE_KEY env var");
+	}
+	const account = privateKeyToAccount(private_key as Hex);
+	const walletClient = createWalletClient({
+		account,
+		transport,
+	});
+	return { publicClient, walletClient, account, chain };
 };
 
 export class CreateRewardsCommand extends Command {
-  static paths = [["reward", "deploy"]];
+	static paths = [["reward", "deploy"]];
 
-  chain = Option.String();
-  id = Option.String();
-  hashPrefix = Option.String("--hash-prefix", "oku:v0.0.0");
-  dir = Option.String("--dir", "chains");
+	chain = Option.String();
+	id = Option.String();
+	hashPrefix = Option.String("--hash-prefix", "oku:v0.0.0");
+	dir = Option.String("--dir", "chains");
 
-  prod = Option.Boolean("--prod", false);
+	prod = Option.Boolean("--prod", false);
 
-  async execute() {
-    const { chain, publicClient, walletClient } = getWalletInfo(this.chain);
+	async execute() {
+		const { chain, publicClient, walletClient } = getWalletInfo(this.chain);
 
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
 
-    // load all the rewards to make sure the id is not a duplicate
-    const rewards = await loadAllData(this.dir, "rewards");
-    const rewardIds = new Set(rewards.map((r) => r.id));
-    if (rewardIds.has(this.id)) {
-      throw new Error(`Reward id ${this.id} already exists. try 'reward list'`);
-    }
+		// load all the rewards to make sure the id is not a duplicate
+		const rewards = await loadAllData(this.dir, "rewards");
+		const rewardIds = new Set(rewards.map((r) => r.id));
+		if (rewardIds.has(this.id)) {
+			throw new Error(`Reward id ${this.id} already exists. try 'reward list'`);
+		}
 
-    const saltHash = keccak256(toHex(`${this.hashPrefix}:${this.id}`));
-    let timelock = 0;
-    if (this.prod) {
-      timelock = 3 * 24 * 60 * 60;
-    }
+		const saltHash = keccak256(toHex(`${this.hashPrefix}:${this.id}`));
+		let timelock = 0;
+		if (this.prod) {
+			timelock = 3 * 24 * 60 * 60;
+		}
 
-    const urdAddress = await createRewards(
-      publicClient,
-      walletClient,
-      BigInt(timelock),
-      saltHash,
-      chain.morpho.urdFactory,
-    );
-    if (this.prod) {
-      //// ended here
-      const txnhash = await setRootUpdater(
-        publicClient,
-        walletClient,
-        getAddress(urdAddress),
-        getAddress(prodPublisher),
-        true,
-      );
-      console.log(
-        `set prod publisher ${prodPublisher} for urd ${urdAddress}. txn hash: ${txnhash}`,
-      );
-      // TODO: ownership transfer to the multisig
-    } else {
-      for (const devPublisher of devPublishers) {
-        const txnSetDevPublisher = await setRootUpdater(
-          publicClient,
-          walletClient,
-          getAddress(urdAddress),
-          getAddress(devPublisher),
-          true,
-        );
-        console.log(
-          `set dev publisher ${devPublisher} for urd ${urdAddress}. txn hash: ${txnSetDevPublisher}`,
-        );
-      }
-      if (!devPublishers.includes(walletClient.account.address)) {
-        const txnSetOwnerPublisher = await setRootUpdater(
-          publicClient,
-          walletClient,
-          getAddress(urdAddress),
-          getAddress(walletClient.account.address),
-          true,
-        );
-        console.log(
-          `set owner publisher ${walletClient.account.address} for urd ${urdAddress}. txn hash: ${txnSetOwnerPublisher}`,
-        );
-      }
-    }
-    //
-    console.log(`deployed a new urd to ${urdAddress}`);
-    let rewardProgram: z.infer<typeof MorphoRewardProgram> = {
-      id: this.id,
-      salt: saltHash,
-      urdAddress: urdAddress.toLowerCase(),
-      chainId: chain.id,
-      start_timestamp: 1756224000,
-      end_timestamp: 1757433600,
-      production: this.prod,
-      reward_amount: "121257470000000000000000",
-      reward_token: "0x9Cf9F00F3498c2ac856097087e041523dfdD71fF",
-      name: this.id,
-      type: "vault",
-      vault:
-        "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21",
-    };
-    const writtenFile = storeData(
-      this.dir,
-      chain.id.toString(),
-      "rewards",
-      rewardProgram.id,
-      rewardProgram,
-    );
-    console.log(
-      `wrote placeholder campaign to ${writtenFile}. please edit it/update it`,
-    );
-  }
+		const urdAddress = await createRewards(
+			publicClient,
+			walletClient,
+			BigInt(timelock),
+			saltHash,
+			chain.morpho.urdFactory,
+		);
+		if (this.prod) {
+			//// ended here
+			const txnhash = await setRootUpdater(
+				publicClient,
+				walletClient,
+				getAddress(urdAddress),
+				getAddress(prodPublisher),
+				true,
+			);
+			console.log(
+				`set prod publisher ${prodPublisher} for urd ${urdAddress}. txn hash: ${txnhash}`,
+			);
+			// TODO: ownership transfer to the multisig
+		} else {
+			for (const devPublisher of devPublishers) {
+				const txnSetDevPublisher = await setRootUpdater(
+					publicClient,
+					walletClient,
+					getAddress(urdAddress),
+					getAddress(devPublisher),
+					true,
+				);
+				console.log(
+					`set dev publisher ${devPublisher} for urd ${urdAddress}. txn hash: ${txnSetDevPublisher}`,
+				);
+			}
+			if (!devPublishers.includes(walletClient.account.address)) {
+				const txnSetOwnerPublisher = await setRootUpdater(
+					publicClient,
+					walletClient,
+					getAddress(urdAddress),
+					getAddress(walletClient.account.address),
+					true,
+				);
+				console.log(
+					`set owner publisher ${walletClient.account.address} for urd ${urdAddress}. txn hash: ${txnSetOwnerPublisher}`,
+				);
+			}
+		}
+		//
+		console.log(`deployed a new urd to ${urdAddress}`);
+		let rewardProgram: z.infer<typeof MorphoRewardProgram> = {
+			id: this.id,
+			salt: saltHash,
+			urdAddress: urdAddress.toLowerCase(),
+			chainId: chain.id,
+			start_timestamp: 1757433600,
+			end_timestamp: 1758643200,
+			production: this.prod,
+			reward_amount: "157740000",
+			reward_token: "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+			name: this.id,
+			type: "market",
+			market:
+				"0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec",
+		};
+		const writtenFile = storeData(
+			this.dir,
+			chain.id.toString(),
+			"rewards",
+			rewardProgram.id,
+			rewardProgram,
+		);
+		console.log(
+			`wrote placeholder campaign to ${writtenFile}. please edit it/update it`,
+		);
+	}
 }
 
 export class ListRewardPrograms extends Command {
-  static paths = [["reward", "list"]];
+	static paths = [["reward", "list"]];
 
-  dir = Option.String("--dir", "chains");
-  root = Option.String("--root");
-  async execute() {
-    const rewards = await loadAllData(this.dir, "rewards");
-    for (const reward of rewards) {
-      console.log(
-        `${reward.id}: (${reward.chainId}) ${reward.reward_amount} https://maizenet-explorer.usecorn.com/address/${reward.urdAddress}`,
-      );
-    }
-  }
+	dir = Option.String("--dir", "chains");
+	root = Option.String("--root");
+	async execute() {
+		const rewards = await loadAllData(this.dir, "rewards");
+		for (const reward of rewards) {
+			console.log(
+				`${reward.id}: (${reward.chainId}) ${reward.reward_amount} https://maizenet-explorer.usecorn.com/address/${reward.urdAddress}`,
+			);
+		}
+	}
 }
 
 export class AcceptRewardRoot extends Command {
-  static paths = [["reward", "accept"]];
-  id = Option.String({ required: false });
-  dir = Option.String("--dir", "chains");
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "accept root");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
-    const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
+	static paths = [["reward", "accept"]];
+	id = Option.String({ required: false });
+	dir = Option.String("--dir", "chains");
+	async execute() {
+		const { reward } = await selectReward(this.dir, this.id, "accept root");
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
+		const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
 
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
-    const txnhash = await acceptRewardRoot(
-      publicClient,
-      walletClient,
-      getAddress(reward.urdAddress),
-    );
-    console.log(
-      `updated root for urd ${reward.urdAddress}. txn hash: ${txnhash}`,
-    );
-  }
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
+		const txnhash = await acceptRewardRoot(
+			publicClient,
+			walletClient,
+			getAddress(reward.urdAddress),
+		);
+		console.log(
+			`updated root for urd ${reward.urdAddress}. txn hash: ${txnhash}`,
+		);
+	}
 }
 export class UpdateRewardRoot extends Command {
-  static paths = [["reward", "update"]];
+	static paths = [["reward", "update"]];
 
-  id = Option.String({ required: false });
-  root = Option.String();
-  dir = Option.String("--dir", "chains");
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "update root");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
+	id = Option.String({ required: false });
+	root = Option.String();
+	dir = Option.String("--dir", "chains");
+	async execute() {
+		const { reward } = await selectReward(this.dir, this.id, "update root");
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
 
-    const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
+		const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
 
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
-    if (!this.root || !isHash(this.root)) {
-      throw new Error("root must be a hash");
-    }
-    const txnhash = await updateRewardRoot(
-      publicClient,
-      walletClient,
-      getAddress(reward.urdAddress),
-      this.root,
-    );
-    console.log(
-      `updated root for urd ${reward.urdAddress} to ${this.root}. txn hash: ${txnhash}`,
-    );
-  }
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
+		if (!this.root || !isHash(this.root)) {
+			throw new Error("root must be a hash");
+		}
+		const txnhash = await updateRewardRoot(
+			publicClient,
+			walletClient,
+			getAddress(reward.urdAddress),
+			this.root,
+		);
+		console.log(
+			`updated root for urd ${reward.urdAddress} to ${this.root}. txn hash: ${txnhash}`,
+		);
+	}
 }
 
 export class AddRewardPublisher extends Command {
-  static paths = [["reward", "add-publisher"]];
+	static paths = [["reward", "add-publisher"]];
 
-  id = Option.String({
-    required: false,
-  });
-  publisher = Option.String();
-  dir = Option.String("--dir", "chains");
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "add publisher");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
-    const { publicClient, walletClient } = getWalletInfo(reward.chainId);
-    if (!this.publisher || !isAddress(this.publisher)) {
-      throw new Error("publisher must be an address");
-    }
-    const txnhash = await setRootUpdater(
-      publicClient,
-      walletClient,
-      getAddress(reward.urdAddress),
-      getAddress(this.publisher),
-      true,
-    );
-    console.log(
-      `added publisher ${this.publisher} to urd ${reward.urdAddress}. txn hash: ${txnhash}`,
-    );
-  }
+	id = Option.String({
+		required: false,
+	});
+	publisher = Option.String();
+	dir = Option.String("--dir", "chains");
+	async execute() {
+		const { reward } = await selectReward(this.dir, this.id, "add publisher");
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
+		const { publicClient, walletClient } = getWalletInfo(reward.chainId);
+		if (!this.publisher || !isAddress(this.publisher)) {
+			throw new Error("publisher must be an address");
+		}
+		const txnhash = await setRootUpdater(
+			publicClient,
+			walletClient,
+			getAddress(reward.urdAddress),
+			getAddress(this.publisher),
+			true,
+		);
+		console.log(
+			`added publisher ${this.publisher} to urd ${reward.urdAddress}. txn hash: ${txnhash}`,
+		);
+	}
 }
 
 export class SetTimelock extends Command {
-  static paths = [["reward", "set-timelock"]];
+	static paths = [["reward", "set-timelock"]];
 
-  id = Option.String({
-    required: false,
-  });
-  // 16 hours
-  timelock = Option.String("--timelock", "57600");
-  dir = Option.String("--dir", "chains");
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "set timelock");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
-    const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
+	id = Option.String({
+		required: false,
+	});
+	// 16 hours
+	timelock = Option.String("--timelock", "57600");
+	dir = Option.String("--dir", "chains");
+	async execute() {
+		const { reward } = await selectReward(this.dir, this.id, "set timelock");
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
+		const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
 
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
-    if (!this.timelock || isNaN(Number(this.timelock))) {
-      throw new Error("timelock must be a number");
-    }
-    const txnhash = await setTimelock(
-      publicClient,
-      walletClient,
-      getAddress(reward.urdAddress),
-      BigInt(this.timelock),
-    );
-    console.log(
-      `updated timelock for urd ${reward.urdAddress} to ${this.timelock}. txn hash: ${txnhash}`,
-    );
-  }
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
+		if (!this.timelock || isNaN(Number(this.timelock))) {
+			throw new Error("timelock must be a number");
+		}
+		const txnhash = await setTimelock(
+			publicClient,
+			walletClient,
+			getAddress(reward.urdAddress),
+			BigInt(this.timelock),
+		);
+		console.log(
+			`updated timelock for urd ${reward.urdAddress} to ${this.timelock}. txn hash: ${txnhash}`,
+		);
+	}
 }
 
 export class CheckPendingRoot extends Command {
-  static paths = [["reward", "check"]];
-  id = Option.String({ required: false });
-  dir = Option.String("--dir", "chains");
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "check pending root");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
-    const { chain, publicClient } = getWalletInfo(reward.chainId);
+	static paths = [["reward", "check"]];
+	id = Option.String({ required: false });
+	dir = Option.String("--dir", "chains");
+	async execute() {
+		const { reward } = await selectReward(
+			this.dir,
+			this.id,
+			"check pending root",
+		);
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
+		const { chain, publicClient } = getWalletInfo(reward.chainId);
 
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
 
-    const pendingRoot = await getPendingRoot(
-      publicClient,
-      getAddress(reward.urdAddress),
-    );
+		const pendingRoot = await getPendingRoot(
+			publicClient,
+			getAddress(reward.urdAddress),
+		);
 
-    // Get detailed pending root info and timelock
-    const pendingRootData = await getPendingRootWithTimestamp(
-      publicClient,
-      getAddress(reward.urdAddress),
-    );
+		// Get detailed pending root info and timelock
+		const pendingRootData = await getPendingRootWithTimestamp(
+			publicClient,
+			getAddress(reward.urdAddress),
+		);
 
-    const timelockPeriod = await getTimelock(
-      publicClient,
-      getAddress(reward.urdAddress),
-    );
+		const timelockPeriod = await getTimelock(
+			publicClient,
+			getAddress(reward.urdAddress),
+		);
 
-    console.log(`Reward Program: ${reward.id} (${reward.name || "no name"})`);
-    console.log(`Chain: ${reward.chainId}`);
-    console.log(`URD Address: ${reward.urdAddress}`);
-    console.log(`On-chain Pending Root: ${pendingRoot}`);
+		console.log(`Reward Program: ${reward.id} (${reward.name || "no name"})`);
+		console.log(`Chain: ${reward.chainId}`);
+		console.log(`URD Address: ${reward.urdAddress}`);
+		console.log(`On-chain Pending Root: ${pendingRoot}`);
 
-    try {
-      const endpointUrl = `https://sap.icarus.tools/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
-      const response = await fetch(endpointUrl);
+		try {
+			const endpointUrl = `https://sap.icarus.tools/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
+			const response = await fetch(endpointUrl);
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`);
+			}
 
-      const endpointData = await response.json();
-      console.log(`Endpoint Response:`, JSON.stringify(endpointData, null, 2));
+			const endpointData = await response.json();
+			console.log(`Endpoint Response:`, JSON.stringify(endpointData, null, 2));
 
-      if (endpointData && endpointData.result) {
-        const campaignTree = endpointData.result;
+			if (endpointData && endpointData.result) {
+				const campaignTree = endpointData.result;
 
-        if (campaignTree.root) {
-          const endpointRoot = campaignTree.root;
-          console.log(`Endpoint Root: ${endpointRoot}`);
-          console.log(`Campaign ID: ${campaignTree.id || 'N/A'}`);
-          console.log(`Campaign Name: ${campaignTree.metadata?.name || 'N/A'}`);
-          console.log(`Tree Entries: ${campaignTree.tree?.length || 0}`);
+				if (campaignTree.root) {
+					const endpointRoot = campaignTree.root;
+					console.log(`Endpoint Root: ${endpointRoot}`);
+					console.log(`Campaign ID: ${campaignTree.id || "N/A"}`);
+					console.log(`Campaign Name: ${campaignTree.metadata?.name || "N/A"}`);
+					console.log(`Tree Entries: ${campaignTree.tree?.length || 0}`);
 
-          if (pendingRoot.toLowerCase() === endpointRoot.toLowerCase()) {
-            console.log("✅ Status: On-chain pending root matches endpoint root");
-          } else {
-            console.log("❌ Status: On-chain pending root does NOT match endpoint root");
-            console.log(`  On-chain: ${pendingRoot}`);
-            console.log(`  Endpoint: ${endpointRoot}`);
-          }
+					if (pendingRoot.toLowerCase() === endpointRoot.toLowerCase()) {
+						console.log(
+							"✅ Status: On-chain pending root matches endpoint root",
+						);
+					} else {
+						console.log(
+							"❌ Status: On-chain pending root does NOT match endpoint root",
+						);
+						console.log(`  On-chain: ${pendingRoot}`);
+						console.log(`  Endpoint: ${endpointRoot}`);
+					}
 
-          // Enhanced validation logic
-          this.validateCampaignProgress(reward, campaignTree);
+					// Enhanced validation logic
+					this.validateCampaignProgress(reward, campaignTree);
 
-          // Blacklist validation
-          this.validateBlacklist(campaignTree, reward.chainId);
-        } else {
-          console.log("⚠️  Endpoint did not return a root value in the campaign tree");
-        }
-      } else {
-        console.log("⚠️  Endpoint did not return a valid campaign tree");
-      }
-    } catch (error) {
-      console.log(`❌ Error calling endpoint: ${error instanceof Error ? error.message : error}`);
-    }
+					// Blacklist validation
+					this.validateBlacklist(campaignTree, reward.chainId);
+				} else {
+					console.log(
+						"!  Endpoint did not return a root value in the campaign tree",
+					);
+				}
+			} else {
+				console.log("!  Endpoint did not return a valid campaign tree");
+			}
+		} catch (error) {
+			console.log(
+				`❌ Error calling endpoint: ${error instanceof Error ? error.message : error}`,
+			);
+		}
 
-    // Display timelock information at the bottom
-    this.displayTimelockInfo(pendingRootData, timelockPeriod);
+		// Display timelock information at the bottom
+		this.displayTimelockInfo(pendingRootData, timelockPeriod);
 
-    // Update status messages based on timelock
-    if (pendingRoot === zeroHash) {
-      console.log("\nStatus: No pending root");
-    } else {
-      const validAtTimestamp = Number(pendingRootData.timestamp);
-      const now = Math.floor(Date.now() / 1000);
+		// Update status messages based on timelock
+		if (pendingRoot === zeroHash) {
+			console.log("\nStatus: No pending root");
+		} else {
+			const validAtTimestamp = Number(pendingRootData.timestamp);
+			const now = Math.floor(Date.now() / 1000);
 
-      if (now >= validAtTimestamp) {
-        console.log("\n✅ Status: Pending root available and ready to accept");
-        console.log("Use 'reward accept' to accept this pending root");
-      } else {
-        console.log("\n⏳ Status: Pending root available but still in timelock");
-        const timeRemaining = validAtTimestamp - now;
-        const hoursRemaining = Math.floor(timeRemaining / 3600);
-        const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
-        console.log(`Cannot accept for ${hoursRemaining}h ${minutesRemaining}m more`);
-      }
-    }
-  }
+			if (now >= validAtTimestamp) {
+				console.log("\n✅ Status: Pending root available and ready to accept");
+				console.log("Use 'reward accept' to accept this pending root");
+			} else {
+				console.log(
+					"\n⏳ Status: Pending root available but still in timelock",
+				);
+				const timeRemaining = validAtTimestamp - now;
+				const hoursRemaining = Math.floor(timeRemaining / 3600);
+				const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+				console.log(
+					`Cannot accept for ${hoursRemaining}h ${minutesRemaining}m more`,
+				);
+			}
+		}
+	}
 
-  private validateCampaignProgress(reward: any, campaignTree: any) {
-    console.log("\n🔍 Campaign Progress Validation:");
+	private validateCampaignProgress(reward: any, campaignTree: any) {
+		console.log("\n🔍 Campaign Progress Validation:");
 
-    // Calculate the most recent Friday at 9am PDT
-    const referenceTime = this.getMostRecentFriday9amPDT();
-    const startTime = campaignTree.metadata?.start_timestamp || reward.start_timestamp;
-    const endTime = campaignTree.metadata?.end_timestamp || reward.end_timestamp;
-    const totalRewardAmount = BigInt(reward.reward_amount);
+		// Calculate the most recent Friday at 9am PDT
+		const referenceTime = this.getMostRecentFriday9amPDT();
+		const startTime =
+			campaignTree.metadata?.start_timestamp || reward.start_timestamp;
+		const endTime =
+			campaignTree.metadata?.end_timestamp || reward.end_timestamp;
+		const totalRewardAmount = BigInt(reward.reward_amount);
 
-    console.log(`📅 Using reference time: ${new Date(referenceTime * 1000).toISOString()} (Most recent Friday 9pm PDT - 12hrs after 9am)`);
+		console.log(
+			`📅 Using reference time: ${new Date(referenceTime * 1000).toISOString()} (Most recent Friday 9pm PDT - 12hrs after 9am)`,
+		);
 
-    // Calculate campaign completion percentage
-    let completionPercentage = 0;
-    if (referenceTime < startTime) {
-      completionPercentage = 0;
-      console.log("⏳ Campaign has not started yet (as of reference time)");
-    } else if (referenceTime >= endTime) {
-      completionPercentage = 100;
-      console.log("✅ Campaign has ended (as of reference time)");
-    } else {
-      const elapsed = referenceTime - startTime;
-      const total = endTime - startTime;
-      completionPercentage = (elapsed / total) * 100;
-      console.log(`⏱️ Campaign is ${completionPercentage.toFixed(2)}% complete (as of reference time)`);
-    }
+		// Calculate campaign completion percentage
+		let completionPercentage = 0;
+		if (referenceTime < startTime) {
+			completionPercentage = 0;
+			console.log("⏳ Campaign has not started yet (as of reference time)");
+		} else if (referenceTime >= endTime) {
+			completionPercentage = 100;
+			console.log("✅ Campaign has ended (as of reference time)");
+		} else {
+			const elapsed = referenceTime - startTime;
+			const total = endTime - startTime;
+			completionPercentage = (elapsed / total) * 100;
+			console.log(
+				`⏱ Campaign is ${completionPercentage.toFixed(2)}% complete (as of reference time)`,
+			);
+		}
 
-    // Validate total claimable amount
-    if (campaignTree.tree && Array.isArray(campaignTree.tree)) {
-      const totalClaimable = campaignTree.tree.reduce((sum: bigint, entry: any) => {
-        return sum + BigInt(entry.claimable || entry.amount || 0);
-      }, BigInt(0));
+		// Validate total claimable amount
+		if (campaignTree.tree && Array.isArray(campaignTree.tree)) {
+			const totalClaimable = campaignTree.tree.reduce(
+				(sum: bigint, entry: any) => {
+					return sum + BigInt(entry.claimable || entry.amount || 0);
+				},
+				BigInt(0),
+			);
 
-      const expectedMax = (totalRewardAmount * BigInt(Math.ceil(completionPercentage))) / BigInt(100);
-      const claimablePercentage = Number((totalClaimable * BigInt(10000)) / totalRewardAmount) / 100;
+			const expectedMax =
+				(totalRewardAmount * BigInt(Math.ceil(completionPercentage))) /
+				BigInt(100);
+			const claimablePercentage =
+				Number((totalClaimable * BigInt(10000)) / totalRewardAmount) / 100;
 
-      console.log(`💰 Total claimable: ${totalClaimable.toString()} (${claimablePercentage.toFixed(2)}% of total reward)`);
-      console.log(`📊 Expected max claimable: ${expectedMax.toString()} (${completionPercentage.toFixed(2)}% of total reward)`);
+			console.log(
+				`💰 Total claimable: ${totalClaimable.toString()} (${claimablePercentage.toFixed(2)}% of total reward)`,
+			);
+			console.log(
+				`📊 Expected max claimable: ${expectedMax.toString()} (${completionPercentage.toFixed(2)}% of total reward)`,
+			);
 
-      // Validation with some tolerance (allowing up to 5% over expected)
-      const tolerance = BigInt(5); // 5%
-      const maxAllowed = (totalRewardAmount * (BigInt(Math.ceil(completionPercentage)) + tolerance)) / BigInt(100);
+			// Validation with some tolerance (allowing up to 5% over expected)
+			const tolerance = BigInt(5); // 5%
+			const maxAllowed =
+				(totalRewardAmount *
+					(BigInt(Math.ceil(completionPercentage)) + tolerance)) /
+				BigInt(100);
 
-      if (totalClaimable <= maxAllowed) {
-        console.log("✅ Total claimable amount is within expected range");
-      } else {
-        console.log("⚠️  Total claimable amount exceeds expected range");
-        const excessPercentage = Number(((totalClaimable - expectedMax) * BigInt(10000)) / totalRewardAmount) / 100;
-        console.log(`   Excess: ${excessPercentage.toFixed(2)}% over expected`);
-      }
+			if (totalClaimable <= maxAllowed) {
+				console.log("✅ Total claimable amount is within expected range");
+			} else {
+				console.log("!  Total claimable amount exceeds expected range");
+				const excessPercentage =
+					Number(
+						((totalClaimable - expectedMax) * BigInt(10000)) /
+							totalRewardAmount,
+					) / 100;
+				console.log(`   Excess: ${excessPercentage.toFixed(2)}% over expected`);
+			}
 
-      // Calculate and display top 5 users' claimable percentages
-      this.displayTopUsersAnalysis(campaignTree.tree, totalRewardAmount);
-    } else {
-      console.log("⚠️  No tree data available for validation");
-    }
+			// Calculate and display top 5 users' claimable percentages
+			this.displayTopUsersAnalysis(campaignTree.tree, totalRewardAmount);
+		} else {
+			console.log("!  No tree data available for validation");
+		}
 
-    // Display campaign timing info
-    console.log(`\n📅 Campaign Timeline:`);
-    console.log(`   Start: ${new Date(startTime * 1000).toISOString()}`);
-    console.log(`   End: ${new Date(endTime * 1000).toISOString()}`);
-    console.log(`   Reference: ${new Date(referenceTime * 1000).toISOString()}`);
-  }
+		// Display campaign timing info
+		console.log(`\n📅 Campaign Timeline:`);
+		console.log(`   Start: ${new Date(startTime * 1000).toISOString()}`);
+		console.log(`   End: ${new Date(endTime * 1000).toISOString()}`);
+		console.log(
+			`   Reference: ${new Date(referenceTime * 1000).toISOString()}`,
+		);
+	}
 
-  private getMostRecentFriday9amPDT(): number {
-    // Get current date in PDT (UTC-7)
-    const now = new Date();
-    const pdtOffset = 7 * 60; // PDT is UTC-7
-    const nowPDT = new Date(now.getTime() - pdtOffset * 60 * 1000);
+	private getMostRecentFriday9amPDT(): number {
+		// Get current date in PDT (UTC-7)
+		const now = new Date();
+		const pdtOffset = 7 * 60; // PDT is UTC-7
+		const nowPDT = new Date(now.getTime() - pdtOffset * 60 * 1000);
 
-    // Get current day of week (0 = Sunday, 1 = Monday, ..., 5 = Friday, 6 = Saturday)
-    const currentDay = nowPDT.getDay();
+		// Get current day of week (0 = Sunday, 1 = Monday, ..., 5 = Friday, 6 = Saturday)
+		const currentDay = nowPDT.getDay();
 
-    // Calculate days to subtract to get to most recent Friday
-    let daysToSubtract = 0;
-    if (currentDay === 5) { // Friday
-      daysToSubtract = 0; // Use today
-    } else if (currentDay === 6) { // Saturday
-      daysToSubtract = 1; // Use yesterday (Friday)
-    } else if (currentDay === 0) { // Sunday
-      daysToSubtract = 2; // Use 2 days ago (Friday)
-    } else { // Monday (1), Tuesday (2), Wednesday (3), Thursday (4)
-      daysToSubtract = currentDay + 2; // Mon=3, Tue=4, Wed=5, Thu=6 days ago
-    }
+		// Calculate days to subtract to get to most recent Friday
+		let daysToSubtract = 0;
+		if (currentDay === 5) {
+			// Friday
+			daysToSubtract = 0; // Use today
+		} else if (currentDay === 6) {
+			// Saturday
+			daysToSubtract = 1; // Use yesterday (Friday)
+		} else if (currentDay === 0) {
+			// Sunday
+			daysToSubtract = 2; // Use 2 days ago (Friday)
+		} else {
+			// Monday (1), Tuesday (2), Wednesday (3), Thursday (4)
+			daysToSubtract = currentDay + 2; // Mon=3, Tue=4, Wed=5, Thu=6 days ago
+		}
 
-    // Create the target Friday date
-    const targetFriday = new Date(nowPDT);
-    targetFriday.setDate(targetFriday.getDate() - daysToSubtract);
+		// Create the target Friday date
+		const targetFriday = new Date(nowPDT);
+		targetFriday.setDate(targetFriday.getDate() - daysToSubtract);
 
-    // Set to 9am PDT
-    targetFriday.setHours(9, 0, 0, 0);
+		// Set to 9am PDT
+		targetFriday.setHours(9, 0, 0, 0);
 
-    // Subtract 12 hours (9am PDT becomes 9pm PDT the previous day)
-    targetFriday.setHours(targetFriday.getHours() - 12);
+		// Subtract 12 hours (9am PDT becomes 9pm PDT the previous day)
+		targetFriday.setHours(targetFriday.getHours() - 12);
 
-    // Convert back to UTC and return as Unix timestamp
-    const fridayUTC = new Date(targetFriday.getTime() + pdtOffset * 60 * 1000);
-    return Math.floor(fridayUTC.getTime() / 1000);
-  }
+		// Convert back to UTC and return as Unix timestamp
+		const fridayUTC = new Date(targetFriday.getTime() + pdtOffset * 60 * 1000);
+		return Math.floor(fridayUTC.getTime() / 1000);
+	}
 
-  private displayTimelockInfo(pendingRootData: any, timelockPeriod: bigint) {
-    console.log(`\n🔒 Timelock Information:`);
-    console.log(`   Timelock Period: ${timelockPeriod.toString()} seconds (${Number(timelockPeriod) / 3600} hours)`);
+	private displayTimelockInfo(pendingRootData: any, timelockPeriod: bigint) {
+		console.log(`\n🔒 Timelock Information:`);
+		console.log(
+			`   Timelock Period: ${timelockPeriod.toString()} seconds (${Number(timelockPeriod) / 3600} hours)`,
+		);
 
-    if (pendingRootData.root === zeroHash) {
-      console.log(`   Status: No pending root to timelock`);
-      return;
-    }
+		if (pendingRootData.root === zeroHash) {
+			console.log(`   Status: No pending root to timelock`);
+			return;
+		}
 
-    const validAtTimestamp = Number(pendingRootData.timestamp);
-    const submittedAtTimestamp = validAtTimestamp - Number(timelockPeriod);
-    const now = Math.floor(Date.now() / 1000);
+		const validAtTimestamp = Number(pendingRootData.timestamp);
+		const submittedAtTimestamp = validAtTimestamp - Number(timelockPeriod);
+		const now = Math.floor(Date.now() / 1000);
 
-    console.log(`   Pending Root Set At: ${new Date(submittedAtTimestamp * 1000).toISOString()}`);
-    console.log(`   Timelock Expires At: ${new Date(validAtTimestamp * 1000).toISOString()}`);
+		console.log(
+			`   Pending Root Set At: ${new Date(submittedAtTimestamp * 1000).toISOString()}`,
+		);
+		console.log(
+			`   Timelock Expires At: ${new Date(validAtTimestamp * 1000).toISOString()}`,
+		);
 
-    if (now >= validAtTimestamp) {
-      console.log(`   ✅ Status: Ready to accept! (Timelock expired)`);
-      const expiredSince = now - validAtTimestamp;
-      const hoursExpired = Math.floor(expiredSince / 3600);
-      const minutesExpired = Math.floor((expiredSince % 3600) / 60);
-      console.log(`   📅 Expired: ${hoursExpired}h ${minutesExpired}m ago`);
-    } else {
-      console.log(`   ⏳ Status: Still locked`);
-      const timeRemaining = validAtTimestamp - now;
-      const hoursRemaining = Math.floor(timeRemaining / 3600);
-      const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
-      console.log(`   ⏱️ Time Remaining: ${hoursRemaining}h ${minutesRemaining}m`);
-      console.log(`   🕐 Ready At: ${new Date(validAtTimestamp * 1000).toLocaleString()}`);
-    }
-  }
+		if (now >= validAtTimestamp) {
+			console.log(`   ✅ Status: Ready to accept! (Timelock expired)`);
+			const expiredSince = now - validAtTimestamp;
+			const hoursExpired = Math.floor(expiredSince / 3600);
+			const minutesExpired = Math.floor((expiredSince % 3600) / 60);
+			console.log(`   📅 Expired: ${hoursExpired}h ${minutesExpired}m ago`);
+		} else {
+			console.log(`   ⏳ Status: Still locked`);
+			const timeRemaining = validAtTimestamp - now;
+			const hoursRemaining = Math.floor(timeRemaining / 3600);
+			const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+			console.log(
+				`   ⏱ Time Remaining: ${hoursRemaining}h ${minutesRemaining}m`,
+			);
+			console.log(
+				`   🕐 Ready At: ${new Date(validAtTimestamp * 1000).toLocaleString()}`,
+			);
+		}
+	}
 
-  private displayTopUsersAnalysis(tree: any[], totalRewardAmount: bigint) {
-    console.log("\n👥 Top 5 Users Analysis:");
+	private displayTopUsersAnalysis(tree: any[], totalRewardAmount: bigint) {
+		console.log("\n👥 Top 5 Users Analysis:");
 
-    // Sort users by claimable amount (descending)
-    const sortedUsers = tree
-      .map(entry => ({
-        user: entry.account || entry.user || entry.address || 'Unknown',
-        claimable: BigInt(entry.claimable || entry.amount || 0)
-      }))
-      .sort((a, b) => {
-        if (a.claimable > b.claimable) return -1;
-        if (a.claimable < b.claimable) return 1;
-        return 0;
-      })
-      .slice(0, 5);
+		// Sort users by claimable amount (descending)
+		const sortedUsers = tree
+			.map((entry) => ({
+				user: entry.account || entry.user || entry.address || "Unknown",
+				claimable: BigInt(entry.claimable || entry.amount || 0),
+			}))
+			.sort((a, b) => {
+				if (a.claimable > b.claimable) return -1;
+				if (a.claimable < b.claimable) return 1;
+				return 0;
+			})
+			.slice(0, 5);
 
-    const topFiveTotal = sortedUsers.reduce((sum, user) => sum + user.claimable, BigInt(0));
-    const topFivePercentage = Number((topFiveTotal * BigInt(10000)) / totalRewardAmount) / 100;
+		const topFiveTotal = sortedUsers.reduce(
+			(sum, user) => sum + user.claimable,
+			BigInt(0),
+		);
+		const topFivePercentage =
+			Number((topFiveTotal * BigInt(10000)) / totalRewardAmount) / 100;
 
-    console.log(`🏆 Top 5 users control ${topFivePercentage.toFixed(2)}% of total rewards`);
+		console.log(
+			`🏆 Top 5 users control ${topFivePercentage.toFixed(2)}% of total rewards`,
+		);
 
-    sortedUsers.forEach((user, index) => {
-      const userPercentage = Number((user.claimable * BigInt(10000)) / totalRewardAmount) / 100;
-      console.log(`   ${index + 1}. ${user.user}: ${user.claimable.toString()} (${userPercentage.toFixed(2)}%)`);
-    });
+		sortedUsers.forEach((user, index) => {
+			const userPercentage =
+				Number((user.claimable * BigInt(10000)) / totalRewardAmount) / 100;
+			console.log(
+				`   ${index + 1}. ${user.user}: ${user.claimable.toString()} (${userPercentage.toFixed(2)}%)`,
+			);
+		});
 
-    // Analysis of concentration
-    if (topFivePercentage > 50) {
-      console.log("⚠️  High concentration: Top 5 users control >50% of rewards");
-    } else if (topFivePercentage > 25) {
-      console.log("ℹ️  Moderate concentration: Top 5 users control >25% of rewards");
-    } else {
-      console.log("✅ Good distribution: Top 5 users control <25% of rewards");
-    }
-  }
+		// Analysis of concentration
+		if (topFivePercentage > 50) {
+			console.log("!  High concentration: Top 5 users control >50% of rewards");
+		} else if (topFivePercentage > 25) {
+			console.log(
+				"i  Moderate concentration: Top 5 users control >25% of rewards",
+			);
+		} else {
+			console.log("✅ Good distribution: Top 5 users control <25% of rewards");
+		}
+	}
 
-  private validateBlacklist(campaignTree: any, chainId: number) {
-    console.log("\n🚫 Blacklist Validation:");
+	private validateBlacklist(campaignTree: any, chainId: number) {
+		console.log("\n🚫 Blacklist Validation:");
 
-    // Load blacklist for the specific chain
-    const blacklist = loadBlacklist(this.dir, chainId);
+		// Load blacklist for the specific chain
+		const blacklist = loadBlacklist(this.dir, chainId);
 
-    if (blacklist.length === 0) {
-      console.log("ℹ️  No blacklist found for this chain");
-      return;
-    }
+		if (blacklist.length === 0) {
+			console.log("i  No blacklist found for this chain");
+			return;
+		}
 
-    console.log(`📋 Loaded blacklist with ${blacklist.length} addresses for chain ${chainId}`);
+		console.log(
+			`📋 Loaded blacklist with ${blacklist.length} addresses for chain ${chainId}`,
+		);
 
-    if (!campaignTree.tree || !Array.isArray(campaignTree.tree)) {
-      console.log("⚠️  No tree data available for blacklist validation");
-      return;
-    }
+		if (!campaignTree.tree || !Array.isArray(campaignTree.tree)) {
+			console.log("!  No tree data available for blacklist validation");
+			return;
+		}
 
-    // Check for blacklisted addresses in the tree
-    for (const entry of campaignTree.tree) {
-      const userAddress = (entry.account || entry.user || entry.address || '').toLowerCase();
-      if (blacklist.includes(userAddress)) {
-        console.log("\n🔥🔥🔥 CRITICAL ERROR: BLACKLISTED ADDRESS DETECTED 🔥🔥🔥");
-        console.log("❌❌❌ DO NOT ACCEPT THIS ROOT - CONTAINS SANCTIONED USER ❌❌❌");
-        console.log(`🚨 Blacklisted address found: ${userAddress}`);
-        console.log("🛑 ABORTING VALIDATION - MANUAL REVIEW REQUIRED 🛑");
-        return;
-      }
-    }
+		// Check for blacklisted addresses in the tree
+		for (const entry of campaignTree.tree) {
+			const userAddress = (
+				entry.account ||
+				entry.user ||
+				entry.address ||
+				""
+			).toLowerCase();
+			if (blacklist.includes(userAddress)) {
+				console.log(
+					"\n🔥🔥🔥 CRITICAL ERROR: BLACKLISTED ADDRESS DETECTED 🔥🔥🔥",
+				);
+				console.log(
+					"❌❌❌ DO NOT ACCEPT THIS ROOT - CONTAINS SANCTIONED USER ❌❌❌",
+				);
+				console.log(`🚨 Blacklisted address found: ${userAddress}`);
+				console.log("🛑 ABORTING VALIDATION - MANUAL REVIEW REQUIRED 🛑");
+				return;
+			}
+		}
 
-    console.log("✅ No blacklisted addresses found in pending root");
-  }
+		console.log("✅ No blacklisted addresses found in pending root");
+	}
 }
 
 export class ListPendingRoots extends Command {
-  static paths = [["reward", "pending"]];
-  dir = Option.String("--dir", "chains");
-  async execute() {
-    const rewards = await loadAllData(this.dir, "rewards");
-    console.log("Checking all rewards for pending roots...\n");
+	static paths = [["reward", "pending"]];
+	dir = Option.String("--dir", "chains");
+	async execute() {
+		const rewards = await loadAllData(this.dir, "rewards");
+		console.log("Checking all rewards for pending roots...\n");
 
-    let foundPending = false;
+		let foundPending = false;
 
-    for (const reward of rewards) {
-      try {
-        const { chain, publicClient } = getWalletInfo(reward.chainId);
+		for (const reward of rewards) {
+			try {
+				const { chain, publicClient } = getWalletInfo(reward.chainId);
 
-        if (!("urdFactory" in chain.morpho)) {
-          console.log(`⚠️  Skipping ${reward.id}: No urdFactory for chain ${chain.id}`);
-          continue;
-        }
+				if (!("urdFactory" in chain.morpho)) {
+					console.log(
+						`!  Skipping ${reward.id}: No urdFactory for chain ${chain.id}`,
+					);
+					continue;
+				}
 
-        const pendingRoot = await getPendingRoot(
-          publicClient,
-          getAddress(reward.urdAddress),
-        );
+				const pendingRoot = await getPendingRoot(
+					publicClient,
+					getAddress(reward.urdAddress),
+				);
 
-        if (pendingRoot !== zeroHash) {
-          foundPending = true;
+				if (pendingRoot !== zeroHash) {
+					foundPending = true;
 
-          const pendingRootData = await getPendingRootWithTimestamp(
-            publicClient,
-            getAddress(reward.urdAddress),
-          );
+					const pendingRootData = await getPendingRootWithTimestamp(
+						publicClient,
+						getAddress(reward.urdAddress),
+					);
 
-          const timelockPeriod = await getTimelock(
-            publicClient,
-            getAddress(reward.urdAddress),
-          );
+					const timelockPeriod = await getTimelock(
+						publicClient,
+						getAddress(reward.urdAddress),
+					);
 
-          const validAtTimestamp = Number(pendingRootData.timestamp);
-          const now = Math.floor(Date.now() / 1000);
-          const timeRemaining = validAtTimestamp - now;
+					const validAtTimestamp = Number(pendingRootData.timestamp);
+					const now = Math.floor(Date.now() / 1000);
+					const timeRemaining = validAtTimestamp - now;
 
-          console.log(`🔄 ${reward.id} (${reward.name || "no name"})`);
-          console.log(`   Chain: ${reward.chainId}`);
-          console.log(`   URD: ${reward.urdAddress}`);
-          console.log(`   Pending Root: ${pendingRoot}`);
+					console.log(`🔄 ${reward.id} (${reward.name || "no name"})`);
+					console.log(`   Chain: ${reward.chainId}`);
+					console.log(`   URD: ${reward.urdAddress}`);
+					console.log(`   Pending Root: ${pendingRoot}`);
 
-          if (now >= validAtTimestamp) {
-            console.log(`   ✅ Status: Ready to accept! (expired ${Math.floor((now - validAtTimestamp) / 3600)}h ago)`);
-          } else {
-            const hoursRemaining = Math.floor(timeRemaining / 3600);
-            const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
-            console.log(`   ⏳ Status: Locked for ${hoursRemaining}h ${minutesRemaining}m more`);
-          }
-          console.log("");
-        }
-      } catch (error) {
-        console.log(`❌ Error checking ${reward.id}: ${error instanceof Error ? error.message : error}`);
-      }
-    }
+					if (now >= validAtTimestamp) {
+						console.log(
+							`   ✅ Status: Ready to accept! (expired ${Math.floor((now - validAtTimestamp) / 3600)}h ago)`,
+						);
+					} else {
+						const hoursRemaining = Math.floor(timeRemaining / 3600);
+						const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+						console.log(
+							`   ⏳ Status: Locked for ${hoursRemaining}h ${minutesRemaining}m more`,
+						);
+					}
+					console.log("");
+				}
+			} catch (error) {
+				console.log(
+					`❌ Error checking ${reward.id}: ${error instanceof Error ? error.message : error}`,
+				);
+			}
+		}
 
-    if (!foundPending) {
-      console.log("✨ No rewards have pending roots.");
-    }
-  }
+		if (!foundPending) {
+			console.log("✨ No rewards have pending roots.");
+		}
+	}
 }
 
 export class RepublishRoot extends Command {
-  static paths = [["reward", "republish-root"]];
-  id = Option.String({
-    required: false,
-  });
-  dir = Option.String("--dir", "chains");
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "republish root");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
-    const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
+	static paths = [["reward", "republish-root"]];
+	id = Option.String({
+		required: false,
+	});
+	dir = Option.String("--dir", "chains");
+	async execute() {
+		const { reward } = await selectReward(this.dir, this.id, "republish root");
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
+		const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
 
-    const pendingRoot = await getPendingRoot(
-      publicClient,
-      getAddress(reward.urdAddress),
-    );
-    const answer = await confirm({
-      message: `Are you sure you want to republish the root for urd ${reward.urdAddress}? The pending root is ${pendingRoot}`,
-    });
-    if (!answer) {
-      console.log("aborting");
-      return;
-    }
-    const txnhash = await updateRewardRoot(
-      publicClient,
-      walletClient,
-      getAddress(reward.urdAddress),
-      pendingRoot,
-      zeroHash,
-    );
-    console.log(
-      `republished root for urd ${reward.urdAddress}. txn hash: ${txnhash}`,
-    );
-  }
+		const pendingRoot = await getPendingRoot(
+			publicClient,
+			getAddress(reward.urdAddress),
+		);
+		const answer = await confirm({
+			message: `Are you sure you want to republish the root for urd ${reward.urdAddress}? The pending root is ${pendingRoot}`,
+		});
+		if (!answer) {
+			console.log("aborting");
+			return;
+		}
+		const txnhash = await updateRewardRoot(
+			publicClient,
+			walletClient,
+			getAddress(reward.urdAddress),
+			pendingRoot,
+			zeroHash,
+		);
+		console.log(
+			`republished root for urd ${reward.urdAddress}. txn hash: ${txnhash}`,
+		);
+	}
 }
 
 export class ShowRewardInfo extends Command {
-  static paths = [["reward", "info"]];
+	static paths = [["reward", "info"]];
 
-  id = Option.String({ required: false });
-  dir = Option.String("--dir", "chains");
+	id = Option.String({ required: false });
+	dir = Option.String("--dir", "chains");
 
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "show info");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
+	async execute() {
+		const { reward } = await selectReward(this.dir, this.id, "show info");
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
 
-    const { chain, publicClient } = getWalletInfo(reward.chainId);
+		const { chain, publicClient } = getWalletInfo(reward.chainId);
 
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
 
-    console.log("=== Reward Campaign Information ===\n");
+		console.log("=== Reward Campaign Information ===\n");
 
-    console.log(`📋 Campaign Details:`);
-    console.log(`   ID: ${reward.id}`);
-    console.log(`   Name: ${reward.name || "No name specified"}`);
-    console.log(`   Type: ${reward.type}`);
-    console.log(`   Chain ID: ${reward.chainId}`);
-    console.log(`   Production: ${reward.production ? "Yes" : "No"}`);
-    console.log(`   Finished: ${reward.finished ? "Yes" : "No"}`);
+		console.log(`📋 Campaign Details:`);
+		console.log(`   ID: ${reward.id}`);
+		console.log(`   Name: ${reward.name || "No name specified"}`);
+		console.log(`   Type: ${reward.type}`);
+		console.log(`   Chain ID: ${reward.chainId}`);
+		console.log(`   Production: ${reward.production ? "Yes" : "No"}`);
+		console.log(`   Finished: ${reward.finished ? "Yes" : "No"}`);
 
-    console.log(`\n📍 Addresses:`);
-    console.log(`   URD Contract: ${reward.urdAddress}`);
-    console.log(`   Reward Token: ${reward.reward_token}`);
-    if (reward.vault) {
-      console.log(`   Vault: ${reward.vault}`);
-    }
-    if (reward.market) {
-      console.log(`   Market: ${reward.market}`);
-    }
+		console.log(`\n📍 Addresses:`);
+		console.log(`   URD Contract: ${reward.urdAddress}`);
+		console.log(`   Reward Token: ${reward.reward_token}`);
+		if (reward.vault) {
+			console.log(`   Vault: ${reward.vault}`);
+		}
+		if (reward.market) {
+			console.log(`   Market: ${reward.market}`);
+		}
 
-    console.log(`\n💰 Reward Details:`);
-    console.log(`   Total Amount: ${reward.reward_amount}`);
-    const rewardBigInt = BigInt(reward.reward_amount);
-    const rewardFormatted = (Number(rewardBigInt) / 1e18).toFixed(2);
-    console.log(`   Total Amount (formatted): ${rewardFormatted}`);
+		console.log(`\n💰 Reward Details:`);
+		console.log(`   Total Amount: ${reward.reward_amount}`);
+		const rewardBigInt = BigInt(reward.reward_amount);
+		const rewardFormatted = (Number(rewardBigInt) / 1e18).toFixed(2);
+		console.log(`   Total Amount (formatted): ${rewardFormatted}`);
 
-    console.log(`\n⏱️ Timeline:`);
-    const startDate = new Date(reward.start_timestamp * 1000);
-    const endDate = new Date(reward.end_timestamp * 1000);
-    console.log(`   Start: ${startDate.toISOString()} (${reward.start_timestamp})`);
-    console.log(`   End: ${endDate.toISOString()} (${reward.end_timestamp})`);
+		console.log(`\n⏱ Timeline:`);
+		const startDate = new Date(reward.start_timestamp * 1000);
+		const endDate = new Date(reward.end_timestamp * 1000);
+		console.log(
+			`   Start: ${startDate.toISOString()} (${reward.start_timestamp})`,
+		);
+		console.log(`   End: ${endDate.toISOString()} (${reward.end_timestamp})`);
 
-    const now = Date.now() / 1000;
-    if (now < reward.start_timestamp) {
-      const daysUntilStart = Math.ceil((reward.start_timestamp - now) / 86400);
-      console.log(`   Status: Not started (starts in ${daysUntilStart} days)`);
-    } else if (now > reward.end_timestamp) {
-      const daysSinceEnd = Math.floor((now - reward.end_timestamp) / 86400);
-      console.log(`   Status: Ended (${daysSinceEnd} days ago)`);
-    } else {
-      const elapsed = now - reward.start_timestamp;
-      const total = reward.end_timestamp - reward.start_timestamp;
-      const percentage = (elapsed / total) * 100;
-      const daysRemaining = Math.ceil((reward.end_timestamp - now) / 86400);
-      console.log(`   Status: Active (${percentage.toFixed(2)}% complete, ${daysRemaining} days remaining)`);
-    }
+		const now = Date.now() / 1000;
+		if (now < reward.start_timestamp) {
+			const daysUntilStart = Math.ceil((reward.start_timestamp - now) / 86400);
+			console.log(`   Status: Not started (starts in ${daysUntilStart} days)`);
+		} else if (now > reward.end_timestamp) {
+			const daysSinceEnd = Math.floor((now - reward.end_timestamp) / 86400);
+			console.log(`   Status: Ended (${daysSinceEnd} days ago)`);
+		} else {
+			const elapsed = now - reward.start_timestamp;
+			const total = reward.end_timestamp - reward.start_timestamp;
+			const percentage = (elapsed / total) * 100;
+			const daysRemaining = Math.ceil((reward.end_timestamp - now) / 86400);
+			console.log(
+				`   Status: Active (${percentage.toFixed(2)}% complete, ${daysRemaining} days remaining)`,
+			);
+		}
 
-    console.log(`\n🔧 Technical Details:`);
-    console.log(`   Salt: ${reward.salt}`);
+		console.log(`\n🔧 Technical Details:`);
+		console.log(`   Salt: ${reward.salt}`);
 
-    try {
-      const pendingRoot = await getPendingRoot(
-        publicClient,
-        getAddress(reward.urdAddress),
-      );
+		try {
+			const pendingRoot = await getPendingRoot(
+				publicClient,
+				getAddress(reward.urdAddress),
+			);
 
-      const pendingRootData = await getPendingRootWithTimestamp(
-        publicClient,
-        getAddress(reward.urdAddress),
-      );
+			const pendingRootData = await getPendingRootWithTimestamp(
+				publicClient,
+				getAddress(reward.urdAddress),
+			);
 
-      const timelockPeriod = await getTimelock(
-        publicClient,
-        getAddress(reward.urdAddress),
-      );
+			const timelockPeriod = await getTimelock(
+				publicClient,
+				getAddress(reward.urdAddress),
+			);
 
-      const owner = await getOwner(
-        publicClient,
-        getAddress(reward.urdAddress),
-      );
+			const owner = await getOwner(publicClient, getAddress(reward.urdAddress));
 
-      console.log(`\n📊 On-chain State:`);
-      console.log(`   Owner: ${owner}`);
-      console.log(`   Pending Root: ${pendingRoot}`);
-      console.log(`   Timelock Period: ${timelockPeriod.toString()} seconds (${Number(timelockPeriod) / 3600} hours)`);
+			console.log(`\n📊 On-chain State:`);
+			console.log(`   Owner: ${owner}`);
+			console.log(`   Pending Root: ${pendingRoot}`);
+			console.log(
+				`   Timelock Period: ${timelockPeriod.toString()} seconds (${Number(timelockPeriod) / 3600} hours)`,
+			);
 
-      if (pendingRoot !== zeroHash) {
-        const validAtTimestamp = Number(pendingRootData.timestamp);
-        const currentTime = Math.floor(Date.now() / 1000);
+			if (pendingRoot !== zeroHash) {
+				const validAtTimestamp = Number(pendingRootData.timestamp);
+				const currentTime = Math.floor(Date.now() / 1000);
 
-        if (currentTime >= validAtTimestamp) {
-          console.log(`   Root Status: ✅ Ready to accept`);
-        } else {
-          const timeRemaining = validAtTimestamp - currentTime;
-          const hoursRemaining = Math.floor(timeRemaining / 3600);
-          const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
-          console.log(`   Root Status: ⏳ In timelock (${hoursRemaining}h ${minutesRemaining}m remaining)`);
-        }
+				if (currentTime >= validAtTimestamp) {
+					console.log(`   Root Status: ✅ Ready to accept`);
+				} else {
+					const timeRemaining = validAtTimestamp - currentTime;
+					const hoursRemaining = Math.floor(timeRemaining / 3600);
+					const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+					console.log(
+						`   Root Status: ⏳ In timelock (${hoursRemaining}h ${minutesRemaining}m remaining)`,
+					);
+				}
 
-        if (pendingRootData.ipfs && pendingRootData.ipfs !== zeroHash) {
-          console.log(`   IPFS Hash: ${pendingRootData.ipfs}`);
-        }
-      } else {
-        console.log(`   Root Status: No pending root`);
-      }
+				if (pendingRootData.ipfs && pendingRootData.ipfs !== zeroHash) {
+					console.log(`   IPFS Hash: ${pendingRootData.ipfs}`);
+				}
+			} else {
+				console.log(`   Root Status: No pending root`);
+			}
+		} catch (error) {
+			console.log(
+				`\n! Could not fetch on-chain data: ${error instanceof Error ? error.message : error}`,
+			);
+		}
 
-    } catch (error) {
-      console.log(`\n⚠️ Could not fetch on-chain data: ${error instanceof Error ? error.message : error}`);
-    }
-
-    console.log(`\n🔗 Links:`);
-    console.log(`   Explorer: https://maizenet-explorer.usecorn.com/address/${reward.urdAddress}`);
-  }
+		console.log(`\n🔗 Links:`);
+		console.log(
+			`   Explorer: https://maizenet-explorer.usecorn.com/address/${reward.urdAddress}`,
+		);
+	}
 }
 
 export class CheckAllPendingRoots extends Command {
-  static paths = [["reward", "check-all-pending"]];
-  dir = Option.String("--dir", "chains");
+	static paths = [["reward", "check-all-pending"]];
+	dir = Option.String("--dir", "chains");
 
-  async execute() {
-    const rewards = await loadAllData(this.dir, "rewards");
-    console.log("🔍 Checking validity of all pending roots...\n");
+	async execute() {
+		const rewards = await loadAllData(this.dir, "rewards");
+		console.log("🔍 Checking validity of all pending roots...\n");
 
-    let foundPending = false;
-    let validCount = 0;
-    let invalidCount = 0;
-    let errorCount = 0;
-    let readyToAccept: string[] = [];
+		let foundPending = false;
+		let validCount = 0;
+		let invalidCount = 0;
+		let errorCount = 0;
+		let readyToAccept: string[] = [];
 
-    for (const reward of rewards) {
-      try {
-        const { chain, publicClient } = getWalletInfo(reward.chainId);
+		for (const reward of rewards) {
+			try {
+				const { chain, publicClient } = getWalletInfo(reward.chainId);
 
-        if (!("urdFactory" in chain.morpho)) {
-          console.log(`⚠️  Skipping ${reward.id}: No urdFactory for chain ${chain.id}`);
-          continue;
-        }
+				if (!("urdFactory" in chain.morpho)) {
+					console.log(
+						`!  Skipping ${reward.id}: No urdFactory for chain ${chain.id}`,
+					);
+					continue;
+				}
 
-        const pendingRoot = await getPendingRoot(
-          publicClient,
-          getAddress(reward.urdAddress),
-        );
+				const pendingRoot = await getPendingRoot(
+					publicClient,
+					getAddress(reward.urdAddress),
+				);
 
-        if (pendingRoot !== zeroHash) {
-          foundPending = true;
-          console.log(`\n${'='.repeat(60)}`);
-          console.log(`🔄 CHECKING: ${reward.id} (${reward.name || "no name"})`);
-          console.log(`${'='.repeat(60)}`);
+				if (pendingRoot !== zeroHash) {
+					foundPending = true;
+					console.log(`\n${"=".repeat(60)}`);
+					console.log(
+						`🔄 CHECKING: ${reward.id} (${reward.name || "no name"})`,
+					);
+					console.log(`${"=".repeat(60)}`);
 
-          let isValid = true;
-          let hasErrors = false;
+					let isValid = true;
+					let hasErrors = false;
 
-          // Get detailed pending root info and timelock
-          const pendingRootData = await getPendingRootWithTimestamp(
-            publicClient,
-            getAddress(reward.urdAddress),
-          );
+					// Get detailed pending root info and timelock
+					const pendingRootData = await getPendingRootWithTimestamp(
+						publicClient,
+						getAddress(reward.urdAddress),
+					);
 
-          const timelockPeriod = await getTimelock(
-            publicClient,
-            getAddress(reward.urdAddress),
-          );
+					const timelockPeriod = await getTimelock(
+						publicClient,
+						getAddress(reward.urdAddress),
+					);
 
-          console.log(`📋 Chain: ${reward.chainId}`);
-          console.log(`📋 URD Address: ${reward.urdAddress}`);
-          console.log(`📋 On-chain Pending Root: ${pendingRoot}`);
+					console.log(`📋 Chain: ${reward.chainId}`);
+					console.log(`📋 URD Address: ${reward.urdAddress}`);
+					console.log(`📋 On-chain Pending Root: ${pendingRoot}`);
 
-          // Check endpoint validation
-          try {
-            const endpointUrl = `https://sap.icarus.tools/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
-            const response = await fetch(endpointUrl);
+					// Check endpoint validation
+					try {
+						const endpointUrl = `https://sap.icarus.tools/blue?method=getPendingTreeForCampaign&params=[%22${encodeURIComponent(reward.id)}%22]`;
+						const response = await fetch(endpointUrl);
 
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
 
-            const endpointData = await response.json();
+						const endpointData = await response.json();
 
-            if (endpointData && endpointData.result && endpointData.result.root) {
-              const campaignTree = endpointData.result;
-              const endpointRoot = campaignTree.root;
+						if (
+							endpointData &&
+							endpointData.result &&
+							endpointData.result.root
+						) {
+							const campaignTree = endpointData.result;
+							const endpointRoot = campaignTree.root;
 
-              console.log(`📋 Endpoint Root: ${endpointRoot}`);
+							console.log(`📋 Endpoint Root: ${endpointRoot}`);
 
-              if (pendingRoot.toLowerCase() === endpointRoot.toLowerCase()) {
-                console.log("✅ Root Match: On-chain pending root matches endpoint root");
-              } else {
-                console.log("❌ Root Match: On-chain pending root does NOT match endpoint root");
-                isValid = false;
-              }
+							if (pendingRoot.toLowerCase() === endpointRoot.toLowerCase()) {
+								console.log(
+									"✅ Root Match: On-chain pending root matches endpoint root",
+								);
+							} else {
+								console.log(
+									"❌ Root Match: On-chain pending root does NOT match endpoint root",
+								);
+								isValid = false;
+							}
 
-              // Validate campaign progress
-              const progressValid = this.validateCampaignProgressQuick(reward, campaignTree);
-              if (!progressValid) {
-                isValid = false;
-              }
+							// Validate campaign progress
+							const progressValid = this.validateCampaignProgressQuick(
+								reward,
+								campaignTree,
+							);
+							if (!progressValid) {
+								isValid = false;
+							}
 
-              // Validate blacklist
-              const blacklistValid = this.validateBlacklistQuick(campaignTree, reward.chainId);
-              if (!blacklistValid) {
-                isValid = false;
-              }
+							// Validate blacklist
+							const blacklistValid = this.validateBlacklistQuick(
+								campaignTree,
+								reward.chainId,
+							);
+							if (!blacklistValid) {
+								isValid = false;
+							}
+						} else {
+							console.log("❌ Endpoint: Did not return a valid campaign tree");
+							isValid = false;
+						}
+					} catch (error) {
+						console.log(
+							`❌ Endpoint Error: ${error instanceof Error ? error.message : error}`,
+						);
+						hasErrors = true;
+					}
 
-            } else {
-              console.log("❌ Endpoint: Did not return a valid campaign tree");
-              isValid = false;
-            }
-          } catch (error) {
-            console.log(`❌ Endpoint Error: ${error instanceof Error ? error.message : error}`);
-            hasErrors = true;
-          }
+					// Display timelock information
+					this.displayTimelockInfoQuick(pendingRootData, timelockPeriod);
 
-          // Display timelock information
-          this.displayTimelockInfoQuick(pendingRootData, timelockPeriod);
+					// Final status
+					const validAtTimestamp = Number(pendingRootData.timestamp);
+					const now = Math.floor(Date.now() / 1000);
+					const isReady = now >= validAtTimestamp;
 
-          // Final status
-          const validAtTimestamp = Number(pendingRootData.timestamp);
-          const now = Math.floor(Date.now() / 1000);
-          const isReady = now >= validAtTimestamp;
+					if (hasErrors) {
+						console.log(
+							`\n🔴 FINAL STATUS: ERROR - Could not fully validate ${reward.id}`,
+						);
+						errorCount++;
+					} else if (!isValid) {
+						console.log(
+							`\n🔴 FINAL STATUS: INVALID - ${reward.id} has validation issues`,
+						);
+						invalidCount++;
+					} else if (!isReady) {
+						console.log(
+							`\n🟡 FINAL STATUS: VALID BUT LOCKED - ${reward.id} is valid but still in timelock`,
+						);
+						validCount++;
+					} else {
+						console.log(
+							`\n🟢 FINAL STATUS: VALID AND READY - ${reward.id} is ready to accept`,
+						);
+						validCount++;
+						readyToAccept.push(reward.id);
+					}
+				}
+			} catch (error) {
+				console.log(
+					`❌ Error checking ${reward.id}: ${error instanceof Error ? error.message : error}`,
+				);
+				errorCount++;
+			}
+		}
 
-          if (hasErrors) {
-            console.log(`\n🔴 FINAL STATUS: ERROR - Could not fully validate ${reward.id}`);
-            errorCount++;
-          } else if (!isValid) {
-            console.log(`\n🔴 FINAL STATUS: INVALID - ${reward.id} has validation issues`);
-            invalidCount++;
-          } else if (!isReady) {
-            console.log(`\n🟡 FINAL STATUS: VALID BUT LOCKED - ${reward.id} is valid but still in timelock`);
-            validCount++;
-          } else {
-            console.log(`\n🟢 FINAL STATUS: VALID AND READY - ${reward.id} is ready to accept`);
-            validCount++;
-            readyToAccept.push(reward.id);
-          }
-        }
-      } catch (error) {
-        console.log(`❌ Error checking ${reward.id}: ${error instanceof Error ? error.message : error}`);
-        errorCount++;
-      }
-    }
+		// Summary
+		console.log(`\n${"=".repeat(60)}`);
+		console.log(`📊 VALIDATION SUMMARY`);
+		console.log(`${"=".repeat(60)}`);
 
-    // Summary
-    console.log(`\n${'='.repeat(60)}`);
-    console.log(`📊 VALIDATION SUMMARY`);
-    console.log(`${'='.repeat(60)}`);
+		if (!foundPending) {
+			console.log("✨ No rewards have pending roots.");
+		} else {
+			console.log(`🟢 Valid: ${validCount}`);
+			console.log(`🔴 Invalid: ${invalidCount}`);
+			console.log(`!  Errors: ${errorCount}`);
+			console.log(
+				`📊 Total Checked: ${validCount + invalidCount + errorCount}`,
+			);
 
-    if (!foundPending) {
-      console.log("✨ No rewards have pending roots.");
-    } else {
-      console.log(`🟢 Valid: ${validCount}`);
-      console.log(`🔴 Invalid: ${invalidCount}`);
-      console.log(`⚠️  Errors: ${errorCount}`);
-      console.log(`📊 Total Checked: ${validCount + invalidCount + errorCount}`);
+			if (validCount > 0) {
+				console.log(`\n✅ ${validCount} campaign(s) ready for acceptance`);
+			}
+			if (invalidCount > 0) {
+				console.log(
+					`\n❌ ${invalidCount} campaign(s) have validation issues - DO NOT ACCEPT`,
+				);
+			}
+			if (errorCount > 0) {
+				console.log(
+					`\n!  ${errorCount} campaign(s) had validation errors - manual review required`,
+				);
+			}
 
-      if (validCount > 0) {
-        console.log(`\n✅ ${validCount} campaign(s) ready for acceptance`);
-      }
-      if (invalidCount > 0) {
-        console.log(`\n❌ ${invalidCount} campaign(s) have validation issues - DO NOT ACCEPT`);
-      }
-      if (errorCount > 0) {
-        console.log(`\n⚠️  ${errorCount} campaign(s) had validation errors - manual review required`);
-      }
+			// Print acceptance commands for ready campaigns
+			if (readyToAccept.length > 0) {
+				console.log(`\n${"=".repeat(60)}`);
+				console.log(`🚀 READY TO ACCEPT - RUN THESE COMMANDS:`);
+				console.log(`${"=".repeat(60)}`);
 
-      // Print acceptance commands for ready campaigns
-      if (readyToAccept.length > 0) {
-        console.log(`\n${'='.repeat(60)}`);
-        console.log(`🚀 READY TO ACCEPT - RUN THESE COMMANDS:`);
-        console.log(`${'='.repeat(60)}`);
+				for (const campaignId of readyToAccept) {
+					console.log(`./cli reward accept ${campaignId}`);
+				}
 
-        for (const campaignId of readyToAccept) {
-          console.log(`./cli reward accept ${campaignId}`);
-        }
+				console.log(`\n💡 Or accept all at once:`);
+				const acceptAllCommand = readyToAccept
+					.map((id) => `./cli reward accept ${id}`)
+					.join(" && ");
+				console.log(acceptAllCommand);
+			}
+		}
+	}
 
-        console.log(`\n💡 Or accept all at once:`);
-        const acceptAllCommand = readyToAccept.map(id => `./cli reward accept ${id}`).join(' && ');
-        console.log(acceptAllCommand);
-      }
-    }
-  }
+	private validateCampaignProgressQuick(
+		reward: any,
+		campaignTree: any,
+	): boolean {
+		try {
+			const referenceTime = this.getMostRecentFriday9amPDT();
+			const startTime =
+				campaignTree.metadata?.start_timestamp || reward.start_timestamp;
+			const endTime =
+				campaignTree.metadata?.end_timestamp || reward.end_timestamp;
+			const totalRewardAmount = BigInt(reward.reward_amount);
 
-  private validateCampaignProgressQuick(reward: any, campaignTree: any): boolean {
-    try {
-      const referenceTime = this.getMostRecentFriday9amPDT();
-      const startTime = campaignTree.metadata?.start_timestamp || reward.start_timestamp;
-      const endTime = campaignTree.metadata?.end_timestamp || reward.end_timestamp;
-      const totalRewardAmount = BigInt(reward.reward_amount);
+			let completionPercentage = 0;
+			if (referenceTime < startTime) {
+				completionPercentage = 0;
+			} else if (referenceTime >= endTime) {
+				completionPercentage = 100;
+			} else {
+				const elapsed = referenceTime - startTime;
+				const total = endTime - startTime;
+				completionPercentage = (elapsed / total) * 100;
+			}
 
-      let completionPercentage = 0;
-      if (referenceTime < startTime) {
-        completionPercentage = 0;
-      } else if (referenceTime >= endTime) {
-        completionPercentage = 100;
-      } else {
-        const elapsed = referenceTime - startTime;
-        const total = endTime - startTime;
-        completionPercentage = (elapsed / total) * 100;
-      }
+			if (campaignTree.tree && Array.isArray(campaignTree.tree)) {
+				const totalClaimable = campaignTree.tree.reduce(
+					(sum: bigint, entry: any) => {
+						return sum + BigInt(entry.claimable || entry.amount || 0);
+					},
+					BigInt(0),
+				);
 
-      if (campaignTree.tree && Array.isArray(campaignTree.tree)) {
-        const totalClaimable = campaignTree.tree.reduce((sum: bigint, entry: any) => {
-          return sum + BigInt(entry.claimable || entry.amount || 0);
-        }, BigInt(0));
+				const expectedMax =
+					(totalRewardAmount * BigInt(Math.ceil(completionPercentage))) /
+					BigInt(100);
+				const tolerance = BigInt(5);
+				const maxAllowed =
+					(totalRewardAmount *
+						(BigInt(Math.ceil(completionPercentage)) + tolerance)) /
+					BigInt(100);
 
-        const expectedMax = (totalRewardAmount * BigInt(Math.ceil(completionPercentage))) / BigInt(100);
-        const tolerance = BigInt(5);
-        const maxAllowed = (totalRewardAmount * (BigInt(Math.ceil(completionPercentage)) + tolerance)) / BigInt(100);
+				if (totalClaimable <= maxAllowed) {
+					console.log(
+						"✅ Progress: Total claimable amount is within expected range",
+					);
+					return true;
+				} else {
+					console.log(
+						"❌ Progress: Total claimable amount exceeds expected range",
+					);
+					return false;
+				}
+			}
+			return true;
+		} catch (error) {
+			console.log(
+				`!  Progress: Could not validate campaign progress: ${error}`,
+			);
+			return false;
+		}
+	}
 
-        if (totalClaimable <= maxAllowed) {
-          console.log("✅ Progress: Total claimable amount is within expected range");
-          return true;
-        } else {
-          console.log("❌ Progress: Total claimable amount exceeds expected range");
-          return false;
-        }
-      }
-      return true;
-    } catch (error) {
-      console.log(`⚠️  Progress: Could not validate campaign progress: ${error}`);
-      return false;
-    }
-  }
+	private validateBlacklistQuick(campaignTree: any, chainId: number): boolean {
+		try {
+			const blacklist = loadBlacklist(this.dir, chainId);
 
-  private validateBlacklistQuick(campaignTree: any, chainId: number): boolean {
-    try {
-      const blacklist = loadBlacklist(this.dir, chainId);
+			if (blacklist.length === 0) {
+				console.log("i  Blacklist: No blacklist found for this chain");
+				return true;
+			}
 
-      if (blacklist.length === 0) {
-        console.log("ℹ️  Blacklist: No blacklist found for this chain");
-        return true;
-      }
+			if (!campaignTree.tree || !Array.isArray(campaignTree.tree)) {
+				console.log("!  Blacklist: No tree data available for validation");
+				return false;
+			}
 
-      if (!campaignTree.tree || !Array.isArray(campaignTree.tree)) {
-        console.log("⚠️  Blacklist: No tree data available for validation");
-        return false;
-      }
+			for (const entry of campaignTree.tree) {
+				const userAddress = (
+					entry.account ||
+					entry.user ||
+					entry.address ||
+					""
+				).toLowerCase();
+				if (blacklist.includes(userAddress)) {
+					console.log(
+						"🔥 CRITICAL: BLACKLISTED ADDRESS DETECTED - DO NOT ACCEPT",
+					);
+					return false;
+				}
+			}
 
-      for (const entry of campaignTree.tree) {
-        const userAddress = (entry.account || entry.user || entry.address || '').toLowerCase();
-        if (blacklist.includes(userAddress)) {
-          console.log("🔥 CRITICAL: BLACKLISTED ADDRESS DETECTED - DO NOT ACCEPT");
-          return false;
-        }
-      }
+			console.log("✅ Blacklist: No blacklisted addresses found");
+			return true;
+		} catch (error) {
+			console.log(`!  Blacklist: Could not validate blacklist: ${error}`);
+			return false;
+		}
+	}
 
-      console.log("✅ Blacklist: No blacklisted addresses found");
-      return true;
-    } catch (error) {
-      console.log(`⚠️  Blacklist: Could not validate blacklist: ${error}`);
-      return false;
-    }
-  }
+	private getMostRecentFriday9amPDT(): number {
+		const now = new Date();
+		const pdtOffset = 7 * 60;
+		const nowPDT = new Date(now.getTime() - pdtOffset * 60 * 1000);
+		const currentDay = nowPDT.getDay();
 
-  private getMostRecentFriday9amPDT(): number {
-    const now = new Date();
-    const pdtOffset = 7 * 60;
-    const nowPDT = new Date(now.getTime() - pdtOffset * 60 * 1000);
-    const currentDay = nowPDT.getDay();
+		let daysToSubtract = 0;
+		if (currentDay === 5) {
+			daysToSubtract = 0;
+		} else if (currentDay === 6) {
+			daysToSubtract = 1;
+		} else if (currentDay === 0) {
+			daysToSubtract = 2;
+		} else {
+			daysToSubtract = currentDay + 2;
+		}
 
-    let daysToSubtract = 0;
-    if (currentDay === 5) {
-      daysToSubtract = 0;
-    } else if (currentDay === 6) {
-      daysToSubtract = 1;
-    } else if (currentDay === 0) {
-      daysToSubtract = 2;
-    } else {
-      daysToSubtract = currentDay + 2;
-    }
+		const targetFriday = new Date(nowPDT);
+		targetFriday.setDate(targetFriday.getDate() - daysToSubtract);
+		targetFriday.setHours(9, 0, 0, 0);
+		targetFriday.setHours(targetFriday.getHours() - 12);
 
-    const targetFriday = new Date(nowPDT);
-    targetFriday.setDate(targetFriday.getDate() - daysToSubtract);
-    targetFriday.setHours(9, 0, 0, 0);
-    targetFriday.setHours(targetFriday.getHours() - 12);
+		const fridayUTC = new Date(targetFriday.getTime() + pdtOffset * 60 * 1000);
+		return Math.floor(fridayUTC.getTime() / 1000);
+	}
 
-    const fridayUTC = new Date(targetFriday.getTime() + pdtOffset * 60 * 1000);
-    return Math.floor(fridayUTC.getTime() / 1000);
-  }
+	private displayTimelockInfoQuick(
+		pendingRootData: any,
+		timelockPeriod: bigint,
+	) {
+		if (pendingRootData.root === zeroHash) {
+			console.log(`i  Timelock: No pending root to timelock`);
+			return;
+		}
 
-  private displayTimelockInfoQuick(pendingRootData: any, timelockPeriod: bigint) {
-    if (pendingRootData.root === zeroHash) {
-      console.log(`ℹ️  Timelock: No pending root to timelock`);
-      return;
-    }
+		const validAtTimestamp = Number(pendingRootData.timestamp);
+		const now = Math.floor(Date.now() / 1000);
 
-    const validAtTimestamp = Number(pendingRootData.timestamp);
-    const now = Math.floor(Date.now() / 1000);
-
-    if (now >= validAtTimestamp) {
-      console.log(`✅ Timelock: Ready to accept (timelock expired)`);
-    } else {
-      const timeRemaining = validAtTimestamp - now;
-      const hoursRemaining = Math.floor(timeRemaining / 3600);
-      const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
-      console.log(`⏳ Timelock: Still locked (${hoursRemaining}h ${minutesRemaining}m remaining)`);
-    }
-  }
+		if (now >= validAtTimestamp) {
+			console.log(`✅ Timelock: Ready to accept (timelock expired)`);
+		} else {
+			const timeRemaining = validAtTimestamp - now;
+			const hoursRemaining = Math.floor(timeRemaining / 3600);
+			const minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+			console.log(
+				`⏳ Timelock: Still locked (${hoursRemaining}h ${minutesRemaining}m remaining)`,
+			);
+		}
+	}
 }
 
 export class TransferOwner extends Command {
-  static paths = [["reward", "transfer-owner"]];
+	static paths = [["reward", "transfer-owner"]];
 
-  id = Option.String({ required: false });
-  newOwner = Option.String();
-  dir = Option.String("--dir", "chains");
+	id = Option.String({ required: false });
+	newOwner = Option.String();
+	dir = Option.String("--dir", "chains");
 
-  async execute() {
-    const { reward } = await selectReward(this.dir, this.id, "transfer ownership");
-    if (!reward) {
-      throw new Error(`reward ${this.id} not found. try 'reward list'`);
-    }
+	async execute() {
+		const { reward } = await selectReward(
+			this.dir,
+			this.id,
+			"transfer ownership",
+		);
+		if (!reward) {
+			throw new Error(`reward ${this.id} not found. try 'reward list'`);
+		}
 
-    if (!this.newOwner || !isAddress(this.newOwner)) {
-      throw new Error("new-owner must be a valid address");
-    }
+		if (!this.newOwner || !isAddress(this.newOwner)) {
+			throw new Error("new-owner must be a valid address");
+		}
 
-    const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
+		const { chain, publicClient, walletClient } = getWalletInfo(reward.chainId);
 
-    if (!("urdFactory" in chain.morpho)) {
-      throw new Error(`No urdFactory for chain ${chain.id}.'`);
-    }
+		if (!("urdFactory" in chain.morpho)) {
+			throw new Error(`No urdFactory for chain ${chain.id}.'`);
+		}
 
-    // Get current owner
-    const currentOwner = await getOwner(
-      publicClient,
-      getAddress(reward.urdAddress),
-    );
+		// Get current owner
+		const currentOwner = await getOwner(
+			publicClient,
+			getAddress(reward.urdAddress),
+		);
 
-    console.log(`\n⚠️  WARNING: Ownership Transfer`);
-    console.log(`Campaign: ${reward.id} (${reward.name || "no name"})`);
-    console.log(`URD Contract: ${reward.urdAddress}`);
-    console.log(`Current Owner: ${currentOwner}`);
-    console.log(`New Owner: ${this.newOwner}`);
-    console.log(`\n🚨 This action is IRREVERSIBLE!`);
+		console.log(`\n!  WARNING: Ownership Transfer`);
+		console.log(`Campaign: ${reward.id} (${reward.name || "no name"})`);
+		console.log(`URD Contract: ${reward.urdAddress}`);
+		console.log(`Current Owner: ${currentOwner}`);
+		console.log(`New Owner: ${this.newOwner}`);
+		console.log(`\n🚨 This action is IRREVERSIBLE!`);
 
-    const answer = await confirm({
-      message: `Are you absolutely sure you want to transfer ownership to ${this.newOwner}?`,
-      default: false,
-    });
+		const answer = await confirm({
+			message: `Are you absolutely sure you want to transfer ownership to ${this.newOwner}?`,
+			default: false,
+		});
 
-    if (!answer) {
-      console.log("Transfer cancelled");
-      return;
-    }
+		if (!answer) {
+			console.log("Transfer cancelled");
+			return;
+		}
 
-    // Double confirmation for safety
-    const secondAnswer = await confirm({
-      message: `FINAL CONFIRMATION: Transfer ownership of ${reward.id} to ${this.newOwner}?`,
-      default: false,
-    });
+		// Double confirmation for safety
+		const secondAnswer = await confirm({
+			message: `FINAL CONFIRMATION: Transfer ownership of ${reward.id} to ${this.newOwner}?`,
+			default: false,
+		});
 
-    if (!secondAnswer) {
-      console.log("Transfer cancelled");
-      return;
-    }
+		if (!secondAnswer) {
+			console.log("Transfer cancelled");
+			return;
+		}
 
-    try {
-      const txnhash = await transferOwnership(
-        publicClient,
-        walletClient,
-        getAddress(reward.urdAddress),
-        getAddress(this.newOwner),
-      );
+		try {
+			const txnhash = await transferOwnership(
+				publicClient,
+				walletClient,
+				getAddress(reward.urdAddress),
+				getAddress(this.newOwner),
+			);
 
-      console.log(`\n✅ Ownership transferred successfully!`);
-      console.log(`Transaction hash: ${txnhash}`);
-      console.log(`New owner: ${this.newOwner}`);
+			console.log(`\n✅ Ownership transferred successfully!`);
+			console.log(`Transaction hash: ${txnhash}`);
+			console.log(`New owner: ${this.newOwner}`);
 
-      // Verify the transfer
-      const newOwnerVerified = await getOwner(
-        publicClient,
-        getAddress(reward.urdAddress),
-      );
+			// Verify the transfer
+			const newOwnerVerified = await getOwner(
+				publicClient,
+				getAddress(reward.urdAddress),
+			);
 
-      if (newOwnerVerified.toLowerCase() === this.newOwner.toLowerCase()) {
-        console.log(`✅ Ownership transfer verified on-chain`);
-      } else {
-        console.log(`⚠️  Warning: Could not verify ownership transfer. Please check manually.`);
-      }
-    } catch (error) {
-      console.log(`\n❌ Transfer failed: ${error instanceof Error ? error.message : error}`);
-      throw error;
-    }
-  }
+			if (newOwnerVerified.toLowerCase() === this.newOwner.toLowerCase()) {
+				console.log(`✅ Ownership transfer verified on-chain`);
+			} else {
+				console.log(
+					`!  Warning: Could not verify ownership transfer. Please check manually.`,
+				);
+			}
+		} catch (error) {
+			console.log(
+				`\n❌ Transfer failed: ${error instanceof Error ? error.message : error}`,
+			);
+			throw error;
+		}
+	}
 }
