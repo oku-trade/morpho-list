@@ -1,0 +1,14 @@
+{
+  "id": "corn_usdt0_usdt0_vault_v1.1.10",
+  "salt": "0xf3c8cf9807a982d8cba0ccd90c8619c2d15be34fe546483f406cf7076411f2fe",
+  "urdAddress": "0x55e9ef14b763c227dca6e24b62b6cfd311de6466",
+  "chainId": 21000000,
+  "start_timestamp": 1758643200,
+  "end_timestamp": 1759852800,
+  "production": true,
+  "reward_amount": "1917040000",
+  "reward_token": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+  "name": "USDT0 Vault Supply 9/23",
+  "type": "vault",
+  "vault": "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21"
+}

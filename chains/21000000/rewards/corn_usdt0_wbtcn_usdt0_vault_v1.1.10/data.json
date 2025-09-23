@@ -1,0 +1,14 @@
+{
+  "id": "corn_usdt0_wbtcn_usdt0_vault_v1.1.10",
+  "salt": "0xc4a03cd2529e0e1d2e76159054e9ff0f4a9368b5b7cbc874be4a6aae26e9f2c0",
+  "urdAddress": "0x688893d4af3a992443f7fcf300b79c72d483ce86",
+  "chainId": 21000000,
+  "start_timestamp": 1758643200,
+  "end_timestamp": 1759852800,
+  "production": true,
+  "reward_amount": "105160000",
+  "reward_token": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
+  "name": "WBTCN USDT0 Market Borrow 9/23",
+  "type": "market",
+  "market": "0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec"
+}
