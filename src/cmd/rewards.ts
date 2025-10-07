@@ -45,16 +45,16 @@ const selectReward = async (
 	const reward =
 		id === undefined
 			? await search({
-					message: `Select a campaign${action ? ` to ${action} for` : ""}:`,
-					source: async (input) => {
-						return rewards
-							.filter((r) => r.id.includes(input || ""))
-							.map((r) => ({
-								name: `${r.id} - (${r.name})`,
-								value: r,
-							}));
-					},
-				})
+				message: `Select a campaign${action ? ` to ${action} for` : ""}:`,
+				source: async (input) => {
+					return rewards
+						.filter((r) => r.id.includes(input || ""))
+						.map((r) => ({
+							name: `${r.id} - (${r.name})`,
+							value: r,
+						}));
+				},
+			})
 			: rewards.find((r) => r.id === id);
 	return { reward, rewards };
 };
@@ -179,14 +179,14 @@ export class CreateRewardsCommand extends Command {
 			salt: saltHash,
 			urdAddress: urdAddress.toLowerCase(),
 			chainId: chain.id,
-			start_timestamp: 1758643200,
-			end_timestamp: 1759852800,
+			start_timestamp: 1759852800,
+			end_timestamp: 1761062400,
 			production: this.prod,
-			reward_amount: "693640000",
+			reward_amount: "201140000",
 			reward_token: "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
-			name: "WBTCN Vault Supply 9/23",
-			type: "vault",
-			vault: "0xa7ba08cfc37e7cc67404d4996ffbb3e977490115",
+			name: "LBTC WBTCN Market Borrow 10/7",
+			type: "market",
+			market: "0x2547ba491a7ff9e8cfcaa3e1c0da739f4fdc1be9fe4a37bfcdf570002153a0de",
 		};
 		const writtenFile = storeData(
 			this.dir,
@@ -523,7 +523,7 @@ export class CheckPendingRoot extends Command {
 				const excessPercentage =
 					Number(
 						((totalClaimable - expectedMax) * BigInt(10000)) /
-							totalRewardAmount,
+						totalRewardAmount,
 					) / 100;
 				console.log(`   Excess: ${excessPercentage.toFixed(2)}% over expected`);
 			}
