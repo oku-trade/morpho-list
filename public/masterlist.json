@@ -4709,6 +4709,57 @@
       "rewards": [],
       "blacklist": []
     },
+    "42793": {
+      "vaults": [
+        {
+          "chainId": 42793,
+          "name": "MEV Capital USDC",
+          "tokenAddress": "0x796Ea11Fa2dD751eD01b53C372fFDB4AAa8f00F9",
+          "performanceFeePercentage": "150000000000000000",
+          "vaultAddress": "0x7a78bB51D513b8c63e2BB9bd3F1c223B613a10aF",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        }
+      ],
+      "markets": [
+        {
+          "chainId": 42793,
+          "marketId": "0x1494d570f02138e13f54bf9a3f17f7050479cc8379bd52d8ca52130e605b3cb0",
+          "collateralTokenAddress": "0x5542f82389b76c23f5848268893234d8a63fd5c8",
+          "loanTokenAddress": "0x796ea11fa2dd751ed01b53c372ffdb4aaa8f00f9",
+          "oracleAddress": "0xe5335c15e475ac7514832ce79c84d3b33748e758",
+          "irmAddress": "0xc1523be776e66ba07b609b1914d0925278f21fe5",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 42793,
+          "marketId": "0x6289128d43f4318c8bfe3f370343686eb92d55dd41988e735a8058bbba182008",
+          "collateralTokenAddress": "0x2247b5a46bb79421a314ab0f0b67ffd11dd37ee4",
+          "loanTokenAddress": "0x796ea11fa2dd751ed01b53c372ffdb4aaa8f00f9",
+          "oracleAddress": "0x459f50fa71f5f21cbf4af7f1d749f543d94f5297",
+          "irmAddress": "0xc1523be776e66ba07b609b1914d0925278f21fe5",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 42793,
+          "marketId": "0x62fba7079a12cf8abe09431c065ff1edc343d3be520e18e8cb3097e15618c947",
+          "collateralTokenAddress": "0xdd629e5241cbc5919847783e6c96b2de4754e438",
+          "loanTokenAddress": "0x796ea11fa2dd751ed01b53c372ffdb4aaa8f00f9",
+          "oracleAddress": "0x8a268e7f9d0a85a09425483a88788c1177efc044",
+          "irmAddress": "0xc1523be776e66ba07b609b1914d0925278f21fe5",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        }
+      ],
+      "rewards": [],
+      "blacklist": []
+    },
     "21000000": {
       "vaults": [
         {
