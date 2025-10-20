@@ -4720,9 +4720,30 @@
           "guardianAddress": "0x0000000000000000000000000000000000000000",
           "curatorAddress": "0x0000000000000000000000000000000000000000",
           "enabled": true
+        },
+        {
+          "chainId": 42793,
+          "name": "Uranium USDC",
+          "tokenAddress": "0x796Ea11Fa2dD751eD01b53C372fFDB4AAa8f00F9",
+          "performanceFeePercentage": "0",
+          "vaultAddress": "0xfcc667aEA1D69ea578e2Cfc41f5B5586F1435Cd3",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
         }
       ],
       "markets": [
+        {
+          "chainId": 42793,
+          "marketId": "0x1480207aed3544fed0c3128316cf9ed9776d3a2ce2243536827a2d660ab929bf",
+          "collateralTokenAddress": "0x79052ab3c166d4899a1e0dd033ac3b379af0b1fd",
+          "loanTokenAddress": "0x796ea11fa2dd751ed01b53c372ffdb4aaa8f00f9",
+          "oracleAddress": "0x3b789d4316ab5019fe57bbf3b80a0b656430b75d",
+          "irmAddress": "0xc1523be776e66ba07b609b1914d0925278f21fe5",
+          "lltvPercent": "770000000000000000",
+          "liquidationPenalty": "1074113856068743286",
+          "enabled": true
+        },
         {
           "chainId": 42793,
           "marketId": "0x1494d570f02138e13f54bf9a3f17f7050479cc8379bd52d8ca52130e605b3cb0",
