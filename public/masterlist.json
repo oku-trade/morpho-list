@@ -3126,6 +3126,88 @@
       "rewards": [],
       "blacklist": []
     },
+    "10": {
+      "vaults": [
+        {
+          "chainId": 10,
+          "name": "Moonwell Flagship USDC",
+          "tokenAddress": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+          "performanceFeePercentage": "150000000000000000",
+          "vaultAddress": "0x3520E1a10038131A3C00Bf2158835A75e929642d",
+          "guardianAddress": "0x355F7b5edbfbfb5cCc7a3C67Dab2f99A72FDDa09",
+          "curatorAddress": "0x970d5ce29730b8e5792da0f0f0a544721B0E0b4F",
+          "enabled": true
+        },
+        {
+          "chainId": 10,
+          "name": "Edge UltraYield USDC",
+          "tokenAddress": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0x48921e52f70CEC7D3425Cf5103Caace27Fc0b2Fe",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        },
+        {
+          "chainId": 10,
+          "name": "Gauntlet USDC Prime",
+          "tokenAddress": "0x0b2C639c533813f4Aa9D7837CAf62653d097Ff85",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0xC30ce6A5758786e0F640cC5f881Dd96e9a1C5C59",
+          "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+          "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+          "enabled": true
+        }
+      ],
+      "markets": [
+        {
+          "chainId": 10,
+          "marketId": "0x173b66359f0741b1c7f1963075cd271c739b6dc73b658e108a54ce6febeb279b",
+          "collateralTokenAddress": "0x4200000000000000000000000000000000000006",
+          "loanTokenAddress": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "oracleAddress": "0x6475585f7811d03063bf6817306d75f9d9e61735",
+          "irmAddress": "0x8cd70a8f399428456b29546bc5dbe10ab6a06ef6",
+          "lltvPercent": "860000000000000000",
+          "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 10,
+          "marketId": "0x8e77af0efaf4a3d59f37126c77f6f0ee7b56bcb1363c0986b8f6087b93ba833e",
+          "collateralTokenAddress": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+          "loanTokenAddress": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "oracleAddress": "0x78900c74cc6b50819f19a04acd561e94606137ac",
+          "irmAddress": "0x8cd70a8f399428456b29546bc5dbe10ab6a06ef6",
+          "lltvPercent": "860000000000000000",
+          "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 10,
+          "marketId": "0xc7ae57c1998c67a4c21804df606db1309b68a518ba5acc8b1dc3ffcb1b26b071",
+          "collateralTokenAddress": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
+          "loanTokenAddress": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "oracleAddress": "0x11b8ea87bf6051265be35df2ac81b32326d47dbf",
+          "irmAddress": "0x8cd70a8f399428456b29546bc5dbe10ab6a06ef6",
+          "lltvPercent": "860000000000000000",
+          "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 10,
+          "marketId": "0xff239fbfcc8fc3b579ee12496554a51f0187e2fa04e44d6439dca4ed79c167c8",
+          "collateralTokenAddress": "0x0000000000000000000000000000000000000000",
+          "loanTokenAddress": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+          "oracleAddress": "0x0000000000000000000000000000000000000000",
+          "irmAddress": "0x0000000000000000000000000000000000000000",
+          "lltvPercent": "0",
+          "liquidationPenalty": "1150000000000000000",
+          "enabled": true
+        }
+      ],
+      "rewards": [],
+      "blacklist": []
+    },
     "480": {
       "vaults": [
         {
