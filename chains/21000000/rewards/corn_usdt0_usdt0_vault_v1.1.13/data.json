@@ -7,7 +7,7 @@
   "end_timestamp": 1763481600,
   "production": true,
   "reward_amount": "972710000",
-  "reward_token": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb?chainid",
+  "reward_token": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
   "name": "USDT0 Vault Supply 11/4",
   "type": "vault",
   "vault": "0x9b2fa89e23ae84f7895a58f8ec7cb0b267ed8a21"

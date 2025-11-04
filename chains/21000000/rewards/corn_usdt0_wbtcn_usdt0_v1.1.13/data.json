@@ -7,7 +7,7 @@
   "end_timestamp": 1763481600,
   "production": true,
   "reward_amount": "101260000",
-  "reward_token": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb?chainid",
+  "reward_token": "0xB8CE59FC3717ada4C02eaDF9682A9e934F625ebb",
   "name": "WBTCN USDT0 Market Borrow 11/4",
   "type": "market",
   "market": "0x9039bf8b5c3cd6f2d3f937e8a2e59ef6af0109a0d0f3499e7dbf75be0aef75ec"
