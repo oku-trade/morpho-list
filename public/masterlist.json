@@ -3222,6 +3222,16 @@
         },
         {
           "chainId": 480,
+          "name": "Re7 WARS",
+          "tokenAddress": "0x0DC4F92879B7670e5f4e4e6e3c801D229129D90D",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0x1C94c7A2c71ECF13104c31F49d5138EDb099D25D",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
           "name": "Re7 WLD",
           "tokenAddress": "0x2cFc85d8E48F8EAB294be644d9E25C3030863003",
           "performanceFeePercentage": "100000000000000000",
@@ -3236,6 +3246,16 @@
           "tokenAddress": "0x03C7054BCB39f7b2e5B2c7AcB37583e32D70Cfa3",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0xBC8C37467c5Df9D50B42294B8628c25888BECF61",
+          "guardianAddress": "0x0000000000000000000000000000000000000000",
+          "curatorAddress": "0x0000000000000000000000000000000000000000",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
+          "name": "Re7 EURC",
+          "tokenAddress": "0x1C60ba0A0eD1019e8Eb035E6daF4155A5cE2380B",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0xDaa79e066DeE8c8C15FFb37b1157F7Eb8e0d1b37",
           "guardianAddress": "0x0000000000000000000000000000000000000000",
           "curatorAddress": "0x0000000000000000000000000000000000000000",
           "enabled": true
@@ -3316,6 +3336,17 @@
           "irmAddress": "0x34e99d604751a72cf8d0cfdf87069292d82de472",
           "lltvPercent": "915000000000000000",
           "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
+          "marketId": "0x5a9e548d439a85a815ef0323263e16b9044245942c2e067f39ff9ce171d726dc",
+          "collateralTokenAddress": "0x79a02482a880bce3f13e09da970dc34db4cd24d1",
+          "loanTokenAddress": "0x1c60ba0a0ed1019e8eb035e6daf4155a5ce2380b",
+          "oracleAddress": "0xbd048fe978c2f678ab3dcdc868af9f19bea0e453",
+          "irmAddress": "0x34e99d604751a72cf8d0cfdf87069292d82de472",
+          "lltvPercent": "770000000000000000",
+          "liquidationPenalty": "1074113856068743286",
           "enabled": true
         },
         {
@@ -3415,6 +3446,28 @@
           "irmAddress": "0x34e99d604751a72cf8d0cfdf87069292d82de472",
           "lltvPercent": "770000000000000000",
           "liquidationPenalty": "1074113856068743286",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
+          "marketId": "0xc46461539e485c13b3be339d220988667a379764e99bea86f89a18239a27288d",
+          "collateralTokenAddress": "0x0000000000000000000000000000000000000000",
+          "loanTokenAddress": "0x1c60ba0a0ed1019e8eb035e6daf4155a5ce2380b",
+          "oracleAddress": "0x0000000000000000000000000000000000000000",
+          "irmAddress": "0x0000000000000000000000000000000000000000",
+          "lltvPercent": "0",
+          "liquidationPenalty": "1150000000000000000",
+          "enabled": true
+        },
+        {
+          "chainId": 480,
+          "marketId": "0xef7644c80545d8a5459fa9ed06df4d407c28e83c21622d42fd3983f5a758083e",
+          "collateralTokenAddress": "0x0000000000000000000000000000000000000000",
+          "loanTokenAddress": "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d",
+          "oracleAddress": "0x0000000000000000000000000000000000000000",
+          "irmAddress": "0x0000000000000000000000000000000000000000",
+          "lltvPercent": "0",
+          "liquidationPenalty": "1150000000000000000",
           "enabled": true
         }
       ],
