@@ -1,0 +1,10 @@
+{
+  "chainId": 480,
+  "name": "Re7 WARS",
+  "tokenAddress": "0x0DC4F92879B7670e5f4e4e6e3c801D229129D90D",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x1C94c7A2c71ECF13104c31F49d5138EDb099D25D",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 480,
+  "name": "Re7 EURC",
+  "tokenAddress": "0x1C60ba0A0eD1019e8Eb035E6daF4155A5cE2380B",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xDaa79e066DeE8c8C15FFb37b1157F7Eb8e0d1b37",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}
