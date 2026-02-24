@@ -1,0 +1,10 @@
+{
+  "chainId": 1329,
+  "name": "Feather SEI",
+  "tokenAddress": "0xE30feDd158A2e3b13e9badaeABaFc5516e95e8C7",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x948FcC6b7f68f4830Cd69dB1481a9e1A142A4923",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x3aC7BF91E67B75A50482607c00FE95d06447fB5d",
+  "enabled": true
+}

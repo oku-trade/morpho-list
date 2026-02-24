@@ -1,0 +1,10 @@
+{
+  "chainId": 1329,
+  "name": "Feather USDC",
+  "tokenAddress": "0xe15fC38F6D8c56aF07bbCBe3BAf5708A2Bf42392",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x015F10a56e97e02437D294815D8e079e1903E41C",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x3aC7BF91E67B75A50482607c00FE95d06447fB5d",
+  "enabled": true
+}
