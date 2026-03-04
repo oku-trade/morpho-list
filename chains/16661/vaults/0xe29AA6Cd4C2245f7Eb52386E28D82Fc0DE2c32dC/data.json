@@ -1,0 +1,10 @@
+{
+  "chainId": 16661,
+  "name": "w0g Vault",
+  "tokenAddress": "0x1Cd0690fF9a693f5EF2dD976660a8dAFc81A109c",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xe29AA6Cd4C2245f7Eb52386E28D82Fc0DE2c32dC",
+  "guardianAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+  "curatorAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+  "enabled": true
+}

@@ -8,7 +8,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@gfxlabs/oku-chains": "^1.11.12",
+		"@gfxlabs/oku-chains": "^1.11.15",
 		"@inquirer/prompts": "^7.5.0",
 		"@types/node": "^22.13.17",
 		"clipanion": "^4.0.0-rc.4",

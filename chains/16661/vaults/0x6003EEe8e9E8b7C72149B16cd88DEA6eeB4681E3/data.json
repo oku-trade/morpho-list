@@ -1,0 +1,10 @@
+{
+  "chainId": 16661,
+  "name": "0g USDC Vault",
+  "tokenAddress": "0x1f3AA82227281cA364bFb3d253B0f1af1Da6473E",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x6003EEe8e9E8b7C72149B16cd88DEA6eeB4681E3",
+  "guardianAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+  "curatorAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+  "enabled": true
+}

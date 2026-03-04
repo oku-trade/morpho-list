@@ -187,12 +187,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gfxlabs/oku-chains@npm:^1.11.12":
-  version: 1.11.12
-  resolution: "@gfxlabs/oku-chains@npm:1.11.12"
+"@gfxlabs/oku-chains@npm:^1.11.15":
+  version: 1.11.15
+  resolution: "@gfxlabs/oku-chains@npm:1.11.15"
   peerDependencies:
     viem: 2.x
-  checksum: 10c0/f0dd324ca807bd55491c7d98efb3fc9fe88c61c732e1170aed38a636386766ad37220dc6b8b82cfc7bee92e6cf52e7869d6d1bd16ee2ae7a1af512e7cadaf17c
+  checksum: 10c0/06e28258f837d49fb23ab2ff96d99be13181d772213a2d393651f2d8cb5b1cf744c33e5c97e22c0e1a3dc05dceeff17d246c01a082063ada2a512ade161eecab
   languageName: node
   linkType: hard
 
@@ -1272,7 +1272,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "morpho-list@workspace:."
   dependencies:
-    "@gfxlabs/oku-chains": "npm:^1.11.12"
+    "@gfxlabs/oku-chains": "npm:^1.11.15"
     "@inquirer/prompts": "npm:^7.5.0"
     "@morpho-org/blue-sdk": "npm:^3.0.0-next.2"
     "@morpho-org/blue-sdk-viem": "npm:^3.0.0-next.5"
