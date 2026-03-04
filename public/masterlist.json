@@ -5059,6 +5059,56 @@
       "rewards": [],
       "blacklist": []
     },
+    "16661": {
+      "vaults": [
+        {
+          "chainId": 16661,
+          "name": "0g USDC Vault",
+          "tokenAddress": "0x1f3AA82227281cA364bFb3d253B0f1af1Da6473E",
+          "performanceFeePercentage": "0",
+          "vaultAddress": "0x6003EEe8e9E8b7C72149B16cd88DEA6eeB4681E3",
+          "guardianAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+          "curatorAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+          "enabled": true
+        },
+        {
+          "chainId": 16661,
+          "name": "w0g Vault",
+          "tokenAddress": "0x1Cd0690fF9a693f5EF2dD976660a8dAFc81A109c",
+          "performanceFeePercentage": "0",
+          "vaultAddress": "0xe29AA6Cd4C2245f7Eb52386E28D82Fc0DE2c32dC",
+          "guardianAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+          "curatorAddress": "0x4f894Bfc9481110278C356adE1473eBe2127Fd3C",
+          "enabled": true
+        }
+      ],
+      "markets": [
+        {
+          "chainId": 16661,
+          "marketId": "0x22056ed6318ee3403025f5ef17c4ab40e321538fbfa7e3ae9d3db0dde0de9b5d",
+          "collateralTokenAddress": "0x1cd0690ff9a693f5ef2dd976660a8dafc81a109c",
+          "loanTokenAddress": "0x1f3aa82227281ca364bfb3d253b0f1af1da6473e",
+          "oracleAddress": "0xa83fb44c3594be82db081f7502ad7d7f3b7134cd",
+          "irmAddress": "0xf52e20c42fec624819d4184226c4777d7cbd767e",
+          "lltvPercent": "860000000000000000",
+          "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 16661,
+          "marketId": "0x8cf401e68e3ffaf1320f05a77b45d468b6859c50d57a5b4a0799e9cb85612785",
+          "collateralTokenAddress": "0x1f3aa82227281ca364bfb3d253b0f1af1da6473e",
+          "loanTokenAddress": "0x1cd0690ff9a693f5ef2dd976660a8dafc81a109c",
+          "oracleAddress": "0xf3123f44b26f8771e53ac95258bfce846258ef13",
+          "irmAddress": "0xf52e20c42fec624819d4184226c4777d7cbd767e",
+          "lltvPercent": "945000000000000000",
+          "liquidationPenalty": "1016776817488561260",
+          "enabled": true
+        }
+      ],
+      "rewards": [],
+      "blacklist": []
+    },
     "42793": {
       "vaults": [
         {
