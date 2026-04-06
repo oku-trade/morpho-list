@@ -54,16 +54,6 @@
         },
         {
           "chainId": 1,
-          "name": "Resolv USDC",
-          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "performanceFeePercentage": "100000000000000000",
-          "vaultAddress": "0x132e6c9c33a62d7727cd359b1f51e5b566e485eb",
-          "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
-          "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
           "name": "Flagship USDC",
           "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "50000000000000000",
@@ -94,42 +84,12 @@
         },
         {
           "chainId": 1,
-          "name": "9S Mount Denali USDC Core",
-          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0x1e2aaadcf528b9cc08f43d4fd7db488ce89f5741",
-          "guardianAddress": "0x0000000000000000000000000000000000000000",
-          "curatorAddress": "0x59e608E4842162480591032f3c8b0aE55C98d104",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Apostro Resolv USDC",
-          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "performanceFeePercentage": "100000000000000000",
-          "vaultAddress": "0x214b47c50057efaa7adc1b1c2608c3751cd77d78",
-          "guardianAddress": "0x0000000000000000000000000000000000000000",
-          "curatorAddress": "0xC91578e51BCE35844E345CC7F733b4bBf6721734",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
           "name": "Gauntlet WETH Prime",
           "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "50000000000000000",
           "vaultAddress": "0x2371e134e3455e0593363cbf89d3b6cf53740618",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
           "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Flagship USDT",
-          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0x2c25f6c25770ffec5959d34b94bf898865e5d6b1",
-          "guardianAddress": "0xB5f28e67C616a183e4e8843358A185a57462556E",
-          "curatorAddress": "0x2a933dbd0D9e32593e62702028Edcab437CE3cBA",
           "enabled": true
         },
         {
@@ -150,16 +110,6 @@
           "vaultAddress": "0x30881baa943777f92dc934d53d3bfdf33382cab3",
           "guardianAddress": "0xAa5BD13E90428dCc33a5b367Cfebc7FFaB7E2d9e",
           "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Flagship ETH",
-          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0x38989bba00bdf8181f4082995b3deae96163ac5d",
-          "guardianAddress": "0xB6F83824F267320a66850C59FE05d21cAb9C4D41",
-          "curatorAddress": "0x2a933dbd0D9e32593e62702028Edcab437CE3cBA",
           "enabled": true
         },
         {
@@ -204,32 +154,12 @@
         },
         {
           "chainId": 1,
-          "name": "SwissBorg Morpho USDC",
-          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0x4ff4186188f8406917293a9e01a1ca16d3cf9e59",
-          "guardianAddress": "0xAC15982Ca8A8e8BAc738FE492b84D8761B4384a3",
-          "curatorAddress": "0xC684c6587712e5E7BDf9fD64415F23Bd2b05fAec",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
           "name": "Gauntlet DAI Core",
           "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x500331c9ff24d9d11aee6b07734aa72343ea74a5",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
           "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Apostro Resolv USR",
-          "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
-          "performanceFeePercentage": "100000000000000000",
-          "vaultAddress": "0x5085dd6fad07c12e38fae01bc2a4938d2c08b1bc",
-          "guardianAddress": "0x0000000000000000000000000000000000000000",
-          "curatorAddress": "0xC91578e51BCE35844E345CC7F733b4bBf6721734",
           "enabled": true
         },
         {
@@ -284,16 +214,6 @@
         },
         {
           "chainId": 1,
-          "name": "MEV Capital USD0",
-          "tokenAddress": "0x73A15FeD60Bf67631dC6cd7Bc5B6e8da8190aCF5",
-          "performanceFeePercentage": "100000000000000000",
-          "vaultAddress": "0x749794e985af5a9a384b9cee6d88dab4ce1576a1",
-          "guardianAddress": "0x66Ed8855B47E0D6E6aDa3ADc9B14900e81dE4da1",
-          "curatorAddress": "0x38afC3aA2c76b4cA1F8e1DabA68e998e1F4782DB",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
           "name": "Hyperithm USDC",
           "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "100000000000000000",
@@ -310,16 +230,6 @@
           "vaultAddress": "0x78b18e07dc43017fceaabad0751d6464c0f56b25",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
           "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Re7 WETH",
-          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-          "performanceFeePercentage": "200000000000000000",
-          "vaultAddress": "0x78fc2c2ed1a4cdb5402365934ae5648adad094d0",
-          "guardianAddress": "0x0000000000000000000000000000000000000000",
-          "curatorAddress": "0x0000000000000000000000000000000000000000",
           "enabled": true
         },
         {
@@ -360,16 +270,6 @@
           "vaultAddress": "0x8eb67a509616cd6a7c1b3c8c21d48ff57df3d458",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
           "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Re7 USDT",
-          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0x95eef579155cd2c5510f312c8fa39208c3be01a8",
-          "guardianAddress": "0x2F80ba89362f86a9acC71BFfE5EcF4997F52BDd4",
-          "curatorAddress": "0x0000000000000000000000000000000000000000",
           "enabled": true
         },
         {
@@ -520,26 +420,6 @@
           "vaultAddress": "0xc080f56504e0278828a403269db945f6c6d6e014",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
           "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Gauntlet USDC Frontier",
-          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "performanceFeePercentage": "0",
-          "vaultAddress": "0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e",
-          "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
-          "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "MEV Capital Resolv USR",
-          "tokenAddress": "0x66a1E37c9b0eAddca17d3662D6c05F4DECf3e110",
-          "performanceFeePercentage": "100000000000000000",
-          "vaultAddress": "0xd50da5f859811a91fd1876c9461fd39c23c747ad",
-          "guardianAddress": "0x6e9d65eC80D69b1f508560Bc7aeA5003db1f7FB7",
-          "curatorAddress": "0x0000000000000000000000000000000000000000",
           "enabled": true
         },
         {
