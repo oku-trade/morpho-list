@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Yield Clearstar USDC",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "90000000000000000",
+  "vaultAddress": "0xe74c499fa461af1844fca84204490877787ced56",
+  "guardianAddress": "0x1bb2d4532fbedc2a93b77248d023657014c18458",
+  "curatorAddress": "0x72882eb5d27c7088dfa6dde941dd42e5d184f0ef",
+  "enabled": true
+}

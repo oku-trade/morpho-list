@@ -1,0 +1,10 @@
+{
+  "chainId": 137,
+  "name": "Compound USDC",
+  "tokenAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x781fb7f6d845e3be129289833b04d43aa8558c42",
+  "guardianAddress": "0x8ab717cac3cbc4934e63825b88442f5810aaf6e5",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

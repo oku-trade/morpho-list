@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Gauntlet USDC Frontier",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x236919f11ff9ea9550a4287696c2fc9e18e6e890",
+  "guardianAddress": "0x7084bf4db6c21e1834dd6482f6056a39a33584cd",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

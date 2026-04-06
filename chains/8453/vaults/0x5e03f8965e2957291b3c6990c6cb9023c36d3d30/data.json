@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Prime USDC",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x5e03f8965e2957291b3c6990c6cb9023c36d3d30",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xb5933f4e9f29e9e92dba92b643b37a270204de82",
+  "enabled": true
+}

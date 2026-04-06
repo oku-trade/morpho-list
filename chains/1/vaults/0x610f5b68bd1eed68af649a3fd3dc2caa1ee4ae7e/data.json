@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha LINK Enhanced V2",
+  "tokenAddress": "0x514910771af9ca656af840dff83e8264ecf986ca",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x610f5b68bd1eed68af649a3fd3dc2caa1ee4ae7e",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

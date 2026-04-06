@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Hyperithm ETH Apex",
+  "tokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x6d6d386c4855d9b604d7e14c70526407f6272394",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x75178137d3b4b9a0f771e0e149b00fb8167ba325",
+  "enabled": true
+}

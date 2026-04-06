@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha ZCHF Vault",
+  "tokenAddress": "0xb58e61c3098d85632df34eecfb899a1ed80921cb",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xfa7ed49eb24a6117d8a3168eee69d26b45c40c63",
+  "guardianAddress": "0x8cf8aa7805dd315372d5b9899554e5f1c4e35540",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

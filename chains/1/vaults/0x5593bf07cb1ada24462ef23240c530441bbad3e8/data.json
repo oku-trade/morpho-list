@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "USDCV Prime",
+  "tokenAddress": "0x5422374b27757da72d5265cc745ea906e0446634",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x5593bf07cb1ada24462ef23240c530441bbad3e8",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

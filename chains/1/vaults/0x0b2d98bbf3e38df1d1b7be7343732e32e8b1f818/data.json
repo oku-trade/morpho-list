@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Cap Ecosystem USDC",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x0b2d98bbf3e38df1d1b7be7343732e32e8b1f818",
+  "guardianAddress": "0x7084bf4db6c21e1834dd6482f6056a39a33584cd",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

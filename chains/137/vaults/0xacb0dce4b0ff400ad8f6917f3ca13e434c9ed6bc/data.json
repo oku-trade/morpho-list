@@ -1,0 +1,10 @@
+{
+  "chainId": 137,
+  "name": "Steakhouse High Yield USDC",
+  "tokenAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xacb0dce4b0ff400ad8f6917f3ca13e434c9ed6bc",
+  "guardianAddress": "0x2b6f3b77aa4c8491187595f947a945ad1d298219",
+  "curatorAddress": "0x827e86072b06674a077f592a531dce4590adecdb",
+  "enabled": true
+}

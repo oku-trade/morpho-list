@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "BOLD Reactor",
+  "tokenAddress": "0x6440f144b7e50d6a8439336510312d2f54beb01d",
+  "performanceFeePercentage": "40000000000000000",
+  "vaultAddress": "0xfbc84dbfaa2196853fdb6cae52ef8f56dd76770a",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x72882eb5d27c7088dfa6dde941dd42e5d184f0ef",
+  "enabled": true
+}

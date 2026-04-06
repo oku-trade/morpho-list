@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "SingularV USDT",
+  "tokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xbdd4859050468fbc11dec07113a6e633608a1372",
+  "guardianAddress": "0x7a844c8ed2ce4a244111e4cd4efca873b419d841",
+  "curatorAddress": "0x46057881e0b9d190920fb823f840b837f65745d5",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "ALPHA wETH Core",
+  "tokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x47fe8ab9ee47dd65c24df52324181790b9f47efc",
+  "guardianAddress": "0x8cf8aa7805dd315372d5b9899554e5f1c4e35540",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

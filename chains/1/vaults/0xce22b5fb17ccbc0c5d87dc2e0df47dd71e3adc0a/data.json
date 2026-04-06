@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "USDU Core",
+  "tokenAddress": "0xdde3ec717f220fc6a29d6a4be73f91da5b718e55",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xce22b5fb17ccbc0c5d87dc2e0df47dd71e3adc0a",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Steakhouse Prime Instant",
+  "tokenAddress": "0x6c3ea9036406852006290770bedfcaba0e23a0e8",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xbeef00b5d83c1188f07a5184230a805639c39f04",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x827e86072b06674a077f592a531dce4590adecdb",
+  "enabled": true
+}

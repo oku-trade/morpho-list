@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "UltraYield USDC",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x0562ae950276b24f3eae0d0a518dadb7ad2f8d66",
+  "guardianAddress": "0x35f419ce1ca0c8ee93aee7b832d1b7701b61b310",
+  "curatorAddress": "0xcc217d03d9ad82c80101b9f0579fd5a0b141edcc",
+  "enabled": true
+}

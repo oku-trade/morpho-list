@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "ALPHA USDC Core",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xb0f05e4de970a1aaf77f8c2f823953a367504ba9",
+  "guardianAddress": "0x8cf8aa7805dd315372d5b9899554e5f1c4e35540",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

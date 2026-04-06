@@ -1,0 +1,10 @@
+{
+  "chainId": 137,
+  "name": "Compound POL",
+  "tokenAddress": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x3f33f9f7e2d7cfbcbdf8ea8b870a6e3d449664c2",
+  "guardianAddress": "0x8ab717cac3cbc4934e63825b88442f5810aaf6e5",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

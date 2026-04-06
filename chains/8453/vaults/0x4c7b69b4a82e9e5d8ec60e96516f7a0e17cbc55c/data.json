@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Clearstar Reactor EURC",
+  "tokenAddress": "0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x4c7b69b4a82e9e5d8ec60e96516f7a0e17cbc55c",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x72882eb5d27c7088dfa6dde941dd42e5d184f0ef",
+  "enabled": true
+}

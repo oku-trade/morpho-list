@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "fxUSD Agentic Stablecoin",
+  "tokenAddress": "0x55380fe7a1910dff29a47b622057ab4139da42c5",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x85dfbe8c834ae0451613e58604e6e165abb5c4db",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x2ca1fac7e626bc2e2122578e07772098f4f4f7cb",
+  "enabled": true
+}

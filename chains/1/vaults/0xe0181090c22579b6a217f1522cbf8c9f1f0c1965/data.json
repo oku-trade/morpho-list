@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "RockawayX USDC Yield",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xe0181090c22579b6a217f1522cbf8c9f1f0c1965",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xbbacdcfb9691dfa1066ab29edfcc4a73f6def918",
+  "enabled": true
+}

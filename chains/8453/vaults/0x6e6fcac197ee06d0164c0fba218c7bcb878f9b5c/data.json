@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Apostro VNX Swiss Franc VCHF",
+  "tokenAddress": "0x1fca74d9ef54a6ac80ffe7d3b14e76c4330fd5d8",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x6e6fcac197ee06d0164c0fba218c7bcb878f9b5c",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xc91578e51bce35844e345cc7f733b4bbf6721734",
+  "enabled": true
+}
