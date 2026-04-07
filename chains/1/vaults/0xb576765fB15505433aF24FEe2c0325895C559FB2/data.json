@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Sentora PYUSD Main",
+  "tokenAddress": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xb576765fB15505433aF24FEe2c0325895C559FB2",
+  "curatorAddress": "0x9e396dE3312D373b87F9BD8763fb48184b42aac0",
+  "enabled": true,
+  "version": 2
+}
