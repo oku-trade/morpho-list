@@ -21,6 +21,10 @@ const morphoMarketV1AdapterV2Abi = [
   { type: "function", name: "marketIds", inputs: [{ type: "uint256" }], outputs: [{ type: "bytes32" }], stateMutability: "view" },
 ] as const
 
+const morphoVaultV1AdapterAbi = [
+  { type: "function", name: "morphoVaultV1", inputs: [], outputs: [{ type: "address" }], stateMutability: "view" },
+] as const
+
 export const getVaultByAddress = async (chain: number, address: Address, version: number = 1) => {
   if (version === 2) {
     return getVaultV2ByAddress(chain, address)
@@ -69,21 +73,33 @@ const getVaultV2ByAddress = async (chain: number, address: Address) => {
 
   console.log("got v2 vault", { address, asset, name, performanceFee, curator })
 
-  // Collect market IDs from all adapters
+  // Collect market IDs and wrapped V1 vault addresses from all adapters
   const adaptersLength = await pc.readContract({ address, abi: vaultV2Abi, functionName: "adaptersLength" })
   const markets: MarketId[] = []
+  const wrappedV1Vaults: Address[] = []
 
   for (let i = 0n; i < adaptersLength; i++) {
     const adapterAddr = await pc.readContract({ address, abi: vaultV2Abi, functionName: "adapters", args: [i] })
-    // Try to read market IDs from the adapter (MorphoMarketV1AdapterV2)
+    // Try MorphoMarketV1AdapterV2 — has marketIdsLength/marketIds
     try {
       const marketIdsLength = await pc.readContract({ address: adapterAddr, abi: morphoMarketV1AdapterV2Abi, functionName: "marketIdsLength" })
       for (let j = 0n; j < marketIdsLength; j++) {
         const marketId = await pc.readContract({ address: adapterAddr, abi: morphoMarketV1AdapterV2Abi, functionName: "marketIds", args: [j] })
         markets.push(marketId as MarketId)
       }
+      continue
     } catch {
-      // Not a MorphoMarketV1AdapterV2, skip
+      // Not a MorphoMarketV1AdapterV2
+    }
+    // Try MorphoVaultV1Adapter — wraps a V1 vault
+    try {
+      const wrappedVault = await pc.readContract({ address: adapterAddr, abi: morphoVaultV1AdapterAbi, functionName: "morphoVaultV1" })
+      if (wrappedVault !== zeroAddress) {
+        wrappedV1Vaults.push(getAddress(wrappedVault))
+        console.log(`  adapter ${adapterAddr} wraps V1 vault ${wrappedVault}`)
+      }
+    } catch {
+      // Unknown adapter type
     }
   }
 
@@ -103,6 +119,7 @@ const getVaultV2ByAddress = async (chain: number, address: Address) => {
     chain,
     entry,
     markets,
+    wrappedV1Vaults,
   }
 }
 

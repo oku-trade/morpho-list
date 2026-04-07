@@ -56,6 +56,22 @@ export class AddVaultCommand extends Command {
         await cmd.execute()
       }
     }
+
+    // For V2 vaults: auto-add any wrapped V1 vaults from MorphoVaultV1Adapters
+    if (vaultVersion === 2 && 'wrappedV1Vaults' in vaultInfo) {
+      const wrappedVaults = (vaultInfo as any).wrappedV1Vaults as string[]
+      for (const wrappedAddr of wrappedVaults) {
+        console.log(`auto-adding wrapped V1 vault ${wrappedAddr}`)
+        const cmd = new AddVaultCommand()
+        cmd.chain = this.chain
+        cmd.vault = wrappedAddr
+        cmd.dir = this.dir
+        cmd.version = "1"
+        cmd.withMarkets = true
+        cmd.force = false
+        await cmd.execute()
+      }
+    }
   }
 }
 
