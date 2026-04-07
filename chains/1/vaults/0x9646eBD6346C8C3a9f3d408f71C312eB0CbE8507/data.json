@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Pendlend USDT",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x9646eBD6346C8C3a9f3d408f71C312eB0CbE8507",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha MUSD",
+  "tokenAddress": "0xdD468A1DDc392dcdbEf6db6e34E89AA338F9F186",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x52317a47585A6ACDfbD7a29B494c3E2baAE96aBc",
+  "guardianAddress": "0x9a283CE851340AF5746b51a6a98a745Dc53D75B7",
+  "curatorAddress": "0x6788c8ad65E85CCa7224a0B46D061EF7D81F9Da5",
+  "enabled": true
+}

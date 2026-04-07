@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "kpk ETH Prime",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xd564F765F9aD3E7d2d6cA782100795a885e8e7C8",
+  "guardianAddress": "0x354C92aF243d53A24feb3dFF20372Af7b7c47478",
+  "curatorAddress": "0xC266b1181A80E84EDC2c6596718E88E8115c1eaa",
+  "enabled": true
+}

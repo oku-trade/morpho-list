@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Yearn OG WETH",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xE89371eAaAC6D46d4C3ED23453241987916224FC",
+  "guardianAddress": "0xFEB4acf3df3cDEA7399794D0869ef76A6EfAff52",
+  "curatorAddress": "0x90D0f26025571295D18a6c041E47450B81886B51",
+  "enabled": true
+}

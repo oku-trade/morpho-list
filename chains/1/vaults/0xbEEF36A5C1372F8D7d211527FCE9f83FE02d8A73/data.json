@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Smokehouse ETH",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xbEEF36A5C1372F8D7d211527FCE9f83FE02d8A73",
+  "guardianAddress": "0x23c47911E3de590Cb31E5D788A89F6D84bcb57f5",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true
+}

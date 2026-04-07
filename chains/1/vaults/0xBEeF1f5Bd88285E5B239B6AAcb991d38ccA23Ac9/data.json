@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Steakhouse infiniFi USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xBEeF1f5Bd88285E5B239B6AAcb991d38ccA23Ac9",
+  "guardianAddress": "0x6cF2E416b900a63734ab34bcaaF577fA26C9E2c2",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true
+}

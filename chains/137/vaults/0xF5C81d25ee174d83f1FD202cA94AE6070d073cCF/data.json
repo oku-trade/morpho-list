@@ -1,0 +1,10 @@
+{
+  "chainId": 137,
+  "name": "Compound WETH",
+  "tokenAddress": "0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xF5C81d25ee174d83f1FD202cA94AE6070d073cCF",
+  "guardianAddress": "0x8Ab717CAC3CbC4934E63825B88442F5810aAF6e5",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

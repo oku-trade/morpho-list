@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "EURCV Prime",
+  "tokenAddress": "0x5F7827FDeb7c20b443265Fc2F40845B715385Ff2",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x34eCe536d2ae03192B06c0A67030D1Faf4c0Ba43",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

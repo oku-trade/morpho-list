@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "SingularV ETH",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x739d8a60ED4b14E4cB6DCAEAF79d2ec0Ca092237",
+  "guardianAddress": "0x7A844C8Ed2Ce4a244111E4CD4EFcA873b419d841",
+  "curatorAddress": "0x46057881E0B9d190920FB823F840B837f65745d5",
+  "enabled": true
+}

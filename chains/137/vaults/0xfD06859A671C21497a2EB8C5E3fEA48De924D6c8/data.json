@@ -1,0 +1,10 @@
+{
+  "chainId": 137,
+  "name": "Compound USDT",
+  "tokenAddress": "0xc2132D05D31c914a87C6611C10748AEb04B58e8F",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xfD06859A671C21497a2EB8C5E3fEA48De924D6c8",
+  "guardianAddress": "0x8Ab717CAC3CbC4934E63825B88442F5810aAF6e5",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}

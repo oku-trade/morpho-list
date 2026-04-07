@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": " kpk EURC Yield",
+  "tokenAddress": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x0c6aec603d48eBf1cECc7b247a2c3DA08b398DC1",
+  "guardianAddress": "0x354C92aF243d53A24feb3dFF20372Af7b7c47478",
+  "curatorAddress": "0xd15f11B334e1e233127302E5F759C17DA1260df5",
+  "enabled": true
+}

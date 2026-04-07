@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Pangolins USDT",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xd73270593E2542e5A43b8c7FBE4F2d5c9c4A443c",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}
