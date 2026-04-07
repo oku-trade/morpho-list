@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "UltraYield USDT",
+  "tokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x965ec3552427b8258bd0a0c7baa234618fc98d01",
+  "guardianAddress": "0x35f419ce1ca0c8ee93aee7b832d1b7701b61b310",
+  "curatorAddress": "0xcc217d03d9ad82c80101b9f0579fd5a0b141edcc",
+  "enabled": true
+}

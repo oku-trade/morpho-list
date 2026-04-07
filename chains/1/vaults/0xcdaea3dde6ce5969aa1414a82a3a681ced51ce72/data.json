@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Hyperithm USDC Core",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xcdaea3dde6ce5969aa1414a82a3a681ced51ce72",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x75178137d3b4b9a0f771e0e149b00fb8167ba325",
+  "enabled": true
+}

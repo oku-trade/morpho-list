@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Moonwell Flagship ETH ",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x89bedbb1c4837444da215a377275ff96a84d6f53",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x08edebffae68970dcf751baa826182b3a4acfc05",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "USUAL Vault",
+  "tokenAddress": "0xc4441c2be5d8fa8126822b9929ca0b81ea0de38e",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x28d24d4380b26a1ef305ad8d8db258159e472f33",
+  "guardianAddress": "0x6e9d65ec80d69b1f508560bc7aea5003db1f7fb7",
+  "curatorAddress": "0x0000000000000000000000000000000000000000",
+  "enabled": true
+}

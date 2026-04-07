@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Gauntlet USDT Prime",
+  "tokenAddress": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xf3557ad5e984211ac8a0874a670344f2c3376471",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

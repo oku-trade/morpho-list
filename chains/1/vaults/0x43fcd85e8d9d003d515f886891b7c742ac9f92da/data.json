@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Gauntlet WETH Prime",
+  "tokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x43fcd85e8d9d003d515f886891b7c742ac9f92da",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

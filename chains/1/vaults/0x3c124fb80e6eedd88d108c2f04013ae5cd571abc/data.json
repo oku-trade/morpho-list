@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Falcon USDf Core",
+  "tokenAddress": "0xfa2b947eec368f42195f24f36d2af29f7c24cec2",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x3c124fb80e6eedd88d108c2f04013ae5cd571abc",
+  "guardianAddress": "0x8cf8aa7805dd315372d5b9899554e5f1c4e35540",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

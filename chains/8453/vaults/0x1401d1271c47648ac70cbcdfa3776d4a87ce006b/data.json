@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Pangolins USDC",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x1401d1271c47648ac70cbcdfa3776d4a87ce006b",
+  "guardianAddress": "0xd222408eb42589db5d2e0be3cee6a4aaf2952c1a",
+  "curatorAddress": "0x9855475778aa3b492c14e4e12ca0d44c253c9884",
+  "enabled": true
+}

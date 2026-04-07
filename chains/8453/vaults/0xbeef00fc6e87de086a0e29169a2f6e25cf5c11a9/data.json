@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Farcaster x Steakhouse Prime",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xbeef00fc6e87de086a0e29169a2f6e25cf5c11a9",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x827e86072b06674a077f592a531dce4590adecdb",
+  "enabled": true
+}

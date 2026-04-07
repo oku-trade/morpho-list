@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Clearstar USDC Reactor",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x1d3b1cd0a0f242d598834b3f2d126dc6bd774657",
+  "guardianAddress": "0x1bb2d4532fbedc2a93b77248d023657014c18458",
+  "curatorAddress": "0x72882eb5d27c7088dfa6dde941dd42e5d184f0ef",
+  "enabled": true
+}

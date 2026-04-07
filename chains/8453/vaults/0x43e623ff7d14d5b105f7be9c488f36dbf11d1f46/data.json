@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Clearstar Boring USDC",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x43e623ff7d14d5b105f7be9c488f36dbf11d1f46",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x72882eb5d27c7088dfa6dde941dd42e5d184f0ef",
+  "enabled": true
+}

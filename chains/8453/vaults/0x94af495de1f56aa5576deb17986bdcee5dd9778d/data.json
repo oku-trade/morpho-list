@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Gauntlet EURC Balanced",
+  "tokenAddress": "0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x94af495de1f56aa5576deb17986bdcee5dd9778d",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

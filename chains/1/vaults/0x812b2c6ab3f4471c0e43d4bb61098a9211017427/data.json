@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Vault Bridge WBTC",
+  "tokenAddress": "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x812b2c6ab3f4471c0e43d4bb61098a9211017427",
+  "guardianAddress": "0x7084bf4db6c21e1834dd6482f6056a39a33584cd",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}

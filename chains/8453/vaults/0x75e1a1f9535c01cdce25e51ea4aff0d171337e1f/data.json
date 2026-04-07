@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Apostro USDC",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x75e1a1f9535c01cdce25e51ea4aff0d171337e1f",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xc91578e51bce35844e345cc7f733b4bbf6721734",
+  "enabled": true
+}

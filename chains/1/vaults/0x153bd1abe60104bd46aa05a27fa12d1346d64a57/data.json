@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha USDC Forex V2",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x153bd1abe60104bd46aa05a27fa12d1346d64a57",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

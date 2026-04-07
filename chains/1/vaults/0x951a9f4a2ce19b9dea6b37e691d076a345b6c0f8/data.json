@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha USDC Enhanced V2",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x951a9f4a2ce19b9dea6b37e691d076a345b6c0f8",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x6788c8ad65e85cca7224a0b46d061ef7d81f9da5",
+  "enabled": true
+}

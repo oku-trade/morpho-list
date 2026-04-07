@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Re Ecosystem Vault",
+  "tokenAddress": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xd1e9242e075db4bdd3f3c721d7d5fd4180a94a7e",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x72882eb5d27c7088dfa6dde941dd42e5d184f0ef",
+  "enabled": true
+}

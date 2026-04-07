@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "MEV Frontier USDC Vault",
+  "tokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x8773447e6369472d9b72f064ea62e405216e9084",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xb672ea44a1ec692a9baf851dc90a1ee3db25f1c4",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Yearn OG WETH V2",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x2efd54529329ad364b8df988ce3bab5ff256ab3e",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x90d0f26025571295d18a6c041e47450b81886b51",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Vault Bridge WETH",
+  "tokenAddress": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x31a5684983eee865d943a696aac155363ba024f9",
+  "guardianAddress": "0x7084bf4db6c21e1834dd6482f6056a39a33584cd",
+  "curatorAddress": "0x9e33faae38ff641094fa68c65c2ce600b3410585",
+  "enabled": true
+}
