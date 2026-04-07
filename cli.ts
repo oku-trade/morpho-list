@@ -23,13 +23,17 @@ class CompileCommand extends Command {
     console.log(`running compile in ${this.dir}`);
 
     const markets = await loadAllData(this.dir, "markets");
-    const vaults = await loadAllData(this.dir, "vaults");
+    const allVaults = await loadAllData(this.dir, "vaults");
     const rewards = await loadAllData(this.dir, "rewards");
     const blacklists = await loadAllData(this.dir, "blacklist");
+
+    const vaults = allVaults.filter(v => !v.version || v.version === 1);
+    const vaultsV2 = allVaults.filter(v => v.version === 2);
 
     console.log(
       "markets", markets.length,
       "vaults", vaults.length,
+      "vaultsV2", vaultsV2.length,
       "rewards", rewards.length,
       "blacklists", blacklists.length
     );
@@ -42,6 +46,7 @@ class CompileCommand extends Command {
       if (output.chains[chainId] === undefined) {
         output.chains[chainId] = {
           vaults: [],
+          vaultsV2: [],
           markets: [],
           rewards: [],
           blacklist: [],
@@ -61,6 +66,12 @@ class CompileCommand extends Command {
       ensureChain(vault.chainId);
       checkSeen(`${vault.chainId}_${vault.vaultAddress}`);
       output.chains[vault.chainId].vaults.push(vault);
+    }
+
+    for (const vault of vaultsV2) {
+      ensureChain(vault.chainId);
+      checkSeen(`${vault.chainId}_${vault.vaultAddress}`);
+      output.chains[vault.chainId].vaultsV2!.push(vault);
     }
 
     for (const market of markets) {

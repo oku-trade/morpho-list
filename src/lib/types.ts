@@ -21,10 +21,11 @@ export const MorphoVault = z.object({
   tokenAddress: z.string(),
   performanceFeePercentage: zStringInt,
   vaultAddress: z.string(),
-  guardianAddress: z.string(),
+  guardianAddress: z.string().optional(), // V1 only; V2 vaults use sentinels instead
   curatorAddress: z.string(),
   enabled: z.boolean(),
   blacklisted: z.boolean().optional(),
+  version: z.number().int().min(1).max(2).optional(), // 1 = MetaMorpho V1 (default), 2 = VaultV2
 })
 
 export const MorphoMarket = z.object({
@@ -68,6 +69,7 @@ export const Blacklist = z.object({
 
 export const MasterListEntry = z.object({
   vaults: z.array(MorphoVault),
+  vaultsV2: z.array(MorphoVault).optional(),
   markets: z.array(MorphoMarket),
   rewards: z.array(MorphoRewardProgram),
   blacklist: z.array(zAddress),
