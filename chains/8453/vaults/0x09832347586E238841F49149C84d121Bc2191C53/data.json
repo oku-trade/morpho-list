@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Clearstar ETH Reactor",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "80000000000000000",
+  "vaultAddress": "0x09832347586E238841F49149C84d121Bc2191C53",
+  "guardianAddress": "0x1bB2D4532FbEDC2a93B77248D023657014C18458",
+  "curatorAddress": "0x72882eb5D27C7088DFA6DDE941DD42e5d184F0ef",
+  "enabled": true
+}

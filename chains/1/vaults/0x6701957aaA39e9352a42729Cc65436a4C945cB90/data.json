@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "AlphaPing PT Frontier",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x6701957aaA39e9352a42729Cc65436a4C945cB90",
+  "guardianAddress": "0x8cF8AA7805dd315372D5B9899554E5F1C4E35540",
+  "curatorAddress": "0x6788c8ad65E85CCa7224a0B46D061EF7D81F9Da5",
+  "enabled": true
+}

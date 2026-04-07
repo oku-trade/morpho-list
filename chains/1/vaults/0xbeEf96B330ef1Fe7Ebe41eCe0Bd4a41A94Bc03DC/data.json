@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Cronos USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xbeEf96B330ef1Fe7Ebe41eCe0Bd4a41A94Bc03DC",
+  "guardianAddress": "0xa263bEDed40D26BF0D85c2d69FA0c759c12cf788",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true
+}

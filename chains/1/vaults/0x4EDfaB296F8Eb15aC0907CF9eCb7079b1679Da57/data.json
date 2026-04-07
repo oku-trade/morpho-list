@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Apostro Ethena USDe",
+  "tokenAddress": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x4EDfaB296F8Eb15aC0907CF9eCb7079b1679Da57",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xC91578e51BCE35844E345CC7F733b4bBf6721734",
+  "enabled": true
+}

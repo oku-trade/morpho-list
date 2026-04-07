@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Vault Bridge USDT",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xc54b4E08C1Dcc199fdd35c6b5Ab589ffD3428a8d",
+  "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true
+}
