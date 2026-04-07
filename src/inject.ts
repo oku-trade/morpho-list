@@ -10,8 +10,7 @@ for(const chain of MAINNET_CHAINS) {
   if(
     !(
       "morpho" in chain.morpho &&
-        "bundler3" in chain.morpho &&
-        "publicAllocator" in chain.morpho
+        "bundler3" in chain.morpho
     ) ||
       !(
         "wrappedNativeAddress" in chain.uniswap &&
@@ -29,12 +28,15 @@ for(const chain of MAINNET_CHAINS) {
   }
 
   const modifiable = addresses as any
-  modifiable[chain.id as ChainId] = {
+  const chainAddresses: any = {
     morpho: chain.morpho.morpho,
     bundler: chain.morpho.bundler3,
     permit2: chain.uniswap.permit2,
-    publicAllocator: chain.morpho.publicAllocator
   }
+  if("publicAllocator" in chain.morpho && chain.morpho.publicAllocator) {
+    chainAddresses.publicAllocator = chain.morpho.publicAllocator
+  }
+  modifiable[chain.id as ChainId] = chainAddresses
 
   unwrappedTokensMapping[chain.id as ChainId] = {
     [chain.uniswap.wrappedNativeAddress]: NATIVE_ADDRESS,

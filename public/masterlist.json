@@ -1003,6 +1003,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 1,
@@ -4704,6 +4705,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 10,
@@ -4816,6 +4818,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 137,
@@ -5093,6 +5096,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 480,
@@ -5330,6 +5334,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 1329,
@@ -5949,6 +5954,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 8453,
@@ -7242,6 +7248,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 16661,
@@ -7292,6 +7299,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 42793,
@@ -7364,6 +7372,7 @@
           "enabled": true
         }
       ],
+      "vaultsV2": [],
       "markets": [
         {
           "chainId": 21000000,

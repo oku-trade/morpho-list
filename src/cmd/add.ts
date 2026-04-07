@@ -17,9 +17,15 @@ export class AddVaultCommand extends Command {
   force = Option.Boolean("--force", false);
   dir = Option.String("--dir","chains");
   withMarkets = Option.Boolean("--with-markets", true);
+  version = Option.String("--version", "1", { description: "Vault version: 1 (MetaMorpho) or 2 (VaultV2)" });
 
   async execute() {
     const chainId = getChainId(this.chain);
+    const vaultVersion = parseInt(this.version)
+    if (vaultVersion !== 1 && vaultVersion !== 2) {
+      console.error("--version must be 1 or 2")
+      return 1
+    }
     // see if the vault is an address
     const addr = getAddress(this.vault)
     if(!this.force) {
@@ -35,7 +41,7 @@ export class AddVaultCommand extends Command {
       }
     }
     // now get the vault
-    const vaultInfo = await getVaultByAddress(chainId, addr)
+    const vaultInfo = await getVaultByAddress(chainId, addr, vaultVersion)
     storeData(this.dir, chainId.toString(), "vaults", addr, vaultInfo.entry)
 
     // now get the markets

@@ -1,13 +1,34 @@
 import "../inject.js"
 import { fetchAccrualVault, fetchMarketParams, fetchVault, fetchVaultConfig } from "@morpho-org/blue-sdk-viem";
-import { getRpc } from "./rpc.js"
+import { getRpc, getTransport } from "./rpc.js"
 import { typecheck } from "src/lib/utils.js";
 import { MorphoMarket, MorphoVault } from "src/lib/types.js";
-import { Address, zeroAddress } from "viem";
+import { Address, zeroAddress, createPublicClient, getAddress } from "viem";
 import { MarketId } from "@morpho-org/blue-sdk";
 
+const vaultV2Abi = [
+  { type: "function", name: "asset", inputs: [], outputs: [{ type: "address" }], stateMutability: "view" },
+  { type: "function", name: "name", inputs: [], outputs: [{ type: "string" }], stateMutability: "view" },
+  { type: "function", name: "performanceFee", inputs: [], outputs: [{ type: "uint96" }], stateMutability: "view" },
+  { type: "function", name: "owner", inputs: [], outputs: [{ type: "address" }], stateMutability: "view" },
+  { type: "function", name: "curator", inputs: [], outputs: [{ type: "address" }], stateMutability: "view" },
+  { type: "function", name: "adaptersLength", inputs: [], outputs: [{ type: "uint256" }], stateMutability: "view" },
+  { type: "function", name: "adapters", inputs: [{ type: "uint256" }], outputs: [{ type: "address" }], stateMutability: "view" },
+] as const
 
-export const getVaultByAddress =  async (chain: number, address: Address) => {
+const morphoMarketV1AdapterV2Abi = [
+  { type: "function", name: "marketIdsLength", inputs: [], outputs: [{ type: "uint256" }], stateMutability: "view" },
+  { type: "function", name: "marketIds", inputs: [{ type: "uint256" }], outputs: [{ type: "bytes32" }], stateMutability: "view" },
+] as const
+
+export const getVaultByAddress = async (chain: number, address: Address, version: number = 1) => {
+  if (version === 2) {
+    return getVaultV2ByAddress(chain, address)
+  }
+  return getVaultV1ByAddress(chain, address)
+}
+
+const getVaultV1ByAddress = async (chain: number, address: Address) => {
   const pc = getRpc(chain);
   const vaultAccural = await fetchAccrualVault(address, pc)
   const vaultMarkets = Array.from(vaultAccural.allocations.keys())
@@ -16,7 +37,6 @@ export const getVaultByAddress =  async (chain: number, address: Address) => {
   const vaultLive = await fetchVault(address, pc)
 
   console.log("got vault config", vaultConfig, vaultMarkets, vaultLive)
-
 
   // try to create an entry now
   let entry = await typecheck(MorphoVault, {
@@ -34,6 +54,55 @@ export const getVaultByAddress =  async (chain: number, address: Address) => {
     chain,
     entry,
     markets: vaultMarkets,
+  }
+}
+
+const getVaultV2ByAddress = async (chain: number, address: Address) => {
+  const pc = createPublicClient({ transport: getTransport(chain) })
+
+  const [asset, name, performanceFee, curator] = await Promise.all([
+    pc.readContract({ address, abi: vaultV2Abi, functionName: "asset" }),
+    pc.readContract({ address, abi: vaultV2Abi, functionName: "name" }),
+    pc.readContract({ address, abi: vaultV2Abi, functionName: "performanceFee" }),
+    pc.readContract({ address, abi: vaultV2Abi, functionName: "curator" }),
+  ])
+
+  console.log("got v2 vault", { address, asset, name, performanceFee, curator })
+
+  // Collect market IDs from all adapters
+  const adaptersLength = await pc.readContract({ address, abi: vaultV2Abi, functionName: "adaptersLength" })
+  const markets: MarketId[] = []
+
+  for (let i = 0n; i < adaptersLength; i++) {
+    const adapterAddr = await pc.readContract({ address, abi: vaultV2Abi, functionName: "adapters", args: [i] })
+    // Try to read market IDs from the adapter (MorphoMarketV1AdapterV2)
+    try {
+      const marketIdsLength = await pc.readContract({ address: adapterAddr, abi: morphoMarketV1AdapterV2Abi, functionName: "marketIdsLength" })
+      for (let j = 0n; j < marketIdsLength; j++) {
+        const marketId = await pc.readContract({ address: adapterAddr, abi: morphoMarketV1AdapterV2Abi, functionName: "marketIds", args: [j] })
+        markets.push(marketId as MarketId)
+      }
+    } catch {
+      // Not a MorphoMarketV1AdapterV2, skip
+    }
+  }
+
+  let entry = await typecheck(MorphoVault, {
+    enabled: true,
+    vaultAddress: address,
+    chainId: Number(chain),
+    tokenAddress: getAddress(asset),
+    curatorAddress: getAddress(curator),
+    performanceFeePercentage: performanceFee.toString(),
+    name: name,
+    version: 2,
+  })
+
+  return {
+    address,
+    chain,
+    entry,
+    markets,
   }
 }
 
