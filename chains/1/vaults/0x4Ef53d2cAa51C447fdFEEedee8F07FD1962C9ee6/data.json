@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "kpk USDC Prime V2",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x4Ef53d2cAa51C447fdFEEedee8F07FD1962C9ee6",
+  "curatorAddress": "0xf8182E5827c06a47A985eC565A3bcd56437a97bE",
+  "enabled": true,
+  "version": 2
+}

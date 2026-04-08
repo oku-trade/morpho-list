@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "sky.money USDS Flagship",
+  "tokenAddress": "0xdC035D45d973E3EC169d2276DDab16f1e407384F",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xE15fcC81118895b67b6647BBd393182dF44E11E0",
+  "curatorAddress": "0x3F32bC09d41eE699844F8296e806417D6bf61Bba",
+  "enabled": true,
+  "version": 2
+}

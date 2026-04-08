@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Re Ecosystem USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xA1FF9C28Ebc160c1Dcde4b9aA9551f617880c6fb",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x72882eb5D27C7088DFA6DDE941DD42e5d184F0ef",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "sky.money USDT Risk Capital",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x2bD3A43863c07B6A01581FADa0E1614ca5DF0E3d",
+  "curatorAddress": "0x3F32bC09d41eE699844F8296e806417D6bf61Bba",
+  "enabled": true,
+  "version": 2
+}

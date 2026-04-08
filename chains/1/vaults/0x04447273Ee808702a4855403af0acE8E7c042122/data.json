@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Re7 USDC Prime",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x04447273Ee808702a4855403af0acE8E7c042122",
+  "curatorAddress": "0xE86399fE6d7007FdEcb08A2ee1434Ee677a04433",
+  "enabled": true,
+  "version": 2
+}

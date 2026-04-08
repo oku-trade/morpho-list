@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "sky.money USDC Risk Capital",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x56bfa6f53669B836D1E0Dfa5e99706b12c373ecf",
+  "curatorAddress": "0x3F32bC09d41eE699844F8296e806417D6bf61Bba",
+  "enabled": true,
+  "version": 2
+}

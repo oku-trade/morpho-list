@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Flowdesk AUSD RWA Strategy",
+  "tokenAddress": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x32401B9fb79065Bc15949DE0BD43927492f02F0C",
+  "curatorAddress": "0xA817e31C4b9B3a5A596bB2E81D5068030b1778eC",
+  "enabled": true,
+  "version": 2
+}

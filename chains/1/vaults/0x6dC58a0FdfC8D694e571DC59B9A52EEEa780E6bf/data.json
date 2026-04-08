@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Sentora RLUSD Main",
+  "tokenAddress": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x6dC58a0FdfC8D694e571DC59B9A52EEEa780E6bf",
+  "curatorAddress": "0x9e396dE3312D373b87F9BD8763fb48184b42aac0",
+  "enabled": true,
+  "version": 2
+}

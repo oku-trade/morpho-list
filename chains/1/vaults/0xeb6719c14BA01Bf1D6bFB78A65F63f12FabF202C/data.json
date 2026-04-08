@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha APXUSD V2",
+  "tokenAddress": "0x98A878b1Cd98131B271883B390f68D2c90674665",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xeb6719c14BA01Bf1D6bFB78A65F63f12FabF202C",
+  "curatorAddress": "0x6788c8ad65E85CCa7224a0B46D061EF7D81F9Da5",
+  "enabled": true,
+  "version": 2
+}

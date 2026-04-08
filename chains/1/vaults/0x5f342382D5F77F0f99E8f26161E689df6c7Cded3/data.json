@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Gauntlet WETH Balanced",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x5f342382D5F77F0f99E8f26161E689df6c7Cded3",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}

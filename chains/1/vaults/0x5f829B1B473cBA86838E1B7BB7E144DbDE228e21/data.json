@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "RockawayX USDC Prime",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x5f829B1B473cBA86838E1B7BB7E144DbDE228e21",
+  "curatorAddress": "0xbBacDCFB9691DFA1066aB29edfcc4A73f6DEf918",
+  "enabled": true,
+  "version": 2
+}

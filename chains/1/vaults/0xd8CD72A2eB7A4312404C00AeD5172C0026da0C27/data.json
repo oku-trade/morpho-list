@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha Frax USD Enhanced V2",
+  "tokenAddress": "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xd8CD72A2eB7A4312404C00AeD5172C0026da0C27",
+  "curatorAddress": "0x6788c8ad65E85CCa7224a0B46D061EF7D81F9Da5",
+  "enabled": true,
+  "version": 2
+}

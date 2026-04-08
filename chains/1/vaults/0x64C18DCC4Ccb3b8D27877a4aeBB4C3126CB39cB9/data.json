@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "RockawayX wETH",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x64C18DCC4Ccb3b8D27877a4aeBB4C3126CB39cB9",
+  "curatorAddress": "0xbBacDCFB9691DFA1066aB29edfcc4A73f6DEf918",
+  "enabled": true,
+  "version": 2
+}

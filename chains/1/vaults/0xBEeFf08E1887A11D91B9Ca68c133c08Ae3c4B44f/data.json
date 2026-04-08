@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Steakhouse Reservoir rUSD",
+  "tokenAddress": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xBEeFf08E1887A11D91B9Ca68c133c08Ae3c4B44f",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true,
+  "version": 2
+}

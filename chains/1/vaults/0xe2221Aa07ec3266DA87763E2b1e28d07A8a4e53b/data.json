@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Api3 Core USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xe2221Aa07ec3266DA87763E2b1e28d07A8a4e53b",
+  "curatorAddress": "0xBBE0dE9757F93e3306aDBfeBE906AB285EDD13DA",
+  "enabled": true,
+  "version": 2
+}

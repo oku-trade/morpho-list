@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Avantgarde WETH Conservative",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x132Fe294ea9b6faD8cA00554D211d5F2b905c1AD",
+  "curatorAddress": "0x8257dd8e97aa1e903339e3FF45240162Fe342132",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Avantgarde USDC Dynamic",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x8E56CB6Bc1a8961ed9062B99045D3299b27CDb4D",
+  "curatorAddress": "0x8257dd8e97aa1e903339e3FF45240162Fe342132",
+  "enabled": true,
+  "version": 2
+}

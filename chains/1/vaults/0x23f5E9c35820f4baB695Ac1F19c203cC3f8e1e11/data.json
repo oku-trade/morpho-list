@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "sky.money USDT Savings",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x23f5E9c35820f4baB695Ac1F19c203cC3f8e1e11",
+  "curatorAddress": "0x3F32bC09d41eE699844F8296e806417D6bf61Bba",
+  "enabled": true,
+  "version": 2
+}

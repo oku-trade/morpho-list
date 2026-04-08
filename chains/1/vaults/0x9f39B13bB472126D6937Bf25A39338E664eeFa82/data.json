@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Alpha USDC Prime V2",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x9f39B13bB472126D6937Bf25A39338E664eeFa82",
+  "curatorAddress": "0x6788c8ad65E85CCa7224a0B46D061EF7D81F9Da5",
+  "enabled": true,
+  "version": 2
+}

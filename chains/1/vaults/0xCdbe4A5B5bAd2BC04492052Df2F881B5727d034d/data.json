@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Hyperithm cbBTC Apex",
+  "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xCdbe4A5B5bAd2BC04492052Df2F881B5727d034d",
+  "curatorAddress": "0x75178137D3B4B9A0F771E0e149b00fB8167BA325",
+  "enabled": true,
+  "version": 2
+}

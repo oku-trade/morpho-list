@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Steakhouse Prime EURC",
+  "tokenAddress": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xbeef003E31546C7210687f1A7b40d096BE83ec58",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true,
+  "version": 2
+}

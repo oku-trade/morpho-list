@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Yearn OG USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xB885F6d448dA7E2C642Ec31190B629E40E87B069",
+  "curatorAddress": "0x90D0f26025571295D18a6c041E47450B81886B51",
+  "enabled": true,
+  "version": 2
+}
