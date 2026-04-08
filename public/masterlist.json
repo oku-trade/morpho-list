@@ -6998,6 +6998,16 @@
         },
         {
           "chainId": 8453,
+          "name": "Steakhouse High Yield USDC v1.1",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "performanceFeePercentage": "0",
+          "vaultAddress": "0xBEEFA7B88064FeEF0cEe02AAeBBd95D30df3878F",
+          "guardianAddress": "0xF8949d935d4e5Cb0A6641dddB53Db10246C0621C",
+          "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+          "enabled": true
+        },
+        {
+          "chainId": 8453,
           "name": "Steakhouse Prime USDC",
           "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "performanceFeePercentage": "0",
@@ -7217,7 +7227,18 @@
           "enabled": true
         }
       ],
-      "vaultsV2": [],
+      "vaultsV2": [
+        {
+          "chainId": 8453,
+          "name": "Steakhouse High Yield Instant",
+          "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+          "performanceFeePercentage": "0",
+          "vaultAddress": "0xbeeff7aE5E00Aae3Db302e4B0d8C883810a58100",
+          "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+          "enabled": true,
+          "version": 2
+        }
+      ],
       "markets": [
         {
           "chainId": 8453,
@@ -7360,6 +7381,17 @@
           "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
           "lltvPercent": "860000000000000000",
           "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 8453,
+          "marketId": "0x18316ce427a45d18852267bc90a34548bcc257efc9c8aa48186cb71a095d2f81",
+          "collateralTokenAddress": "0x7d214438d0f27afccc23b3d1e1a53906ace5cfea",
+          "loanTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "oracleAddress": "0x04c10c80eced1b5febbc59442b392470773c9bc0",
+          "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
           "enabled": true
         },
         {
@@ -7573,6 +7605,17 @@
         },
         {
           "chainId": 8453,
+          "marketId": "0x52f04b08a17a9d5ab3d9eaa183917b8124662eb9aea279e17bd62a59413648a5",
+          "collateralTokenAddress": "0x660975730059246a68521a3e2fbd4740173100f5",
+          "loanTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "oracleAddress": "0x8e5581119b7a6737dd829dc2fc364f498c0da50c",
+          "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 8453,
           "marketId": "0x576db1fa04a04b81eaeb36d14c16730bcfe34c8089abe1a204032e160b459157",
           "collateralTokenAddress": "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22",
           "loanTokenAddress": "0x1fca74d9ef54a6ac80ffe7d3b14e76c4330fd5d8",
@@ -7643,6 +7686,17 @@
           "collateralTokenAddress": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
           "loanTokenAddress": "0x4200000000000000000000000000000000000006",
           "oracleAddress": "0x10b95702a0ce895972c91e432c4f7e19811d320e",
+          "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 8453,
+          "marketId": "0x5f42e9a47335fc15507f0ab6ac362e9d0fcd2f6fd881852198824c5b01045cb7",
+          "collateralTokenAddress": "0x62344be8ca1c339b46274a4017dd87af436900b1",
+          "loanTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "oracleAddress": "0x1a2681bab91dc48c56f858808f6a65c402e63b3f",
           "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
           "lltvPercent": "915000000000000000",
           "liquidationPenalty": "1026167265264238070",
@@ -7800,6 +7854,17 @@
           "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
           "lltvPercent": "915000000000000000",
           "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 8453,
+          "marketId": "0x7dc02ff6c536b1d49d7fba770438d79f5bd1f1c78884629b7d1aaee19675782b",
+          "collateralTokenAddress": "0x311935cd80b76769bf2ecc9d8ab7635b2139cf82",
+          "loanTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "oracleAddress": "0xe9725430f3a72611ac72eddc650625bce4f45dc7",
+          "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
+          "lltvPercent": "625000000000000000",
+          "liquidationPenalty": "1126760563380281690",
           "enabled": true
         },
         {
@@ -8064,6 +8129,17 @@
           "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
           "lltvPercent": "965000000000000000",
           "liquidationPenalty": "1010611419909044972",
+          "enabled": true
+        },
+        {
+          "chainId": 8453,
+          "marketId": "0xaf2657ed859dcac494afc20ba83e26fa153414da971a1f082ebfcb45d73955f1",
+          "collateralTokenAddress": "0xc31e19dc6c8a90d628432e15bbd538aa8c789e5d",
+          "loanTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "oracleAddress": "0xa678d7a42606a1362d2ee2da176b20ee24476666",
+          "irmAddress": "0x46415998764c29ab2a25cbea6254146d50d22687",
+          "lltvPercent": "915000000000000000",
+          "liquidationPenalty": "1026167265264238070",
           "enabled": true
         },
         {
