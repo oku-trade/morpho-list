@@ -154,16 +154,6 @@
         },
         {
           "chainId": 1,
-          "name": "Gauntlet WETH Prime",
-          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0x2371e134e3455e0593363cbf89d3b6cf53740618",
-          "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
-          "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
           "name": "USUAL Vault",
           "tokenAddress": "0xC4441c2BE5d8fA8126822B9929CA0b81Ea0DE38E",
           "performanceFeePercentage": "100000000000000000",
@@ -268,16 +258,6 @@
           "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x4881Ef0BF6d2365D3dd6499ccd7532bcdBCE0658",
-          "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
-          "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Gauntlet LRT Core",
-          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-          "performanceFeePercentage": "100000000000000000",
-          "vaultAddress": "0x4881ef0bf6d2365d3dd6499ccd7532bcdbce0658",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
           "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
           "enabled": true
@@ -924,36 +904,6 @@
         },
         {
           "chainId": 1,
-          "name": "Steakhouse PYUSD",
-          "tokenAddress": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0xbeef02e5e13584ab96848af90261f0c8ee04722a",
-          "guardianAddress": "0xCcFd0E9CEC732fb839fadDeCc72B6154530bC90f",
-          "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Steakhouse USDT",
-          "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-          "performanceFeePercentage": "0",
-          "vaultAddress": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
-          "guardianAddress": "0xaeC761545Fd135db6d04D27C92BCB3951668c67F",
-          "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Steakhouse ETH",
-          "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-          "performanceFeePercentage": "50000000000000000",
-          "vaultAddress": "0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4",
-          "guardianAddress": "0x4ef090B2c36b34974e244f3699DF998e2b9D4FE9",
-          "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
           "name": "Steakhouse RUSD",
           "tokenAddress": "0x09D4214C03D01F49544C0448DBE3A27f768F2b34",
           "performanceFeePercentage": "0",
@@ -1088,16 +1038,6 @@
           "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           "performanceFeePercentage": "0",
           "vaultAddress": "0xdd0f28e19C1780eb6396170735D45153D261490d",
-          "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
-          "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
-          "enabled": true
-        },
-        {
-          "chainId": 1,
-          "name": "Gauntlet USDC Prime",
-          "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-          "performanceFeePercentage": "0",
-          "vaultAddress": "0xdd0f28e19c1780eb6396170735d45153d261490d",
           "guardianAddress": "0x7084bF4dB6c21e1834dD6482f6056a39A33584cD",
           "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
           "enabled": true
