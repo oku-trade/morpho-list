@@ -1,0 +1,10 @@
+{
+  "chainId": 1329,
+  "name": "PYUSD0 Y10k Capital",
+  "tokenAddress": "0x142cdc44890978B506e745bB3Bd11607B7f7faEf",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x6137dCfDd3C83Fe2922B1cba4105d2E92B327A06",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0xcA8254821436081BDeD10187040f64E8fAAa3cA8",
+  "enabled": true
+}
