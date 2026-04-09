@@ -1,0 +1,10 @@
+{
+  "chainId": 1329,
+  "name": "Feather PYUSD0",
+  "tokenAddress": "0x142cdc44890978B506e745bB3Bd11607B7f7faEf",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x50715ae180FF0EA799dc8AB635C2D876e528bfe8",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x3aC7BF91E67B75A50482607c00FE95d06447fB5d",
+  "enabled": true
+}
