@@ -187,12 +187,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gfxlabs/oku-chains@npm:^1.11.15":
-  version: 1.11.15
-  resolution: "@gfxlabs/oku-chains@npm:1.11.15"
+"@gfxlabs/oku-chains@npm:^1.11.25":
+  version: 1.11.25
+  resolution: "@gfxlabs/oku-chains@npm:1.11.25"
   peerDependencies:
     viem: 2.x
-  checksum: 10c0/06e28258f837d49fb23ab2ff96d99be13181d772213a2d393651f2d8cb5b1cf744c33e5c97e22c0e1a3dc05dceeff17d246c01a082063ada2a512ade161eecab
+  checksum: 10c0/c13abf60d7d5b239bdbfb85cd22d4e8658143e6f2bd72435ee3d9c4f8276654487dd20833c787f3717aeca273fb2b6a640e6d4799e3f207103342adec07ae714
   languageName: node
   linkType: hard
 
@@ -1272,7 +1272,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "morpho-list@workspace:."
   dependencies:
-    "@gfxlabs/oku-chains": "npm:^1.11.15"
+    "@gfxlabs/oku-chains": "npm:^1.11.25"
     "@inquirer/prompts": "npm:^7.5.0"
     "@morpho-org/blue-sdk": "npm:^3.0.0-next.2"
     "@morpho-org/blue-sdk-viem": "npm:^3.0.0-next.5"
@@ -1287,7 +1287,7 @@ __metadata:
     minimist: "npm:^1.2.8"
     prettier: "npm:^3.5.3"
     tsx: "npm:^4.19.3"
-    viem: "npm:^2.46.3"
+    viem: "npm:^2.47.12"
     zod: "npm:^3.24.2"
   languageName: unknown
   linkType: soft
@@ -1351,9 +1351,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ox@npm:0.12.4":
-  version: 0.12.4
-  resolution: "ox@npm:0.12.4"
+"ox@npm:0.14.13":
+  version: 0.14.13
+  resolution: "ox@npm:0.14.13"
   dependencies:
     "@adraffy/ens-normalize": "npm:^1.11.0"
     "@noble/ciphers": "npm:^1.3.0"
@@ -1368,7 +1368,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/4b03aebe0ee02b9ba57faa765418acd9a58471f2feedd9f3c6db6fd9b9cf0b96a7c89795721977b110481ca2e525176ffd23f4bab8ac55deb7553205768d3068
+  checksum: 10c0/45856160eeb12d7c43927aca964eadbf3b7a48d90ad720bda6ed4a528e607558d804d52092eede3db1d36dd1373c4301e89069120fff40234e6fcf12856750eb
   languageName: node
   linkType: hard
 
@@ -1655,9 +1655,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"viem@npm:^2.46.3":
-  version: 2.46.3
-  resolution: "viem@npm:2.46.3"
+"viem@npm:^2.47.12":
+  version: 2.47.12
+  resolution: "viem@npm:2.47.12"
   dependencies:
     "@noble/curves": "npm:1.9.1"
     "@noble/hashes": "npm:1.8.0"
@@ -1665,14 +1665,14 @@ __metadata:
     "@scure/bip39": "npm:1.6.0"
     abitype: "npm:1.2.3"
     isows: "npm:1.0.7"
-    ox: "npm:0.12.4"
+    ox: "npm:0.14.13"
     ws: "npm:8.18.3"
   peerDependencies:
     typescript: ">=5.0.4"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/2e201fb4e6171a518b1ae57fbf098864f45ab54bf0828c3f93eebcbf791a4d3d5a3d0137c68822703ab143cd8460f09791f191a9811411cc23bfc90a73c0d2ba
+  checksum: 10c0/ab53b8442bca93e102f0eb84d6c65a6aec5200d6aa42a6b3a63b433a24167b7491dbe1cd268b0827820e6dc72c755210affc3238486c47ecc514c28bda657597
   languageName: node
   linkType: hard
 
