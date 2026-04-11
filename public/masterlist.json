@@ -8936,9 +8936,9 @@
       "vaultsV2": [
         {
           "chainId": 685689,
-          "name": "",
+          "name": "Gensyn Prime USDC",
           "tokenAddress": "0x5b32c997211621d55a89Cc5abAF1cC21F3A6ddF5",
-          "performanceFeePercentage": "0",
+          "performanceFeePercentage": "250000000000000000",
           "vaultAddress": "0x1b6C76fF584FBee80e4BBd7a4eB060c6C8Dd3B9F",
           "curatorAddress": "0xe75358526Ef4441Db03cCaEB9a87F180fAe80eb9",
           "enabled": true,
