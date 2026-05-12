@@ -5948,6 +5948,36 @@
       "rewards": [],
       "blacklist": []
     },
+    "50": {
+      "vaults": [],
+      "vaultsV2": [
+        {
+          "chainId": 50,
+          "name": "testUSDC",
+          "tokenAddress": "0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1",
+          "performanceFeePercentage": "0",
+          "vaultAddress": "0x223D1Ebf4A893F4D7c7f18bB172585173A5B07d5",
+          "curatorAddress": "0x2c38722DdB0faB52396c6486C85Ec1d19B6eEb89",
+          "enabled": true,
+          "version": 2
+        }
+      ],
+      "markets": [
+        {
+          "chainId": 50,
+          "marketId": "0x78ca1986ad5206cb3957198aacd06f8203d80b33dd19fbdfa99cfca5addce4f5",
+          "collateralTokenAddress": "0x951857744785e80e2de051c32ee7b25f9c458c42",
+          "loanTokenAddress": "0xfa2958cb79b0491cc627c1557f441ef849ca8eb1",
+          "oracleAddress": "0x6ad93a3aa829514473d3df67382894a76c7283b4",
+          "irmAddress": "0x15c7312b0f26aa0aa70b24a0d2af87b9e7d614a0",
+          "lltvPercent": "625000000000000000",
+          "liquidationPenalty": "1126760563380281690",
+          "enabled": true
+        }
+      ],
+      "rewards": [],
+      "blacklist": []
+    },
     "137": {
       "vaults": [
         {

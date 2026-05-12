@@ -1,0 +1,10 @@
+{
+  "chainId": 50,
+  "name": "testUSDC",
+  "tokenAddress": "0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x223D1Ebf4A893F4D7c7f18bB172585173A5B07d5",
+  "curatorAddress": "0x2c38722DdB0faB52396c6486C85Ec1d19B6eEb89",
+  "enabled": true,
+  "version": 2
+}
