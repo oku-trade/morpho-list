@@ -1,0 +1,10 @@
+{
+  "chainId": 50,
+  "name": "Yield Network USDC ",
+  "tokenAddress": "0xfA2958CB79b0491CC627c1557F441eF849Ca8eb1",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x1ac19bEc163b445fbd4B8Ddc616e4002126Efa5A",
+  "curatorAddress": "0xBDa66C6704d1170Ce3479a9a53465fAA2482f9e5",
+  "enabled": true,
+  "version": 2
+}
