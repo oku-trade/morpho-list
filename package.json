@@ -8,7 +8,7 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@gfxlabs/oku-chains": "^1.11.33",
+		"@gfxlabs/oku-chains": "^1.12.7",
 		"@inquirer/prompts": "^7.5.0",
 		"@types/node": "^22.13.17",
 		"clipanion": "^4.0.0-rc.4",
@@ -22,9 +22,9 @@
 		"zod": "^3.24.2"
 	},
 	"devDependencies": {
-		"@morpho-org/blue-sdk": "^3.0.0-next.2",
-		"@morpho-org/blue-sdk-viem": "^3.0.0-next.5",
-		"@morpho-org/morpho-ts": "^2.2.0",
+		"@morpho-org/blue-sdk": "^6.2.0",
+		"@morpho-org/blue-sdk-viem": "^5.1.1",
+		"@morpho-org/morpho-ts": "^2.6.0",
 		"@types/minimist": "^1",
 		"viem": "^2.48.4"
 	}

@@ -187,12 +187,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gfxlabs/oku-chains@npm:^1.11.33":
-  version: 1.11.33
-  resolution: "@gfxlabs/oku-chains@npm:1.11.33"
+"@gfxlabs/oku-chains@npm:^1.12.7":
+  version: 1.12.7
+  resolution: "@gfxlabs/oku-chains@npm:1.12.7"
   peerDependencies:
     viem: 2.x
-  checksum: 10c0/2b1b7a52d7ceb87fff85234071d2bbc93b2164649aa712fef21d7dfdbb33fb229e52251ccb810eaa0f55feb4907b1946d0e2866d64fbfcba1b9a2dfd3909b60c
+  checksum: 10c0/93cac5a432783fafc20d942d32a7c4ab96f3470609893a00159b788c8dbfdf00589a231065cd9725eddd3c76b5350ab0b00a64cd6694e6b133bd6c34af773f49
   languageName: node
   linkType: hard
 
@@ -453,32 +453,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@morpho-org/blue-sdk-viem@npm:^3.0.0-next.5":
-  version: 3.0.0-next.5
-  resolution: "@morpho-org/blue-sdk-viem@npm:3.0.0-next.5"
+"@morpho-org/blue-sdk-viem@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@morpho-org/blue-sdk-viem@npm:5.1.1"
   peerDependencies:
-    "@morpho-org/blue-sdk": ^3.0.0-next.11
-    "@morpho-org/morpho-ts": ^2.2.0
+    "@morpho-org/blue-sdk": ^6.0.0
+    "@morpho-org/morpho-ts": ^2.5.1
     viem: ^2.0.0
-  checksum: 10c0/be0883efa3d00aa03492a5bb2ef4083ad5c8d51a2e8b4bb37d07c80b2c8cdcbc69ed242352e27be51d1f7a9d39d1f68bc81212409d08eec74ce3caa5d99ba6fd
+  checksum: 10c0/e7e6f2ad76697ef6f09a74518b7d935fcd3183dcb77e6414210b6a15a2c7cd996122a7bd43e092afc2d9854c00c54115ea1a458a8e587e1dd2cdfbccbbf3f37f
   languageName: node
   linkType: hard
 
-"@morpho-org/blue-sdk@npm:^3.0.0-next.2":
-  version: 3.0.0-next.12
-  resolution: "@morpho-org/blue-sdk@npm:3.0.0-next.12"
+"@morpho-org/blue-sdk@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "@morpho-org/blue-sdk@npm:6.2.0"
   dependencies:
-    "@noble/hashes": "npm:^1.6.1"
+    "@noble/hashes": "npm:^2.2.0"
+    "@types/lodash.isplainobject": "npm:^4.0.9"
+    "@types/lodash.mergewith": "npm:^4.6.9"
+    lodash.isplainobject: "npm:^4.0.6"
+    lodash.mergewith: "npm:^4.6.2"
   peerDependencies:
-    "@morpho-org/morpho-ts": ^2.2.0
-  checksum: 10c0/e0d06ca51fc7b6170b7cc8a80da788268531b8c2baf2d52ed4827415e665115c053255f55e8f67a8452338a25c422ee63c9cf7684876522913e85d8540b26176
+    "@morpho-org/morpho-ts": ^2.5.1
+  checksum: 10c0/149b83eab155dad8c78b49f15d6431beb11df628515d63959aefcaecb3bc0ee67084ff660b4bfe259007848ef3b0384d2d4a2a9e891c117800ebe8b6e9a61226
   languageName: node
   linkType: hard
 
-"@morpho-org/morpho-ts@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "@morpho-org/morpho-ts@npm:2.2.0"
-  checksum: 10c0/dfd27c973c28c83020211a8919b59fc26924ac7f189778d480c7aaf1f1c72085edbaab96c13294eef59504861b490607f73f1e73fb262c3b7827661d7b5fc12e
+"@morpho-org/morpho-ts@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "@morpho-org/morpho-ts@npm:2.6.0"
+  checksum: 10c0/11119c497d7716d3fa059c2ad2e9b1382f51131116c084e29432e257a82d7e1ff0f4781652d7f7b4b5021585022ded70f6415b6fc0e7dac950e89ad5a6716ffa
   languageName: node
   linkType: hard
 
@@ -514,10 +518,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noble/hashes@npm:^1.6.1":
-  version: 1.7.1
-  resolution: "@noble/hashes@npm:1.7.1"
-  checksum: 10c0/2f8ec0338ccc92b576a0f5c16ab9c017a3a494062f1fbb569ae641c5e7eab32072f9081acaa96b5048c0898f972916c818ea63cbedda707886a4b5ffcfbf94e3
+"@noble/hashes@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@noble/hashes@npm:2.2.0"
+  checksum: 10c0/cad8630c504d6b9271984f685cd0af9101b40988fc2dfbe17ccdf068a9941f95cc5c9957d89e9ca4b7ca94c15cb35f93510c5d53a09fbcc83ee503b93d0a1034
   languageName: node
   linkType: hard
 
@@ -575,6 +579,31 @@ __metadata:
     "@noble/hashes": "npm:~1.8.0"
     "@scure/base": "npm:~1.2.5"
   checksum: 10c0/73a54b5566a50a3f8348a5cfd74d2092efeefc485efbed83d7a7374ffd9a75defddf446e8e5ea0385e4adb49a94b8ae83c5bad3e16333af400e932f7da3aaff8
+  languageName: node
+  linkType: hard
+
+"@types/lodash.isplainobject@npm:^4.0.9":
+  version: 4.0.9
+  resolution: "@types/lodash.isplainobject@npm:4.0.9"
+  dependencies:
+    "@types/lodash": "npm:*"
+  checksum: 10c0/d0c66efaaa70de483293bcf7c5adda37077c4c7db5c4c7ede50796afdd9fca65e46e3f8b2791f3023b4b786cf57b1c382a152f9b2e2f0fd6a4dfbcc63fa0bd4a
+  languageName: node
+  linkType: hard
+
+"@types/lodash.mergewith@npm:^4.6.9":
+  version: 4.6.9
+  resolution: "@types/lodash.mergewith@npm:4.6.9"
+  dependencies:
+    "@types/lodash": "npm:*"
+  checksum: 10c0/d245cb8c66f88251a6251f93eaec9e876f8c967ef7dac67d7da75eec2a8049e37342478dbe5ae163a566c233b2a1ecd494b180ccaa8603bef58d4ca6a803d2cf
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.17.24
+  resolution: "@types/lodash@npm:4.17.24"
+  checksum: 10c0/b72f60d4daacdad1fa643edb3faba204c02a01eb1ac00a83ff73496a6d236fc55e459c06106e8ced42277dba932d087d8fc090f8de4ef590d3f91e6d6f7ce85a
   languageName: node
   linkType: hard
 
@@ -1140,6 +1169,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.isplainobject@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "lodash.isplainobject@npm:4.0.6"
+  checksum: 10c0/afd70b5c450d1e09f32a737bed06ff85b873ecd3d3d3400458725283e3f2e0bb6bf48e67dbe7a309eb371a822b16a26cca4a63c8c52db3fc7dc9d5f9dd324cbb
+  languageName: node
+  linkType: hard
+
+"lodash.mergewith@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "lodash.mergewith@npm:4.6.2"
+  checksum: 10c0/4adbed65ff96fd65b0b3861f6899f98304f90fd71e7f1eb36c1270e05d500ee7f5ec44c02ef979b5ddbf75c0a0b9b99c35f0ad58f4011934c4d4e99e5200b3b5
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0":
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
@@ -1272,11 +1315,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "morpho-list@workspace:."
   dependencies:
-    "@gfxlabs/oku-chains": "npm:^1.11.33"
+    "@gfxlabs/oku-chains": "npm:^1.12.7"
     "@inquirer/prompts": "npm:^7.5.0"
-    "@morpho-org/blue-sdk": "npm:^3.0.0-next.2"
-    "@morpho-org/blue-sdk-viem": "npm:^3.0.0-next.5"
-    "@morpho-org/morpho-ts": "npm:^2.2.0"
+    "@morpho-org/blue-sdk": "npm:^6.2.0"
+    "@morpho-org/blue-sdk-viem": "npm:^5.1.1"
+    "@morpho-org/morpho-ts": "npm:^2.6.0"
     "@types/minimist": "npm:^1"
     "@types/node": "npm:^22.13.17"
     clipanion: "npm:^4.0.0-rc.4"
