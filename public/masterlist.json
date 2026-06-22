@@ -6792,6 +6792,24 @@
       "rewards": [],
       "blacklist": []
     },
+    "1672": {
+      "vaults": [],
+      "vaultsV2": [
+        {
+          "chainId": 1672,
+          "name": "USDC Vault",
+          "tokenAddress": "0xC879C018dB60520F4355C26eD1a6D572cdAC1815",
+          "performanceFeePercentage": "150000000000000000",
+          "vaultAddress": "0x047cD0a91E9B92ED979189a6C8A120bf280f02E5",
+          "curatorAddress": "0x8747Cf054EfE02ECd4A7A31eB2030cefEB49d846",
+          "enabled": true,
+          "version": 2
+        }
+      ],
+      "markets": [],
+      "rewards": [],
+      "blacklist": []
+    },
     "8453": {
       "vaults": [
         {
