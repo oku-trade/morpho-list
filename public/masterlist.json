@@ -6806,7 +6806,19 @@
           "version": 2
         }
       ],
-      "markets": [],
+      "markets": [
+        {
+          "chainId": 1672,
+          "marketId": "0xb3b8a31c8a1652cf31eb872c7778716edc39471ed82bcad99b3f5c83a449e1ba",
+          "collateralTokenAddress": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0",
+          "loanTokenAddress": "0xc879c018db60520f4355c26ed1a6d572cdac1815",
+          "oracleAddress": "0xf4331ff581c31d897da6a3cd552dc39bd44983a5",
+          "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
+          "lltvPercent": "385000000000000000",
+          "liquidationPenalty": "1150000000000000000",
+          "enabled": true
+        }
+      ],
       "rewards": [],
       "blacklist": []
     },
