@@ -6797,7 +6797,7 @@
       "vaultsV2": [
         {
           "chainId": 1672,
-          "name": "USDC Vault",
+          "name": "RockawayX USDC",
           "tokenAddress": "0xC879C018dB60520F4355C26eD1a6D572cdAC1815",
           "performanceFeePercentage": "150000000000000000",
           "vaultAddress": "0x047cD0a91E9B92ED979189a6C8A120bf280f02E5",
