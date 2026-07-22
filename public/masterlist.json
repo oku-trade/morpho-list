@@ -6826,9 +6826,30 @@
           "curatorAddress": "0x8747Cf054EfE02ECd4A7A31eB2030cefEB49d846",
           "enabled": true,
           "version": 2
+        },
+        {
+          "chainId": 1672,
+          "name": "Vishwa WPROS Vault",
+          "tokenAddress": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0x6cE7a0C9bD655C7b4C3cA398Fc74939A5f5B3e73",
+          "curatorAddress": "0x1F735797c030e7780F803706c5ed8E2B269a528c",
+          "enabled": true,
+          "version": 2
         }
       ],
       "markets": [
+        {
+          "chainId": 1672,
+          "marketId": "0x6657f8b7ec9d900f8e975e3f7eb74b80e2783cbbacd1d3f90d144a3e34ad2faa",
+          "collateralTokenAddress": "0x4b01436d82dff601281f7ebdf44e73a47d77ee3d",
+          "loanTokenAddress": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0",
+          "oracleAddress": "0x1f4cc0cc384f59a78e0eaceff0e87b1e6449c854",
+          "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
+          "lltvPercent": "385000000000000000",
+          "liquidationPenalty": "1150000000000000000",
+          "enabled": true
+        },
         {
           "chainId": 1672,
           "marketId": "0xb3b8a31c8a1652cf31eb872c7778716edc39471ed82bcad99b3f5c83a449e1ba",
