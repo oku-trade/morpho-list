@@ -1,0 +1,10 @@
+{
+  "chainId": 1672,
+  "name": "Vishwa WPROS Vault",
+  "tokenAddress": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x6cE7a0C9bD655C7b4C3cA398Fc74939A5f5B3e73",
+  "curatorAddress": "0x1F735797c030e7780F803706c5ed8E2B269a528c",
+  "enabled": true,
+  "version": 2
+}
