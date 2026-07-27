@@ -6836,6 +6836,16 @@
           "curatorAddress": "0x1F735797c030e7780F803706c5ed8E2B269a528c",
           "enabled": true,
           "version": 2
+        },
+        {
+          "chainId": 1672,
+          "name": "Vishwa USDC Vault",
+          "tokenAddress": "0xC879C018dB60520F4355C26eD1a6D572cdAC1815",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0xA5fB3eCA411926e64C41cD9D200440953A936378",
+          "curatorAddress": "0x902d1C04C3Fc51515Ad1c187d02a884f348b24F2",
+          "enabled": true,
+          "version": 2
         }
       ],
       "markets": [
@@ -6870,6 +6880,17 @@
           "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
           "lltvPercent": "915000000000000000",
           "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 1672,
+          "marketId": "0xf203d06ff4b5339e76d576b369c6799168d76112d489651b8347a501cc7795c5",
+          "collateralTokenAddress": "0x4b01436d82dff601281f7ebdf44e73a47d77ee3d",
+          "loanTokenAddress": "0xc879c018db60520f4355c26ed1a6d572cdac1815",
+          "oracleAddress": "0x6f3295673386ca540e94aaf5ecb6b2e5fa0bcf10",
+          "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
+          "lltvPercent": "385000000000000000",
+          "liquidationPenalty": "1150000000000000000",
           "enabled": true
         }
       ],
