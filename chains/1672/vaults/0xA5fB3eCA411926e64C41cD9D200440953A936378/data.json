@@ -1,0 +1,10 @@
+{
+  "chainId": 1672,
+  "name": "Vishwa USDC Vault",
+  "tokenAddress": "0xC879C018dB60520F4355C26eD1a6D572cdAC1815",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xA5fB3eCA411926e64C41cD9D200440953A936378",
+  "curatorAddress": "0x902d1C04C3Fc51515Ad1c187d02a884f348b24F2",
+  "enabled": true,
+  "version": 2
+}
