@@ -1,0 +1,10 @@
+{
+  "chainId": 1672,
+  "name": "SharpByte USDC Pharos Ecosystem",
+  "tokenAddress": "0xC879C018dB60520F4355C26eD1a6D572cdAC1815",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x15c25ED222fc498f672af5c3adb5ED0a96E1AFf1",
+  "curatorAddress": "0x73fceD2CB2432ff354ab29E9dDc1FbDB203D8fDA",
+  "enabled": true,
+  "version": 2
+}

@@ -6829,6 +6829,16 @@
         },
         {
           "chainId": 1672,
+          "name": "SharpByte USDC Pharos Ecosystem",
+          "tokenAddress": "0xC879C018dB60520F4355C26eD1a6D572cdAC1815",
+          "performanceFeePercentage": "150000000000000000",
+          "vaultAddress": "0x15c25ED222fc498f672af5c3adb5ED0a96E1AFf1",
+          "curatorAddress": "0x73fceD2CB2432ff354ab29E9dDc1FbDB203D8fDA",
+          "enabled": true,
+          "version": 2
+        },
+        {
+          "chainId": 1672,
           "name": "Vishwa WPROS Vault",
           "tokenAddress": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
           "performanceFeePercentage": "100000000000000000",
@@ -6849,6 +6859,28 @@
         }
       ],
       "markets": [
+        {
+          "chainId": 1672,
+          "marketId": "0x082e865d3606768b6883039a1899df7d7267e012a1babf88ec0c29576098e90f",
+          "collateralTokenAddress": "0x1c2bc8b553d9a7e61f7531a3a4bf2162f4569268",
+          "loanTokenAddress": "0xc879c018db60520f4355c26ed1a6d572cdac1815",
+          "oracleAddress": "0x476057776dbb12d6b6720d9e65e80ce57d6193d7",
+          "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
+          "lltvPercent": "860000000000000000",
+          "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 1672,
+          "marketId": "0x1aa31baf4ea7b82429c410182688db9d3cccf400b25041d39656fa221c267219",
+          "collateralTokenAddress": "0xec47e6f3ef1e7bc8e00f670ac3d5016798fe44d0",
+          "loanTokenAddress": "0xc879c018db60520f4355c26ed1a6d572cdac1815",
+          "oracleAddress": "0x4eb6fcffc4d1b27ea773edc062d5adfc94a81fae",
+          "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
+          "lltvPercent": "770000000000000000",
+          "liquidationPenalty": "1074113856068743286",
+          "enabled": true
+        },
         {
           "chainId": 1672,
           "marketId": "0x6657f8b7ec9d900f8e975e3f7eb74b80e2783cbbacd1d3f90d144a3e34ad2faa",
