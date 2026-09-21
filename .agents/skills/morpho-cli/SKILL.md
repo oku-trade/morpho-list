@@ -1,6 +1,6 @@
 ---
 name: morpho-cli
-description: Manage Morpho protocol vaults, markets, and reward programs via the morpho-list CLI. Use when adding vaults/markets, deploying or managing reward programs, compiling the masterlist, or any registry operation.
+description: Manage Morpho protocol vaults, markets, and reward programs via the morpho-list CLI. Use when adding vaults/markets, deploying or managing reward programs, or other registry operations. Masterlist generation is handled by CI only.
 license: MIT
 metadata:
   audience: developers
@@ -100,7 +100,6 @@ yarn tsx cli.ts add market <chain> <market-id> [--force] [--dir chains]
 - After the requested CLI additions, stop. Do not run `yarn compile`, `corepack yarn compile`, `make list`, or equivalent commands, even for validation.
 - CI regenerates `public/masterlist.json` after merge to `main`.
 - Never edit, generate, stage, or commit the masterlist. **If a PR includes masterlist edits, the task was completed incorrectly.**
-- The pre-commit hook compiles and auto-commits changes. Bypass it with `git -c core.hooksPath=/dev/null commit ...`.
 - Check the PR diff before submitting: include only the CLI-generated entries under `chains/`, with no masterlist changes. See [AGENTS.md](../../../AGENTS.md).
 
 ---

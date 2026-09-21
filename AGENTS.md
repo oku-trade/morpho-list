@@ -25,5 +25,4 @@ yarn tsx cli.ts add market <chain> <market-id>
 - Never edit, generate, stage, or commit `public/masterlist.json`.
 - Never run `yarn compile`, `corepack yarn compile`, `make list`, or any equivalent compile command, including for validation.
 - CI regenerates the masterlist after merge to the default branch. Generating it locally causes PR conflicts.
-- The pre-commit hook runs compilation and auto-commits changes. Bypass it when committing with `git -c core.hooksPath=/dev/null commit ...`.
 - Before submitting, check the PR diff. It must contain no masterlist changes.
