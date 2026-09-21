@@ -2,14 +2,18 @@
 
 ## Adding vaults and markets
 
+Before adding vaults or markets, read the [`morpho-cli` skill](.agents/skills/morpho-cli/SKILL.md).
+
 Run only the CLI commands needed for the requested additions:
 
 ```bash
 yarn tsx cli.ts add vault <chain> <vault-address>
+yarn tsx cli.ts add vault <chain> <vault-address> --version 2
 yarn tsx cli.ts add market <chain> <market-id>
 ```
 
 - `<chain>` is a chain name (e.g. `ethereum`, `base`, `polygon`) or numeric chain ID.
+- Vaults default to v1 (MetaMorpho). For VaultV2 vaults, use `--version 2`, not `--v2`. If the default path fails with `unknown factory`, retry with `--version 2` (required on V2-only chains such as Pharos).
 - Adding a vault automatically adds its associated markets.
 - Never create or edit `data.json` files by hand. Include only the CLI-generated entries under `chains/` in the PR.
 - Stop after the requested additions. Do not run compilation or make unrelated changes.
