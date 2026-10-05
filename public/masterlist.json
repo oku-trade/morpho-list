@@ -6865,7 +6865,7 @@
           "tokenAddress": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
           "performanceFeePercentage": "100000000000000000",
           "vaultAddress": "0x6cE7a0C9bD655C7b4C3cA398Fc74939A5f5B3e73",
-          "curatorAddress": "0x1F735797c030e7780F803706c5ed8E2B269a528c",
+          "curatorAddress": "0x902d1C04C3Fc51515Ad1c187d02a884f348b24F2",
           "enabled": true,
           "version": 2
         },
@@ -6934,6 +6934,17 @@
           "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
           "lltvPercent": "860000000000000000",
           "liquidationPenalty": "1043841336116910229",
+          "enabled": true
+        },
+        {
+          "chainId": 1672,
+          "marketId": "0xab78d4ff6d4f39a7d05a822d787e33d61c68e398fd7aec5a8bca4ab296985c69",
+          "collateralTokenAddress": "0xde0ed48021050a4979068a1708f6bbfb3939f385",
+          "loanTokenAddress": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0",
+          "oracleAddress": "0xbdb96f2c380f13356c33f0df0ae9308a3c7b1c3a",
+          "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
+          "lltvPercent": "385000000000000000",
+          "liquidationPenalty": "1150000000000000000",
           "enabled": true
         },
         {
