@@ -6851,6 +6851,16 @@
         },
         {
           "chainId": 1672,
+          "name": "BitFi WPROS Vault",
+          "tokenAddress": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
+          "performanceFeePercentage": "100000000000000000",
+          "vaultAddress": "0x0C1127e697f6a4c62FAA810d7Db0392a90dD5e77",
+          "curatorAddress": "0xd931401B37c3A368505E7AE6dE700f2b0ad14ac6",
+          "enabled": true,
+          "version": 2
+        },
+        {
+          "chainId": 1672,
           "name": "SharpByte USDC Pharos Ecosystem",
           "tokenAddress": "0xC879C018dB60520F4355C26eD1a6D572cdAC1815",
           "performanceFeePercentage": "150000000000000000",
@@ -6989,6 +6999,17 @@
           "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
           "lltvPercent": "915000000000000000",
           "liquidationPenalty": "1026167265264238070",
+          "enabled": true
+        },
+        {
+          "chainId": 1672,
+          "marketId": "0xce1289aec8983c9361ce7b6c139682f78ef84d37afd0b9d44eca161092dbf347",
+          "collateralTokenAddress": "0x623f2774d9f27b59bc6b954544487532ce79d9df",
+          "loanTokenAddress": "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0",
+          "oracleAddress": "0x20b601fbcbafcd6b9c0c38191a90d1d3abbdd46d",
+          "irmAddress": "0xd5e02889c13230458506cc842347c4e62f8cdf3a",
+          "lltvPercent": "385000000000000000",
+          "liquidationPenalty": "1150000000000000000",
           "enabled": true
         },
         {
