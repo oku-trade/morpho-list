@@ -1,0 +1,10 @@
+{
+  "chainId": 1672,
+  "name": "BitFi WPROS Vault",
+  "tokenAddress": "0x52C48d4213107b20bC583832b0d951FB9CA8F0B0",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x0C1127e697f6a4c62FAA810d7Db0392a90dD5e77",
+  "curatorAddress": "0xd931401B37c3A368505E7AE6dE700f2b0ad14ac6",
+  "enabled": true,
+  "version": 2
+}
