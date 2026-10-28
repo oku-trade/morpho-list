@@ -1,0 +1,10 @@
+{
+  "chainId": 42161,
+  "name": "ARGt Prime",
+  "tokenAddress": "0x59863989d080B22476DB95656d0C3CC18be92214",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x9Dd3F844747AB78d616BF76DB92756E17A064aDD",
+  "curatorAddress": "0x864D311823e2BD71A910b3e82FDEA72ce935BD81",
+  "enabled": true,
+  "version": 2
+}

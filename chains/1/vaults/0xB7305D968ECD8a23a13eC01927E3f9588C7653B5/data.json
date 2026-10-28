@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Etherealm USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xB7305D968ECD8a23a13eC01927E3f9588C7653B5",
+  "curatorAddress": "0xdA6b209D7619567cFDAE61dAbBfbaC1C8A08f2BC",
+  "enabled": true,
+  "version": 2
+}

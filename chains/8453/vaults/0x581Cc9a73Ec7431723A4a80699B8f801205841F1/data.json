@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "OUSD Vault V1",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x581Cc9a73Ec7431723A4a80699B8f801205841F1",
+  "guardianAddress": "0x4FF1b9D9ba8558F5EAfCec096318eA0d8b541971",
+  "curatorAddress": "0x90D0f26025571295D18a6c041E47450B81886B51",
+  "enabled": true
+}

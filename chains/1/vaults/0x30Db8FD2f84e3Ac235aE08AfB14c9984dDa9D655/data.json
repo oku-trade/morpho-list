@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "CCM YieldWorks RPL",
+  "tokenAddress": "0xD33526068D116cE69F19A9ee46F0bd304F21A51f",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x30Db8FD2f84e3Ac235aE08AfB14c9984dDa9D655",
+  "curatorAddress": "0xa32697eD5C12d1b15f083a270Aff71c0cb37b02a",
+  "enabled": true,
+  "version": 2
+}

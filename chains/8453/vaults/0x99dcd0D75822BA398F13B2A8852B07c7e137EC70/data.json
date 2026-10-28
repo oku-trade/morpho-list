@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Muscadine cbBTC Prime",
+  "tokenAddress": "0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x99dcd0D75822BA398F13B2A8852B07c7e137EC70",
+  "curatorAddress": "0xb6d1d784e9Bc3570546e231caCB52B4E0f1ED8b1",
+  "enabled": true,
+  "version": 2
+}

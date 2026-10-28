@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Fiber USDC Base",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "250000000000000000",
+  "vaultAddress": "0xA1168D47Fc27775153f210c663BdCb3761070c8F",
+  "curatorAddress": "0xD3FD4F95820a9AA848CE716d6C200EAEfB9A2e49",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Splits Earn USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "200000000000000000",
+  "vaultAddress": "0xF5730f6F5bcc2a3E98dA199F40b1A8aF1Ac37A43",
+  "curatorAddress": "0x5d8B947cE5853Bd8e5CacA8a7c39EAcA452b6752",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Fee Wrapper 1 USDCq",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x6Bb9d07BE70d5C2c80C30B469759be92F6405C6b",
+  "curatorAddress": "0x42D510eDeb9257f8D920d5B9f5109D95cB22419d",
+  "enabled": true,
+  "version": 2
+}

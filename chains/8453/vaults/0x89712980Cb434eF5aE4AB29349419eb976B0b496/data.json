@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Muscadine USDC Prime",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x89712980Cb434eF5aE4AB29349419eb976B0b496",
+  "curatorAddress": "0xb6d1d784e9Bc3570546e231caCB52B4E0f1ED8b1",
+  "enabled": true,
+  "version": 2
+}

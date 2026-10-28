@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Trezor Steakhouse ETH Prime",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "75000000000000000",
+  "vaultAddress": "0x704cFb08969048a8DFf298B214F959791d8Da509",
+  "curatorAddress": "0xDA9964EaF7a303Bd493fa7a6f1593b544F0DA80D",
+  "enabled": true,
+  "version": 2
+}
