@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Metronome msETH Vault",
+  "tokenAddress": "0x64351fC9810aDAd17A690E4e1717Df5e7e085160",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x78B18E07dc43017fcEaabaD0751d6464c0F56b25",
+  "guardianAddress": "0xCE3187216B39ED222319D877956aC6b2eF1961E9",
+  "curatorAddress": "0xCE3187216B39ED222319D877956aC6b2eF1961E9",
+  "enabled": true
+}
