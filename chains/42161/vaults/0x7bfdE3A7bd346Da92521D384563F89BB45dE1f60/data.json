@@ -1,0 +1,10 @@
+{
+  "chainId": 42161,
+  "name": "KPK EURe Yield",
+  "tokenAddress": "0x0c06cCF38114ddfc35e07427B9424adcca9F44F8",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x7bfdE3A7bd346Da92521D384563F89BB45dE1f60",
+  "curatorAddress": "0xb3E0fe1ac9AcaBC64132171CD88A91312Da71C25",
+  "enabled": true,
+  "version": 2
+}

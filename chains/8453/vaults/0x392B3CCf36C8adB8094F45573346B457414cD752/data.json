@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "KPK USDC Yield",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x392B3CCf36C8adB8094F45573346B457414cD752",
+  "curatorAddress": "0x58C83Ce55164537F9C73d5B65C426691bC26Ffa0",
+  "enabled": true,
+  "version": 2
+}

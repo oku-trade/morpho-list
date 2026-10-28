@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Osero x Gauntlet USDC Prime",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x802148D518A6De2aF866f9A61ffB5e5C39156dB2",
+  "curatorAddress": "0x256DaC8fad2788F4182A42cE8F26029F0DEd7cf9",
+  "enabled": true,
+  "version": 2
+}

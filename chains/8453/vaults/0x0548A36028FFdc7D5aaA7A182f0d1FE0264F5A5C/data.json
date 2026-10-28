@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "К3 cbMaxxxing USDC",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x0548A36028FFdc7D5aaA7A182f0d1FE0264F5A5C",
+  "curatorAddress": "0x060DB084bF41872861f175d83f3cb1B5566dfEA3",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Spark Blue Chip USDT Vault",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xb0c424116172B55CbB6dD3136F5989F7959e5B91",
+  "curatorAddress": "0x0f963A8A8c01042B69054e787E5763ABbB0646A3",
+  "enabled": true,
+  "version": 2
+}

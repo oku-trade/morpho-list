@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "SharpByte USDT Prime",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x65a6334c0e2b5f7640c2A6b9ce615e162b1E909B",
+  "curatorAddress": "0x73fceD2CB2432ff354ab29E9dDc1FbDB203D8fDA",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Flowmark fGenesis",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xfA5367bF43b9FC2a9764Ed946b29F6e6150F6439",
+  "curatorAddress": "0xe5F7d857C129a6349f2A150665DCFF4FeF979744",
+  "enabled": true,
+  "version": 2
+}

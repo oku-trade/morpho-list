@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Sentora PRIME Main",
+  "tokenAddress": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0xC21b08C16458202593D4D9B26b9984Ee67b38BbD",
+  "curatorAddress": "0x9e396dE3312D373b87F9BD8763fb48184b42aac0",
+  "enabled": true,
+  "version": 2
+}

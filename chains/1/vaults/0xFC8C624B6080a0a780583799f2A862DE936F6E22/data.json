@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Sentora x Spark RLUSD",
+  "tokenAddress": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xFC8C624B6080a0a780583799f2A862DE936F6E22",
+  "curatorAddress": "0xff070333654aaE76A0A77465E4F0fd101C57c03F",
+  "enabled": true,
+  "version": 2
+}

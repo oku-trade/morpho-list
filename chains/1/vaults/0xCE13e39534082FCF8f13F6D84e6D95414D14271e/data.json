@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Stake DAO frxUSD v2",
+  "tokenAddress": "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xCE13e39534082FCF8f13F6D84e6D95414D14271e",
+  "curatorAddress": "0xF930EBBd05eF8b25B1797b9b2109DDC9B0d43063",
+  "enabled": true,
+  "version": 2
+}

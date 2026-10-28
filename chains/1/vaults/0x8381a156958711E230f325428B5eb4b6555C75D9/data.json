@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Sentora Huma PST Main",
+  "tokenAddress": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x8381a156958711E230f325428B5eb4b6555C75D9",
+  "curatorAddress": "0x9e396dE3312D373b87F9BD8763fb48184b42aac0",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,11 @@
+{
+  "chainId": 1,
+  "marketId": "0xa81671bb2b0b56c04a318b7e1a3699b02508f8494e2113357a50eccb6bef4b34",
+  "collateralTokenAddress": "0x70a3b0fd5d7781b759a60398a1e9edb465aa420e",
+  "loanTokenAddress": "0x98a878b1cd98131b271883b390f68d2c90674665",
+  "oracleAddress": "0xc29f08fc5617a2c3966e1271ba88c031a5727eef",
+  "irmAddress": "0x870ac11d48b15db9a138cf899d20f13f79ba00bc",
+  "lltvPercent": "945000000000000000",
+  "liquidationPenalty": "1016776817488561260",
+  "enabled": true
+}

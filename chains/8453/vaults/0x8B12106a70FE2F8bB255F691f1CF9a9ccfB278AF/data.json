@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Noon Ecosystem Vault",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x8B12106a70FE2F8bB255F691f1CF9a9ccfB278AF",
+  "curatorAddress": "0x5634520dd1C044fD8E589A7113C2d8f8f279fc24",
+  "enabled": true,
+  "version": 2
+}

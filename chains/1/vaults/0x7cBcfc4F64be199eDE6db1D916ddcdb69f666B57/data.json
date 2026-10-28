@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Sentora mWIN Main",
+  "tokenAddress": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x7cBcfc4F64be199eDE6db1D916ddcdb69f666B57",
+  "curatorAddress": "0x9e396dE3312D373b87F9BD8763fb48184b42aac0",
+  "enabled": true,
+  "version": 2
+}

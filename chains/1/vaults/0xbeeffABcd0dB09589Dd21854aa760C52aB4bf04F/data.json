@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Steakhouse tGBP",
+  "tokenAddress": "0x27f6c8289550fCE67f6B50BeD1F519966aFE5287",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xbeeffABcd0dB09589Dd21854aa760C52aB4bf04F",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 137,
+  "name": "Feather frxUSD",
+  "tokenAddress": "0x80Eede496655FB9047dd39d9f418d5483ED600df",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x922c843349e3Bd9e4C3572171DfCa5e08836151F",
+  "curatorAddress": "0x66d702C8f95A2E5A2A018e1Cb0edc4aea4E58A27",
+  "enabled": true,
+  "version": 2
+}

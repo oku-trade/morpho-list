@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Clearstar Core ETH",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xBCA4E2E24A7cFa776E4282CC8Eb06f04738b71da",
+  "curatorAddress": "0x5634520dd1C044fD8E589A7113C2d8f8f279fc24",
+  "enabled": true,
+  "version": 2
+}

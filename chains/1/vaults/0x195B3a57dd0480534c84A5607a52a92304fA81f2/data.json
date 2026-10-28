@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "RockawayX USPC ecosystem vault",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x195B3a57dd0480534c84A5607a52a92304fA81f2",
+  "curatorAddress": "0xbBacDCFB9691DFA1066aB29edfcc4A73f6DEf918",
+  "enabled": true,
+  "version": 2
+}

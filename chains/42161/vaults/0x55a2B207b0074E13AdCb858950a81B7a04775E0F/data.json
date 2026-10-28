@@ -1,0 +1,10 @@
+{
+  "chainId": 42161,
+  "name": "Gauntlet USDC Balanced",
+  "tokenAddress": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x55a2B207b0074E13AdCb858950a81B7a04775E0F",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}

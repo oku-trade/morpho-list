@@ -1,0 +1,10 @@
+{
+  "chainId": 137,
+  "name": "Feather BRZ",
+  "tokenAddress": "0x4eD141110F6EeeAbA9A1df36d8c26f684d2475Dc",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x902Af532d51D4983DBf9B8E29d1f01E430B24435",
+  "curatorAddress": "0x66d702C8f95A2E5A2A018e1Cb0edc4aea4E58A27",
+  "enabled": true,
+  "version": 2
+}

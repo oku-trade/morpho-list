@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Keyrock USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x04422053aDDbc9bB2759b248B574e3FCA76Bc145",
+  "curatorAddress": "0xbA75546ACD56b3a9142f94F179b03970eE4283Fd",
+  "enabled": true,
+  "version": 2
+}

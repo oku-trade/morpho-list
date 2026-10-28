@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "YO Ecosystem Vault",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x355A1c6A3f1946d4DbD7cE932492925AB9F261a7",
+  "curatorAddress": "0xA2AE32ab472BBc1ceF8d5A6F0712c652E414FF62",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Bitso USDC Prime",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x39E18c066187c83e860801Befe45aE8ecd021575",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}

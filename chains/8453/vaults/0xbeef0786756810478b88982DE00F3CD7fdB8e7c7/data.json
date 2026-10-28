@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Grove x Steakhouse USDC",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xbeef0786756810478b88982DE00F3CD7fdB8e7c7",
+  "curatorAddress": "0x622E19d6903BD4507cfc70b31d5B99535114C0FC",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Galaxy WETH Quality",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x1878805799273d10aE96a58201A6f5254CF9824F",
+  "curatorAddress": "0xA13094eCEd689b7419BAbA12851374424c1486f1",
+  "enabled": true,
+  "version": 2
+}

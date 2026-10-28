@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Bitwise Premium RWA AUSD",
+  "tokenAddress": "0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xB344e331A3cDa61D329fb3Cca2Be5942da87c418",
+  "curatorAddress": "0xB5933F4E9F29e9E92dBA92b643B37a270204dE82",
+  "enabled": true,
+  "version": 2
+}

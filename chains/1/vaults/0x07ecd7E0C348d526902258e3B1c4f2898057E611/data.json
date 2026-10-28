@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Frax USDai Ecosystem",
+  "tokenAddress": "0xCAcd6fd266aF91b8AeD52aCCc382b4e165586E29",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x07ecd7E0C348d526902258e3B1c4f2898057E611",
+  "curatorAddress": "0xa58f41ddFD3E8e601349DbF5ac0213F614150f0f",
+  "enabled": true,
+  "version": 2
+}

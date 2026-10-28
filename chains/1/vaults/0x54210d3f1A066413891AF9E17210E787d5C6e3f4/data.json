@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Kabu USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x54210d3f1A066413891AF9E17210E787d5C6e3f4",
+  "curatorAddress": "0x24DB7c6F689e480d6E5d45DaD400CC4456C832F0",
+  "enabled": true,
+  "version": 2
+}
