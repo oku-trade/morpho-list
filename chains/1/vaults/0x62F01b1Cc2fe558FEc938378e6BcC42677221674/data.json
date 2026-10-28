@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "msETH Vault",
+  "tokenAddress": "0x64351fC9810aDAd17A690E4e1717Df5e7e085160",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x62F01b1Cc2fe558FEc938378e6BcC42677221674",
+  "curatorAddress": "0x9520b477Aa81180E6DdC006Fc09Fb6d3eb4e807A",
+  "enabled": true,
+  "version": 2
+}
