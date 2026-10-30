@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "KPK wARS Yield",
+  "tokenAddress": "0x0DC4F92879B7670e5f4e4e6e3c801D229129D90D",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xb5ce3CA2C774b72955C25875022FdD91f7a7B938",
+  "curatorAddress": "0xEaCFA855d172F1B40D9b04245960b2c12266C5f5",
+  "enabled": true,
+  "version": 2
+}

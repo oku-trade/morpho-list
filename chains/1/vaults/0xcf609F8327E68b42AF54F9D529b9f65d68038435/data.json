@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Pendle Ecosystem High Yield USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xcf609F8327E68b42AF54F9D529b9f65d68038435",
+  "curatorAddress": "0x4687E45bB5518a995913a24BB2816fe2031d74D8",
+  "enabled": true,
+  "version": 2
+}

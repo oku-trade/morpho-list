@@ -1,0 +1,10 @@
+{
+  "chainId": 42161,
+  "name": "Gauntlet USDC Prime",
+  "tokenAddress": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x610D151aE40662AE148cdBaaE1Ea5904b6AFAE78",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}

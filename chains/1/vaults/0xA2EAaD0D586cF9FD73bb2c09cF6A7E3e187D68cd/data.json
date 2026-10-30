@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Wintermute USDC Select",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xA2EAaD0D586cF9FD73bb2c09cF6A7E3e187D68cd",
+  "curatorAddress": "0x4687E45bB5518a995913a24BB2816fe2031d74D8",
+  "enabled": true,
+  "version": 2
+}

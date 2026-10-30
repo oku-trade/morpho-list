@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "ARCHITECT Global Value",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x8effa741061aaA2d8A5012a9B09A2d31d8B628d7",
+  "curatorAddress": "0xc74b0F8AfbC66ee960c98Dda1C909dF9D16691CB",
+  "enabled": true,
+  "version": 2
+}

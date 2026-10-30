@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Juno MXNB Prime",
+  "tokenAddress": "0xF197FFC28c23E0309B5559e7a166f2c6164C80aA",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x08cc279532f159BdB450eBc0bAf6562f585Ded58",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Aerie x Plume USDC Core",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x5E2339BCb89B42782CEE454B46C7C6f88c0E4f83",
+  "curatorAddress": "0xa58f41ddFD3E8e601349DbF5ac0213F614150f0f",
+  "enabled": true,
+  "version": 2
+}

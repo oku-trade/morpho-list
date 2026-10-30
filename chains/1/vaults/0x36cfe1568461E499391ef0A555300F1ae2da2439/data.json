@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Api3 dCOMP USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x36cfe1568461E499391ef0A555300F1ae2da2439",
+  "curatorAddress": "0x24DB7c6F689e480d6E5d45DaD400CC4456C832F0",
+  "enabled": true,
+  "version": 2
+}

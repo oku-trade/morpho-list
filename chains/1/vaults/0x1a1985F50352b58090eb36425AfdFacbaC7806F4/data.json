@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "KPK USDC Prime Core",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x1a1985F50352b58090eb36425AfdFacbaC7806F4",
+  "curatorAddress": "0x7a2CE012Fe37dB488C24e31f5e38816cAd82b45E",
+  "enabled": true,
+  "version": 2
+}

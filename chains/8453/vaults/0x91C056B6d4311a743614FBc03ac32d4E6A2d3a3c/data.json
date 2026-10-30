@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Clearstar cbAssets Vault",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x91C056B6d4311a743614FBc03ac32d4E6A2d3a3c",
+  "curatorAddress": "0x5634520dd1C044fD8E589A7113C2d8f8f279fc24",
+  "enabled": true,
+  "version": 2
+}

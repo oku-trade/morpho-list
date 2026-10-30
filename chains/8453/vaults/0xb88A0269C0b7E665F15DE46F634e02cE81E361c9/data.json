@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "SoSoValue x Unified Labs USDC",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xb88A0269C0b7E665F15DE46F634e02cE81E361c9",
+  "curatorAddress": "0xF5B0Df8A864a915C6143641b5DA80c04218937B0",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "RockawayX NUVA Ecosystem",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x93e0F9d502eEfce8D34924ab3478C7EA0CBC5a2E",
+  "curatorAddress": "0xbBacDCFB9691DFA1066aB29edfcc4A73f6DEf918",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Clearstar Solana Vault",
+  "tokenAddress": "0x311935Cd80B76769bF2ecC9D8Ab7635b2139cf82",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xb992132F74871677Ff4Aa83F92638C8CD33223Ec",
+  "curatorAddress": "0x5634520dd1C044fD8E589A7113C2d8f8f279fc24",
+  "enabled": true,
+  "version": 2
+}

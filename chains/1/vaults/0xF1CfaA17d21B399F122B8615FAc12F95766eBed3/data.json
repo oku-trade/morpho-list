@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Parity High Yield USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xF1CfaA17d21B399F122B8615FAc12F95766eBed3",
+  "guardianAddress": "0x73d1C7dc9CEb14660Cf1E9BB29F80ECF9E97D774",
+  "curatorAddress": "0x982032cd3c37F6733190dB966dB7db2e0d630715",
+  "enabled": true
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Presto USDC Forte",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "150000000000000000",
+  "vaultAddress": "0x68A65f315BCd3C3456d1368Ff88bC661856548E1",
+  "curatorAddress": "0x1378006F3e864e58deD34e9E2625e7b86B942e22",
+  "enabled": true,
+  "version": 2
+}

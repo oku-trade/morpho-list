@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "Kabu WETH",
+  "tokenAddress": "0x4200000000000000000000000000000000000006",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0x4D72Fed1b6cE42F8Dea811F7b6685EbE4Ec04E01",
+  "curatorAddress": "0x7D02b68dEb9956F211083dA811f4856C901884C9",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 42161,
+  "name": "Gauntlet USDG Premium",
+  "tokenAddress": "0x004B506865409877C9fA29bfb1ebA929984B9bbC",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x390c1bb01F3F627144a40617e287d4cE3D5aBCfa",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}

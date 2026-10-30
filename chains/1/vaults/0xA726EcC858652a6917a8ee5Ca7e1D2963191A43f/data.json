@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Philidor EURC Prime",
+  "tokenAddress": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xA726EcC858652a6917a8ee5Ca7e1D2963191A43f",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x79C93B25c845D1F0406369d05d59262D0b0e00f8",
+  "enabled": true
+}

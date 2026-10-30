@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "August USDC V2",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x7ceB0f01Cb7187a2EBED5661eCC4d5701d8F2350",
+  "curatorAddress": "0xA81AE7d57D68Fd6eF76a3082134BD2F3019aec24",
+  "enabled": true,
+  "version": 2
+}

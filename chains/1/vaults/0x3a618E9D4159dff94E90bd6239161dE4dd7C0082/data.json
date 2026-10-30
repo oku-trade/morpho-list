@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Apyx apxUSD",
+  "tokenAddress": "0x98A878b1Cd98131B271883B390f68D2c90674665",
+  "performanceFeePercentage": "80000000000000000",
+  "vaultAddress": "0x3a618E9D4159dff94E90bd6239161dE4dd7C0082",
+  "curatorAddress": "0x75178137D3B4B9A0F771E0e149b00fB8167BA325",
+  "enabled": true,
+  "version": 2
+}

@@ -1,0 +1,10 @@
+{
+  "chainId": 8453,
+  "name": "RockawayX Midas USDC Prime",
+  "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xAE4181CFB5aaA08bbE77d269c6B595672b9F9Edc",
+  "curatorAddress": "0xbBacDCFB9691DFA1066aB29edfcc4A73f6DEf918",
+  "enabled": true,
+  "version": 2
+}

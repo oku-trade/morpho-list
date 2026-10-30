@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "KPK wBRL Yield",
+  "tokenAddress": "0xD76f5Faf6888e24D9F04Bf92a0c8B921FE4390e0",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x7873F890A3Eec30909Bdb2cF65C4FA70DB905aac",
+  "curatorAddress": "0xFF9394fAd2D05b53F49d24D9d1c7feb9f5138917",
+  "enabled": true,
+  "version": 2
+}

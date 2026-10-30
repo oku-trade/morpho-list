@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Philidor USDC Prime",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0xFB219e20e7Ad26345FD3474EBA6C9250482971Cf",
+  "guardianAddress": "0x0000000000000000000000000000000000000000",
+  "curatorAddress": "0x79C93B25c845D1F0406369d05d59262D0b0e00f8",
+  "enabled": true
+}

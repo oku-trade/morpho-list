@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Clearstar USDC Core",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0x69A238Ae7ebeb3c53ff3B544E48B96a2142fc284",
+  "curatorAddress": "0x5634520dd1C044fD8E589A7113C2d8f8f279fc24",
+  "enabled": true,
+  "version": 2
+}

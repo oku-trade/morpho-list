@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Yearn WBTC",
+  "tokenAddress": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x2bB005127069A0F0325Fb7370967E8A2b64FB77E",
+  "guardianAddress": "0xFEB4acf3df3cDEA7399794D0869ef76A6EfAff52",
+  "curatorAddress": "0x90D0f26025571295D18a6c041E47450B81886B51",
+  "enabled": true
+}

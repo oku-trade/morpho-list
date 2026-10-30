@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Trezor Steakhouse USDT Prime",
+  "tokenAddress": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xE4DB1c5A1B709CE4d2adA6985D9D506e58F73829",
+  "curatorAddress": "0xDA9964EaF7a303Bd493fa7a6f1593b544F0DA80D",
+  "enabled": true,
+  "version": 2
+}

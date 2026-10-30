@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Presto USDC Prime",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x133614490896bc02C774bc3399E4Db1B6D05a2CA",
+  "curatorAddress": "0x1457AcC027D96C57B63deF06261cAe76aa8f4472",
+  "enabled": true,
+  "version": 2
+}

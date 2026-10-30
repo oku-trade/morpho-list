@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Purinta USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xc92A37Fd0250F4eecF092960a2F70A1334217528",
+  "curatorAddress": "0x24DB7c6F689e480d6E5d45DaD400CC4456C832F0",
+  "enabled": true,
+  "version": 2
+}

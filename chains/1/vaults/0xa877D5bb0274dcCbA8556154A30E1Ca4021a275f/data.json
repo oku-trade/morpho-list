@@ -1,6 +1,6 @@
 {
   "chainId": 1,
-  "name": "kpk EURC Yield V2",
+  "name": "KPK EURC Yield",
   "tokenAddress": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c",
   "performanceFeePercentage": "0",
   "vaultAddress": "0xa877D5bb0274dcCbA8556154A30E1Ca4021a275f",

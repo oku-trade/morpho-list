@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Safe x Steakhouse USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "100000000000000000",
+  "vaultAddress": "0xbEeFCe6c76C7D7A8066562Fe9FF0e343a52dD92F",
+  "guardianAddress": "0xA672931fae8c044e1bB4Da30c46F9f133cBB0A05",
+  "curatorAddress": "0x827e86072B06674a077f592A531dcE4590aDeCdB",
+  "enabled": true
+}

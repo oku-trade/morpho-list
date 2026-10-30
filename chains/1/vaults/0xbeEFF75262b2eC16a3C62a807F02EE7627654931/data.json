@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Waterline InfiniFi USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "50000000000000000",
+  "vaultAddress": "0xbeEFF75262b2eC16a3C62a807F02EE7627654931",
+  "curatorAddress": "0xC5fA35a7DA6798211d4AcD6b1D36F2f3E8c6dBdB",
+  "enabled": true,
+  "version": 2
+}

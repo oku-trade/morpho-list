@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Uniswap ETH",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x98D2b241DA14c5dd848812708Eb8A1F3c5512f9d",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}

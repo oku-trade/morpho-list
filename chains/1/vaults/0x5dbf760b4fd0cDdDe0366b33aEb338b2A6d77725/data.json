@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "KPK ETH Yield",
+  "tokenAddress": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x5dbf760b4fd0cDdDe0366b33aEb338b2A6d77725",
+  "curatorAddress": "0xE5aEC7D0E795456F90ceBefBa56470F0E5dfC075",
+  "enabled": true,
+  "version": 2
+}

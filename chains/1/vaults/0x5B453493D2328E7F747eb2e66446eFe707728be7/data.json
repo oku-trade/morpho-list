@@ -1,0 +1,10 @@
+{
+  "chainId": 1,
+  "name": "Uniswap USDC",
+  "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "performanceFeePercentage": "0",
+  "vaultAddress": "0x5B453493D2328E7F747eb2e66446eFe707728be7",
+  "curatorAddress": "0x9E33faAE38ff641094fa68c65c2cE600b3410585",
+  "enabled": true,
+  "version": 2
+}
